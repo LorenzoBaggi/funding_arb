@@ -1,5 +1,6 @@
 # Crypto Basis Arbitrage: Delta-Neutral Trading Strategies
 
+
 ## Introduction to Forward Contracts and Futures
 
 Forward contracts and futures are fundamental financial instruments in the trading world, designed to mitigate uncertainty about future prices. To understand their functioning, let's consider a practical example.
@@ -101,7 +102,8 @@ An interesting market observation is that funding rate imbalances tend to be "st
 
 This persistence creates a potential opportunity for arbitrage strategies.
 
-![Predicted vs actual funding, overlapping data removed](../Image%201.png)
+![Predicted vs actual funding, overlapping data removed]![image](https://github.com/user-attachments/assets/42084c56-1053-4e0a-8375-cf904fa89dd1)
+
 
 ## Delta-Neutral Trading Strategy
 
@@ -139,7 +141,8 @@ Backtesting results show:
 - Very low standard deviation
 - Sharpe ratio of approximately 10
 
-![PnL to price change, funding, and costs. Starting capital $1000](../Image%202.png)
+![PnL to price change, funding, and costs. Starting capital $1000]![image](https://github.com/user-attachments/assets/86296849-8fc5-4d70-aca4-a1e85d42a639)
+
 
 The strategy's performance breakdown shows:
 - The majority of profits come from funding payments
@@ -165,7 +168,7 @@ As shown in the performance graph:
 - The strategy exhibits some short-term volatility
 - Long-term performance shows nearly linear growth
 
-![Mean absolute perp funding rate on Binance](../Image%203.png)
+![Mean absolute perp funding rate on Binance]![image](https://github.com/user-attachments/assets/c3076d0e-293c-4c3a-8f15-fdf3a8842236)
 
 The mean absolute funding rate varies significantly over time, with periods of both high and low opportunity. Notice the spikes in early 2023 and early 2024, which would have been particularly profitable periods for this strategy.
 
