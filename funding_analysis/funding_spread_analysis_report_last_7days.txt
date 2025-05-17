@@ -1,0 +1,123 @@
+FUNDING RATE SPREAD ANALYSIS REPORT (LAST 7 DAYS)
+=============================================
+
+Analysis Period: 2025-05-10 13:00:00+00:00 to 2025-05-16 00:00:00+00:00
+Total Symbols Analyzed: 473
+
+NORMALIZATION METHODOLOGY
+------------------------
+All funding rates have been normalized to their daily equivalent values for fair comparison.
+For example:
+- 8h interval (3 fundings per day): rate × 3 = daily equivalent
+- 1h interval (24 fundings per day): rate × 24 = daily equivalent
+
+FUNDING INTERVAL DISTRIBUTION
+----------------------------
+1h interval: 3 symbols (0.6%)
+2h interval: 15 symbols (3.2%)
+4h interval: 225 symbols (47.6%)
+8h interval: 230 symbols (48.6%)
+
+TOP 10 SYMBOLS BY DAILY EQUIVALENT ABSOLUTE SPREAD
+----------------------------------------------
+1. SNTUSDT (4h): 0.63% daily equiv. (Interval rate: 0.1049%, Sharpe: 0.54, Positive: 45.5%)
+2. HIFIUSDT (4h): 0.61% daily equiv. (Interval rate: 0.1010%, Sharpe: 0.56, Positive: 72.7%)
+3. AIOZUSDT (8h): 0.60% daily equiv. (Interval rate: 0.1987%, Sharpe: 1.92, Positive: 0.0%)
+4. LAUNCHCOINUSDT (4h): 0.40% daily equiv. (Interval rate: 0.0671%, Sharpe: 0.68, Positive: 80.0%)
+5. KAITOUSDT (1h): 0.28% daily equiv. (Interval rate: 0.0117%, Sharpe: 0.52, Positive: 53.8%)
+6. DEEPUSDT (8h): 0.24% daily equiv. (Interval rate: 0.0816%, Sharpe: 1.75, Positive: 0.0%)
+7. SLFUSDT (8h): 0.21% daily equiv. (Interval rate: 0.0687%, Sharpe: 1.22, Positive: 17.6%)
+8. BANKUSDT (4h): 0.19% daily equiv. (Interval rate: 0.0324%, Sharpe: 0.32, Positive: 60.6%)
+9. GODSUSDT (4h): 0.19% daily equiv. (Interval rate: 0.0316%, Sharpe: 0.25, Positive: 84.8%)
+10. PUNDIXUSDT (4h): 0.18% daily equiv. (Interval rate: 0.0295%, Sharpe: 0.38, Positive: 57.6%)
+
+TOP 10 SYMBOLS BY MAXIMUM DAILY EQUIVALENT ABSOLUTE SPREAD
+----------------------------------------------
+1. SNTUSDT (4h): 4.31% max daily equiv. (Actual rate: -0.7187%, Date: 2025-05-15 20:00:00, Avg: 0.63%)
+2. GODSUSDT (4h): 4.22% max daily equiv. (Actual rate: -0.7038%, Date: 2025-05-13 20:00:00, Avg: 0.19%)
+3. HIFIUSDT (4h): 4.11% max daily equiv. (Actual rate: -0.6854%, Date: 2025-05-10 16:00:00, Avg: 0.61%)
+4. BANKUSDT (4h): 3.41% max daily equiv. (Actual rate: -0.5689%, Date: 2025-05-10 16:00:00, Avg: 0.19%)
+5. KAITOUSDT (1h): 3.40% max daily equiv. (Actual rate: -0.1419%, Date: 2025-05-13 07:00:00, Avg: 0.28%)
+6. PUNDIXUSDT (4h): 2.54% max daily equiv. (Actual rate: -0.4240%, Date: 2025-05-11 08:00:00, Avg: 0.18%)
+7. RPLUSDT (4h): 2.07% max daily equiv. (Actual rate: -0.3445%, Date: 2025-05-11 20:00:00, Avg: 0.13%)
+8. 1000TOSHIUSDT (4h): 1.87% max daily equiv. (Actual rate: -0.3121%, Date: 2025-05-10 20:00:00, Avg: 0.09%)
+9. HYPEPERP (4h): 1.68% max daily equiv. (Actual rate: +0.2794%, Date: 2025-05-11 08:00:00, Avg: 0.11%)
+10. AIOZUSDT (8h): 1.23% max daily equiv. (Actual rate: -0.4105%, Date: 2025-05-10 16:00:00, Avg: 0.60%)
+
+TOP 10 SYMBOLS BY ANNUAL EQUIVALENT RETURN
+---------------------------------------
+1. FBUSDT (8h): 79.02% annual return (Daily: 0.1597%, Direction: Positive, Consistency: 100.0%)
+2. FARTCOINUSDT (4h): 69.54% annual return (Daily: 0.1447%, Direction: Positive, Consistency: 100.0%)
+3. 1000000PEIPEIUSDT (8h): 61.69% annual return (Daily: 0.1317%, Direction: Positive, Consistency: 100.0%)
+4. LAUNCHCOINUSDT (4h): 60.43% annual return (Daily: 0.1296%, Direction: Positive, Consistency: 80.0%)
+5. PIPPINUSDT (4h): 60.20% annual return (Daily: 0.1292%, Direction: Positive, Consistency: 100.0%)
+6. SKYAIUSDT (4h): 59.55% annual return (Daily: 0.1281%, Direction: Positive, Consistency: 100.0%)
+7. ORBSUSDT (4h): 53.43% annual return (Daily: 0.1173%, Direction: Positive, Consistency: 100.0%)
+8. GIGAUSDT (4h): 51.56% annual return (Daily: 0.1140%, Direction: Positive, Consistency: 100.0%)
+9. GORKUSDT (4h): 50.82% annual return (Daily: 0.1126%, Direction: Positive, Consistency: 100.0%)
+10. HYPEPERP (4h): 48.51% annual return (Daily: 0.1084%, Direction: Positive, Consistency: 100.0%)
+
+TOP 10 SYMBOLS BY SHARPE RATIO
+-----------------------------
+1. 1000FLOKIUSDT (8h): Sharpe 83.39 (Daily spread: 0.03%, Positive: 100.0%)
+2. CHESSUSDT (4h): Sharpe 75.21 (Daily spread: 0.03%, Positive: 100.0%)
+3. DOGSUSDT (4h): Sharpe 69.88 (Daily spread: 0.03%, Positive: 100.0%)
+4. RENDERUSDT (4h): Sharpe 46.00 (Daily spread: 0.03%, Positive: 100.0%)
+5. GALAUSDT (8h): Sharpe 33.20 (Daily spread: 0.03%, Positive: 100.0%)
+6. KAVAUSDT (8h): Sharpe 31.45 (Daily spread: 0.03%, Positive: 100.0%)
+7. BNBUSDT (8h): Sharpe 31.29 (Daily spread: 0.03%, Positive: 100.0%)
+8. HOTUSDT (8h): Sharpe 23.47 (Daily spread: 0.03%, Positive: 100.0%)
+9. MAVIAUSDT (4h): Sharpe 20.32 (Daily spread: 0.03%, Positive: 100.0%)
+10. PNUTUSDT (4h): Sharpe 13.88 (Daily spread: 0.03%, Positive: 100.0%)
+
+TOP 10 MOST CONSISTENTLY POSITIVE
+-------------------------------
+1. THEUSDT (4h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.57%)
+2. 1000000BABYDOGEUSDT (4h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.57%)
+3. 1000000CHEEMSUSDT (4h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.77%)
+4. 1000000MOGUSDT (4h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.57%)
+5. 1000000PEIPEIUSDT (8h): 100.0% positive (Daily spread: 0.13%, Annual equiv: 61.69%)
+6. 10000COQUSDT (8h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.57%)
+7. 10000ELONUSDT (4h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.57%)
+8. 10000LADYSUSDT (8h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.57%)
+9. SUNDOGUSDT (8h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.57%)
+10. SUIPERP (8h): 100.0% positive (Daily spread: 0.03%, Annual equiv: 11.57%)
+
+TOP 10 MOST CONSISTENTLY NEGATIVE
+-------------------------------
+1. AIOZUSDT (8h): 100.0% negative (Daily spread: 0.60%, Annual equiv: -88.72%)
+2. DEEPUSDT (8h): 100.0% negative (Daily spread: 0.24%, Annual equiv: -59.12%)
+3. ETHBTCUSDT (8h): 94.1% negative (Daily spread: 0.02%, Annual equiv: 7.77%)
+4. GNOUSDT (8h): 88.2% negative (Daily spread: 0.14%, Annual equiv: -38.32%)
+5. SLFUSDT (8h): 82.4% negative (Daily spread: 0.21%, Annual equiv: -51.06%)
+6. BLASTUSDT (8h): 76.5% negative (Daily spread: 0.10%, Annual equiv: -26.68%)
+7. HAEDALUSDT (4h): 66.7% negative (Daily spread: 0.15%, Annual equiv: -36.90%)
+8. FLRUSDT (8h): 64.7% negative (Daily spread: 0.07%, Annual equiv: -17.42%)
+9. COREUSDT (8h): 58.8% negative (Daily spread: 0.04%, Annual equiv: -8.71%)
+10. BCHUSDT (8h): 58.8% negative (Daily spread: 0.04%, Annual equiv: -5.67%)
+
+KEY INSIGHTS
+-----------
+- Average daily equivalent funding rate spread: 0.05%
+- Highest average spread symbol: SNTUSDT (4h interval, 0.63% daily equiv.)
+- Highest maximum spread symbol: SNTUSDT (4h interval, 4.31% max daily equiv. on 2025-05-15 20:00:00)
+
+AVERAGE SPREAD BY FUNDING INTERVAL
+-------------------------------
+1h interval: 0.13% avg daily equiv. spread (Avg Sharpe: 0.35, Count: 3.0)
+2h interval: 0.04% avg daily equiv. spread (Avg Sharpe: 1.58, Count: 15.0)
+4h interval: 0.05% avg daily equiv. spread (Avg Sharpe: 1.97, Count: 225.0)
+8h interval: 0.04% avg daily equiv. spread (Avg Sharpe: 2.04, Count: 230.0)
+
+POTENTIAL ARBITRAGE OPPORTUNITIES (NORMALIZED)
+------------------------------------------
+45. AIOZUSDT (8h): 0.60% daily equiv. spread, 100.0% negative, Annual equiv: -88.72%, Sharpe: 1.92
+153. DEEPUSDT (8h): 0.24% daily equiv. spread, 100.0% negative, Annual equiv: -59.12%, Sharpe: 1.75
+434. SLFUSDT (8h): 0.21% daily equiv. spread, 82.4% negative, Annual equiv: -51.06%, Sharpe: 1.22
+191. FBUSDT (8h): 0.16% daily equiv. spread, 100.0% positive, Annual equiv: 79.02%, Sharpe: 1.37
+190. FARTCOINUSDT (4h): 0.14% daily equiv. spread, 100.0% positive, Annual equiv: 69.54%, Sharpe: 1.59
+216. GNOUSDT (8h): 0.14% daily equiv. spread, 88.2% negative, Annual equiv: -38.32%, Sharpe: 1.06
+369. PIPPINUSDT (4h): 0.13% daily equiv. spread, 100.0% positive, Annual equiv: 60.20%, Sharpe: 1.11
+353. ORBSUSDT (4h): 0.12% daily equiv. spread, 100.0% positive, Annual equiv: 53.43%, Sharpe: 1.01
+386. PUMPUSDT (4h): 0.10% daily equiv. spread, 100.0% positive, Annual equiv: 42.81%, Sharpe: 1.00
+110. BROCCOLIUSDT (4h): 0.09% daily equiv. spread, 100.0% positive, Annual equiv: 40.72%, Sharpe: 1.16
