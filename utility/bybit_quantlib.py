@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from pybit.unified_trading import HTTP
 import time
 import matplotlib.patches as mpatches
+import matplotlib.dates as mdates
 from datetime import datetime, timedelta
 import os
 from tqdm import tqdm 
@@ -358,7 +359,7 @@ def calculate_moving_averages_and_future_funding(daily_mean, window=7, remove_ov
     
     return result_df
 
-def plot_funding_rate_persistence(analysis_df, output_path="funding_persistence.png", remove_outliers=True, outlier_threshold=2.0):
+def plot_funding_rate_persistence(analysis_df, output_path="funding_persistence.png", remove_outliers=True, outlier_threshold=2.0, window=7):
     """
     Create a comprehensive scatter plot to visualize funding rate persistence
     with enhanced legends, annotations, and optional outlier removal
@@ -486,7 +487,7 @@ def plot_funding_rate_persistence(analysis_df, output_path="funding_persistence.
         
     stats_text += (    
         f"\nDate Range: {plot_df['date'].min().strftime('%Y-%m-%d')} to {plot_df['date'].max().strftime('%Y-%m-%d')}\n"
-        f"Window Size: 7 days"
+        f"Window Size: {window} days"
     )
     
     plt.annotate(
@@ -500,7 +501,7 @@ def plot_funding_rate_persistence(analysis_df, output_path="funding_persistence.
     # Add explanatory text about what the chart shows
     explanation_text = (
         "This chart shows the relationship between current funding rates\n"
-        "(7-day moving average) and future funding rates (next 7 days).\n"
+        f"({window}-day moving average) and future funding rates (next {window} days).\n"
         "Points along the 45° line indicate perfect persistence of funding rates.\n"
         "Color indicates number of cryptocurrency symbols analyzed at each point."
     )
@@ -523,8 +524,8 @@ def plot_funding_rate_persistence(analysis_df, output_path="funding_persistence.
     
     # Add plot details with improved styling
     plt.title(f'Funding Rate Persistence (Correlation = {corr:.3f})', fontsize=18, pad=20)
-    plt.xlabel('Current Funding Rate (7-day Moving Average)', fontsize=14, labelpad=10)
-    plt.ylabel('Future Funding Rate (Next 7 days)', fontsize=14, labelpad=10)
+    plt.xlabel(f'Current Funding Rate ({window}-day Moving Average)', fontsize=14, labelpad=10)
+    plt.ylabel(f'Future Funding Rate (Next {window} days)', fontsize=14, labelpad=10)
     
     # Format tick labels to show percentages (funding rates are usually shown as %)
     plt.gca().xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x*100:.3f}%'))
@@ -548,9 +549,9 @@ def plot_funding_rate_persistence(analysis_df, output_path="funding_persistence.
     
     # Plot time series of both current and future rates
     plt.plot(time_df.index, time_df['rolling_avg']*100, 'b-', 
-             label='Current Funding Rate (7-day MA)', linewidth=1.5)
+             label=f'Current Funding Rate ({window}-day MA)', linewidth=1.5)
     plt.plot(time_df.index, time_df['future_avg']*100, 'r--', 
-             label='Future Funding Rate (Next 7 days)', linewidth=1.5)
+             label=f'Future Funding Rate (Next {window} days)', linewidth=1.5)
     
     # Add zero line for reference
     plt.axhline(y=0, color='gray', linestyle='-', alpha=0.3)
@@ -1017,3 +1018,311 @@ def analyze_funding_spread_by_symbol(funding_data, symbols_df=None, output_dir="
     
     print(f"Comprehensive normalized analysis for the last {days_to_analyze} days saved to {output_dir}/funding_spread_analysis_report_last_{days_to_analyze}days.txt")
     return filtered_stats
+
+def plot_aggregated_funding_rates(funding_data, symbols_df=None, output_dir="funding_analysis", 
+                                 start_date=None, end_date=None, 
+                                 metric="mean", normalized=True):
+    """
+    Create a time series plot of aggregated funding rates (max or mean) across all symbols,
+    normalized by their funding intervals.
+    
+    Args:
+        funding_data (dict): Dictionary with symbols as keys and funding rate DataFrames as values
+        symbols_df (pd.DataFrame, optional): DataFrame with symbols metadata including fundingInterval
+        output_dir (str): Directory to save results
+        start_date (str, optional): Start date in 'YYYY-MM-DD' format
+        end_date (str, optional): End date in 'YYYY-MM-DD' format
+        metric (str): 'mean' or 'max' - which aggregation to use for the daily rates
+        normalized (bool): Whether to normalize rates by funding interval
+        
+    Returns:
+        pd.DataFrame: DataFrame with daily aggregated funding rates
+    """
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir, exist_ok=True)
+    
+    # Convert date strings to datetime objects if provided
+    if start_date:
+        start_date = pd.to_datetime(start_date).tz_localize(pytz.UTC)
+    if end_date:
+        end_date = pd.to_datetime(end_date).tz_localize(pytz.UTC)
+    
+    print("Processing funding rate data from all symbols...")
+    
+    # Prepare a list to hold all normalized funding data
+    all_funding_data = []
+    
+    # Process each symbol
+    for symbol, df in funding_data.items():
+        if df.empty:
+            continue
+        
+        # Make a copy to avoid modifying the original
+        df_copy = df.copy()
+        
+        # Ensure timestamp column is datetime with timezone
+        if not pd.api.types.is_datetime64_dtype(df_copy['fundingRateTimestamp']):
+            df_copy['fundingRateTimestamp'] = pd.to_datetime(df_copy['fundingRateTimestamp'])
+        
+        # Add timezone if missing
+        if df_copy['fundingRateTimestamp'].dt.tz is None:
+            df_copy['fundingRateTimestamp'] = df_copy['fundingRateTimestamp'].dt.tz_localize(pytz.UTC)
+        
+        # Filter by date range if provided
+        if start_date:
+            df_copy = df_copy[df_copy['fundingRateTimestamp'] >= start_date]
+        if end_date:
+            df_copy = df_copy[df_copy['fundingRateTimestamp'] <= end_date]
+        
+        if df_copy.empty:
+            continue
+        
+        # Ensure fundingRate is numeric
+        df_copy['fundingRate'] = pd.to_numeric(df_copy['fundingRate'], errors='coerce')
+        
+        # Calculate absolute funding rate
+        df_copy['abs_funding_rate'] = df_copy['fundingRate'].abs()
+        
+        # Get funding interval (in minutes)
+        funding_interval = df_copy['fundingInterval'].iloc[0]
+        
+        # Normalize funding rate if requested
+        if normalized:
+            # Calculate normalization factor (how many funding events per day)
+            normalization_factor = 1440 / funding_interval  # 1440 minutes in a day
+            
+            # Normalize the funding rate to a daily equivalent rate
+            df_copy['normalized_abs_rate'] = df_copy['abs_funding_rate'] * normalization_factor
+        else:
+            # Just use the raw rate
+            df_copy['normalized_abs_rate'] = df_copy['abs_funding_rate']
+        
+        # Add symbol column
+        df_copy['symbol'] = symbol
+        
+        # Extract date (drop time part) for daily aggregation
+        df_copy['date'] = df_copy['fundingRateTimestamp'].dt.date
+        df_copy['date'] = pd.to_datetime(df_copy['date'])
+        
+        # Append to all data
+        all_funding_data.append(df_copy)
+    
+    # Check if we have any data
+    if not all_funding_data:
+        print("No data found for the specified period")
+        return None
+    
+    # Combine all data
+    combined_df = pd.concat(all_funding_data, ignore_index=True)
+    
+    # Aggregate by date according to specified metric
+    if metric == "max":
+        daily_agg = combined_df.groupby('date')['normalized_abs_rate'].max().reset_index()
+        metric_label = "Maximum"
+    else:  # default to mean
+        daily_agg = combined_df.groupby('date')['normalized_abs_rate'].mean().reset_index()
+        metric_label = "Mean"
+    
+    # Also calculate count of symbols per day for reference
+    symbol_count = combined_df.groupby('date')['symbol'].nunique().reset_index()
+    symbol_count.rename(columns={'symbol': 'symbol_count'}, inplace=True)
+    
+    # Merge with the main DataFrame
+    daily_agg = pd.merge(daily_agg, symbol_count, on='date')
+    
+    # Create the time series plot
+    plt.figure(figsize=(15, 8))
+    
+    # Plot the main line
+    plt.plot(daily_agg['date'], daily_agg['normalized_abs_rate'], 
+             color='black', linewidth=1.5)
+    
+    # Add grid
+    plt.grid(True, alpha=0.3, linestyle='--')
+    
+    # Format x-axis as dates
+    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
+    plt.gca().xaxis.set_major_locator(mdates.MonthLocator(interval=3))  # Show every 3 months
+    
+    # Additional formatting
+    plt.gcf().autofmt_xdate()  # Auto-format date labels
+    
+    # Add labels and title
+    normalized_label = "Normalized (Daily Equivalent)" if normalized else "Raw"
+    plt.title(f'{metric_label} Absolute Perpetual Funding Rate {normalized_label}', fontsize=18)
+    plt.xlabel('Date', fontsize=14)
+    plt.ylabel(f'{metric_label} Absolute Funding Rate', fontsize=14)
+    
+    # Add symbol count as text in the corner
+    avg_symbols = daily_agg['symbol_count'].mean()
+    max_symbols = daily_agg['symbol_count'].max()
+    plt.figtext(0.01, 0.01, 
+                f"Avg. Symbols per Day: {avg_symbols:.1f}\nMax Symbols: {max_symbols:.0f}",
+                ha='left', fontsize=10, bbox=dict(facecolor='white', alpha=0.7))
+    
+    # Add more context
+    date_range_text = (f"Date Range: {daily_agg['date'].min().strftime('%Y-%m-%d')} to "
+                      f"{daily_agg['date'].max().strftime('%Y-%m-%d')}")
+    
+    # Identify interesting peaks for annotation
+    threshold = daily_agg['normalized_abs_rate'].mean() + 2 * daily_agg['normalized_abs_rate'].std()
+    peaks = daily_agg[daily_agg['normalized_abs_rate'] > threshold].copy()
+    
+    # Limit to at most 5 annotations to avoid clutter
+    if len(peaks) > 5:
+        peaks = peaks.sort_values('normalized_abs_rate', ascending=False).head(5)
+    
+    # Annotate peaks
+    for _, peak in peaks.iterrows():
+        plt.annotate(
+            f"{peak['date'].strftime('%Y-%m-%d')}\n{peak['normalized_abs_rate']:.3f}",
+            xy=(peak['date'], peak['normalized_abs_rate']),
+            xytext=(10, 20),  # Offset text
+            textcoords='offset points',
+            arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=.2'),
+            bbox=dict(boxstyle='round,pad=0.3', fc='white', alpha=0.7),
+            fontsize=8
+        )
+    
+    # Add statistical information
+    stats_text = (
+        f"Statistics:\n"
+        f"Mean: {daily_agg['normalized_abs_rate'].mean():.4f}\n"
+        f"Median: {daily_agg['normalized_abs_rate'].median():.4f}\n"
+        f"Max: {daily_agg['normalized_abs_rate'].max():.4f}\n"
+        f"Min: {daily_agg['normalized_abs_rate'].min():.4f}\n"
+        f"{date_range_text}"
+    )
+    
+    plt.annotate(
+        stats_text, 
+        xy=(0.01, 0.99),  # Top left position
+        xycoords='axes fraction',
+        va='top',  # Vertical alignment
+        bbox=dict(boxstyle='round,pad=0.5', fc='white', alpha=0.7),
+        fontsize=10
+    )
+    
+    # Save the figure
+    metric_name = "max" if metric == "max" else "mean"
+    norm_label = "normalized" if normalized else "raw"
+    plt.tight_layout()
+    output_path = f"{output_dir}/{metric_name}_abs_funding_rate_{norm_label}.png"
+    plt.savefig(output_path, dpi=300)
+    print(f"Time series plot saved as {output_path}")
+    
+    # Show the plot
+    plt.show()
+    
+    # Return the data for further analysis
+    return daily_agg
+
+def plot_funding_volatility(funding_data, output_dir="funding_analysis", 
+                           start_date=None, end_date=None, window=7):
+    """
+    Plot the volatility of funding rates over time to identify periods of high opportunity.
+    
+    Args:
+        funding_data (dict): Dictionary with symbols as keys and funding rate DataFrames as values
+        output_dir (str): Directory to save results
+        start_date (str, optional): Start date in 'YYYY-MM-DD' format
+        end_date (str, optional): End date in 'YYYY-MM-DD' format
+        window (int): Rolling window size for volatility calculation
+        
+    Returns:
+        pd.DataFrame: DataFrame with volatility metrics
+    """
+    # First get the daily aggregated rates
+    daily_rates = plot_aggregated_funding_rates(
+        funding_data, output_dir=output_dir, 
+        start_date=start_date, end_date=end_date, 
+        metric="mean", normalized=True
+    )
+    
+    if daily_rates is None or len(daily_rates) < window:
+        print(f"Not enough data for volatility analysis (need at least {window} days)")
+        return None
+    
+    # Calculate rolling statistics
+    daily_rates['rolling_mean'] = daily_rates['normalized_abs_rate'].rolling(window=window).mean()
+    daily_rates['rolling_std'] = daily_rates['normalized_abs_rate'].rolling(window=window).std()
+    daily_rates['rolling_cv'] = daily_rates['rolling_std'] / daily_rates['rolling_mean']  # Coefficient of variation
+    
+    # Calculate rolling Sharpe ratio-like metric (mean/std)
+    daily_rates['rolling_sharpe'] = daily_rates['rolling_mean'] / daily_rates['rolling_std']
+    
+    # Drop rows with NaN from rolling calculations
+    daily_rates = daily_rates.dropna()
+    
+    # Create the plot
+    plt.figure(figsize=(15, 10))
+    
+    # Create subplots
+    ax1 = plt.subplot(211)  # Top subplot for rates
+    ax2 = plt.subplot(212, sharex=ax1)  # Bottom subplot for volatility metrics
+    
+    # Plot rates on top subplot
+    ax1.plot(daily_rates['date'], daily_rates['normalized_abs_rate'], 
+            color='black', linewidth=1, alpha=0.6, label='Daily Rate')
+    ax1.plot(daily_rates['date'], daily_rates['rolling_mean'], 
+            color='blue', linewidth=2, label=f'{window}-Day Moving Avg')
+    
+    # Add bands for standard deviation
+    ax1.fill_between(
+        daily_rates['date'],
+        daily_rates['rolling_mean'] - daily_rates['rolling_std'],
+        daily_rates['rolling_mean'] + daily_rates['rolling_std'],
+        color='blue', alpha=0.2, label=f'±1 Std Dev'
+    )
+    
+    # Plot volatility metrics on bottom subplot
+    ax2.plot(daily_rates['date'], daily_rates['rolling_cv'], 
+            color='purple', linewidth=2, label='Coefficient of Variation')
+    ax2.plot(daily_rates['date'], daily_rates['rolling_sharpe'], 
+            color='green', linewidth=2, label='Sharpe Ratio')
+    
+    # Add horizontal line at y=1 for reference on Sharpe ratio
+    ax2.axhline(y=1, color='green', linestyle='--', alpha=0.5)
+    
+    # Format axes
+    for ax in [ax1, ax2]:
+        ax.grid(True, alpha=0.3, linestyle='--')
+        ax.legend(loc='best')
+    
+    # Format x-axis dates
+    ax2.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
+    ax2.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
+    plt.gcf().autofmt_xdate()
+    
+    # Add labels
+    ax1.set_ylabel('Absolute Funding Rate', fontsize=12)
+    ax1.set_title(f'Normalized Absolute Funding Rate and {window}-Day Moving Average', fontsize=14)
+    
+    ax2.set_xlabel('Date', fontsize=12)
+    ax2.set_ylabel('Metric Value', fontsize=12)
+    ax2.set_title('Funding Rate Volatility Metrics', fontsize=14)
+    
+    # Add annotations for highest opportunity periods (highest Sharpe ratio)
+    top_opportunities = daily_rates.sort_values('rolling_sharpe', ascending=False).head(3)
+    
+    for _, row in top_opportunities.iterrows():
+        ax2.annotate(
+            f"{row['date'].strftime('%Y-%m-%d')}\nSharpe: {row['rolling_sharpe']:.2f}",
+            xy=(row['date'], row['rolling_sharpe']),
+            xytext=(10, -30),
+            textcoords='offset points',
+            arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=.2'),
+            bbox=dict(boxstyle='round,pad=0.3', fc='white', alpha=0.7),
+            fontsize=8
+        )
+    
+    # Save the figure
+    plt.tight_layout()
+    output_path = f"{output_dir}/funding_rate_volatility_w{window}.png"
+    plt.savefig(output_path, dpi=300)
+    print(f"Volatility analysis plot saved as {output_path}")
+    
+    # Show the plot
+    plt.show()
+    
+    return daily_rates

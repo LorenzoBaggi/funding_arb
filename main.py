@@ -2,10 +2,10 @@ from utility.bybit_quantlib import *
 
 
 if __name__ == "__main__":
-    start_date = "2024-01-01"
+    start_date = "2023-01-01"
     end_date = "2025-05-16"
     
-    window=7
+    window=3
     remove_overlapping=True
     output_dir="funding_analysis"
     
@@ -56,14 +56,25 @@ if __name__ == "__main__":
     print(f"Analysis data saved to {analysis_path}")
     
     print("Step 5: Creating funding rate persistence plot...")
-    plot_funding_rate_persistence(analysis_df, f"{output_dir}/funding_persistence.png")
+    plot_funding_rate_persistence(analysis_df, f"{output_dir}/funding_persistence.png", window=window)
     
     print("Step 6: Analyzing funding spread by symbol...")
     symbol_stats = analyze_funding_spread_by_symbol(
         funding_data,         
         symbols_df,           
         output_dir=output_dir,
-        days_to_analyze=7
+        days_to_analyze=window
         )
+
+    print("Step 7: Creating aggregated funding rate time series...")
+    daily_avg_df = plot_aggregated_funding_rates(
+        funding_data, 
+        symbols_df, 
+        output_dir=output_dir,
+        start_date=start_date,
+        end_date=end_date,
+        metric="mean",   
+        normalized=True 
+    )
 
     print("Analysis completed!")
