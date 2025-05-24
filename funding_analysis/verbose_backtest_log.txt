@@ -1,0 +1,1409 @@
+=== VERBOSE FUNDING STRATEGY BACKTEST LOG ===
+Started at: 2025-05-24 20:37:44
+
+2025-05-24 20:37:44: 
+================================================================================
+2025-05-24 20:37:44: BACKTEST CONFIGURATION
+2025-05-24 20:37:44: ================================================================================
+2025-05-24 20:37:44: Period: 2025-01-01 to 2025-05-10
+2025-05-24 20:37:44: Initial Capital: $1,000.00
+2025-05-24 20:37:44: Min Annual Funding Rate: 30.0%
+2025-05-24 20:37:44: Top N Symbols: 5
+2025-05-24 20:37:44: Rebalance Every: 7 days
+2025-05-24 20:37:44: Taker Fee: 0.05%
+2025-05-24 20:37:44: Slippage: 0.03%
+2025-05-24 20:37:44: Bid-Ask Spread: 0.02%
+2025-05-24 20:37:44: Auto Download: True
+2025-05-24 20:37:44: ✅ Loaded mapping for 474 symbols
+2025-05-24 20:37:48: ✅ Processed funding data for 471 symbols
+2025-05-24 20:37:48: 
+================================================================================
+2025-05-24 20:37:48: STARTING BACKTEST - 19 REBALANCE PERIODS
+2025-05-24 20:37:48: ================================================================================
+2025-05-24 20:37:48: 
+================================================================================
+2025-05-24 20:37:48: REBALANCE PERIOD 1/19
+2025-05-24 20:37:48: ================================================================================
+2025-05-24 20:37:48: 📅 Period: 2025-01-01 00:00 → 2025-01-08 00:00
+2025-05-24 20:37:48: 💰 Starting Capital: $1,000.00
+2025-05-24 20:37:48: 📊 Current Portfolio Positions: 0
+2025-05-24 20:37:48: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:37:48: Total symbols with funding data in period: 399
+2025-05-24 20:37:48: Symbols meeting 30.0% threshold: 33
+2025-05-24 20:37:48: 
+⭐ TOP 5 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:37:48: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:37:48: --------------------------------------------------
+2025-05-24 20:37:48: 1     FARTCOINUSDT    139.08         % 4h
+2025-05-24 20:37:48: 2     GRIFFAINUSDT    85.50          % 4h
+2025-05-24 20:37:48: 3     AIXBTUSDT       84.14          % 4h
+2025-05-24 20:37:48: 4     HIPPOUSDT       83.17          % 4h
+2025-05-24 20:37:48: 5     1000MUMUUSDT    78.48          % 8h
+2025-05-24 20:37:48: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:37:48:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:37:48:   🔍 Loading data for FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:37:49:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:37:49:      📊 Spot kline shape: EMPTY
+2025-05-24 20:37:49:      🔍 Checking kline directory: kline_data
+2025-05-24 20:37:49:      📁 Linear files found: ['FARTCOINUSDT_1h_linear_kline.csv']
+2025-05-24 20:37:49:      📁 Spot files found: []
+2025-05-24 20:37:49:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:37:49:   🔍 Processing symbol: GRIFFAINUSDT -> GRIFFAINUSDT
+2025-05-24 20:37:49:   🔍 Loading data for GRIFFAINUSDT -> GRIFFAINUSDT
+2025-05-24 20:37:50:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:37:50:      📊 Spot kline shape: EMPTY
+2025-05-24 20:37:50:      🔍 Checking kline directory: kline_data
+2025-05-24 20:37:50:      📁 Linear files found: ['GRIFFAINUSDT_1h_linear_kline.csv']
+2025-05-24 20:37:50:      📁 Spot files found: []
+2025-05-24 20:37:50:   📊 GRIFFAINUSDT -> GRIFFAINUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:37:50:   🔍 Processing symbol: AIXBTUSDT -> AIXBTUSDT
+2025-05-24 20:37:50:   🔍 Loading data for AIXBTUSDT -> AIXBTUSDT
+2025-05-24 20:37:50:      📊 Linear kline shape: (3541, 8)
+2025-05-24 20:37:50:      📊 Spot kline shape: (3032, 8)
+2025-05-24 20:37:50:   📊 AIXBTUSDT -> AIXBTUSDT: Linear ✅ Spot ✅ Prices ❌
+2025-05-24 20:37:50:   🔍 Processing symbol: HIPPOUSDT -> HIPPOUSDT
+2025-05-24 20:37:50:   🔍 Loading data for HIPPOUSDT -> HIPPOUSDT
+2025-05-24 20:37:50:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:37:50:      📊 Spot kline shape: EMPTY
+2025-05-24 20:37:50:      🔍 Checking kline directory: kline_data
+2025-05-24 20:37:50:      📁 Linear files found: ['HIPPOUSDT_1h_linear_kline.csv']
+2025-05-24 20:37:50:      📁 Spot files found: []
+2025-05-24 20:37:50:   📊 HIPPOUSDT -> HIPPOUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:37:50:   🔍 Processing symbol: 1000MUMUUSDT -> MUMUUSDT
+2025-05-24 20:37:50:   🔍 Loading data for 1000MUMUUSDT -> MUMUUSDT
+2025-05-24 20:37:51:      📊 Linear kline shape: (5664, 8)
+2025-05-24 20:37:51:      📊 Spot kline shape: EMPTY
+2025-05-24 20:37:51:      🔍 Checking kline directory: kline_data
+2025-05-24 20:37:51:      📁 Linear files found: ['1000MUMUUSDT_1h_linear_kline.csv']
+2025-05-24 20:37:51:      📁 Spot files found: []
+2025-05-24 20:37:51:   📊 1000MUMUUSDT -> MUMUUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:37:51: 
+📊 REBALANCE PERIOD 1 SUMMARY:
+2025-05-24 20:37:51: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:37:51: ❌ Closed 0 old positions
+2025-05-24 20:37:51: 💰 Total active positions: 0
+2025-05-24 20:37:51: 💸 Period trading costs: $0.00
+2025-05-24 20:37:51: 📈 Period realized PnL: $0.00
+2025-05-24 20:37:51: 🏦 Portfolio value: $1000.00
+2025-05-24 20:37:51: 
+📈 END OF PERIOD 1 DETAILED P&L BREAKDOWN:
+2025-05-24 20:37:51: ============================================================
+2025-05-24 20:37:51: 🏦 Portfolio Value: $1,000.00 → $1,000.00 (+0.00)
+2025-05-24 20:37:51: 💰 Period Funding PnL: $0.00
+2025-05-24 20:37:51: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:37:51: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:37:51: 💸 Period Trading Costs: $0.00
+2025-05-24 20:37:51: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:37:51: 💰 Total Funding PnL: $0.00
+2025-05-24 20:37:51: 📊 Total Realized Trading PnL: $0.00
+2025-05-24 20:37:51: 💸 Total Trading Costs: $0.00
+2025-05-24 20:37:51: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:37:51: 
+📊 Data Availability: 1/5 symbols had complete data
+2025-05-24 20:37:51: 
+================================================================================
+2025-05-24 20:37:51: REBALANCE PERIOD 2/19
+2025-05-24 20:37:51: ================================================================================
+2025-05-24 20:37:51: 📅 Period: 2025-01-08 00:00 → 2025-01-15 00:00
+2025-05-24 20:37:51: 💰 Starting Capital: $1,000.00
+2025-05-24 20:37:51: 📊 Current Portfolio Positions: 0
+2025-05-24 20:37:51: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:37:51: Total symbols with funding data in period: 404
+2025-05-24 20:37:51: Symbols meeting 30.0% threshold: 9
+2025-05-24 20:37:51: 
+⭐ TOP 5 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:37:51: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:37:51: --------------------------------------------------
+2025-05-24 20:37:51: 1     COWUSDT         43.80          % 2h
+2025-05-24 20:37:51: 2     SWARMSUSDT      43.58          % 4h
+2025-05-24 20:37:51: 3     MAGICUSDT       42.34          % 2h
+2025-05-24 20:37:51: 4     FARTCOINUSDT    39.93          % 4h
+2025-05-24 20:37:51: 5     ORCAUSDT        37.60          % 2h
+2025-05-24 20:37:51: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:37:51:   🔍 Processing symbol: COWUSDT -> COWUSDT
+2025-05-24 20:37:51:   🔍 Loading data for COWUSDT -> COWUSDT
+2025-05-24 20:37:52:      📊 Linear kline shape: (4526, 8)
+2025-05-24 20:37:52:      📊 Spot kline shape: EMPTY
+2025-05-24 20:37:52:      🔍 Checking kline directory: kline_data
+2025-05-24 20:37:52:      📁 Linear files found: ['COWUSDT_1h_linear_kline.csv']
+2025-05-24 20:37:52:      📁 Spot files found: []
+2025-05-24 20:37:52:   📊 COWUSDT -> COWUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:37:52:   🔍 Processing symbol: SWARMSUSDT -> SWARMSUSDT
+2025-05-24 20:37:52:   🔍 Loading data for SWARMSUSDT -> SWARMSUSDT
+2025-05-24 20:37:53:      📊 Linear kline shape: (592, 8)
+2025-05-24 20:37:53:      📊 Spot kline shape: EMPTY
+2025-05-24 20:37:53:      🔍 Checking kline directory: kline_data
+2025-05-24 20:37:53:      📁 Linear files found: ['SWARMSUSDT_1h_linear_kline.csv']
+2025-05-24 20:37:53:      📁 Spot files found: []
+2025-05-24 20:37:53:   📊 SWARMSUSDT -> SWARMSUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:37:53:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:37:53:   🔍 Loading data for MAGICUSDT -> MAGICUSDT
+2025-05-24 20:37:53:      📊 Linear kline shape: (10985, 8)
+2025-05-24 20:37:53:      📊 Spot kline shape: (20908, 8)
+2025-05-24 20:37:53:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-24 20:37:53:      💰 Prices: Linear 0.541600, Spot 0.542300, Funding: 42.34%
+2025-05-24 20:37:53:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:37:53:   🔍 Loading data for FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:37:57:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:37:57:      📊 Spot kline shape: EMPTY
+2025-05-24 20:37:57:      🔍 Checking kline directory: kline_data
+2025-05-24 20:37:57:      📁 Linear files found: ['FARTCOINUSDT_1h_linear_kline.csv']
+2025-05-24 20:37:57:      📁 Spot files found: []
+2025-05-24 20:37:57:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:37:57:   🔍 Processing symbol: ORCAUSDT -> ORCAUSDT
+2025-05-24 20:37:57:   🔍 Loading data for ORCAUSDT -> ORCAUSDT
+2025-05-24 20:37:58:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:37:58:      📊 Spot kline shape: EMPTY
+2025-05-24 20:37:58:      🔍 Checking kline directory: kline_data
+2025-05-24 20:37:58:      📁 Linear files found: ['ORCAUSDT_1h_linear_kline.csv']
+2025-05-24 20:37:58:      📁 Spot files found: []
+2025-05-24 20:37:58:   📊 ORCAUSDT -> ORCAUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:37:58: 
+✅ OPENING NEW POSITIONS:
+2025-05-24 20:37:58: Available capital: $1,000.00
+2025-05-24 20:37:58: Allocation per symbol: $1,000.00
+2025-05-24 20:37:58: Symbols to trade: 1
+2025-05-24 20:37:58: 
+  📈 MAGICUSDT (+42.34% funding):
+2025-05-24 20:37:58:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
+2025-05-24 20:37:58:      🔸 LINEAR short: 923.1905 units @ 0.541600 = $500.00
+2025-05-24 20:37:58:      🔸 SPOT long: 921.9989 units @ 0.542300 = $500.00
+2025-05-24 20:37:58:      💸 Trading costs: $0.90 (Linear: $0.45, Spot: $0.45)
+2025-05-24 20:37:58: 
+📊 REBALANCE PERIOD 2 SUMMARY:
+2025-05-24 20:37:58: ✅ Opened 1 new delta-neutral positions
+2025-05-24 20:37:58: ❌ Closed 0 old positions
+2025-05-24 20:37:58: 💰 Total active positions: 1
+2025-05-24 20:37:58: 💸 Period trading costs: $0.90
+2025-05-24 20:37:58: 📈 Period realized PnL: $0.00
+2025-05-24 20:37:58: 🏦 Portfolio value: $1000.00
+2025-05-24 20:38:01: 
+📈 END OF PERIOD 2 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:01: ============================================================
+2025-05-24 20:38:01: 🏦 Portfolio Value: $1,000.00 → $1,001.41 (+1.41)
+2025-05-24 20:38:01: 💰 Period Funding PnL: $2.03
+2025-05-24 20:38:01: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:01: 📈 Current Unrealized PnL: $0.28
+2025-05-24 20:38:01: 💸 Period Trading Costs: $0.90
+2025-05-24 20:38:01: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:01: 💰 Total Funding PnL: $2.03
+2025-05-24 20:38:01: 📊 Total Realized Trading PnL: $0.00
+2025-05-24 20:38:01: 💸 Total Trading Costs: $0.90
+2025-05-24 20:38:01: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:01: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:01: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:01: MAGICUSDT       Linear   short  923.1905     0.541600     0.457200     $77.92     15.58  %
+2025-05-24 20:38:01: MAGIC           Spot     long   921.9989     0.542300     0.458100     $-77.63    -15.53 %
+2025-05-24 20:38:01: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $0.28      0.03   %
+2025-05-24 20:38:01: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:01: 📈 Total Current Unrealized PnL: $0.28
+2025-05-24 20:38:01: 
+📊 Data Availability: 1/5 symbols had complete data
+2025-05-24 20:38:01: 
+================================================================================
+2025-05-24 20:38:01: REBALANCE PERIOD 3/19
+2025-05-24 20:38:01: ================================================================================
+2025-05-24 20:38:01: 📅 Period: 2025-01-15 00:00 → 2025-01-22 00:00
+2025-05-24 20:38:01: 💰 Starting Capital: $1,001.41
+2025-05-24 20:38:01: 📊 Current Portfolio Positions: 1
+2025-05-24 20:38:01: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:01: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:01: --------------------------------------------------------------------------------
+2025-05-24 20:38:01: MAGICUSDT       Linear   short  923.1905     0.541600     $500.00      (PnL: $80.32)
+2025-05-24 20:38:01: MAGIC           Spot     long   921.9989     0.542300     $500.00      (PnL: $-79.29)
+2025-05-24 20:38:01: --------------------------------------------------------------------------------
+2025-05-24 20:38:01: 📈 Total Unrealized PnL: $1.03
+2025-05-24 20:38:01: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:01: Total symbols with funding data in period: 410
+2025-05-24 20:38:01: Symbols meeting 30.0% threshold: 13
+2025-05-24 20:38:01: 
+⭐ TOP 5 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:01: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:01: --------------------------------------------------
+2025-05-24 20:38:01: 1     MELANIAUSDT     172.38         % 4h
+2025-05-24 20:38:01: 2     HYPEUSDT        61.51          % 8h
+2025-05-24 20:38:01: 3     GRIFFAINUSDT    52.41          % 4h
+2025-05-24 20:38:01: 4     PAXGUSDT        47.79          % 4h
+2025-05-24 20:38:01: 5     MAGICUSDT       43.80          % 2h
+2025-05-24 20:38:01: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:01:   🔍 Processing symbol: MELANIAUSDT -> MELANIAUSDT
+2025-05-24 20:38:01:   🔍 Loading data for MELANIAUSDT -> MELANIAUSDT
+2025-05-24 20:38:02:      📊 Linear kline shape: (955, 8)
+2025-05-24 20:38:02:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:02:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:02:      📁 Linear files found: ['MELANIAUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:02:      📁 Spot files found: []
+2025-05-24 20:38:02:   📊 MELANIAUSDT -> MELANIAUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:02:   🔍 Processing symbol: HYPEUSDT -> HYPEUSDT
+2025-05-24 20:38:02:   🔍 Loading data for HYPEUSDT -> HYPEUSDT
+2025-05-24 20:38:02:      📊 Linear kline shape: (2773, 8)
+2025-05-24 20:38:02:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:02:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:02:      📁 Linear files found: ['HYPEUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:02:      📁 Spot files found: []
+2025-05-24 20:38:02:   📊 HYPEUSDT -> HYPEUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:02:   🔍 Processing symbol: GRIFFAINUSDT -> GRIFFAINUSDT
+2025-05-24 20:38:02:   🔍 Loading data for GRIFFAINUSDT -> GRIFFAINUSDT
+2025-05-24 20:38:03:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:38:03:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:03:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:03:      📁 Linear files found: ['GRIFFAINUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:03:      📁 Spot files found: []
+2025-05-24 20:38:03:   📊 GRIFFAINUSDT -> GRIFFAINUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:03:   🔍 Processing symbol: PAXGUSDT -> PAXGUSDT
+2025-05-24 20:38:03:   🔍 Loading data for PAXGUSDT -> PAXGUSDT
+2025-05-24 20:38:03:      📊 Linear kline shape: (10985, 8)
+2025-05-24 20:38:03:      📊 Spot kline shape: (20908, 8)
+2025-05-24 20:38:03:   📊 PAXGUSDT -> PAXGUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-24 20:38:03:      💰 Prices: Linear 2676.000000, Spot 2676.000000, Funding: 47.79%
+2025-05-24 20:38:03:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:03:   ↻ MAGICUSDT -> Already have position, skipping
+2025-05-24 20:38:03: 
+✅ OPENING NEW POSITIONS:
+2025-05-24 20:38:03: Available capital: $1,001.41
+2025-05-24 20:38:03: Allocation per symbol: $1,001.41
+2025-05-24 20:38:03: Symbols to trade: 1
+2025-05-24 20:38:03: 
+  📈 PAXGUSDT (+47.79% funding):
+2025-05-24 20:38:03:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
+2025-05-24 20:38:03:      🔸 LINEAR short: 0.1871 units @ 2676.000000 = $500.71
+2025-05-24 20:38:03:      🔸 SPOT long: 0.1871 units @ 2676.000000 = $500.71
+2025-05-24 20:38:03:      💸 Trading costs: $0.90 (Linear: $0.45, Spot: $0.45)
+2025-05-24 20:38:03: 
+📊 REBALANCE PERIOD 3 SUMMARY:
+2025-05-24 20:38:03: ✅ Opened 1 new delta-neutral positions
+2025-05-24 20:38:03: ❌ Closed 0 old positions
+2025-05-24 20:38:03: 💰 Total active positions: 2
+2025-05-24 20:38:03: 💸 Period trading costs: $0.90
+2025-05-24 20:38:03: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:03: 🏦 Portfolio value: $1001.41
+2025-05-24 20:38:10: 
+📈 END OF PERIOD 3 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:10: ============================================================
+2025-05-24 20:38:10: 🏦 Portfolio Value: $1,001.41 → $1,006.74 (+5.32)
+2025-05-24 20:38:10: 💰 Period Funding PnL: $6.69
+2025-05-24 20:38:10: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:10: 📈 Current Unrealized PnL: $-0.18
+2025-05-24 20:38:10: 💸 Period Trading Costs: $0.90
+2025-05-24 20:38:10: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:10: 💰 Total Funding PnL: $8.72
+2025-05-24 20:38:10: 📊 Total Realized Trading PnL: $0.00
+2025-05-24 20:38:10: 💸 Total Trading Costs: $1.80
+2025-05-24 20:38:10: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:10: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:10: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:10: MAGICUSDT       Linear   short  923.1905     0.541600     0.384200     $145.31    29.06  %
+2025-05-24 20:38:10: MAGIC           Spot     long   921.9989     0.542300     0.384300     $-145.68   -29.14 %
+2025-05-24 20:38:10: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $-0.37     -0.04  %
+2025-05-24 20:38:10: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:10: PAXGUSDT        Linear   short  0.1871       2676.000000  2742.000000  $-12.35    -2.47  %
+2025-05-24 20:38:10: PAXG            Spot     long   0.1871       2676.000000  2743.000000  $12.54     2.50   %
+2025-05-24 20:38:10: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $0.19      0.02   %
+2025-05-24 20:38:10: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:10: 📈 Total Current Unrealized PnL: $-0.18
+2025-05-24 20:38:10: 
+📊 Data Availability: 1/4 symbols had complete data
+2025-05-24 20:38:10: 
+================================================================================
+2025-05-24 20:38:10: REBALANCE PERIOD 4/19
+2025-05-24 20:38:10: ================================================================================
+2025-05-24 20:38:10: 📅 Period: 2025-01-22 00:00 → 2025-01-29 00:00
+2025-05-24 20:38:10: 💰 Starting Capital: $1,006.74
+2025-05-24 20:38:10: 📊 Current Portfolio Positions: 2
+2025-05-24 20:38:10: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:10: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:10: --------------------------------------------------------------------------------
+2025-05-24 20:38:10: MAGICUSDT       Linear   short  923.1905     0.541600     $500.00      (PnL: $140.42)
+2025-05-24 20:38:10: MAGIC           Spot     long   921.9989     0.542300     $500.00      (PnL: $-140.79)
+2025-05-24 20:38:10: PAXGUSDT        Linear   short  0.1871       2676.000000  $500.71      (PnL: $-13.10)
+2025-05-24 20:38:10: PAXG            Spot     long   0.1871       2676.000000  $500.71      (PnL: $12.72)
+2025-05-24 20:38:10: --------------------------------------------------------------------------------
+2025-05-24 20:38:10: 📈 Total Unrealized PnL: $-0.75
+2025-05-24 20:38:10: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:10: Total symbols with funding data in period: 414
+2025-05-24 20:38:10: Symbols meeting 30.0% threshold: 3
+2025-05-24 20:38:10: 
+⭐ TOP 3 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:10: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:10: --------------------------------------------------
+2025-05-24 20:38:10: 1     MAGICUSDT       42.10          % 2h
+2025-05-24 20:38:10: 2     HYPEUSDT        39.58          % 8h
+2025-05-24 20:38:10: 3     RAYDIUMUSDT     30.63          % 4h
+2025-05-24 20:38:10: 
+❌ CLOSING POSITIONS (no longer in top 5):
+2025-05-24 20:38:10:   🔸 Closed LINEAR short PAXGUSDT: 0.1871 @ 2746.000000, PnL: $-13.10, Cost: $0.46
+2025-05-24 20:38:10:   🔸 Closed SPOT long PAXGUSDT: 0.1871 @ 2744.000000, PnL: $12.72, Cost: $0.46
+2025-05-24 20:38:10:   ✅ Total PnL for PAXGUSDT: $-0.37
+2025-05-24 20:38:10: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:10:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:10:   ↻ MAGICUSDT -> Already have position, skipping
+2025-05-24 20:38:10:   🔍 Processing symbol: HYPEUSDT -> HYPEUSDT
+2025-05-24 20:38:10:   🔍 Loading data for HYPEUSDT -> HYPEUSDT
+2025-05-24 20:38:10:      📊 Linear kline shape: (2773, 8)
+2025-05-24 20:38:10:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:10:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:10:      📁 Linear files found: ['HYPEUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:10:      📁 Spot files found: []
+2025-05-24 20:38:10:   📊 HYPEUSDT -> HYPEUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:10:   🔍 Processing symbol: RAYDIUMUSDT -> RAYDIUMUSDT
+2025-05-24 20:38:10:   🔍 Loading data for RAYDIUMUSDT -> RAYDIUMUSDT
+2025-05-24 20:38:11:      📊 Linear kline shape: (7191, 8)
+2025-05-24 20:38:11:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:11:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:11:      📁 Linear files found: ['RAYDIUMUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:11:      📁 Spot files found: []
+2025-05-24 20:38:11:   📊 RAYDIUMUSDT -> RAYDIUMUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:11: 
+📊 REBALANCE PERIOD 4 SUMMARY:
+2025-05-24 20:38:11: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:38:11: ❌ Closed 1 old positions
+2025-05-24 20:38:11: 💰 Total active positions: 1
+2025-05-24 20:38:11: 💸 Period trading costs: $0.92
+2025-05-24 20:38:11: 📈 Period realized PnL: $-0.37
+2025-05-24 20:38:11: 🏦 Portfolio value: $1006.74
+2025-05-24 20:38:15: 
+📈 END OF PERIOD 4 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:15: ============================================================
+2025-05-24 20:38:15: 🏦 Portfolio Value: $1,006.74 → $1,008.00 (+1.26)
+2025-05-24 20:38:15: 💰 Period Funding PnL: $2.02
+2025-05-24 20:38:15: 📊 Period Realized Trading PnL: $-0.37
+2025-05-24 20:38:15: 📈 Current Unrealized PnL: $0.36
+2025-05-24 20:38:15: 💸 Period Trading Costs: $0.92
+2025-05-24 20:38:15: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:15: 💰 Total Funding PnL: $10.74
+2025-05-24 20:38:15: 📊 Total Realized Trading PnL: $-0.37
+2025-05-24 20:38:15: 💸 Total Trading Costs: $2.73
+2025-05-24 20:38:15: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:15: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:15: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:15: MAGICUSDT       Linear   short  923.1905     0.541600     0.316100     $208.18    41.64  %
+2025-05-24 20:38:15: MAGIC           Spot     long   921.9989     0.542300     0.316900     $-207.82   -41.56 %
+2025-05-24 20:38:15: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $0.36      0.04   %
+2025-05-24 20:38:15: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:15: 📈 Total Current Unrealized PnL: $0.36
+2025-05-24 20:38:15: 
+📊 Data Availability: 0/2 symbols had complete data
+2025-05-24 20:38:15: 
+================================================================================
+2025-05-24 20:38:15: REBALANCE PERIOD 5/19
+2025-05-24 20:38:15: ================================================================================
+2025-05-24 20:38:15: 📅 Period: 2025-01-29 00:00 → 2025-02-05 00:00
+2025-05-24 20:38:15: 💰 Starting Capital: $1,008.00
+2025-05-24 20:38:15: 📊 Current Portfolio Positions: 1
+2025-05-24 20:38:15: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:15: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:15: --------------------------------------------------------------------------------
+2025-05-24 20:38:15: MAGICUSDT       Linear   short  923.1905     0.541600     $500.00      (PnL: $206.61)
+2025-05-24 20:38:15: MAGIC           Spot     long   921.9989     0.542300     $500.00      (PnL: $-205.88)
+2025-05-24 20:38:15: --------------------------------------------------------------------------------
+2025-05-24 20:38:15: 📈 Total Unrealized PnL: $0.73
+2025-05-24 20:38:15: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:15: Total symbols with funding data in period: 415
+2025-05-24 20:38:15: Symbols meeting 30.0% threshold: 2
+2025-05-24 20:38:15: 
+⭐ TOP 2 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:15: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:15: --------------------------------------------------
+2025-05-24 20:38:15: 1     RAYDIUMUSDT     35.62          % 4h
+2025-05-24 20:38:15: 2     PIPPINUSDT      31.30          % 4h
+2025-05-24 20:38:15: 
+❌ CLOSING POSITIONS (no longer in top 5):
+2025-05-24 20:38:15:   🔸 Closed LINEAR short MAGICUSDT: 923.1905 @ 0.317800, PnL: $206.61, Cost: $0.26
+2025-05-24 20:38:15:   🔸 Closed SPOT long MAGICUSDT: 921.9989 @ 0.319000, PnL: $-205.88, Cost: $0.26
+2025-05-24 20:38:15:   ✅ Total PnL for MAGICUSDT: $0.73
+2025-05-24 20:38:15: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:15:   🔍 Processing symbol: RAYDIUMUSDT -> RAYDIUMUSDT
+2025-05-24 20:38:15:   🔍 Loading data for RAYDIUMUSDT -> RAYDIUMUSDT
+2025-05-24 20:38:15:      📊 Linear kline shape: (7191, 8)
+2025-05-24 20:38:15:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:15:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:15:      📁 Linear files found: ['RAYDIUMUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:15:      📁 Spot files found: []
+2025-05-24 20:38:15:   📊 RAYDIUMUSDT -> RAYDIUMUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:15:   🔍 Processing symbol: PIPPINUSDT -> PIPPINUSDT
+2025-05-24 20:38:15:   🔍 Loading data for PIPPINUSDT -> PIPPINUSDT
+2025-05-24 20:38:16:      📊 Linear kline shape: (1024, 8)
+2025-05-24 20:38:16:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:16:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:16:      📁 Linear files found: ['PIPPINUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:16:      📁 Spot files found: []
+2025-05-24 20:38:16:   📊 PIPPINUSDT -> PIPPINUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:16: 
+📊 REBALANCE PERIOD 5 SUMMARY:
+2025-05-24 20:38:16: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:38:16: ❌ Closed 1 old positions
+2025-05-24 20:38:16: 💰 Total active positions: 0
+2025-05-24 20:38:16: 💸 Period trading costs: $0.53
+2025-05-24 20:38:16: 📈 Period realized PnL: $0.73
+2025-05-24 20:38:16: 🏦 Portfolio value: $1008.00
+2025-05-24 20:38:16: 
+📈 END OF PERIOD 5 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:16: ============================================================
+2025-05-24 20:38:16: 🏦 Portfolio Value: $1,008.00 → $1,007.84 (-0.16)
+2025-05-24 20:38:16: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:16: 📊 Period Realized Trading PnL: $0.73
+2025-05-24 20:38:16: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:16: 💸 Period Trading Costs: $0.53
+2025-05-24 20:38:16: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:16: 💰 Total Funding PnL: $10.74
+2025-05-24 20:38:16: 📊 Total Realized Trading PnL: $0.35
+2025-05-24 20:38:16: 💸 Total Trading Costs: $3.25
+2025-05-24 20:38:16: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:16: 
+📊 Data Availability: 0/2 symbols had complete data
+2025-05-24 20:38:16: 
+================================================================================
+2025-05-24 20:38:16: REBALANCE PERIOD 6/19
+2025-05-24 20:38:16: ================================================================================
+2025-05-24 20:38:16: 📅 Period: 2025-02-05 00:00 → 2025-02-12 00:00
+2025-05-24 20:38:16: 💰 Starting Capital: $1,007.84
+2025-05-24 20:38:16: 📊 Current Portfolio Positions: 0
+2025-05-24 20:38:16: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:16: Total symbols with funding data in period: 420
+2025-05-24 20:38:16: Symbols meeting 30.0% threshold: 0
+2025-05-24 20:38:16: 
+❌ NO SYMBOLS MEET FUNDING RATE CRITERIA - CLOSING ALL POSITIONS
+2025-05-24 20:38:16: 
+📈 END OF PERIOD 6 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:16: ============================================================
+2025-05-24 20:38:16: 🏦 Portfolio Value: $1,008.00 → $1,007.84 (-0.16)
+2025-05-24 20:38:16: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:16: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:16: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:16: 💸 Period Trading Costs: $0.00
+2025-05-24 20:38:16: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:16: 💰 Total Funding PnL: $10.74
+2025-05-24 20:38:16: 📊 Total Realized Trading PnL: $0.35
+2025-05-24 20:38:16: 💸 Total Trading Costs: $3.25
+2025-05-24 20:38:16: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:16: 
+================================================================================
+2025-05-24 20:38:16: REBALANCE PERIOD 7/19
+2025-05-24 20:38:16: ================================================================================
+2025-05-24 20:38:16: 📅 Period: 2025-02-12 00:00 → 2025-02-19 00:00
+2025-05-24 20:38:16: 💰 Starting Capital: $1,007.84
+2025-05-24 20:38:16: 📊 Current Portfolio Positions: 0
+2025-05-24 20:38:16: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:16: Total symbols with funding data in period: 426
+2025-05-24 20:38:16: Symbols meeting 30.0% threshold: 0
+2025-05-24 20:38:16: 
+❌ NO SYMBOLS MEET FUNDING RATE CRITERIA - CLOSING ALL POSITIONS
+2025-05-24 20:38:17: 
+📈 END OF PERIOD 7 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:17: ============================================================
+2025-05-24 20:38:17: 🏦 Portfolio Value: $1,008.00 → $1,007.84 (-0.16)
+2025-05-24 20:38:17: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:17: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:17: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:17: 💸 Period Trading Costs: $0.00
+2025-05-24 20:38:17: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:17: 💰 Total Funding PnL: $10.74
+2025-05-24 20:38:17: 📊 Total Realized Trading PnL: $0.35
+2025-05-24 20:38:17: 💸 Total Trading Costs: $3.25
+2025-05-24 20:38:17: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:17: 
+================================================================================
+2025-05-24 20:38:17: REBALANCE PERIOD 8/19
+2025-05-24 20:38:17: ================================================================================
+2025-05-24 20:38:17: 📅 Period: 2025-02-19 00:00 → 2025-02-26 00:00
+2025-05-24 20:38:17: 💰 Starting Capital: $1,007.84
+2025-05-24 20:38:17: 📊 Current Portfolio Positions: 0
+2025-05-24 20:38:17: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:17: Total symbols with funding data in period: 428
+2025-05-24 20:38:17: Symbols meeting 30.0% threshold: 12
+2025-05-24 20:38:17: 
+⭐ TOP 5 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:17: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:17: --------------------------------------------------
+2025-05-24 20:38:17: 1     SOLAYERUSDT     134.21         % 1h
+2025-05-24 20:38:17: 2     RAYDIUMUSDT     76.38          % 4h
+2025-05-24 20:38:17: 3     NEIROETHUSDT    50.56          % 4h
+2025-05-24 20:38:17: 4     TAOUSDT         42.87          % 4h
+2025-05-24 20:38:17: 5     MAGICUSDT       41.84          % 2h
+2025-05-24 20:38:17: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:17:   🔍 Processing symbol: SOLAYERUSDT -> SOLAYERUSDT
+2025-05-24 20:38:17:   🔍 Loading data for SOLAYERUSDT -> SOLAYERUSDT
+2025-05-24 20:38:17:      📊 Linear kline shape: (418, 8)
+2025-05-24 20:38:17:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:17:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:17:      📁 Linear files found: ['SOLAYERUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:17:      📁 Spot files found: []
+2025-05-24 20:38:17:   📊 SOLAYERUSDT -> SOLAYERUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:17:   🔍 Processing symbol: RAYDIUMUSDT -> RAYDIUMUSDT
+2025-05-24 20:38:17:   🔍 Loading data for RAYDIUMUSDT -> RAYDIUMUSDT
+2025-05-24 20:38:18:      📊 Linear kline shape: (7191, 8)
+2025-05-24 20:38:18:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:18:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:18:      📁 Linear files found: ['RAYDIUMUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:18:      📁 Spot files found: []
+2025-05-24 20:38:18:   📊 RAYDIUMUSDT -> RAYDIUMUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:18:   🔍 Processing symbol: NEIROETHUSDT -> NEIROETHUSDT
+2025-05-24 20:38:18:   🔍 Loading data for NEIROETHUSDT -> NEIROETHUSDT
+2025-05-24 20:38:18:      📊 Linear kline shape: (5463, 8)
+2025-05-24 20:38:18:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:18:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:18:      📁 Linear files found: ['NEIROETHUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:18:      📁 Spot files found: []
+2025-05-24 20:38:18:   📊 NEIROETHUSDT -> NEIROETHUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:18:   🔍 Processing symbol: TAOUSDT -> TAOUSDT
+2025-05-24 20:38:18:   🔍 Loading data for TAOUSDT -> TAOUSDT
+2025-05-24 20:38:19:      📊 Linear kline shape: (10215, 8)
+2025-05-24 20:38:19:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:19:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:19:      📁 Linear files found: ['TAOUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:19:      📁 Spot files found: []
+2025-05-24 20:38:19:   📊 TAOUSDT -> TAOUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:19:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:19:   🔍 Loading data for MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:19:      📊 Linear kline shape: (10985, 8)
+2025-05-24 20:38:19:      📊 Spot kline shape: (20908, 8)
+2025-05-24 20:38:19:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-24 20:38:19:      💰 Prices: Linear 0.234800, Spot 0.236100, Funding: 41.84%
+2025-05-24 20:38:19: 
+✅ OPENING NEW POSITIONS:
+2025-05-24 20:38:19: Available capital: $1,007.84
+2025-05-24 20:38:19: Allocation per symbol: $1,007.84
+2025-05-24 20:38:19: Symbols to trade: 1
+2025-05-24 20:38:19: 
+  📈 MAGICUSDT (+41.84% funding):
+2025-05-24 20:38:19:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
+2025-05-24 20:38:19:      🔸 LINEAR short: 2146.1594 units @ 0.234800 = $503.92
+2025-05-24 20:38:19:      🔸 SPOT long: 2134.3424 units @ 0.236100 = $503.92
+2025-05-24 20:38:19:      💸 Trading costs: $0.91 (Linear: $0.45, Spot: $0.45)
+2025-05-24 20:38:19: 
+📊 REBALANCE PERIOD 8 SUMMARY:
+2025-05-24 20:38:19: ✅ Opened 1 new delta-neutral positions
+2025-05-24 20:38:19: ❌ Closed 0 old positions
+2025-05-24 20:38:19: 💰 Total active positions: 1
+2025-05-24 20:38:19: 💸 Period trading costs: $0.91
+2025-05-24 20:38:19: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:19: 🏦 Portfolio value: $1007.84
+2025-05-24 20:38:23: 
+📈 END OF PERIOD 8 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:23: ============================================================
+2025-05-24 20:38:23: 🏦 Portfolio Value: $1,007.84 → $1,007.95 (+0.12)
+2025-05-24 20:38:23: 💰 Period Funding PnL: $2.02
+2025-05-24 20:38:23: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:23: 📈 Current Unrealized PnL: $-1.00
+2025-05-24 20:38:23: 💸 Period Trading Costs: $0.91
+2025-05-24 20:38:23: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:23: 💰 Total Funding PnL: $12.76
+2025-05-24 20:38:23: 📊 Total Realized Trading PnL: $0.35
+2025-05-24 20:38:23: 💸 Total Trading Costs: $4.16
+2025-05-24 20:38:23: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:23: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:23: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:23: MAGICUSDT       Linear   short  2146.1594    0.234800     0.210900     $51.29     10.18  %
+2025-05-24 20:38:23: MAGIC           Spot     long   2134.3424    0.236100     0.211600     $-52.29    -10.38 %
+2025-05-24 20:38:23: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $-1.00     -0.10  %
+2025-05-24 20:38:23: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:23: 📈 Total Current Unrealized PnL: $-1.00
+2025-05-24 20:38:23: 
+📊 Data Availability: 1/5 symbols had complete data
+2025-05-24 20:38:23: 
+================================================================================
+2025-05-24 20:38:23: REBALANCE PERIOD 9/19
+2025-05-24 20:38:23: ================================================================================
+2025-05-24 20:38:23: 📅 Period: 2025-02-26 00:00 → 2025-03-05 00:00
+2025-05-24 20:38:23: 💰 Starting Capital: $1,007.95
+2025-05-24 20:38:23: 📊 Current Portfolio Positions: 1
+2025-05-24 20:38:23: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:23: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:23: --------------------------------------------------------------------------------
+2025-05-24 20:38:23: MAGICUSDT       Linear   short  2146.1594    0.234800     $503.92      (PnL: $54.08)
+2025-05-24 20:38:23: MAGIC           Spot     long   2134.3424    0.236100     $503.92      (PnL: $-55.49)
+2025-05-24 20:38:23: --------------------------------------------------------------------------------
+2025-05-24 20:38:23: 📈 Total Unrealized PnL: $-1.41
+2025-05-24 20:38:23: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:23: Total symbols with funding data in period: 429
+2025-05-24 20:38:23: Symbols meeting 30.0% threshold: 2
+2025-05-24 20:38:23: 
+⭐ TOP 2 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:23: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:23: --------------------------------------------------
+2025-05-24 20:38:23: 1     MAGICUSDT       43.80          % 2h
+2025-05-24 20:38:23: 2     FBUSDT          34.32          % 8h
+2025-05-24 20:38:23: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:23:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:23:   ↻ MAGICUSDT -> Already have position, skipping
+2025-05-24 20:38:23:   🔍 Processing symbol: FBUSDT -> FBUSDT
+2025-05-24 20:38:23:   🔍 Loading data for FBUSDT -> FBUSDT
+2025-05-24 20:38:23:      📊 Linear kline shape: (1425, 8)
+2025-05-24 20:38:23:      📊 Spot kline shape: (5617, 8)
+2025-05-24 20:38:23:   📊 FBUSDT -> FBUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-24 20:38:23:      💰 Prices: Linear 1.149000, Spot 0.558100, Funding: 34.32%
+2025-05-24 20:38:23: 
+✅ OPENING NEW POSITIONS:
+2025-05-24 20:38:23: Available capital: $1,007.95
+2025-05-24 20:38:23: Allocation per symbol: $1,007.95
+2025-05-24 20:38:23: Symbols to trade: 1
+2025-05-24 20:38:23: 
+  📈 FBUSDT (+34.32% funding):
+2025-05-24 20:38:23:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
+2025-05-24 20:38:23:      🔸 LINEAR short: 438.6219 units @ 1.149000 = $503.98
+2025-05-24 20:38:23:      🔸 SPOT long: 903.0220 units @ 0.558100 = $503.98
+2025-05-24 20:38:23:      💸 Trading costs: $0.91 (Linear: $0.45, Spot: $0.45)
+2025-05-24 20:38:23: 
+📊 REBALANCE PERIOD 9 SUMMARY:
+2025-05-24 20:38:23: ✅ Opened 1 new delta-neutral positions
+2025-05-24 20:38:23: ❌ Closed 0 old positions
+2025-05-24 20:38:23: 💰 Total active positions: 2
+2025-05-24 20:38:23: 💸 Period trading costs: $0.91
+2025-05-24 20:38:23: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:23: 🏦 Portfolio value: $1007.95
+2025-05-24 20:38:29: 
+📈 END OF PERIOD 9 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:29: ============================================================
+2025-05-24 20:38:29: 🏦 Portfolio Value: $1,007.95 → $1,021.45 (+13.49)
+2025-05-24 20:38:29: 💰 Period Funding PnL: $8.75
+2025-05-24 20:38:29: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:29: 📈 Current Unrealized PnL: $4.65
+2025-05-24 20:38:29: 💸 Period Trading Costs: $0.91
+2025-05-24 20:38:29: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:29: 💰 Total Funding PnL: $21.51
+2025-05-24 20:38:29: 📊 Total Realized Trading PnL: $0.35
+2025-05-24 20:38:29: 💸 Total Trading Costs: $5.07
+2025-05-24 20:38:29: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:29: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:29: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:29: MAGICUSDT       Linear   short  2146.1594    0.234800     0.178200     $121.47    24.11  %
+2025-05-24 20:38:29: MAGIC           Spot     long   2134.3424    0.236100     0.178900     $-122.08   -24.23 %
+2025-05-24 20:38:29: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $-0.61     -0.06  %
+2025-05-24 20:38:29: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:29: FBUSDT          Linear   short  438.6219     1.149000     1.137000     $5.26      1.04   %
+2025-05-24 20:38:29: FB              Spot     long   903.0220     0.558100     0.558100     $0.00      0.00   %
+2025-05-24 20:38:29: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $5.26      0.52   %
+2025-05-24 20:38:29: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:29: 📈 Total Current Unrealized PnL: $4.65
+2025-05-24 20:38:29: 
+📊 Data Availability: 1/1 symbols had complete data
+2025-05-24 20:38:29: 
+================================================================================
+2025-05-24 20:38:29: REBALANCE PERIOD 10/19
+2025-05-24 20:38:29: ================================================================================
+2025-05-24 20:38:29: 📅 Period: 2025-03-05 00:00 → 2025-03-12 00:00
+2025-05-24 20:38:29: 💰 Starting Capital: $1,021.45
+2025-05-24 20:38:29: 📊 Current Portfolio Positions: 2
+2025-05-24 20:38:29: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:29: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:29: --------------------------------------------------------------------------------
+2025-05-24 20:38:29: MAGICUSDT       Linear   short  2146.1594    0.234800     $503.92      (PnL: $120.61)
+2025-05-24 20:38:29: MAGIC           Spot     long   2134.3424    0.236100     $503.92      (PnL: $-122.08)
+2025-05-24 20:38:29: FBUSDT          Linear   short  438.6219     1.149000     $503.98      (PnL: $5.26)
+2025-05-24 20:38:29: FB              Spot     long   903.0220     0.558100     $503.98      (PnL: $0.00)
+2025-05-24 20:38:29: --------------------------------------------------------------------------------
+2025-05-24 20:38:29: 📈 Total Unrealized PnL: $3.79
+2025-05-24 20:38:30: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:30: Total symbols with funding data in period: 432
+2025-05-24 20:38:30: Symbols meeting 30.0% threshold: 1
+2025-05-24 20:38:30: 
+⭐ TOP 1 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:30: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:30: --------------------------------------------------
+2025-05-24 20:38:30: 1     MAGICUSDT       40.14          % 2h
+2025-05-24 20:38:30: 
+❌ CLOSING POSITIONS (no longer in top 5):
+2025-05-24 20:38:30:   🔸 Closed LINEAR short FBUSDT: 438.6219 @ 1.137000, PnL: $5.26, Cost: $0.45
+2025-05-24 20:38:30:   🔸 Closed SPOT long FBUSDT: 903.0220 @ 0.558100, PnL: $0.00, Cost: $0.45
+2025-05-24 20:38:30:   ✅ Total PnL for FBUSDT: $5.26
+2025-05-24 20:38:30: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:30:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:30:   ↻ MAGICUSDT -> Already have position, skipping
+2025-05-24 20:38:30: 
+📊 REBALANCE PERIOD 10 SUMMARY:
+2025-05-24 20:38:30: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:38:30: ❌ Closed 1 old positions
+2025-05-24 20:38:30: 💰 Total active positions: 1
+2025-05-24 20:38:30: 💸 Period trading costs: $0.90
+2025-05-24 20:38:30: 📈 Period realized PnL: $5.26
+2025-05-24 20:38:30: 🏦 Portfolio value: $1021.45
+2025-05-24 20:38:33: 
+📈 END OF PERIOD 10 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:33: ============================================================
+2025-05-24 20:38:33: 🏦 Portfolio Value: $1,021.45 → $1,021.68 (+0.23)
+2025-05-24 20:38:33: 💰 Period Funding PnL: $1.94
+2025-05-24 20:38:33: 📊 Period Realized Trading PnL: $5.26
+2025-05-24 20:38:33: 📈 Current Unrealized PnL: $-1.42
+2025-05-24 20:38:33: 💸 Period Trading Costs: $0.90
+2025-05-24 20:38:33: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:33: 💰 Total Funding PnL: $23.45
+2025-05-24 20:38:33: 📊 Total Realized Trading PnL: $5.62
+2025-05-24 20:38:33: 💸 Total Trading Costs: $5.97
+2025-05-24 20:38:33: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:33: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:33: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:33: MAGICUSDT       Linear   short  2146.1594    0.234800     0.138000     $207.75    41.23  %
+2025-05-24 20:38:33: MAGIC           Spot     long   2134.3424    0.236100     0.138100     $-209.17   -41.51 %
+2025-05-24 20:38:33: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $-1.42     -0.14  %
+2025-05-24 20:38:33: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:33: 📈 Total Current Unrealized PnL: $-1.42
+2025-05-24 20:38:33: 
+================================================================================
+2025-05-24 20:38:33: REBALANCE PERIOD 11/19
+2025-05-24 20:38:33: ================================================================================
+2025-05-24 20:38:33: 📅 Period: 2025-03-12 00:00 → 2025-03-19 00:00
+2025-05-24 20:38:33: 💰 Starting Capital: $1,021.68
+2025-05-24 20:38:33: 📊 Current Portfolio Positions: 1
+2025-05-24 20:38:33: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:33: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:33: --------------------------------------------------------------------------------
+2025-05-24 20:38:33: MAGICUSDT       Linear   short  2146.1594    0.234800     $503.92      (PnL: $205.82)
+2025-05-24 20:38:33: MAGIC           Spot     long   2134.3424    0.236100     $503.92      (PnL: $-206.82)
+2025-05-24 20:38:33: --------------------------------------------------------------------------------
+2025-05-24 20:38:33: 📈 Total Unrealized PnL: $-1.00
+2025-05-24 20:38:33: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:33: Total symbols with funding data in period: 436
+2025-05-24 20:38:33: Symbols meeting 30.0% threshold: 0
+2025-05-24 20:38:33: 
+❌ NO SYMBOLS MEET FUNDING RATE CRITERIA - CLOSING ALL POSITIONS
+2025-05-24 20:38:33:   ✅ Closed all positions for MAGICUSDT, Total PnL: $-1.00
+2025-05-24 20:38:33: 
+📈 END OF PERIOD 11 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:33: ============================================================
+2025-05-24 20:38:33: 🏦 Portfolio Value: $1,021.45 → $1,022.09 (+0.65)
+2025-05-24 20:38:33: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:33: 📊 Period Realized Trading PnL: $-1.00
+2025-05-24 20:38:33: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:33: 💸 Period Trading Costs: $0.00
+2025-05-24 20:38:33: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:33: 💰 Total Funding PnL: $23.45
+2025-05-24 20:38:33: 📊 Total Realized Trading PnL: $4.62
+2025-05-24 20:38:33: 💸 Total Trading Costs: $5.97
+2025-05-24 20:38:33: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:33: 
+================================================================================
+2025-05-24 20:38:33: REBALANCE PERIOD 12/19
+2025-05-24 20:38:33: ================================================================================
+2025-05-24 20:38:33: 📅 Period: 2025-03-19 00:00 → 2025-03-26 00:00
+2025-05-24 20:38:33: 💰 Starting Capital: $1,022.09
+2025-05-24 20:38:33: 📊 Current Portfolio Positions: 0
+2025-05-24 20:38:33: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:33: Total symbols with funding data in period: 441
+2025-05-24 20:38:33: Symbols meeting 30.0% threshold: 1
+2025-05-24 20:38:34: 
+⭐ TOP 1 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:34: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:34: --------------------------------------------------
+2025-05-24 20:38:34: 1     MAGICUSDT       41.54          % 2h
+2025-05-24 20:38:34: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:34:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:34:   🔍 Loading data for MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:34:      📊 Linear kline shape: (10985, 8)
+2025-05-24 20:38:34:      📊 Spot kline shape: (20908, 8)
+2025-05-24 20:38:34:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-24 20:38:34:      💰 Prices: Linear 0.151700, Spot 0.151600, Funding: 41.54%
+2025-05-24 20:38:34: 
+✅ OPENING NEW POSITIONS:
+2025-05-24 20:38:34: Available capital: $1,022.09
+2025-05-24 20:38:34: Allocation per symbol: $1,022.09
+2025-05-24 20:38:34: Symbols to trade: 1
+2025-05-24 20:38:34: 
+  📈 MAGICUSDT (+41.54% funding):
+2025-05-24 20:38:34:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
+2025-05-24 20:38:34:      🔸 LINEAR short: 3368.7997 units @ 0.151700 = $511.05
+2025-05-24 20:38:34:      🔸 SPOT long: 3371.0218 units @ 0.151600 = $511.05
+2025-05-24 20:38:34:      💸 Trading costs: $0.92 (Linear: $0.46, Spot: $0.46)
+2025-05-24 20:38:34: 
+📊 REBALANCE PERIOD 12 SUMMARY:
+2025-05-24 20:38:34: ✅ Opened 1 new delta-neutral positions
+2025-05-24 20:38:34: ❌ Closed 0 old positions
+2025-05-24 20:38:34: 💰 Total active positions: 1
+2025-05-24 20:38:34: 💸 Period trading costs: $0.92
+2025-05-24 20:38:34: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:34: 🏦 Portfolio value: $1022.09
+2025-05-24 20:38:37: 
+📈 END OF PERIOD 12 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:37: ============================================================
+2025-05-24 20:38:37: 🏦 Portfolio Value: $1,022.09 → $1,024.55 (+2.45)
+2025-05-24 20:38:37: 💰 Period Funding PnL: $2.04
+2025-05-24 20:38:37: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:37: 📈 Current Unrealized PnL: $1.34
+2025-05-24 20:38:37: 💸 Period Trading Costs: $0.92
+2025-05-24 20:38:37: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:37: 💰 Total Funding PnL: $25.48
+2025-05-24 20:38:37: 📊 Total Realized Trading PnL: $4.62
+2025-05-24 20:38:37: 💸 Total Trading Costs: $6.89
+2025-05-24 20:38:37: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:37: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:37: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:37: MAGICUSDT       Linear   short  3368.7997    0.151700     0.146300     $18.19     3.56   %
+2025-05-24 20:38:37: MAGIC           Spot     long   3371.0218    0.151600     0.146600     $-16.86    -3.30  %
+2025-05-24 20:38:37: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $1.34      0.13   %
+2025-05-24 20:38:37: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:37: 📈 Total Current Unrealized PnL: $1.34
+2025-05-24 20:38:37: 
+📊 Data Availability: 1/1 symbols had complete data
+2025-05-24 20:38:37: 
+================================================================================
+2025-05-24 20:38:37: REBALANCE PERIOD 13/19
+2025-05-24 20:38:37: ================================================================================
+2025-05-24 20:38:37: 📅 Period: 2025-03-26 00:00 → 2025-04-02 00:00
+2025-05-24 20:38:37: 💰 Starting Capital: $1,024.55
+2025-05-24 20:38:37: 📊 Current Portfolio Positions: 1
+2025-05-24 20:38:37: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:37: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:37: --------------------------------------------------------------------------------
+2025-05-24 20:38:37: MAGICUSDT       Linear   short  3368.7997    0.151700     $511.05      (PnL: $22.23)
+2025-05-24 20:38:37: MAGIC           Spot     long   3371.0218    0.151600     $511.05      (PnL: $-21.57)
+2025-05-24 20:38:37: --------------------------------------------------------------------------------
+2025-05-24 20:38:37: 📈 Total Unrealized PnL: $0.66
+2025-05-24 20:38:37: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:37: Total symbols with funding data in period: 443
+2025-05-24 20:38:37: Symbols meeting 30.0% threshold: 1
+2025-05-24 20:38:37: 
+⭐ TOP 1 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:37: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:37: --------------------------------------------------
+2025-05-24 20:38:37: 1     MAGICUSDT       33.12          % 2h
+2025-05-24 20:38:37: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:37:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:37:   ↻ MAGICUSDT -> Already have position, skipping
+2025-05-24 20:38:37: 
+📊 REBALANCE PERIOD 13 SUMMARY:
+2025-05-24 20:38:37: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:38:37: ❌ Closed 0 old positions
+2025-05-24 20:38:37: 💰 Total active positions: 1
+2025-05-24 20:38:37: 💸 Period trading costs: $0.00
+2025-05-24 20:38:37: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:37: 🏦 Portfolio value: $1024.55
+2025-05-24 20:38:41: 
+📈 END OF PERIOD 13 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:41: ============================================================
+2025-05-24 20:38:41: 🏦 Portfolio Value: $1,024.55 → $1,013.63 (-10.92)
+2025-05-24 20:38:41: 💰 Period Funding PnL: $1.62
+2025-05-24 20:38:41: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:41: 📈 Current Unrealized PnL: $-11.21
+2025-05-24 20:38:41: 💸 Period Trading Costs: $0.00
+2025-05-24 20:38:41: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:41: 💰 Total Funding PnL: $27.11
+2025-05-24 20:38:41: 📊 Total Realized Trading PnL: $4.62
+2025-05-24 20:38:41: 💸 Total Trading Costs: $6.89
+2025-05-24 20:38:41: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:41: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:41: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:41: MAGICUSDT       Linear   short  3368.7997    0.151700     0.114900     $123.97    24.26  %
+2025-05-24 20:38:41: MAGIC           Spot     long   3371.0218    0.151600     0.111500     $-135.18   -26.45 %
+2025-05-24 20:38:41: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $-11.21    -1.10  %
+2025-05-24 20:38:41: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:41: 📈 Total Current Unrealized PnL: $-11.21
+2025-05-24 20:38:41: 
+================================================================================
+2025-05-24 20:38:41: REBALANCE PERIOD 14/19
+2025-05-24 20:38:41: ================================================================================
+2025-05-24 20:38:41: 📅 Period: 2025-04-02 00:00 → 2025-04-09 00:00
+2025-05-24 20:38:41: 💰 Starting Capital: $1,013.63
+2025-05-24 20:38:41: 📊 Current Portfolio Positions: 1
+2025-05-24 20:38:41: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:41: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:41: --------------------------------------------------------------------------------
+2025-05-24 20:38:41: MAGICUSDT       Linear   short  3368.7997    0.151700     $511.05      (PnL: $123.97)
+2025-05-24 20:38:41: MAGIC           Spot     long   3371.0218    0.151600     $511.05      (PnL: $-153.04)
+2025-05-24 20:38:41: --------------------------------------------------------------------------------
+2025-05-24 20:38:41: 📈 Total Unrealized PnL: $-29.07
+2025-05-24 20:38:41: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:41: Total symbols with funding data in period: 444
+2025-05-24 20:38:41: Symbols meeting 30.0% threshold: 0
+2025-05-24 20:38:41: 
+❌ NO SYMBOLS MEET FUNDING RATE CRITERIA - CLOSING ALL POSITIONS
+2025-05-24 20:38:41:   ✅ Closed all positions for MAGICUSDT, Total PnL: $-29.07
+2025-05-24 20:38:41: 
+📈 END OF PERIOD 14 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:41: ============================================================
+2025-05-24 20:38:41: 🏦 Portfolio Value: $1,024.55 → $995.76 (-28.79)
+2025-05-24 20:38:41: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:41: 📊 Period Realized Trading PnL: $-29.07
+2025-05-24 20:38:41: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:41: 💸 Period Trading Costs: $0.00
+2025-05-24 20:38:41: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:41: 💰 Total Funding PnL: $27.11
+2025-05-24 20:38:41: 📊 Total Realized Trading PnL: $-24.46
+2025-05-24 20:38:41: 💸 Total Trading Costs: $6.89
+2025-05-24 20:38:41: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:41: 
+================================================================================
+2025-05-24 20:38:41: REBALANCE PERIOD 15/19
+2025-05-24 20:38:41: ================================================================================
+2025-05-24 20:38:41: 📅 Period: 2025-04-09 00:00 → 2025-04-16 00:00
+2025-05-24 20:38:41: 💰 Starting Capital: $995.76
+2025-05-24 20:38:41: 📊 Current Portfolio Positions: 0
+2025-05-24 20:38:41: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:41: Total symbols with funding data in period: 450
+2025-05-24 20:38:41: Symbols meeting 30.0% threshold: 2
+2025-05-24 20:38:41: 
+⭐ TOP 2 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:41: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:41: --------------------------------------------------
+2025-05-24 20:38:41: 1     JELLYJELLYUSDT  42.45          % 4h
+2025-05-24 20:38:41: 2     MAGICUSDT       30.47          % 2h
+2025-05-24 20:38:41: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:41:   🔍 Processing symbol: JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-24 20:38:41:   🔍 Loading data for JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-24 20:38:42:      📊 Linear kline shape: (2178, 8)
+2025-05-24 20:38:42:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:42:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:42:      📁 Linear files found: ['JELLYJELLYUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:42:      📁 Spot files found: []
+2025-05-24 20:38:42:   📊 JELLYJELLYUSDT -> JELLYJELLYUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:42:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:42:   🔍 Loading data for MAGICUSDT -> MAGICUSDT
+2025-05-24 20:38:42:      📊 Linear kline shape: (10985, 8)
+2025-05-24 20:38:42:      📊 Spot kline shape: (20908, 8)
+2025-05-24 20:38:42:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-24 20:38:42:      💰 Prices: Linear 0.114900, Spot 0.068500, Funding: 30.47%
+2025-05-24 20:38:42: 
+✅ OPENING NEW POSITIONS:
+2025-05-24 20:38:42: Available capital: $995.76
+2025-05-24 20:38:42: Allocation per symbol: $995.76
+2025-05-24 20:38:42: Symbols to trade: 1
+2025-05-24 20:38:42: 
+  📈 MAGICUSDT (+30.47% funding):
+2025-05-24 20:38:42:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
+2025-05-24 20:38:42:      🔸 LINEAR short: 4333.1587 units @ 0.114900 = $497.88
+2025-05-24 20:38:42:      🔸 SPOT long: 7268.3202 units @ 0.068500 = $497.88
+2025-05-24 20:38:42:      💸 Trading costs: $0.90 (Linear: $0.45, Spot: $0.45)
+2025-05-24 20:38:42: 
+📊 REBALANCE PERIOD 15 SUMMARY:
+2025-05-24 20:38:42: ✅ Opened 1 new delta-neutral positions
+2025-05-24 20:38:42: ❌ Closed 0 old positions
+2025-05-24 20:38:42: 💰 Total active positions: 1
+2025-05-24 20:38:42: 💸 Period trading costs: $0.90
+2025-05-24 20:38:42: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:42: 🏦 Portfolio value: $995.76
+2025-05-24 20:38:45: 
+📈 END OF PERIOD 15 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:45: ============================================================
+2025-05-24 20:38:45: 🏦 Portfolio Value: $995.76 → $1,015.22 (+19.46)
+2025-05-24 20:38:45: 💰 Period Funding PnL: $1.45
+2025-05-24 20:38:45: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:45: 📈 Current Unrealized PnL: $18.90
+2025-05-24 20:38:45: 💸 Period Trading Costs: $0.90
+2025-05-24 20:38:45: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:45: 💰 Total Funding PnL: $28.56
+2025-05-24 20:38:45: 📊 Total Realized Trading PnL: $-24.46
+2025-05-24 20:38:45: 💸 Total Trading Costs: $7.79
+2025-05-24 20:38:45: 
+📋 CURRENT POSITIONS AT END OF PERIOD:
+2025-05-24 20:38:45: Symbol          Type     Side   Units        Entry Price  Current Price PnL        %       
+2025-05-24 20:38:45: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:45: MAGICUSDT       Linear   short  4333.1587    0.114900     0.114900     $0.00      0.00   %
+2025-05-24 20:38:45: MAGIC           Spot     long   7268.3202    0.068500     0.071100     $18.90     3.80   %
+2025-05-24 20:38:45: → DELTA-NEUTRAL Total    ---    ---          ---          ---          $18.90     1.90   %
+2025-05-24 20:38:45: ----------------------------------------------------------------------------------------------------
+2025-05-24 20:38:45: 📈 Total Current Unrealized PnL: $18.90
+2025-05-24 20:38:45: 
+📊 Data Availability: 1/2 symbols had complete data
+2025-05-24 20:38:45: 
+================================================================================
+2025-05-24 20:38:45: REBALANCE PERIOD 16/19
+2025-05-24 20:38:45: ================================================================================
+2025-05-24 20:38:45: 📅 Period: 2025-04-16 00:00 → 2025-04-23 00:00
+2025-05-24 20:38:45: 💰 Starting Capital: $1,015.22
+2025-05-24 20:38:45: 📊 Current Portfolio Positions: 1
+2025-05-24 20:38:45: 
+📋 CURRENT PORTFOLIO BEFORE REBALANCING:
+2025-05-24 20:38:45: Symbol          Type     Side   Units        Entry Price  Allocation  
+2025-05-24 20:38:45: --------------------------------------------------------------------------------
+2025-05-24 20:38:45: MAGICUSDT       Linear   short  4333.1587    0.114900     $497.88      (PnL: $0.00)
+2025-05-24 20:38:45: MAGIC           Spot     long   7268.3202    0.068500     $497.88      (PnL: $19.62)
+2025-05-24 20:38:45: --------------------------------------------------------------------------------
+2025-05-24 20:38:45: 📈 Total Unrealized PnL: $19.62
+2025-05-24 20:38:45: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:45: Total symbols with funding data in period: 454
+2025-05-24 20:38:45: Symbols meeting 30.0% threshold: 1
+2025-05-24 20:38:45: 
+⭐ TOP 1 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:45: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:45: --------------------------------------------------
+2025-05-24 20:38:45: 1     JELLYJELLYUSDT  32.77          % 4h
+2025-05-24 20:38:45: 
+❌ CLOSING POSITIONS (no longer in top 5):
+2025-05-24 20:38:45:   🔸 Closed LINEAR short MAGICUSDT: 4333.1587 @ 0.114900, PnL: $0.00, Cost: $0.45
+2025-05-24 20:38:45:   🔸 Closed SPOT long MAGICUSDT: 7268.3202 @ 0.071200, PnL: $19.62, Cost: $0.47
+2025-05-24 20:38:45:   ✅ Total PnL for MAGICUSDT: $19.62
+2025-05-24 20:38:45: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:45:   🔍 Processing symbol: JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-24 20:38:45:   🔍 Loading data for JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-24 20:38:46:      📊 Linear kline shape: (2178, 8)
+2025-05-24 20:38:46:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:46:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:46:      📁 Linear files found: ['JELLYJELLYUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:46:      📁 Spot files found: []
+2025-05-24 20:38:46:   📊 JELLYJELLYUSDT -> JELLYJELLYUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:46: 
+📊 REBALANCE PERIOD 16 SUMMARY:
+2025-05-24 20:38:46: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:38:46: ❌ Closed 1 old positions
+2025-05-24 20:38:46: 💰 Total active positions: 0
+2025-05-24 20:38:46: 💸 Period trading costs: $0.91
+2025-05-24 20:38:46: 📈 Period realized PnL: $19.62
+2025-05-24 20:38:46: 🏦 Portfolio value: $1015.22
+2025-05-24 20:38:46: 
+📈 END OF PERIOD 16 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:46: ============================================================
+2025-05-24 20:38:46: 🏦 Portfolio Value: $1,015.22 → $1,015.03 (-0.19)
+2025-05-24 20:38:46: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:46: 📊 Period Realized Trading PnL: $19.62
+2025-05-24 20:38:46: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:46: 💸 Period Trading Costs: $0.91
+2025-05-24 20:38:46: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:46: 💰 Total Funding PnL: $28.56
+2025-05-24 20:38:46: 📊 Total Realized Trading PnL: $-4.83
+2025-05-24 20:38:46: 💸 Total Trading Costs: $8.70
+2025-05-24 20:38:46: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:46: 
+📊 Data Availability: 0/1 symbols had complete data
+2025-05-24 20:38:46: 
+================================================================================
+2025-05-24 20:38:46: REBALANCE PERIOD 17/19
+2025-05-24 20:38:46: ================================================================================
+2025-05-24 20:38:46: 📅 Period: 2025-04-23 00:00 → 2025-04-30 00:00
+2025-05-24 20:38:46: 💰 Starting Capital: $1,015.03
+2025-05-24 20:38:46: 📊 Current Portfolio Positions: 0
+2025-05-24 20:38:46: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:46: Total symbols with funding data in period: 458
+2025-05-24 20:38:46: Symbols meeting 30.0% threshold: 5
+2025-05-24 20:38:46: 
+⭐ TOP 5 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:46: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:46: --------------------------------------------------
+2025-05-24 20:38:46: 1     SOLAYERUSDT     94.61          % 1h
+2025-05-24 20:38:46: 2     JELLYJELLYUSDT  65.90          % 4h
+2025-05-24 20:38:46: 3     FARTCOINUSDT    44.75          % 4h
+2025-05-24 20:38:46: 4     BROCCOLIUSDT    43.95          % 4h
+2025-05-24 20:38:46: 5     MICHIUSDT       31.69          % 4h
+2025-05-24 20:38:46: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:46:   🔍 Processing symbol: SOLAYERUSDT -> SOLAYERUSDT
+2025-05-24 20:38:46:   🔍 Loading data for SOLAYERUSDT -> SOLAYERUSDT
+2025-05-24 20:38:47:      📊 Linear kline shape: (418, 8)
+2025-05-24 20:38:47:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:47:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:47:      📁 Linear files found: ['SOLAYERUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:47:      📁 Spot files found: []
+2025-05-24 20:38:47:   📊 SOLAYERUSDT -> SOLAYERUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:47:   🔍 Processing symbol: JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-24 20:38:47:   🔍 Loading data for JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-24 20:38:47:      📊 Linear kline shape: (2178, 8)
+2025-05-24 20:38:47:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:47:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:47:      📁 Linear files found: ['JELLYJELLYUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:47:      📁 Spot files found: []
+2025-05-24 20:38:47:   📊 JELLYJELLYUSDT -> JELLYJELLYUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:47:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:38:47:   🔍 Loading data for FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:38:48:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:38:48:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:48:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:48:      📁 Linear files found: ['FARTCOINUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:48:      📁 Spot files found: []
+2025-05-24 20:38:48:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:48:   🔍 Processing symbol: BROCCOLIUSDT -> BROCCOLIUSDT
+2025-05-24 20:38:48:   🔍 Loading data for BROCCOLIUSDT -> BROCCOLIUSDT
+2025-05-24 20:38:49:      📊 Linear kline shape: (2172, 8)
+2025-05-24 20:38:49:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:49:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:49:      📁 Linear files found: ['BROCCOLIUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:49:      📁 Spot files found: []
+2025-05-24 20:38:49:   📊 BROCCOLIUSDT -> BROCCOLIUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:49:   🔍 Processing symbol: MICHIUSDT -> MICHIUSDT
+2025-05-24 20:38:49:   🔍 Loading data for MICHIUSDT -> MICHIUSDT
+2025-05-24 20:38:50:      📊 Linear kline shape: (2247, 8)
+2025-05-24 20:38:50:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:50:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:50:      📁 Linear files found: ['MICHIUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:50:      📁 Spot files found: []
+2025-05-24 20:38:50:   📊 MICHIUSDT -> MICHIUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:50: 
+📊 REBALANCE PERIOD 17 SUMMARY:
+2025-05-24 20:38:50: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:38:50: ❌ Closed 0 old positions
+2025-05-24 20:38:50: 💰 Total active positions: 0
+2025-05-24 20:38:50: 💸 Period trading costs: $0.00
+2025-05-24 20:38:50: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:50: 🏦 Portfolio value: $1015.03
+2025-05-24 20:38:50: 
+📈 END OF PERIOD 17 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:50: ============================================================
+2025-05-24 20:38:50: 🏦 Portfolio Value: $1,015.03 → $1,015.03 (+0.00)
+2025-05-24 20:38:50: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:50: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:50: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:50: 💸 Period Trading Costs: $0.00
+2025-05-24 20:38:50: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:50: 💰 Total Funding PnL: $28.56
+2025-05-24 20:38:50: 📊 Total Realized Trading PnL: $-4.83
+2025-05-24 20:38:50: 💸 Total Trading Costs: $8.70
+2025-05-24 20:38:50: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:50: 
+📊 Data Availability: 0/5 symbols had complete data
+2025-05-24 20:38:50: 
+================================================================================
+2025-05-24 20:38:50: REBALANCE PERIOD 18/19
+2025-05-24 20:38:50: ================================================================================
+2025-05-24 20:38:50: 📅 Period: 2025-04-30 00:00 → 2025-05-07 00:00
+2025-05-24 20:38:50: 💰 Starting Capital: $1,015.03
+2025-05-24 20:38:50: 📊 Current Portfolio Positions: 0
+2025-05-24 20:38:50: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:50: Total symbols with funding data in period: 468
+2025-05-24 20:38:50: Symbols meeting 30.0% threshold: 3
+2025-05-24 20:38:50: 
+⭐ TOP 3 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:50: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:50: --------------------------------------------------
+2025-05-24 20:38:50: 1     10000WHYUSDT    38.73          % 4h
+2025-05-24 20:38:50: 2     FARTCOINUSDT    36.84          % 4h
+2025-05-24 20:38:50: 3     JELLYJELLYUSDT  32.13          % 4h
+2025-05-24 20:38:50: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:50:   🔍 Processing symbol: 10000WHYUSDT -> WHYUSDT
+2025-05-24 20:38:50:   🔍 Loading data for 10000WHYUSDT -> WHYUSDT
+2025-05-24 20:38:50:      📊 Linear kline shape: (5399, 8)
+2025-05-24 20:38:50:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:50:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:50:      📁 Linear files found: ['10000WHYUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:50:      📁 Spot files found: []
+2025-05-24 20:38:50:   📊 10000WHYUSDT -> WHYUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:50:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:38:50:   🔍 Loading data for FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:38:51:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:38:51:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:51:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:51:      📁 Linear files found: ['FARTCOINUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:51:      📁 Spot files found: []
+2025-05-24 20:38:51:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:51:   🔍 Processing symbol: JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-24 20:38:51:   🔍 Loading data for JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-24 20:38:52:      📊 Linear kline shape: (2178, 8)
+2025-05-24 20:38:52:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:52:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:52:      📁 Linear files found: ['JELLYJELLYUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:52:      📁 Spot files found: []
+2025-05-24 20:38:52:   📊 JELLYJELLYUSDT -> JELLYJELLYUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:52: 
+📊 REBALANCE PERIOD 18 SUMMARY:
+2025-05-24 20:38:52: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:38:52: ❌ Closed 0 old positions
+2025-05-24 20:38:52: 💰 Total active positions: 0
+2025-05-24 20:38:52: 💸 Period trading costs: $0.00
+2025-05-24 20:38:52: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:52: 🏦 Portfolio value: $1015.03
+2025-05-24 20:38:52: 
+📈 END OF PERIOD 18 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:52: ============================================================
+2025-05-24 20:38:52: 🏦 Portfolio Value: $1,015.03 → $1,015.03 (+0.00)
+2025-05-24 20:38:52: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:52: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:52: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:52: 💸 Period Trading Costs: $0.00
+2025-05-24 20:38:52: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:52: 💰 Total Funding PnL: $28.56
+2025-05-24 20:38:52: 📊 Total Realized Trading PnL: $-4.83
+2025-05-24 20:38:52: 💸 Total Trading Costs: $8.70
+2025-05-24 20:38:52: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:52: 
+📊 Data Availability: 0/3 symbols had complete data
+2025-05-24 20:38:52: 
+================================================================================
+2025-05-24 20:38:52: REBALANCE PERIOD 19/19
+2025-05-24 20:38:52: ================================================================================
+2025-05-24 20:38:52: 📅 Period: 2025-05-07 00:00 → 2025-05-10 00:00
+2025-05-24 20:38:52: 💰 Starting Capital: $1,015.03
+2025-05-24 20:38:52: 📊 Current Portfolio Positions: 0
+2025-05-24 20:38:52: 
+🔍 SYMBOL SELECTION:
+2025-05-24 20:38:52: Total symbols with funding data in period: 471
+2025-05-24 20:38:52: Symbols meeting 30.0% threshold: 10
+2025-05-24 20:38:52: 
+⭐ TOP 5 SYMBOLS BY FUNDING RATE:
+2025-05-24 20:38:52: Rank  Symbol          Funding Rate    Interval  
+2025-05-24 20:38:52: --------------------------------------------------
+2025-05-24 20:38:52: 1     DOODUSDT        71.12          % 4h
+2025-05-24 20:38:52: 2     1000000PEIPEIUSDT 61.83          % 8h
+2025-05-24 20:38:52: 3     FARTCOINUSDT    50.84          % 4h
+2025-05-24 20:38:52: 4     HYPEUSDT        47.37          % 8h
+2025-05-24 20:38:52: 5     1000MUMUUSDT    45.21          % 8h
+2025-05-24 20:38:52: 
+🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
+2025-05-24 20:38:52:   🔍 Processing symbol: DOODUSDT -> DOODUSDT
+2025-05-24 20:38:52:   🔍 Loading data for DOODUSDT -> DOODUSDT
+2025-05-24 20:38:52:      📊 Linear kline shape: (11, 8)
+2025-05-24 20:38:52:      📊 Spot kline shape: (156, 8)
+2025-05-24 20:38:52:   📊 DOODUSDT -> DOODUSDT: Linear ✅ Spot ✅ Prices ❌
+2025-05-24 20:38:52:   🔍 Processing symbol: 1000000PEIPEIUSDT -> PEIPEIUSDT
+2025-05-24 20:38:52:   🔍 Loading data for 1000000PEIPEIUSDT -> PEIPEIUSDT
+2025-05-24 20:38:53:      📊 Linear kline shape: (7620, 8)
+2025-05-24 20:38:53:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:53:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:53:      📁 Linear files found: ['1000000PEIPEIUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:53:      📁 Spot files found: []
+2025-05-24 20:38:53:   📊 1000000PEIPEIUSDT -> PEIPEIUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:53:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:38:53:   🔍 Loading data for FARTCOINUSDT -> FARTCOINUSDT
+2025-05-24 20:38:54:      📊 Linear kline shape: (725, 8)
+2025-05-24 20:38:54:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:54:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:54:      📁 Linear files found: ['FARTCOINUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:54:      📁 Spot files found: []
+2025-05-24 20:38:54:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:54:   🔍 Processing symbol: HYPEUSDT -> HYPEUSDT
+2025-05-24 20:38:54:   🔍 Loading data for HYPEUSDT -> HYPEUSDT
+2025-05-24 20:38:55:      📊 Linear kline shape: (2773, 8)
+2025-05-24 20:38:55:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:55:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:55:      📁 Linear files found: ['HYPEUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:55:      📁 Spot files found: []
+2025-05-24 20:38:55:   📊 HYPEUSDT -> HYPEUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:55:   🔍 Processing symbol: 1000MUMUUSDT -> MUMUUSDT
+2025-05-24 20:38:55:   🔍 Loading data for 1000MUMUUSDT -> MUMUUSDT
+2025-05-24 20:38:55:      📊 Linear kline shape: (5664, 8)
+2025-05-24 20:38:55:      📊 Spot kline shape: EMPTY
+2025-05-24 20:38:55:      🔍 Checking kline directory: kline_data
+2025-05-24 20:38:55:      📁 Linear files found: ['1000MUMUUSDT_1h_linear_kline.csv']
+2025-05-24 20:38:55:      📁 Spot files found: []
+2025-05-24 20:38:55:   📊 1000MUMUUSDT -> MUMUUSDT: Linear ✅ Spot ❌ Prices ❌
+2025-05-24 20:38:55: 
+📊 REBALANCE PERIOD 19 SUMMARY:
+2025-05-24 20:38:55: ✅ Opened 0 new delta-neutral positions
+2025-05-24 20:38:55: ❌ Closed 0 old positions
+2025-05-24 20:38:55: 💰 Total active positions: 0
+2025-05-24 20:38:55: 💸 Period trading costs: $0.00
+2025-05-24 20:38:55: 📈 Period realized PnL: $0.00
+2025-05-24 20:38:55: 🏦 Portfolio value: $1015.03
+2025-05-24 20:38:55: 
+📈 END OF PERIOD 19 DETAILED P&L BREAKDOWN:
+2025-05-24 20:38:55: ============================================================
+2025-05-24 20:38:55: 🏦 Portfolio Value: $1,015.03 → $1,015.03 (+0.00)
+2025-05-24 20:38:55: 💰 Period Funding PnL: $0.00
+2025-05-24 20:38:55: 📊 Period Realized Trading PnL: $0.00
+2025-05-24 20:38:55: 📈 Current Unrealized PnL: $0.00
+2025-05-24 20:38:55: 💸 Period Trading Costs: $0.00
+2025-05-24 20:38:55: 
+📊 CUMULATIVE TOTALS TO DATE:
+2025-05-24 20:38:55: 💰 Total Funding PnL: $28.56
+2025-05-24 20:38:55: 📊 Total Realized Trading PnL: $-4.83
+2025-05-24 20:38:55: 💸 Total Trading Costs: $8.70
+2025-05-24 20:38:55: 
+📋 NO ACTIVE POSITIONS
+2025-05-24 20:38:55: 
+📊 Data Availability: 1/5 symbols had complete data
+2025-05-24 20:38:55: 
+================================================================================
+2025-05-24 20:38:55: CLOSING ALL REMAINING POSITIONS AT END OF BACKTEST
+2025-05-24 20:38:55: ================================================================================
+2025-05-24 20:38:55: 
+================================================================================
+2025-05-24 20:38:55: RECALCULATING FINAL PORTFOLIO VALUES
+2025-05-24 20:38:55: ================================================================================
+2025-05-24 20:38:55: ✅ Final portfolio value: $1015.03
+2025-05-24 20:38:55: 
+================================================================================
+2025-05-24 20:38:55: FINAL BACKTEST RESULTS
+2025-05-24 20:38:55: ================================================================================
+2025-05-24 20:38:55: 🏁 STRATEGY PERFORMANCE:
+2025-05-24 20:38:55:    📅 Period: 2025-01-01 to 2025-05-10 (129 days)
+2025-05-24 20:38:55:    💰 Initial Capital: $1,000.00
+2025-05-24 20:38:55:    🏦 Final Portfolio Value: $1,015.03
+2025-05-24 20:38:55:    📈 Total Return: 1.50%
+2025-05-24 20:38:55:    📊 Annualized Return: 4.31%
+2025-05-24 20:38:55:    📉 Maximum Drawdown: -6.59%
+2025-05-24 20:38:55:    ⚡ Sharpe Ratio: 0.29
+2025-05-24 20:38:55:    📊 Annualized Volatility: 14.75%
+2025-05-24 20:38:55: 
+💰 P&L BREAKDOWN:
+2025-05-24 20:38:55:    💸 Total Trading Costs: $8.70
+2025-05-24 20:38:55:    💰 Total Funding PnL: $28.56
+2025-05-24 20:38:55:    📊 Total Trading PnL: $-4.83
+2025-05-24 20:38:55:    💎 Total Realized Trading PnL: $-4.83
+2025-05-24 20:38:55:    🏆 Net P&L: $15.03
+2025-05-24 20:38:55: 
+📊 COST ANALYSIS:
+2025-05-24 20:38:55:    💸 Trading costs as % of capital: 0.87%
+2025-05-24 20:38:55:    💰 Funding PnL as % of capital: 2.86%
+2025-05-24 20:38:55:    ⚖️  Funding vs Costs ratio: 3.28x
+2025-05-24 20:38:55: 
+📊 DATA AVAILABILITY:
+2025-05-24 20:38:55:    📋 Total symbol evaluations: 41
+2025-05-24 20:38:55:    ✅ Successful data availability: 8
+2025-05-24 20:38:55:    📈 Success rate: 19.5%
+2025-05-24 20:38:55: 
+📊 TRADING ACTIVITY:
+2025-05-24 20:38:55:    🔄 Total rebalance periods: 19
+2025-05-24 20:38:55:    📈 Total positions opened: 12
+2025-05-24 20:38:55:    📊 Average positions per rebalance: 0.6
+2025-05-24 20:38:55: 
+================================================================================
+2025-05-24 20:38:55: BACKTEST COMPLETED SUCCESSFULLY
+2025-05-24 20:38:55: ================================================================================

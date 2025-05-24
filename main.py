@@ -1,8 +1,8 @@
 from utility.bybit_quantlib import *
 
 if __name__ == "__main__":
-    start_date = "2024-01-01"
-    end_date = "2025-05-01" # prima era 2023-01-01 >> 2025-05-16
+    start_date = "2025-01-01"
+    end_date = "2025-05-10" # prima era 2023-01-01 >> 2025-05-16
     
     window=3
     remove_overlapping=True
@@ -180,9 +180,9 @@ if __name__ == "__main__":
         rebalance_days=7
     )
     '''
-    from strategy import backtest_funding_strategy_with_trading, analyze_data_availability
+    from strategy import backtest_funding_strategy_with_trading_verbose, analyze_data_availability
 
-    results, rebalances, availability = backtest_funding_strategy_with_trading(
+    results, rebalances, availability = backtest_funding_strategy_with_trading_verbose(
         funding_data=funding_data,
         symbols_df=symbols_df,
         start_date=start_date,
@@ -192,3 +192,19 @@ if __name__ == "__main__":
     # Analyze data availability
     if availability:
         analyze_data_availability(availability)
+
+    # TODOs : migliorare i logs e la funzione di KLINE non funziona correttamente, non mi scarica i dati prima 
+    '''
+    ORCAUSDT_1h_linear_spot_kline.csv
+    timestamp,open,high,low,close,volume,turnover,symbol
+    timestamp,open,high,low,close,volume,turnover,symbol
+    2025-01-01 00:00:00,3.921,4.016,3.9,3.996,78685.7,312010.006,ORCAUSDT
+    2025-01-01 01:00:00,3.996,4.002,3.924,3.934,46303.0,183719.9783,ORCAUSDT
+    2025-01-01 02:00:00,3.934,3.959,3.902,3.953,32641.6,128446.1052,ORCAUSDT
+    
+    from symbols.csv
+    ORCAUSDT,ORCA,USDT,120,2024-04-01 09:22:09
+
+    give me a test to see if it works
+    
+    '''
