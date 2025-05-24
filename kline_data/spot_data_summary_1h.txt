@@ -1,0 +1,8 @@
+SPOT DATA SUMMARY - INTERVAL: 1h
+==================================================
+
+Date Range: 2023-01-01 to 2025-05-16
+Interval: 1h
+
+Symbol	Start Date	End Date	Candles	Start Price	End Price	Return
+----------------------------------------------------------------------------------------------------

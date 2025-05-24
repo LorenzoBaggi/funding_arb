@@ -1021,10 +1021,10 @@ def analyze_funding_spread_by_symbol(funding_data, symbols_df=None, output_dir="
 
 def plot_aggregated_funding_rates(funding_data, symbols_df=None, output_dir="funding_analysis", 
                                  start_date=None, end_date=None, 
-                                 metric="mean", normalized=True):
+                                 metric="mean", normalized=True, moving_avg_window=30):
     """
     Create a time series plot of aggregated funding rates (max or mean) across all symbols,
-    normalized by their funding intervals.
+    normalized by their funding intervals, with a moving average.
     
     Args:
         funding_data (dict): Dictionary with symbols as keys and funding rate DataFrames as values
@@ -1034,6 +1034,7 @@ def plot_aggregated_funding_rates(funding_data, symbols_df=None, output_dir="fun
         end_date (str, optional): End date in 'YYYY-MM-DD' format
         metric (str): 'mean' or 'max' - which aggregation to use for the daily rates
         normalized (bool): Whether to normalize rates by funding interval
+        moving_avg_window (int): Window size for moving average calculation (default 30 days)
         
     Returns:
         pd.DataFrame: DataFrame with daily aggregated funding rates
@@ -1130,12 +1131,19 @@ def plot_aggregated_funding_rates(funding_data, symbols_df=None, output_dir="fun
     # Merge with the main DataFrame
     daily_agg = pd.merge(daily_agg, symbol_count, on='date')
     
+    # Calculate moving average
+    daily_agg['moving_avg'] = daily_agg['normalized_abs_rate'].rolling(window=moving_avg_window, min_periods=1).mean()
+    
     # Create the time series plot
     plt.figure(figsize=(15, 8))
     
-    # Plot the main line
+    # Plot the main line (daily data)
     plt.plot(daily_agg['date'], daily_agg['normalized_abs_rate'], 
-             color='black', linewidth=1.5)
+             color='black', linewidth=1.0, alpha=0.6, label='Daily Rate')
+    
+    # Plot the moving average line (thicker)
+    plt.plot(daily_agg['date'], daily_agg['moving_avg'], 
+             color='blue', linewidth=2.5, label=f'{moving_avg_window}-Day Moving Average')
     
     # Add grid
     plt.grid(True, alpha=0.3, linestyle='--')
@@ -1146,6 +1154,9 @@ def plot_aggregated_funding_rates(funding_data, symbols_df=None, output_dir="fun
     
     # Additional formatting
     plt.gcf().autofmt_xdate()  # Auto-format date labels
+    
+    # Add legend
+    plt.legend(loc='upper left')
     
     # Add labels and title
     normalized_label = "Normalized (Daily Equivalent)" if normalized else "Raw"
@@ -1191,7 +1202,8 @@ def plot_aggregated_funding_rates(funding_data, symbols_df=None, output_dir="fun
         f"Median: {daily_agg['normalized_abs_rate'].median():.4f}\n"
         f"Max: {daily_agg['normalized_abs_rate'].max():.4f}\n"
         f"Min: {daily_agg['normalized_abs_rate'].min():.4f}\n"
-        f"{date_range_text}"
+        f"{date_range_text}\n"
+        f"Moving Avg Window: {moving_avg_window} days"
     )
     
     plt.annotate(
@@ -1207,7 +1219,7 @@ def plot_aggregated_funding_rates(funding_data, symbols_df=None, output_dir="fun
     metric_name = "max" if metric == "max" else "mean"
     norm_label = "normalized" if normalized else "raw"
     plt.tight_layout()
-    output_path = f"{output_dir}/{metric_name}_abs_funding_rate_{norm_label}.png"
+    output_path = f"{output_dir}/{metric_name}_abs_funding_rate_{norm_label}_ma{moving_avg_window}.png"
     plt.savefig(output_path, dpi=300)
     print(f"Time series plot saved as {output_path}")
     
@@ -1217,112 +1229,3 @@ def plot_aggregated_funding_rates(funding_data, symbols_df=None, output_dir="fun
     # Return the data for further analysis
     return daily_agg
 
-def plot_funding_volatility(funding_data, output_dir="funding_analysis", 
-                           start_date=None, end_date=None, window=7):
-    """
-    Plot the volatility of funding rates over time to identify periods of high opportunity.
-    
-    Args:
-        funding_data (dict): Dictionary with symbols as keys and funding rate DataFrames as values
-        output_dir (str): Directory to save results
-        start_date (str, optional): Start date in 'YYYY-MM-DD' format
-        end_date (str, optional): End date in 'YYYY-MM-DD' format
-        window (int): Rolling window size for volatility calculation
-        
-    Returns:
-        pd.DataFrame: DataFrame with volatility metrics
-    """
-    # First get the daily aggregated rates
-    daily_rates = plot_aggregated_funding_rates(
-        funding_data, output_dir=output_dir, 
-        start_date=start_date, end_date=end_date, 
-        metric="mean", normalized=True
-    )
-    
-    if daily_rates is None or len(daily_rates) < window:
-        print(f"Not enough data for volatility analysis (need at least {window} days)")
-        return None
-    
-    # Calculate rolling statistics
-    daily_rates['rolling_mean'] = daily_rates['normalized_abs_rate'].rolling(window=window).mean()
-    daily_rates['rolling_std'] = daily_rates['normalized_abs_rate'].rolling(window=window).std()
-    daily_rates['rolling_cv'] = daily_rates['rolling_std'] / daily_rates['rolling_mean']  # Coefficient of variation
-    
-    # Calculate rolling Sharpe ratio-like metric (mean/std)
-    daily_rates['rolling_sharpe'] = daily_rates['rolling_mean'] / daily_rates['rolling_std']
-    
-    # Drop rows with NaN from rolling calculations
-    daily_rates = daily_rates.dropna()
-    
-    # Create the plot
-    plt.figure(figsize=(15, 10))
-    
-    # Create subplots
-    ax1 = plt.subplot(211)  # Top subplot for rates
-    ax2 = plt.subplot(212, sharex=ax1)  # Bottom subplot for volatility metrics
-    
-    # Plot rates on top subplot
-    ax1.plot(daily_rates['date'], daily_rates['normalized_abs_rate'], 
-            color='black', linewidth=1, alpha=0.6, label='Daily Rate')
-    ax1.plot(daily_rates['date'], daily_rates['rolling_mean'], 
-            color='blue', linewidth=2, label=f'{window}-Day Moving Avg')
-    
-    # Add bands for standard deviation
-    ax1.fill_between(
-        daily_rates['date'],
-        daily_rates['rolling_mean'] - daily_rates['rolling_std'],
-        daily_rates['rolling_mean'] + daily_rates['rolling_std'],
-        color='blue', alpha=0.2, label=f'±1 Std Dev'
-    )
-    
-    # Plot volatility metrics on bottom subplot
-    ax2.plot(daily_rates['date'], daily_rates['rolling_cv'], 
-            color='purple', linewidth=2, label='Coefficient of Variation')
-    ax2.plot(daily_rates['date'], daily_rates['rolling_sharpe'], 
-            color='green', linewidth=2, label='Sharpe Ratio')
-    
-    # Add horizontal line at y=1 for reference on Sharpe ratio
-    ax2.axhline(y=1, color='green', linestyle='--', alpha=0.5)
-    
-    # Format axes
-    for ax in [ax1, ax2]:
-        ax.grid(True, alpha=0.3, linestyle='--')
-        ax.legend(loc='best')
-    
-    # Format x-axis dates
-    ax2.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m'))
-    ax2.xaxis.set_major_locator(mdates.MonthLocator(interval=3))
-    plt.gcf().autofmt_xdate()
-    
-    # Add labels
-    ax1.set_ylabel('Absolute Funding Rate', fontsize=12)
-    ax1.set_title(f'Normalized Absolute Funding Rate and {window}-Day Moving Average', fontsize=14)
-    
-    ax2.set_xlabel('Date', fontsize=12)
-    ax2.set_ylabel('Metric Value', fontsize=12)
-    ax2.set_title('Funding Rate Volatility Metrics', fontsize=14)
-    
-    # Add annotations for highest opportunity periods (highest Sharpe ratio)
-    top_opportunities = daily_rates.sort_values('rolling_sharpe', ascending=False).head(3)
-    
-    for _, row in top_opportunities.iterrows():
-        ax2.annotate(
-            f"{row['date'].strftime('%Y-%m-%d')}\nSharpe: {row['rolling_sharpe']:.2f}",
-            xy=(row['date'], row['rolling_sharpe']),
-            xytext=(10, -30),
-            textcoords='offset points',
-            arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=.2'),
-            bbox=dict(boxstyle='round,pad=0.3', fc='white', alpha=0.7),
-            fontsize=8
-        )
-    
-    # Save the figure
-    plt.tight_layout()
-    output_path = f"{output_dir}/funding_rate_volatility_w{window}.png"
-    plt.savefig(output_path, dpi=300)
-    print(f"Volatility analysis plot saved as {output_path}")
-    
-    # Show the plot
-    plt.show()
-    
-    return daily_rates

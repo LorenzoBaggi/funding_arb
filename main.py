@@ -1,9 +1,9 @@
 from utility.bybit_quantlib import *
-
+from strategy import backtest_funding_strategy
 
 if __name__ == "__main__":
     start_date = "2023-01-01"
-    end_date = "2025-05-16"
+    end_date = "2025-05-16" # prima era 2023-01-01 >> 2025-05-16
     
     window=3
     remove_overlapping=True
@@ -23,17 +23,19 @@ if __name__ == "__main__":
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
     
+
+
     print("Step 1: Loading symbols...")
     symbols_df = load_symbols("symbols.csv")
     print(f"Loaded {len(symbols_df)} symbols")
 
-    
     print(f"Step 2: Fetching funding rate data from {start_date} to {end_date}...")
     funding_data = fetch_all_funding_rates(symbols_df, start_date, end_date, 
                                           output_dir=f"{output_dir}/raw_data")
     
     print(f"Fetched data for {len(funding_data)} symbols")
-    
+
+    '''
     print("Step 3: Calculating daily mean funding rates...")
     daily_mean = calculate_daily_mean_funding(funding_data)
     
@@ -78,3 +80,106 @@ if __name__ == "__main__":
     )
 
     print("Analysis completed!")
+
+    '''
+
+    import logging
+    from utility.bybit_klines import *
+    from dotenv import load_dotenv
+
+
+    interval = "1h"  
+    kline_output_dir = "kline_data"
+    
+    load_dotenv()
+
+    api_key = os.getenv("BYBIT_TEST_API_KEY")
+    api_secret = os.getenv("BYBIT_TEST_API_SECRET")
+    
+    # Crea una sessione Bybit come facevi prima
+    session = HTTP(
+        testnet=False,
+        api_key=api_key,
+        api_secret=api_secret
+    )
+     # Configura logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s',
+        handlers=[
+            logging.FileHandler("main_process.log"),
+            logging.StreamHandler()
+        ]
+    )
+    logger = logging.getLogger(__name__)
+    
+    logger.info("Step 1: Loading symbols...")
+    symbols_df = load_symbols("symbols.csv")
+    logger.info(f"Loaded {len(symbols_df)} symbols")
+    
+    interval = "1h"  # ... "1m", "5m", "15m", "30m", "4h", "1d", ecc. 
+    kline_output_dir = "kline_data"
+    max_workers = 5
+
+    max_symbols = None
+    
+    logger.info(f"Step 2: Fetching {interval} kline data from {start_date} to {end_date}...")
+    
+    download_spot = False
+    download_fut = False
+
+
+    try:
+        spot_data = fetch_all_spot_parallel(
+        session=session,
+        symbols_df=symbols_df,
+        interval=interval,
+        start_date=start_date,
+        end_date=end_date,
+        output_dir=kline_output_dir,
+        max_workers=max_workers,
+        max_symbols=max_symbols
+    )
+        logger.info(f"Fetched future data for {len(future_data)} symbols")
+    except Exception as e:
+        logger.error(f"Error in fetch_all_futures_parallel: {e}")
+        future_data = {}
+    
+
+
+    if download_fut == True:
+            
+        try:
+            future_data = fetch_all_futures_parallel(
+                session=session,
+                symbols_df=symbols_df,
+                interval=interval,
+                start_date=start_date,
+                end_date=end_date,
+                output_dir=kline_output_dir,
+                max_workers=max_workers,
+                max_symbols=max_symbols
+            )
+            logger.info(f"Fetched future data for {len(future_data)} symbols")
+        except Exception as e:
+            logger.error(f"Error in fetch_all_futures_parallel: {e}")
+            future_data = {}
+
+
+    ''' 
+    print("\nStep 8: Running funding strategy backtest...")
+    results_df, rebalance_history = backtest_funding_strategy(
+        funding_data, 
+        symbols_df=symbols_df,
+        output_dir=output_dir,
+        start_date=start_date,
+        end_date=end_date,
+        initial_capital=1000,
+        min_annual_rate=30.0,
+        top_n=5,
+        rebalance_days=7
+    )
+    
+    print("Backtest completed!")
+
+    '''
