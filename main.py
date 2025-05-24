@@ -1,9 +1,8 @@
 from utility.bybit_quantlib import *
-from strategy import backtest_funding_strategy
 
 if __name__ == "__main__":
-    start_date = "2023-01-01"
-    end_date = "2025-05-16" # prima era 2023-01-01 >> 2025-05-16
+    start_date = "2024-01-01"
+    end_date = "2025-05-01" # prima era 2023-01-01 >> 2025-05-16
     
     window=3
     remove_overlapping=True
@@ -22,7 +21,6 @@ if __name__ == "__main__":
     """
     # Create output directory
     os.makedirs(output_dir, exist_ok=True)
-    
 
 
     print("Step 1: Loading symbols...")
@@ -129,24 +127,6 @@ if __name__ == "__main__":
     download_fut = False
 
 
-    try:
-        spot_data = fetch_all_spot_parallel(
-        session=session,
-        symbols_df=symbols_df,
-        interval=interval,
-        start_date=start_date,
-        end_date=end_date,
-        output_dir=kline_output_dir,
-        max_workers=max_workers,
-        max_symbols=max_symbols
-    )
-        logger.info(f"Fetched future data for {len(future_data)} symbols")
-    except Exception as e:
-        logger.error(f"Error in fetch_all_futures_parallel: {e}")
-        future_data = {}
-    
-
-
     if download_fut == True:
             
         try:
@@ -165,9 +145,29 @@ if __name__ == "__main__":
             logger.error(f"Error in fetch_all_futures_parallel: {e}")
             future_data = {}
 
+        
+    if download_spot == True:
 
-    ''' 
+        try:
+            spot_data = fetch_all_spot_parallel(
+            session=session,
+            symbols_df=symbols_df,
+            interval=interval,
+            start_date=start_date,
+            end_date=end_date,
+            output_dir=kline_output_dir,
+            max_workers=max_workers,
+            max_symbols=max_symbols
+        )
+            logger.info(f"Fetched future data for {len(future_data)} symbols")
+        except Exception as e:
+            logger.error(f"Error in fetch_all_futures_parallel: {e}")
+            future_data = {}
+
+    
     print("\nStep 8: Running funding strategy backtest...")
+    
+    '''
     results_df, rebalance_history = backtest_funding_strategy(
         funding_data, 
         symbols_df=symbols_df,
@@ -179,7 +179,16 @@ if __name__ == "__main__":
         top_n=5,
         rebalance_days=7
     )
-    
-    print("Backtest completed!")
-
     '''
+    from strategy import backtest_funding_strategy_with_trading, analyze_data_availability
+
+    results, rebalances, availability = backtest_funding_strategy_with_trading(
+        funding_data=funding_data,
+        symbols_df=symbols_df,
+        start_date=start_date,
+        end_date=end_date
+    )
+    
+    # Analyze data availability
+    if availability:
+        analyze_data_availability(availability)

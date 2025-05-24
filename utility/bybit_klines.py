@@ -74,7 +74,6 @@ def convert_interval(interval):
         "1M": "M"
     }
     return mapping.get(interval, interval)
-
 def download_kline_data(session, symbol, interval="1h", start_date=None, end_date=None, output_dir="kline_data", category="linear", launch_time=None):
     """
     Download kline data for a single symbol
@@ -102,21 +101,6 @@ def download_kline_data(session, symbol, interval="1h", start_date=None, end_dat
     
     # Output file path
     output_path = f"{output_dir}/{symbol}_{interval}_{category}_kline.csv"
-    
-    # Thread-safe file check to avoid race conditions
-    file_lock = threading.Lock()
-    with file_lock:
-        # Check if file already exists
-        if os.path.exists(output_path):
-            try:
-                df_existing = pd.read_csv(output_path)
-                if not df_existing.empty:
-                    logger.info(f"Loading existing data for {symbol} from {output_path}: {len(df_existing)} records")
-                    if 'timestamp' in df_existing.columns:
-                        df_existing['timestamp'] = pd.to_datetime(df_existing['timestamp'])
-                    return df_existing
-            except Exception as e:
-                logger.warning(f"Could not load existing file for {symbol}: {e}")
     
     # Convert dates to timestamps
     if start_date:
@@ -157,11 +141,53 @@ def download_kline_data(session, symbol, interval="1h", start_date=None, end_dat
             logger.info(f"Skipping {symbol} as launch time ({launch_time}) is after end date ({end_dt})")
             return None
     
+    # Determine the actual required start date
+    required_start_dt = start_dt
+    
+    # Variable to hold existing data if partial
+    df_existing = None
+    need_to_download_missing = False
+    download_end_dt = end_dt  # By default download until end_date
+    
+    # Thread-safe file check to avoid race conditions
+    file_lock = threading.Lock()
+    with file_lock:
+        # Check if file already exists
+        if os.path.exists(output_path):
+            try:
+                df_existing_temp = pd.read_csv(output_path)
+                if not df_existing_temp.empty:
+                    if 'timestamp' in df_existing_temp.columns:
+                        df_existing_temp['timestamp'] = pd.to_datetime(df_existing_temp['timestamp'])
+                        # Ensure timezone
+                        if df_existing_temp['timestamp'].dt.tz is None:
+                            df_existing_temp['timestamp'] = df_existing_temp['timestamp'].dt.tz_localize(pytz.UTC)
+                        
+                        # Check if existing data covers the required period
+                        existing_min_date = df_existing_temp['timestamp'].min()
+                        
+                        if existing_min_date <= required_start_dt:
+                            # Existing data covers the required period
+                            logger.info(f"Loading existing data for {symbol} from {output_path}: {len(df_existing_temp)} records (covers required period)")
+                            return df_existing_temp
+                        else:
+                            # Need to download missing data from the beginning
+                            logger.info(f"Existing data for {symbol} starts from {existing_min_date}, but need data from {required_start_dt}")
+                            df_existing = df_existing_temp
+                            need_to_download_missing = True
+                            # Download only up to the existing data start
+                            download_end_dt = existing_min_date - timedelta(minutes=1)
+                    else:
+                        logger.info(f"Loading existing data for {symbol} from {output_path}: {len(df_existing_temp)} records")
+                        return df_existing_temp
+            except Exception as e:
+                logger.warning(f"Could not load existing file for {symbol}: {e}")
+    
     # Convert to millisecond timestamps
     start_ms = int(start_dt.timestamp() * 1000)
-    end_ms = int(end_dt.timestamp() * 1000)
+    end_ms = int(download_end_dt.timestamp() * 1000)
     
-    logger.info(f"Date range for {symbol}: {start_dt.strftime('%Y-%m-%d')} to {end_dt.strftime('%Y-%m-%d')}")
+    logger.info(f"Date range for {symbol}: {start_dt.strftime('%Y-%m-%d')} to {download_end_dt.strftime('%Y-%m-%d')}")
     
     # Maximum span per request (to avoid hitting limits)
     max_span_days = 7
@@ -171,6 +197,10 @@ def download_kline_data(session, symbol, interval="1h", start_date=None, end_dat
     
     # Initialize an empty list to store all kline data
     all_data = []
+    
+    # Counter for consecutive empty responses
+    consecutive_empty_chunks = 0
+    max_empty_chunks = 3  # After 3 consecutive empty chunks, assume symbol doesn't exist
     
     # Split the date range into smaller chunks
     current_start = start_ms
@@ -187,6 +217,7 @@ def download_kline_data(session, symbol, interval="1h", start_date=None, end_dat
         # Add retries for robustness
         max_retries = 3
         success = False
+        chunk_has_data = False
         
         for retry in range(max_retries):
             try:
@@ -203,23 +234,48 @@ def download_kline_data(session, symbol, interval="1h", start_date=None, end_dat
                     limit=1000
                 )
                 
-                if result.get("retCode") == 0 and result.get("result", {}).get("list"):
-                    chunk_data = result["result"]["list"]
-                    logger.info(f"  ✓ Got {len(chunk_data)} records for {symbol}")
-                    all_data.extend(chunk_data)
-                    success = True
+                if result.get("retCode") == 0:
+                    chunk_data = result.get("result", {}).get("list", [])
+                    if chunk_data:
+                        logger.info(f"  ✓ Got {len(chunk_data)} records for {symbol}")
+                        all_data.extend(chunk_data)
+                        success = True
+                        chunk_has_data = True
+                        consecutive_empty_chunks = 0  # Reset counter
+                    else:
+                        # Empty list but successful API call
+                        logger.info(f"  ⚠️  No data for {symbol} in period {current_start_dt} to {current_end_dt}")
+                        success = True  # API call was successful, just no data
+                        chunk_has_data = False
                     break
                 else:
-                    logger.warning(f"  ✗ Attempt {retry+1}/{max_retries}: Error or no data for {symbol}: {result}")
+                    logger.warning(f"  ✗ Attempt {retry+1}/{max_retries}: Error for {symbol}: {result}")
                     
             except Exception as e:
-                logger.warning(f"  ✗ Attempt {retry+1}/{max_retries}: Exception for {symbol}: {e}")
+                error_msg = str(e)
+                # Check if it's a "not supported symbol" error
+                if "Not supported symbols" in error_msg or "ErrCode: 10001" in error_msg:
+                    logger.warning(f"  ✗ Symbol {symbol} not supported in {category} market")
+                    # Don't retry for unsupported symbols
+                    return None
+                else:
+                    logger.warning(f"  ✗ Attempt {retry+1}/{max_retries}: Exception for {symbol}: {e}")
             
             # Wait before retry with backoff
-            time.sleep(1 * (2 ** retry))
+            if retry < max_retries - 1:  # Don't wait after last retry
+                time.sleep(1 * (2 ** retry))
         
         if not success:
             logger.warning(f"Failed to fetch data for {symbol} chunk {current_start_dt} to {current_end_dt} after {max_retries} attempts")
+            # Consider this as an empty chunk
+            consecutive_empty_chunks += 1
+        elif not chunk_has_data:
+            consecutive_empty_chunks += 1
+        
+        # Check if we've had too many consecutive empty chunks
+        if consecutive_empty_chunks >= max_empty_chunks:
+            logger.warning(f"  ✗ {consecutive_empty_chunks} consecutive empty chunks for {symbol}. Symbol likely doesn't exist in {category} market.")
+            return None
         
         # Move to next chunk
         current_start = current_end + 1
@@ -251,6 +307,16 @@ def download_kline_data(session, symbol, interval="1h", start_date=None, end_dat
             
             # Add symbol column
             df["symbol"] = symbol
+            
+            # If we had existing data that didn't cover the full period, merge it
+            if need_to_download_missing and df_existing is not None and not df_existing.empty:
+                # Combine new and existing data
+                df = pd.concat([df, df_existing], ignore_index=True)
+                # Remove duplicates, keeping the first occurrence
+                df = df.drop_duplicates(subset=['timestamp'], keep='first')
+                # Sort again
+                df = df.sort_values("timestamp")
+                logger.info(f"Merged new data with existing data for {symbol}: total {len(df)} records")
             
             # Thread-safe file writing
             with file_lock:
