@@ -803,11 +803,11 @@ def backtest_funding_strategy_with_trading_verbose(funding_data, symbols_df=None
                     # Remove from active positions
                     if symbol in active_positions:
                         del active_positions[symbol]
-            
+        
             # Check new symbols for data availability
             symbols_to_trade = []
             log_verbose(f"\n🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:")
-            
+
             for _, row in top_symbols.iterrows():
                 symbol = row['symbol']
                 spot_symbol = symbol_mapping.get(symbol, symbol.replace('USDT', ''))
@@ -882,35 +882,12 @@ def backtest_funding_strategy_with_trading_verbose(funding_data, symbols_df=None
                 except Exception as e:
                     log_verbose(f"  ⚠️  Error getting prices for {symbol}: {e}")
                 
-                prices_available = (linear_price is not None) and (spot_price is not None)
-                
-                # Log availability
-                linear_status = "✅" if linear_available else "❌"
-                spot_status = "✅" if spot_available else "❌"
-                price_status = "✅" if prices_available else "❌"
-                
-                log_verbose(f"  📊 {symbol} -> {spot_symbol}: Linear {linear_status} Spot {spot_status} Prices {price_status}")
-                if prices_available:
+                # NUOVA LOGICA: Prima controlla se abbiamo tutto, altrimenti prova Bitcoin proxy
+                if linear_available and spot_available and linear_price is not None and spot_price is not None:
+                    # CASO 1: Abbiamo sia linear che spot - tutto normale
+                    log_verbose(f"  📊 {symbol} -> {spot_symbol}: Linear ✅ Spot ✅ Prices ✅")
                     log_verbose(f"     💰 Prices: Linear {linear_price:.6f}, Spot {spot_price:.6f}, Funding: {row['annualized_rate']:.2f}%")
-                
-                # Record data availability
-                data_availability.append({
-                    'rebalance_date': rebalance_date,
-                    'symbol': symbol,
-                    'spot_symbol': spot_symbol,
-                    'linear_data_available': linear_available,
-                    'spot_data_available': spot_available,
-                    'both_available': linear_available and spot_available,
-                    'linear_price_available': linear_price is not None,
-                    'spot_price_available': spot_price is not None,
-                    'prices_available': prices_available,
-                    'entry_timestamp': entry_timestamp,
-                    'linear_price': linear_price,
-                    'spot_price': spot_price,
-                    'avg_funding_rate': row['annualized_rate']
-                })
-                
-                if linear_available and spot_available and prices_available:
+                    
                     symbols_to_trade.append({
                         'symbol': symbol,
                         'spot_symbol': spot_symbol,
@@ -920,8 +897,51 @@ def backtest_funding_strategy_with_trading_verbose(funding_data, symbols_df=None
                         'is_proxy': False,
                         'actual_spot_symbol': spot_symbol
                     })
-            
-            # Open new positions
+                    
+                elif linear_available and linear_price is not None:
+                    # CASO 2: Abbiamo linear ma non spot - proviamo Bitcoin proxy
+                    log_verbose(f"  📊 {symbol} -> {spot_symbol}: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY")
+                    
+                    # QUI È IL FIX: CHIAMIAMO LA FUNZIONE BITCOIN PROXY!
+                    btc_price, btc_available = try_bitcoin_proxy(symbol, entry_timestamp)
+                    
+                    if btc_available and btc_price is not None:
+                        log_verbose(f"  ✅ Using Bitcoin proxy for {symbol}: BTC @ {btc_price:.2f}")
+                        
+                        symbols_to_trade.append({
+                            'symbol': symbol,
+                            'spot_symbol': 'BTCUSDT',  # Usiamo Bitcoin come spot
+                            'linear_price': linear_price,
+                            'spot_price': btc_price,
+                            'funding_rate': row['annualized_rate'],
+                            'is_proxy': True,  # Importante: flagghiamo che è un proxy
+                            'actual_spot_symbol': 'BTCUSDT'
+                        })
+                    else:
+                        log_verbose(f"  ❌ Bitcoin proxy failed for {symbol} - skipping")
+                else:
+                    # CASO 3: Non abbiamo nemmeno il linear - salta completamente
+                    log_verbose(f"  ❌ {symbol} -> {spot_symbol}: Linear ❌ - Cannot trade without linear data")
+                
+                # Record data availability (per tracking)
+                data_availability.append({
+                    'rebalance_date': rebalance_date,
+                    'symbol': symbol,
+                    'spot_symbol': spot_symbol,
+                    'linear_data_available': linear_available,
+                    'spot_data_available': spot_available,
+                    'both_available': linear_available and spot_available,
+                    'linear_price_available': linear_price is not None,
+                    'spot_price_available': spot_price is not None,
+                    'prices_available': linear_price is not None and spot_price is not None,
+                    'entry_timestamp': entry_timestamp,
+                    'linear_price': linear_price,
+                    'spot_price': spot_price,
+                    'avg_funding_rate': row['annualized_rate'],
+                    'used_bitcoin_proxy': btc_available if 'btc_available' in locals() else False
+                })
+
+
             if symbols_to_trade:
                 # Calculate allocation
                 allocation_per_symbol = (current_capital - period_trading_cost) / len(symbols_to_trade)
@@ -937,17 +957,24 @@ def backtest_funding_strategy_with_trading_verbose(funding_data, symbols_df=None
                     linear_price = symbol_info['linear_price']
                     spot_price = symbol_info['spot_price']
                     avg_funding_rate = symbol_info['funding_rate']
+                    is_proxy = symbol_info.get('is_proxy', False)
                     actual_spot_symbol = symbol_info.get('actual_spot_symbol', spot_symbol)
                     
                     # Determine position direction based on funding rate
                     if avg_funding_rate > 0:
                         linear_side = 'short'
                         spot_side = 'long'
-                        strategy_desc = "Short perp (collect funding) + Long spot (hedge)"
+                        if is_proxy:
+                            strategy_desc = "Short perp (collect funding) + Long BTC PROXY (hedge)"
+                        else:
+                            strategy_desc = "Short perp (collect funding) + Long spot (hedge)"
                     else:
                         linear_side = 'long'
                         spot_side = 'short'
-                        strategy_desc = "Long perp (negative funding) + Short spot (hedge)"
+                        if is_proxy:
+                            strategy_desc = "Long perp (negative funding) + Short BTC PROXY (hedge)"
+                        else:
+                            strategy_desc = "Long perp (negative funding) + Short spot (hedge)"
                     
                     # Calculate units for each position (delta-neutral)
                     position_size_usd = allocation_per_symbol / 2  # Half for each leg
@@ -968,7 +995,7 @@ def backtest_funding_strategy_with_trading_verbose(funding_data, symbols_df=None
                     active_positions[symbol] = {
                         'linear': linear_position,
                         'spot': spot_position,
-                        'is_proxy': False,
+                        'is_proxy': is_proxy,  # Tracciamo se stiamo usando Bitcoin proxy
                         'original_spot_symbol': spot_symbol,
                         'actual_spot_symbol': actual_spot_symbol,
                         'allocation': allocation_per_symbol
@@ -976,12 +1003,13 @@ def backtest_funding_strategy_with_trading_verbose(funding_data, symbols_df=None
                     
                     position_history.extend([linear_position, spot_position])
                     
-                    log_verbose(f"\n  📈 {symbol} ({avg_funding_rate:+.2f}% funding):")
+                    proxy_indicator = " 🪙 [BTC PROXY]" if is_proxy else ""
+                    log_verbose(f"\n  📈 {symbol} ({avg_funding_rate:+.2f}% funding){proxy_indicator}:")
                     log_verbose(f"     💡 Strategy: {strategy_desc}")
                     log_verbose(f"     🔸 LINEAR {linear_side}: {linear_units:.4f} units @ {linear_price:.6f} = ${position_size_usd:.2f}")
                     log_verbose(f"     🔸 SPOT {spot_side}: {spot_units:.4f} units @ {spot_price:.6f} = ${position_size_usd:.2f}")
                     log_verbose(f"     💸 Trading costs: ${total_cost:.2f} (Linear: ${linear_cost:.2f}, Spot: ${spot_cost:.2f})")
-            
+                    
             # Update cumulative values
             cumulative_trading_costs += period_trading_cost
             cumulative_realized_pnl += period_realized_pnl
