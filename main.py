@@ -180,24 +180,18 @@ if __name__ == "__main__":
         rebalance_days=7
     )
     '''
-    # from strategy_vol_scaling import backtest_funding_strategy_with_trading_verbose_vol_scaling, analyze_data_availability
+    from strategy_clean import backtest_funding_strategy_with_trading_verbose_vol_scaling, analyze_data_availability
 
-    from strategy import backtest_funding_strategy_with_trading_verbose, analyze_data_availability
+    #from strategy import backtest_funding_strategy_with_trading_verbose, analyze_data_availability
     
 
-    # results, rebalances, availability = backtest_funding_strategy_with_trading_verbose_vol_scaling(
-    #     funding_data=funding_data,
-    #    symbols_df=symbols_df,
-    #    start_date=start_date,
-    #    end_date=end_date
-    #)
-
-    results, rebalances, availability = backtest_funding_strategy_with_trading_verbose(
-    funding_data=funding_data,
-    symbols_df=symbols_df,
-    start_date=start_date,
-    end_date=end_date
+    results, rebalances, availability = backtest_funding_strategy_with_trading_verbose_vol_scaling(
+         funding_data=funding_data,
+        symbols_df=symbols_df,
+        start_date=start_date,
+        end_date=end_date
     )
+
     
     # Analyze data availability
     if availability:

@@ -1,2170 +1,1393 @@
 === VERBOSE VOLATILITY SCALED FUNDING STRATEGY BACKTEST LOG ===
-Started at: 2025-05-25 10:54:04
+Started at: 2025-05-25 18:42:20
 
-2025-05-25 10:54:04: 
+2025-05-25 18:42:20: 
 ================================================================================
-2025-05-25 10:54:04: VOLATILITY SCALED BACKTEST CONFIGURATION
-2025-05-25 10:54:04: ================================================================================
-2025-05-25 10:54:04: Period: 2025-01-01 to 2025-05-10
-2025-05-25 10:54:04: Initial Capital: $1,000.00
-2025-05-25 10:54:04: 🎯 Target Volatility: 15.0% (annualized)
-2025-05-25 10:54:04: ⚡ EWMA Lambda: 0.060
-2025-05-25 10:54:04: Min Annual Funding Rate: 30.0%
-2025-05-25 10:54:04: Top N Symbols: 5
-2025-05-25 10:54:04: Rebalance Every: 7 days
-2025-05-25 10:54:04: Taker Fee: 0.05%
-2025-05-25 10:54:04: Slippage: 0.03%
-2025-05-25 10:54:04: Bid-Ask Spread: 0.02%
-2025-05-25 10:54:04: Auto Download: True
-2025-05-25 10:54:04: ✅ Loaded mapping for 474 symbols
-2025-05-25 10:54:05: ✅ Processed funding data for 471 symbols
-2025-05-25 10:54:05: 
-🎯 VOLATILITY SCALING INITIALIZATION:
-2025-05-25 10:54:05:    📊 Initial EWMA variance: 0.010000 (10% daily equivalent)
-2025-05-25 10:54:05:    ⚡ Initial vol scalar: 1.000
-2025-05-25 10:54:05:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:05:    λ EWMA Lambda: 0.060
-2025-05-25 10:54:05: 
+2025-05-25 18:42:20: VOLATILITY SCALED BACKTEST CONFIGURATION
+2025-05-25 18:42:20: ================================================================================
+2025-05-25 18:42:20: Period: 2025-01-01 to 2025-05-10
+2025-05-25 18:42:20: Initial Capital: $1,000.00
+2025-05-25 18:42:20: 🎯 Target Volatility: 15.0% (annualized)
+2025-05-25 18:42:20: ⚡ EWMA Lambda: 0.060
+2025-05-25 18:42:20: Min Annual Funding Rate: 30.0%
+2025-05-25 18:42:20: Top N Symbols: 5
+2025-05-25 18:42:20: Rebalance Every: 7 days
+2025-05-25 18:42:20: ✅ Loaded mapping for 474 symbols
+2025-05-25 18:42:21: ✅ Processed funding data for 471 symbols
+2025-05-25 18:42:21: 
 ================================================================================
-2025-05-25 10:54:05: STARTING VOLATILITY SCALED BACKTEST - 19 REBALANCE PERIODS
-2025-05-25 10:54:05: ================================================================================
-2025-05-25 10:54:05: 
+2025-05-25 18:42:21: STARTING VOLATILITY SCALED BACKTEST - 19 REBALANCE PERIODS
+2025-05-25 18:42:21: ================================================================================
+2025-05-25 18:42:21: 
 ================================================================================
-2025-05-25 10:54:05: REBALANCE PERIOD 1/19
-2025-05-25 10:54:05: ================================================================================
-2025-05-25 10:54:05: 📅 Period: 2025-01-01 00:00 → 2025-01-08 00:00
-2025-05-25 10:54:05: 💰 Starting Capital: $1,000.00
-2025-05-25 10:54:05: 📊 Current Portfolio Positions: 0
-2025-05-25 10:54:05: 
+2025-05-25 18:42:21: REBALANCE PERIOD 1/19
+2025-05-25 18:42:21: ================================================================================
+2025-05-25 18:42:21: 📅 Period: 2025-01-01 00:00 → 2025-01-08 00:00
+2025-05-25 18:42:21: 💰 Starting Capital: $1,000.00
+2025-05-25 18:42:21: 📊 Current Portfolio Positions: 0
+2025-05-25 18:42:21: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:05:    📊 Current realized volatility: 191.05%
-2025-05-25 10:54:05:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:05:    ⚡ Current vol scalar: 1.000
-2025-05-25 10:54:05:    🔄 Scaling direction: ➡️ NEUTRAL
-2025-05-25 10:54:05:    📐 Vol ratio (realized/target): 12.74
-2025-05-25 10:54:05: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:05: Total symbols with funding data in period: 399
-2025-05-25 10:54:05: Symbols meeting 30.0% threshold: 33
-2025-05-25 10:54:05: 
+2025-05-25 18:42:21:    📊 Current realized volatility: 191.05%
+2025-05-25 18:42:21:    🎯 Target volatility: 15.0%
+2025-05-25 18:42:21:    ⚡ Current vol scalar: 1.000
+2025-05-25 18:42:21: 
 ⭐ TOP 5 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:54:05: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:54:05: --------------------------------------------------
-2025-05-25 10:54:05: 1     FARTCOINUSDT    139.08         % 4h
-2025-05-25 10:54:05: 2     GRIFFAINUSDT    85.50          % 4h
-2025-05-25 10:54:05: 3     AIXBTUSDT       84.14          % 4h
-2025-05-25 10:54:05: 4     HIPPOUSDT       83.17          % 4h
-2025-05-25 10:54:05: 5     1000MUMUUSDT    78.48          % 8h
-2025-05-25 10:54:05: 
+2025-05-25 18:42:21: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:42:21: --------------------------------------------------
+2025-05-25 18:42:21: 1     FARTCOINUSDT    139.08         % 4h
+2025-05-25 18:42:21: 2     GRIFFAINUSDT    85.50          % 4h
+2025-05-25 18:42:21: 3     AIXBTUSDT       84.14          % 4h
+2025-05-25 18:42:21: 4     HIPPOUSDT       83.17          % 4h
+2025-05-25 18:42:21: 5     1000MUMUUSDT    78.48          % 8h
+2025-05-25 18:42:21: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:54:05:    💵 Available capital: $1,000.00
-2025-05-25 10:54:05:    📊 Base allocation per symbol: $200.00
-2025-05-25 10:54:05:    ⚡ Vol scalar: 1.000
-2025-05-25 10:54:05:    💎 Scaled allocation per symbol: $200.00
-2025-05-25 10:54:05:    📈 Scaling effect: +0.0%
-2025-05-25 10:54:05: 
+2025-05-25 18:42:21:    💵 Available capital: $1,000.00
+2025-05-25 18:42:21:    📊 Base allocation per symbol: $200.00
+2025-05-25 18:42:21:    ⚡ Vol scalar: 1.000
+2025-05-25 18:42:21:    💎 Scaled allocation per symbol: $200.00
+2025-05-25 18:42:21: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:54:05:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
-2025-05-25 10:54:06:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:06:     🪙 Trying Bitcoin as proxy for FARTCOINUSDT...
-2025-05-25 10:54:06:     ✅ Bitcoin proxy available @ 94393.55
-2025-05-25 10:54:06:   ✅ Using Bitcoin proxy for FARTCOINUSDT: BTC @ 94393.55
-2025-05-25 10:54:06:   🔍 Processing symbol: GRIFFAINUSDT -> GRIFFAINUSDT
-2025-05-25 10:54:07:   📊 GRIFFAINUSDT -> GRIFFAINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:07:     🪙 Trying Bitcoin as proxy for GRIFFAINUSDT...
-2025-05-25 10:54:07:     ✅ Bitcoin proxy available @ 94393.55
-2025-05-25 10:54:07:   ✅ Using Bitcoin proxy for GRIFFAINUSDT: BTC @ 94393.55
-2025-05-25 10:54:07:   🔍 Processing symbol: AIXBTUSDT -> AIXBTUSDT
-2025-05-25 10:54:07:   📊 AIXBTUSDT -> AIXBTUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:07:     🪙 Trying Bitcoin as proxy for AIXBTUSDT...
-2025-05-25 10:54:07:     ✅ Bitcoin proxy available @ 94393.55
-2025-05-25 10:54:07:   ✅ Using Bitcoin proxy for AIXBTUSDT: BTC @ 94393.55
-2025-05-25 10:54:07:   🔍 Processing symbol: HIPPOUSDT -> HIPPOUSDT
-2025-05-25 10:54:08:   📊 HIPPOUSDT -> HIPPOUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:08:     🪙 Trying Bitcoin as proxy for HIPPOUSDT...
-2025-05-25 10:54:08:     ✅ Bitcoin proxy available @ 94393.55
-2025-05-25 10:54:08:   ✅ Using Bitcoin proxy for HIPPOUSDT: BTC @ 94393.55
-2025-05-25 10:54:08:   🔍 Processing symbol: 1000MUMUUSDT -> MUMUUSDT
-2025-05-25 10:54:08:   📊 1000MUMUUSDT -> MUMUUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:08:     🪙 Trying Bitcoin as proxy for 1000MUMUUSDT...
-2025-05-25 10:54:08:     ✅ Bitcoin proxy available @ 94393.55
-2025-05-25 10:54:08:   ✅ Using Bitcoin proxy for 1000MUMUUSDT: BTC @ 94393.55
-2025-05-25 10:54:08: 
+2025-05-25 18:42:21:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
+2025-05-25 18:42:22:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:22:     🪙 Trying Bitcoin as proxy for FARTCOINUSDT...
+2025-05-25 18:42:22:     ✅ Bitcoin proxy available @ 94393.55
+2025-05-25 18:42:22:   🔍 Processing symbol: GRIFFAINUSDT -> GRIFFAINUSDT
+2025-05-25 18:42:23:   📊 GRIFFAINUSDT -> GRIFFAINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:23:     🪙 Trying Bitcoin as proxy for GRIFFAINUSDT...
+2025-05-25 18:42:23:     ✅ Bitcoin proxy available @ 94393.55
+2025-05-25 18:42:23:   🔍 Processing symbol: AIXBTUSDT -> AIXBTUSDT
+2025-05-25 18:42:23:   📊 AIXBTUSDT -> AIXBTUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:23:     🪙 Trying Bitcoin as proxy for AIXBTUSDT...
+2025-05-25 18:42:23:     ✅ Bitcoin proxy available @ 94393.55
+2025-05-25 18:42:23:   🔍 Processing symbol: HIPPOUSDT -> HIPPOUSDT
+2025-05-25 18:42:23:   📊 HIPPOUSDT -> HIPPOUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:23:     🪙 Trying Bitcoin as proxy for HIPPOUSDT...
+2025-05-25 18:42:23:     ✅ Bitcoin proxy available @ 94393.55
+2025-05-25 18:42:23:   🔍 Processing symbol: 1000MUMUUSDT -> MUMUUSDT
+2025-05-25 18:42:23:   📊 1000MUMUUSDT -> MUMUUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:23:     🪙 Trying Bitcoin as proxy for 1000MUMUUSDT...
+2025-05-25 18:42:23:     ✅ Bitcoin proxy available @ 94393.55
+2025-05-25 18:42:23: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:54:08: Available capital: $1,000.00
-2025-05-25 10:54:08: Base allocation per symbol: $200.00
-2025-05-25 10:54:08: Scaled allocation per symbol: $200.00
-2025-05-25 10:54:08: Vol scalar applied: 1.000
-2025-05-25 10:54:08: Symbols to trade: 5
-2025-05-25 10:54:08: 
+2025-05-25 18:42:23: Symbols to trade: 5
+2025-05-25 18:42:23: 
   📈 FARTCOINUSDT (+139.08% funding) 🪙 [BTC PROXY] ⚡ [SCALED 1.00x]:
-2025-05-25 10:54:08:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:08:      💰 Base allocation: $200.00, Scaled: $200.00
-2025-05-25 10:54:08:      🔸 LINEAR short: 100.3512 units @ 0.996500 = $100.00
-2025-05-25 10:54:08:      🔸 SPOT long: 0.0011 units @ 94393.550000 = $100.00
-2025-05-25 10:54:08:      💸 Trading costs: $0.18 (Linear: $0.09, Spot: $0.09)
-2025-05-25 10:54:08: 
+2025-05-25 18:42:23:      💸 Trading costs: $0.18
+2025-05-25 18:42:23: 
   📈 GRIFFAINUSDT (+85.50% funding) 🪙 [BTC PROXY] ⚡ [SCALED 1.00x]:
-2025-05-25 10:54:08:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:08:      💰 Base allocation: $200.00, Scaled: $200.00
-2025-05-25 10:54:08:      🔸 LINEAR short: 266.1769 units @ 0.375690 = $100.00
-2025-05-25 10:54:08:      🔸 SPOT long: 0.0011 units @ 94393.550000 = $100.00
-2025-05-25 10:54:08:      💸 Trading costs: $0.18 (Linear: $0.09, Spot: $0.09)
-2025-05-25 10:54:08: 
+2025-05-25 18:42:23:      💸 Trading costs: $0.18
+2025-05-25 18:42:23: 
   📈 AIXBTUSDT (+84.14% funding) 🪙 [BTC PROXY] ⚡ [SCALED 1.00x]:
-2025-05-25 10:54:08:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:08:      💰 Base allocation: $200.00, Scaled: $200.00
-2025-05-25 10:54:08:      🔸 LINEAR short: 157.8781 units @ 0.633400 = $100.00
-2025-05-25 10:54:08:      🔸 SPOT long: 0.0011 units @ 94393.550000 = $100.00
-2025-05-25 10:54:08:      💸 Trading costs: $0.18 (Linear: $0.09, Spot: $0.09)
-2025-05-25 10:54:08: 
+2025-05-25 18:42:23:      💸 Trading costs: $0.18
+2025-05-25 18:42:23: 
   📈 HIPPOUSDT (+83.17% funding) 🪙 [BTC PROXY] ⚡ [SCALED 1.00x]:
-2025-05-25 10:54:08:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:08:      💰 Base allocation: $200.00, Scaled: $200.00
-2025-05-25 10:54:08:      🔸 LINEAR short: 10582.0106 units @ 0.009450 = $100.00
-2025-05-25 10:54:08:      🔸 SPOT long: 0.0011 units @ 94393.550000 = $100.00
-2025-05-25 10:54:08:      💸 Trading costs: $0.18 (Linear: $0.09, Spot: $0.09)
-2025-05-25 10:54:08: 
+2025-05-25 18:42:23:      💸 Trading costs: $0.18
+2025-05-25 18:42:23: 
   📈 1000MUMUUSDT (+78.48% funding) 🪙 [BTC PROXY] ⚡ [SCALED 1.00x]:
-2025-05-25 10:54:08:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:08:      💰 Base allocation: $200.00, Scaled: $200.00
-2025-05-25 10:54:08:      🔸 LINEAR short: 3581.4053 units @ 0.027922 = $100.00
-2025-05-25 10:54:08:      🔸 SPOT long: 0.0011 units @ 94393.550000 = $100.00
-2025-05-25 10:54:08:      💸 Trading costs: $0.18 (Linear: $0.09, Spot: $0.09)
-2025-05-25 10:54:08: 
+2025-05-25 18:42:23:      💸 Trading costs: $0.18
+2025-05-25 18:42:23: 
 📊 REBALANCE PERIOD 1 SUMMARY:
-2025-05-25 10:54:08: ✅ Opened 5 new delta-neutral positions
-2025-05-25 10:54:08: ❌ Closed 0 old positions
-2025-05-25 10:54:08: 🔄 Updated 0 existing positions
-2025-05-25 10:54:08: 💰 Total active positions: 5
-2025-05-25 10:54:08: 💸 Period trading costs: $0.90
-2025-05-25 10:54:08: 📈 Period realized PnL: $0.00
-2025-05-25 10:54:08: 🏦 Portfolio value: $1000.00
-2025-05-25 10:54:08: ⚡ Applied vol scalar: 1.000
-2025-05-25 10:54:08: 💎 Total nominal exposure: $2000.00
-2025-05-25 10:54:08: ⚖️  Final leverage: 2.00x
-2025-05-25 10:54:09: 
+2025-05-25 18:42:23: ✅ Opened 5 new positions
+2025-05-25 18:42:23: ❌ Closed 0 old positions
+2025-05-25 18:42:23: 🔄 Updated 0 existing positions
+2025-05-25 18:42:23: 💰 Total active positions: 5
+2025-05-25 18:42:23: 💸 Period trading costs: $0.90
+2025-05-25 18:42:23: 📈 Period realized PnL: $0.00
+2025-05-25 18:42:23: ⚖️  Final leverage: 2.00x
+2025-05-25 18:42:25: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-02 00:00:
-2025-05-25 10:54:09:    📊 Daily return: -0.77%
-2025-05-25 10:54:09:    📈 Realized vol: 185.26% -> Target: 15.0%
-2025-05-25 10:54:09:    ⚡ Vol scalar: 1.000 -> 0.945
-2025-05-25 10:54:09:      🔄 FARTCOINUSDT: $200.00 -> $188.97 (-5.5%)
-2025-05-25 10:54:09:      🔄 GRIFFAINUSDT: $200.00 -> $188.97 (-5.5%)
-2025-05-25 10:54:09:      🔄 AIXBTUSDT: $200.00 -> $188.97 (-5.5%)
-2025-05-25 10:54:09:      🔄 HIPPOUSDT: $200.00 -> $188.97 (-5.5%)
-2025-05-25 10:54:09:      🔄 1000MUMUUSDT: $200.00 -> $188.97 (-5.5%)
-2025-05-25 10:54:11: 
+2025-05-25 18:42:25:    📊 Daily return: -0.77%
+2025-05-25 18:42:25:    📈 Realized vol: 185.26% -> Target: 15.0%
+2025-05-25 18:42:25:    ⚡ Vol scalar: 1.000 -> 0.945
+2025-05-25 18:42:25:      🔄 FARTCOINUSDT: $200.00 -> $188.97 (-5.5%)
+2025-05-25 18:42:25:      🔄 GRIFFAINUSDT: $200.00 -> $188.97 (-5.5%)
+2025-05-25 18:42:25:      🔄 AIXBTUSDT: $200.00 -> $188.97 (-5.5%)
+2025-05-25 18:42:25:      🔄 HIPPOUSDT: $200.00 -> $188.97 (-5.5%)
+2025-05-25 18:42:25:      🔄 1000MUMUUSDT: $200.00 -> $188.97 (-5.5%)
+2025-05-25 18:42:26: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-03 00:00:
-2025-05-25 10:54:11:    📊 Daily return: -1.68%
-2025-05-25 10:54:11:    📈 Realized vol: 179.79% -> Target: 15.0%
-2025-05-25 10:54:11:    ⚡ Vol scalar: 0.945 -> 0.893
-2025-05-25 10:54:11:      🔄 FARTCOINUSDT: $188.97 -> $178.58 (-5.5%)
-2025-05-25 10:54:11:      🔄 GRIFFAINUSDT: $188.97 -> $178.58 (-5.5%)
-2025-05-25 10:54:11:      🔄 AIXBTUSDT: $188.97 -> $178.58 (-5.5%)
-2025-05-25 10:54:11:      🔄 HIPPOUSDT: $188.97 -> $178.58 (-5.5%)
-2025-05-25 10:54:11:      🔄 1000MUMUUSDT: $188.97 -> $178.58 (-5.5%)
-2025-05-25 10:54:12: 
+2025-05-25 18:42:26:    📊 Daily return: -1.68%
+2025-05-25 18:42:26:    📈 Realized vol: 179.79% -> Target: 15.0%
+2025-05-25 18:42:26:    ⚡ Vol scalar: 0.945 -> 0.893
+2025-05-25 18:42:26:      🔄 FARTCOINUSDT: $188.97 -> $178.58 (-5.5%)
+2025-05-25 18:42:26:      🔄 GRIFFAINUSDT: $188.97 -> $178.58 (-5.5%)
+2025-05-25 18:42:26:      🔄 AIXBTUSDT: $188.97 -> $178.58 (-5.5%)
+2025-05-25 18:42:26:      🔄 HIPPOUSDT: $188.97 -> $178.58 (-5.5%)
+2025-05-25 18:42:26:      🔄 1000MUMUUSDT: $188.97 -> $178.58 (-5.5%)
+2025-05-25 18:42:27: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-04 00:00:
-2025-05-25 10:54:12:    📊 Daily return: -5.45%
-2025-05-25 10:54:12:    📈 Realized vol: 176.17% -> Target: 15.0%
-2025-05-25 10:54:12:    ⚡ Vol scalar: 0.893 -> 0.844
-2025-05-25 10:54:12:      🔄 FARTCOINUSDT: $178.58 -> $168.78 (-5.5%)
-2025-05-25 10:54:12:      🔄 GRIFFAINUSDT: $178.58 -> $168.78 (-5.5%)
-2025-05-25 10:54:12:      🔄 AIXBTUSDT: $178.58 -> $168.78 (-5.5%)
-2025-05-25 10:54:12:      🔄 HIPPOUSDT: $178.58 -> $168.78 (-5.5%)
-2025-05-25 10:54:12:      🔄 1000MUMUUSDT: $178.58 -> $168.78 (-5.5%)
-2025-05-25 10:54:13: 
+2025-05-25 18:42:27:    📊 Daily return: -5.45%
+2025-05-25 18:42:27:    📈 Realized vol: 176.17% -> Target: 15.0%
+2025-05-25 18:42:27:    ⚡ Vol scalar: 0.893 -> 0.844
+2025-05-25 18:42:27:      🔄 FARTCOINUSDT: $178.58 -> $168.78 (-5.5%)
+2025-05-25 18:42:27:      🔄 GRIFFAINUSDT: $178.58 -> $168.78 (-5.5%)
+2025-05-25 18:42:27:      🔄 AIXBTUSDT: $178.58 -> $168.78 (-5.5%)
+2025-05-25 18:42:27:      🔄 HIPPOUSDT: $178.58 -> $168.78 (-5.5%)
+2025-05-25 18:42:27:      🔄 1000MUMUUSDT: $178.58 -> $168.78 (-5.5%)
+2025-05-25 18:42:28: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-05 00:00:
-2025-05-25 10:54:13:    📊 Daily return: +3.21%
-2025-05-25 10:54:13:    📈 Realized vol: 171.47% -> Target: 15.0%
-2025-05-25 10:54:13:    ⚡ Vol scalar: 0.844 -> 0.798
-2025-05-25 10:54:13:      🔄 FARTCOINUSDT: $168.78 -> $159.54 (-5.5%)
-2025-05-25 10:54:13:      🔄 GRIFFAINUSDT: $168.78 -> $159.54 (-5.5%)
-2025-05-25 10:54:13:      🔄 AIXBTUSDT: $168.78 -> $159.54 (-5.5%)
-2025-05-25 10:54:13:      🔄 HIPPOUSDT: $168.78 -> $159.54 (-5.5%)
-2025-05-25 10:54:13:      🔄 1000MUMUUSDT: $168.78 -> $159.54 (-5.5%)
-2025-05-25 10:54:15: 
+2025-05-25 18:42:28:    📊 Daily return: +3.21%
+2025-05-25 18:42:28:    📈 Realized vol: 171.47% -> Target: 15.0%
+2025-05-25 18:42:28:    ⚡ Vol scalar: 0.844 -> 0.798
+2025-05-25 18:42:28:      🔄 FARTCOINUSDT: $168.78 -> $159.54 (-5.5%)
+2025-05-25 18:42:28:      🔄 GRIFFAINUSDT: $168.78 -> $159.54 (-5.5%)
+2025-05-25 18:42:28:      🔄 AIXBTUSDT: $168.78 -> $159.54 (-5.5%)
+2025-05-25 18:42:28:      🔄 HIPPOUSDT: $168.78 -> $159.54 (-5.5%)
+2025-05-25 18:42:28:      🔄 1000MUMUUSDT: $168.78 -> $159.54 (-5.5%)
+2025-05-25 18:42:29: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-06 00:00:
-2025-05-25 10:54:15:    📊 Daily return: +4.65%
-2025-05-25 10:54:15:    📈 Realized vol: 167.66% -> Target: 15.0%
-2025-05-25 10:54:15:    ⚡ Vol scalar: 0.798 -> 0.754
-2025-05-25 10:54:15:      🔄 FARTCOINUSDT: $159.54 -> $150.82 (-5.5%)
-2025-05-25 10:54:15:      🔄 GRIFFAINUSDT: $159.54 -> $150.82 (-5.5%)
-2025-05-25 10:54:15:      🔄 AIXBTUSDT: $159.54 -> $150.82 (-5.5%)
-2025-05-25 10:54:15:      🔄 HIPPOUSDT: $159.54 -> $150.82 (-5.5%)
-2025-05-25 10:54:15:      🔄 1000MUMUUSDT: $159.54 -> $150.82 (-5.5%)
-2025-05-25 10:54:16: 
+2025-05-25 18:42:29:    📊 Daily return: +4.65%
+2025-05-25 18:42:29:    📈 Realized vol: 167.66% -> Target: 15.0%
+2025-05-25 18:42:29:    ⚡ Vol scalar: 0.798 -> 0.754
+2025-05-25 18:42:29:      🔄 FARTCOINUSDT: $159.54 -> $150.82 (-5.5%)
+2025-05-25 18:42:29:      🔄 GRIFFAINUSDT: $159.54 -> $150.82 (-5.5%)
+2025-05-25 18:42:29:      🔄 AIXBTUSDT: $159.54 -> $150.82 (-5.5%)
+2025-05-25 18:42:29:      🔄 HIPPOUSDT: $159.54 -> $150.82 (-5.5%)
+2025-05-25 18:42:29:      🔄 1000MUMUUSDT: $159.54 -> $150.82 (-5.5%)
+2025-05-25 18:42:31: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-07 00:00:
-2025-05-25 10:54:16:    📊 Daily return: +0.01%
-2025-05-25 10:54:16:    📈 Realized vol: 162.55% -> Target: 15.0%
-2025-05-25 10:54:16:    ⚡ Vol scalar: 0.754 -> 0.713
-2025-05-25 10:54:16:      🔄 FARTCOINUSDT: $150.82 -> $142.61 (-5.4%)
-2025-05-25 10:54:16:      🔄 GRIFFAINUSDT: $150.82 -> $142.61 (-5.4%)
-2025-05-25 10:54:16:      🔄 AIXBTUSDT: $150.82 -> $142.61 (-5.4%)
-2025-05-25 10:54:16:      🔄 HIPPOUSDT: $150.82 -> $142.61 (-5.4%)
-2025-05-25 10:54:16:      🔄 1000MUMUUSDT: $150.82 -> $142.61 (-5.4%)
-2025-05-25 10:54:18: 
-📈 END OF PERIOD 1 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:54:18: ============================================================
-2025-05-25 10:54:18: 🏦 Portfolio Value: $1,000.00 → $1,037.15 (+37.15)
-2025-05-25 10:54:18: 💰 Period Funding PnL: $8.76
-2025-05-25 10:54:18: 📊 Period Realized Trading PnL: $0.00
-2025-05-25 10:54:18: 📈 Current Unrealized PnL: $29.29
-2025-05-25 10:54:18: 💸 Period Trading Costs: $0.90
-2025-05-25 10:54:18: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:54:18: 📊 Period-end realized vol: 162.55% (target: 15.0%)
-2025-05-25 10:54:18: ⚡ Period-end vol scalar: 0.713
-2025-05-25 10:54:18: ⚖️  Period-end leverage: 1.37x
-2025-05-25 10:54:18: 📈 Vol scaling effectiveness: 983.7% deviation from target
-2025-05-25 10:54:18: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:54:18: 💰 Total Funding PnL: $8.76
-2025-05-25 10:54:18: 📊 Total Realized Trading PnL: $0.00
-2025-05-25 10:54:18: 💸 Total Trading Costs: $0.90
-2025-05-25 10:54:18: 
+2025-05-25 18:42:31:    📊 Daily return: +0.01%
+2025-05-25 18:42:31:    📈 Realized vol: 162.55% -> Target: 15.0%
+2025-05-25 18:42:31:    ⚡ Vol scalar: 0.754 -> 0.713
+2025-05-25 18:42:31:      🔄 FARTCOINUSDT: $150.82 -> $142.61 (-5.4%)
+2025-05-25 18:42:31:      🔄 GRIFFAINUSDT: $150.82 -> $142.61 (-5.4%)
+2025-05-25 18:42:31:      🔄 AIXBTUSDT: $150.82 -> $142.61 (-5.4%)
+2025-05-25 18:42:31:      🔄 HIPPOUSDT: $150.82 -> $142.61 (-5.4%)
+2025-05-25 18:42:31:      🔄 1000MUMUUSDT: $150.82 -> $142.61 (-5.4%)
+2025-05-25 18:42:32: 
+📈 END OF PERIOD 1 SUMMARY:
+2025-05-25 18:42:32: 🏦 Portfolio Value: $1,000.00 → $1,037.15 (+37.15)
+2025-05-25 18:42:32: 💰 Period Funding PnL: $8.76
+2025-05-25 18:42:32: 📊 Period Realized Trading PnL: $0.00
+2025-05-25 18:42:32: 💸 Period Trading Costs: $0.90
+2025-05-25 18:42:32: 
 ================================================================================
-2025-05-25 10:54:18: REBALANCE PERIOD 2/19
-2025-05-25 10:54:18: ================================================================================
-2025-05-25 10:54:18: 📅 Period: 2025-01-08 00:00 → 2025-01-15 00:00
-2025-05-25 10:54:18: 💰 Starting Capital: $1,037.15
-2025-05-25 10:54:18: 📊 Current Portfolio Positions: 5
-2025-05-25 10:54:18: 
+2025-05-25 18:42:32: REBALANCE PERIOD 2/19
+2025-05-25 18:42:32: ================================================================================
+2025-05-25 18:42:32: 📅 Period: 2025-01-08 00:00 → 2025-01-15 00:00
+2025-05-25 18:42:32: 💰 Starting Capital: $1,037.15
+2025-05-25 18:42:32: 📊 Current Portfolio Positions: 5
+2025-05-25 18:42:32: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:18:    📊 Current realized volatility: 162.55%
-2025-05-25 10:54:18:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:18:    ⚡ Current vol scalar: 0.713
-2025-05-25 10:54:18:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:54:18:    📐 Vol ratio (realized/target): 10.84
-2025-05-25 10:54:18: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:18: Total symbols with funding data in period: 404
-2025-05-25 10:54:18: Symbols meeting 30.0% threshold: 9
-2025-05-25 10:54:18: 
+2025-05-25 18:42:32:    📊 Current realized volatility: 162.55%
+2025-05-25 18:42:32:    🎯 Target volatility: 15.0%
+2025-05-25 18:42:32:    ⚡ Current vol scalar: 0.713
+2025-05-25 18:42:32: 
 ⭐ TOP 5 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:54:18: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:54:18: --------------------------------------------------
-2025-05-25 10:54:18: 1     COWUSDT         43.80          % 2h
-2025-05-25 10:54:18: 2     SWARMSUSDT      43.58          % 4h
-2025-05-25 10:54:18: 3     MAGICUSDT       42.34          % 2h
-2025-05-25 10:54:18: 4     FARTCOINUSDT    39.93          % 4h
-2025-05-25 10:54:18: 5     ORCAUSDT        37.60          % 2h
-2025-05-25 10:54:18: 
+2025-05-25 18:42:32: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:42:32: --------------------------------------------------
+2025-05-25 18:42:32: 1     COWUSDT         43.80          % 2h
+2025-05-25 18:42:32: 2     SWARMSUSDT      43.58          % 4h
+2025-05-25 18:42:32: 3     MAGICUSDT       42.34          % 2h
+2025-05-25 18:42:32: 4     FARTCOINUSDT    39.93          % 4h
+2025-05-25 18:42:32: 5     ORCAUSDT        37.60          % 2h
+2025-05-25 18:42:32: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:54:18:    💵 Available capital: $1,037.15
-2025-05-25 10:54:18:    📊 Base allocation per symbol: $207.43
-2025-05-25 10:54:18:    ⚡ Vol scalar: 0.713
-2025-05-25 10:54:18:    💎 Scaled allocation per symbol: $147.90
-2025-05-25 10:54:18:    📈 Scaling effect: -28.7%
-2025-05-25 10:54:18: 
+2025-05-25 18:42:32:    💵 Available capital: $1,037.15
+2025-05-25 18:42:32:    📊 Base allocation per symbol: $207.43
+2025-05-25 18:42:32:    ⚡ Vol scalar: 0.713
+2025-05-25 18:42:32:    💎 Scaled allocation per symbol: $147.90
+2025-05-25 18:42:32: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:54:18:   🔸 Closed LINEAR short HIPPOUSDT: 10582.0106 @ 0.009180, PnL: $2.86, Cost: $0.09
-2025-05-25 10:54:18:   🔸 Closed SPOT long BTCUSDT: 0.0011 @ 97255.010000, PnL: $3.03, Cost: $0.09
-2025-05-25 10:54:18:   ✅ Total PnL for HIPPOUSDT: $5.89
-2025-05-25 10:54:18:   🔸 Closed LINEAR short AIXBTUSDT: 157.8781 @ 0.468900, PnL: $25.97, Cost: $0.07
-2025-05-25 10:54:18:   🔸 Closed SPOT long BTCUSDT: 0.0011 @ 97255.010000, PnL: $3.03, Cost: $0.09
-2025-05-25 10:54:18:   ✅ Total PnL for AIXBTUSDT: $29.00
-2025-05-25 10:54:18:   🔸 Closed LINEAR short 1000MUMUUSDT: 3581.4053 @ 0.024850, PnL: $11.00, Cost: $0.08
-2025-05-25 10:54:18:   🔸 Closed SPOT long BTCUSDT: 0.0011 @ 97255.010000, PnL: $3.03, Cost: $0.09
-2025-05-25 10:54:18:   ✅ Total PnL for 1000MUMUUSDT: $14.03
-2025-05-25 10:54:18:   🔸 Closed LINEAR short GRIFFAINUSDT: 266.1769 @ 0.457490, PnL: $-21.77, Cost: $0.11
-2025-05-25 10:54:18:   🔸 Closed SPOT long BTCUSDT: 0.0011 @ 97255.010000, PnL: $3.03, Cost: $0.09
-2025-05-25 10:54:18:   ✅ Total PnL for GRIFFAINUSDT: $-18.74
-2025-05-25 10:54:18: 
+2025-05-25 18:42:32:   ✅ Closed AIXBTUSDT, PnL: $29.00, Cost: $0.16
+2025-05-25 18:42:32:   ✅ Closed 1000MUMUUSDT, PnL: $14.03, Cost: $0.17
+2025-05-25 18:42:32:   ✅ Closed GRIFFAINUSDT, PnL: $-18.74, Cost: $0.20
+2025-05-25 18:42:32:   ✅ Closed HIPPOUSDT, PnL: $5.89, Cost: $0.18
+2025-05-25 18:42:32: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:54:18:   🔄 FARTCOINUSDT: $142.61 → $147.90 (+3.7%)
-2025-05-25 10:54:18: 
+2025-05-25 18:42:32:   🔄 FARTCOINUSDT: $147.90 → $147.90 (+0.0%)
+2025-05-25 18:42:32: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:54:18:   🔍 Processing symbol: COWUSDT -> COWUSDT
-2025-05-25 10:54:18:   📊 COWUSDT -> COWUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:18:     🪙 Trying Bitcoin as proxy for COWUSDT...
-2025-05-25 10:54:18:     ✅ Bitcoin proxy available @ 97255.01
-2025-05-25 10:54:18:   ✅ Using Bitcoin proxy for COWUSDT: BTC @ 97255.01
-2025-05-25 10:54:18:   🔍 Processing symbol: SWARMSUSDT -> SWARMSUSDT
-2025-05-25 10:54:18:   📊 SWARMSUSDT -> SWARMSUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:18:     🪙 Trying Bitcoin as proxy for SWARMSUSDT...
-2025-05-25 10:54:18:     ✅ Bitcoin proxy available @ 97255.01
-2025-05-25 10:54:18:   ✅ Using Bitcoin proxy for SWARMSUSDT: BTC @ 97255.01
-2025-05-25 10:54:18:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
-2025-05-25 10:54:18:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
-2025-05-25 10:54:18:   🔍 Processing symbol: ORCAUSDT -> ORCAUSDT
-2025-05-25 10:54:19:   📊 ORCAUSDT -> ORCAUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:19:     🪙 Trying Bitcoin as proxy for ORCAUSDT...
-2025-05-25 10:54:19:     ✅ Bitcoin proxy available @ 97255.01
-2025-05-25 10:54:19:   ✅ Using Bitcoin proxy for ORCAUSDT: BTC @ 97255.01
-2025-05-25 10:54:19: 
+2025-05-25 18:42:32:   🔍 Processing symbol: COWUSDT -> COWUSDT
+2025-05-25 18:42:32:   📊 COWUSDT -> COWUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:32:     🪙 Trying Bitcoin as proxy for COWUSDT...
+2025-05-25 18:42:32:     ✅ Bitcoin proxy available @ 97255.01
+2025-05-25 18:42:32:   🔍 Processing symbol: SWARMSUSDT -> SWARMSUSDT
+2025-05-25 18:42:32:   📊 SWARMSUSDT -> SWARMSUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:32:     🪙 Trying Bitcoin as proxy for SWARMSUSDT...
+2025-05-25 18:42:32:     ✅ Bitcoin proxy available @ 97255.01
+2025-05-25 18:42:32:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-25 18:42:32:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-25 18:42:32:   🔍 Processing symbol: ORCAUSDT -> ORCAUSDT
+2025-05-25 18:42:33:   📊 ORCAUSDT -> ORCAUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:33:     🪙 Trying Bitcoin as proxy for ORCAUSDT...
+2025-05-25 18:42:33:     ✅ Bitcoin proxy available @ 97255.01
+2025-05-25 18:42:33: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:54:19: Available capital: $1,036.44
-2025-05-25 10:54:19: Base allocation per symbol: $207.43
-2025-05-25 10:54:19: Scaled allocation per symbol: $147.90
-2025-05-25 10:54:19: Vol scalar applied: 0.713
-2025-05-25 10:54:19: Symbols to trade: 4
-2025-05-25 10:54:19: 
+2025-05-25 18:42:33: Symbols to trade: 4
+2025-05-25 18:42:33: 
   📈 COWUSDT (+43.80% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.71x]:
-2025-05-25 10:54:19:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:19:      💰 Base allocation: $207.43, Scaled: $147.90
-2025-05-25 10:54:19:      🔸 LINEAR short: 93.1973 units @ 0.793500 = $73.95
-2025-05-25 10:54:19:      🔸 SPOT long: 0.0008 units @ 97255.010000 = $73.95
-2025-05-25 10:54:19:      💸 Trading costs: $0.13 (Linear: $0.07, Spot: $0.07)
-2025-05-25 10:54:19: 
+2025-05-25 18:42:33:      💸 Trading costs: $0.13
+2025-05-25 18:42:33: 
   📈 SWARMSUSDT (+43.58% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.71x]:
-2025-05-25 10:54:19:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:19:      💰 Base allocation: $207.43, Scaled: $147.90
-2025-05-25 10:54:19:      🔸 LINEAR short: 166.3825 units @ 0.444470 = $73.95
-2025-05-25 10:54:19:      🔸 SPOT long: 0.0008 units @ 97255.010000 = $73.95
-2025-05-25 10:54:19:      💸 Trading costs: $0.13 (Linear: $0.07, Spot: $0.07)
-2025-05-25 10:54:19: 
+2025-05-25 18:42:33:      💸 Trading costs: $0.13
+2025-05-25 18:42:33: 
   📈 MAGICUSDT (+42.34% funding) ⚡ [SCALED 0.71x]:
-2025-05-25 10:54:19:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
-2025-05-25 10:54:19:      💰 Base allocation: $207.43, Scaled: $147.90
-2025-05-25 10:54:19:      🔸 LINEAR short: 136.5436 units @ 0.541600 = $73.95
-2025-05-25 10:54:19:      🔸 SPOT long: 136.3674 units @ 0.542300 = $73.95
-2025-05-25 10:54:19:      💸 Trading costs: $0.13 (Linear: $0.07, Spot: $0.07)
-2025-05-25 10:54:19: 
+2025-05-25 18:42:33:      💸 Trading costs: $0.13
+2025-05-25 18:42:33: 
   📈 ORCAUSDT (+37.60% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.71x]:
-2025-05-25 10:54:19:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:19:      💰 Base allocation: $207.43, Scaled: $147.90
-2025-05-25 10:54:19:      🔸 LINEAR short: 19.3541 units @ 3.821000 = $73.95
-2025-05-25 10:54:19:      🔸 SPOT long: 0.0008 units @ 97255.010000 = $73.95
-2025-05-25 10:54:19:      💸 Trading costs: $0.13 (Linear: $0.07, Spot: $0.07)
-2025-05-25 10:54:19: 
+2025-05-25 18:42:33:      💸 Trading costs: $0.13
+2025-05-25 18:42:33: 
 📊 REBALANCE PERIOD 2 SUMMARY:
-2025-05-25 10:54:19: ✅ Opened 4 new delta-neutral positions
-2025-05-25 10:54:19: ❌ Closed 4 old positions
-2025-05-25 10:54:19: 🔄 Updated 1 existing positions
-2025-05-25 10:54:19: 💰 Total active positions: 5
-2025-05-25 10:54:19: 💸 Period trading costs: $1.25
-2025-05-25 10:54:19: 📈 Period realized PnL: $30.18
-2025-05-25 10:54:19: 🏦 Portfolio value: $1037.15
-2025-05-25 10:54:19: ⚡ Applied vol scalar: 0.713
-2025-05-25 10:54:19: 💎 Total nominal exposure: $1479.04
-2025-05-25 10:54:19: ⚖️  Final leverage: 1.43x
-2025-05-25 10:54:19: 
+2025-05-25 18:42:33: ✅ Opened 4 new positions
+2025-05-25 18:42:33: ❌ Closed 4 old positions
+2025-05-25 18:42:33: 🔄 Updated 1 existing positions
+2025-05-25 18:42:33: 💰 Total active positions: 5
+2025-05-25 18:42:33: 💸 Period trading costs: $1.25
+2025-05-25 18:42:33: 📈 Period realized PnL: $30.18
+2025-05-25 18:42:33: ⚖️  Final leverage: 1.43x
+2025-05-25 18:42:33: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-08 00:00:
-2025-05-25 10:54:19:    📊 Daily return: +3.32%
-2025-05-25 10:54:19:    📈 Realized vol: 158.37% -> Target: 15.0%
-2025-05-25 10:54:19:    ⚡ Vol scalar: 0.713 -> 0.674
-2025-05-25 10:54:19:      🔄 FARTCOINUSDT: $147.90 -> $139.87 (-5.4%)
-2025-05-25 10:54:19:      🔄 COWUSDT: $147.90 -> $139.87 (-5.4%)
-2025-05-25 10:54:19:      🔄 SWARMSUSDT: $147.90 -> $139.87 (-5.4%)
-2025-05-25 10:54:19:      🔄 MAGICUSDT: $147.90 -> $139.87 (-5.4%)
-2025-05-25 10:54:19:      🔄 ORCAUSDT: $147.90 -> $139.87 (-5.4%)
-2025-05-25 10:54:20: 
+2025-05-25 18:42:33:    📊 Daily return: +3.32%
+2025-05-25 18:42:33:    📈 Realized vol: 158.37% -> Target: 15.0%
+2025-05-25 18:42:33:    ⚡ Vol scalar: 0.713 -> 0.674
+2025-05-25 18:42:33:      🔄 FARTCOINUSDT: $147.90 -> $139.87 (-5.4%)
+2025-05-25 18:42:33:      🔄 COWUSDT: $147.90 -> $139.87 (-5.4%)
+2025-05-25 18:42:33:      🔄 SWARMSUSDT: $147.90 -> $139.87 (-5.4%)
+2025-05-25 18:42:33:      🔄 MAGICUSDT: $147.90 -> $139.87 (-5.4%)
+2025-05-25 18:42:33:      🔄 ORCAUSDT: $147.90 -> $139.87 (-5.4%)
+2025-05-25 18:42:34: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-09 00:00:
-2025-05-25 10:54:20:    📊 Daily return: +1.72%
-2025-05-25 10:54:20:    📈 Realized vol: 153.75% -> Target: 15.0%
-2025-05-25 10:54:20:    ⚡ Vol scalar: 0.674 -> 0.638
-2025-05-25 10:54:20:      🔄 FARTCOINUSDT: $139.87 -> $132.30 (-5.4%)
-2025-05-25 10:54:20:      🔄 COWUSDT: $139.87 -> $132.30 (-5.4%)
-2025-05-25 10:54:20:      🔄 SWARMSUSDT: $139.87 -> $132.30 (-5.4%)
-2025-05-25 10:54:20:      🔄 MAGICUSDT: $139.87 -> $132.30 (-5.4%)
-2025-05-25 10:54:20:      🔄 ORCAUSDT: $139.87 -> $132.30 (-5.4%)
-2025-05-25 10:54:21: 
+2025-05-25 18:42:34:    📊 Daily return: +1.72%
+2025-05-25 18:42:34:    📈 Realized vol: 153.75% -> Target: 15.0%
+2025-05-25 18:42:34:    ⚡ Vol scalar: 0.674 -> 0.638
+2025-05-25 18:42:34:      🔄 FARTCOINUSDT: $139.87 -> $132.30 (-5.4%)
+2025-05-25 18:42:34:      🔄 COWUSDT: $139.87 -> $132.30 (-5.4%)
+2025-05-25 18:42:34:      🔄 SWARMSUSDT: $139.87 -> $132.30 (-5.4%)
+2025-05-25 18:42:34:      🔄 MAGICUSDT: $139.87 -> $132.30 (-5.4%)
+2025-05-25 18:42:34:      🔄 ORCAUSDT: $139.87 -> $132.30 (-5.4%)
+2025-05-25 18:42:35: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-10 00:00:
-2025-05-25 10:54:21:    📊 Daily return: +2.78%
-2025-05-25 10:54:21:    📈 Realized vol: 149.64% -> Target: 15.0%
-2025-05-25 10:54:21:    ⚡ Vol scalar: 0.638 -> 0.603
-2025-05-25 10:54:21:      🔄 FARTCOINUSDT: $132.30 -> $125.15 (-5.4%)
-2025-05-25 10:54:21:      🔄 COWUSDT: $132.30 -> $125.15 (-5.4%)
-2025-05-25 10:54:21:      🔄 SWARMSUSDT: $132.30 -> $125.15 (-5.4%)
-2025-05-25 10:54:21:      🔄 MAGICUSDT: $132.30 -> $125.15 (-5.4%)
-2025-05-25 10:54:21:      🔄 ORCAUSDT: $132.30 -> $125.15 (-5.4%)
-2025-05-25 10:54:23: 
+2025-05-25 18:42:35:    📊 Daily return: +2.78%
+2025-05-25 18:42:35:    📈 Realized vol: 149.64% -> Target: 15.0%
+2025-05-25 18:42:35:    ⚡ Vol scalar: 0.638 -> 0.603
+2025-05-25 18:42:35:      🔄 FARTCOINUSDT: $132.30 -> $125.15 (-5.4%)
+2025-05-25 18:42:35:      🔄 COWUSDT: $132.30 -> $125.15 (-5.4%)
+2025-05-25 18:42:35:      🔄 SWARMSUSDT: $132.30 -> $125.15 (-5.4%)
+2025-05-25 18:42:35:      🔄 MAGICUSDT: $132.30 -> $125.15 (-5.4%)
+2025-05-25 18:42:35:      🔄 ORCAUSDT: $132.30 -> $125.15 (-5.4%)
+2025-05-25 18:42:36: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-11 00:00:
-2025-05-25 10:54:23:    📊 Daily return: +0.04%
-2025-05-25 10:54:23:    📈 Realized vol: 145.08% -> Target: 15.0%
-2025-05-25 10:54:23:    ⚡ Vol scalar: 0.603 -> 0.571
-2025-05-25 10:54:23:      🔄 FARTCOINUSDT: $125.15 -> $118.42 (-5.4%)
-2025-05-25 10:54:23:      🔄 COWUSDT: $125.15 -> $118.42 (-5.4%)
-2025-05-25 10:54:23:      🔄 SWARMSUSDT: $125.15 -> $118.42 (-5.4%)
-2025-05-25 10:54:23:      🔄 MAGICUSDT: $125.15 -> $118.42 (-5.4%)
-2025-05-25 10:54:23:      🔄 ORCAUSDT: $125.15 -> $118.42 (-5.4%)
-2025-05-25 10:54:24: 
+2025-05-25 18:42:36:    📊 Daily return: +0.04%
+2025-05-25 18:42:36:    📈 Realized vol: 145.08% -> Target: 15.0%
+2025-05-25 18:42:36:    ⚡ Vol scalar: 0.603 -> 0.571
+2025-05-25 18:42:36:      🔄 FARTCOINUSDT: $125.15 -> $118.42 (-5.4%)
+2025-05-25 18:42:36:      🔄 COWUSDT: $125.15 -> $118.42 (-5.4%)
+2025-05-25 18:42:36:      🔄 SWARMSUSDT: $125.15 -> $118.42 (-5.4%)
+2025-05-25 18:42:36:      🔄 MAGICUSDT: $125.15 -> $118.42 (-5.4%)
+2025-05-25 18:42:36:      🔄 ORCAUSDT: $125.15 -> $118.42 (-5.4%)
+2025-05-25 18:42:37: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-12 00:00:
-2025-05-25 10:54:24:    📊 Daily return: +1.29%
-2025-05-25 10:54:24:    📈 Realized vol: 140.79% -> Target: 15.0%
-2025-05-25 10:54:24:    ⚡ Vol scalar: 0.571 -> 0.540
-2025-05-25 10:54:24:      🔄 FARTCOINUSDT: $118.42 -> $112.07 (-5.4%)
-2025-05-25 10:54:24:      🔄 COWUSDT: $118.42 -> $112.07 (-5.4%)
-2025-05-25 10:54:24:      🔄 SWARMSUSDT: $118.42 -> $112.07 (-5.4%)
-2025-05-25 10:54:24:      🔄 MAGICUSDT: $118.42 -> $112.07 (-5.4%)
-2025-05-25 10:54:24:      🔄 ORCAUSDT: $118.42 -> $112.07 (-5.4%)
-2025-05-25 10:54:25: 
+2025-05-25 18:42:37:    📊 Daily return: +1.29%
+2025-05-25 18:42:37:    📈 Realized vol: 140.79% -> Target: 15.0%
+2025-05-25 18:42:37:    ⚡ Vol scalar: 0.571 -> 0.540
+2025-05-25 18:42:37:      🔄 FARTCOINUSDT: $118.42 -> $112.07 (-5.4%)
+2025-05-25 18:42:37:      🔄 COWUSDT: $118.42 -> $112.07 (-5.4%)
+2025-05-25 18:42:37:      🔄 SWARMSUSDT: $118.42 -> $112.07 (-5.4%)
+2025-05-25 18:42:37:      🔄 MAGICUSDT: $118.42 -> $112.07 (-5.4%)
+2025-05-25 18:42:37:      🔄 ORCAUSDT: $118.42 -> $112.07 (-5.4%)
+2025-05-25 18:42:39: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-13 00:00:
-2025-05-25 10:54:25:    📊 Daily return: +0.76%
-2025-05-25 10:54:25:    📈 Realized vol: 136.55% -> Target: 15.0%
-2025-05-25 10:54:25:    ⚡ Vol scalar: 0.540 -> 0.511
-2025-05-25 10:54:25:      🔄 FARTCOINUSDT: $112.07 -> $106.09 (-5.3%)
-2025-05-25 10:54:25:      🔄 COWUSDT: $112.07 -> $106.09 (-5.3%)
-2025-05-25 10:54:25:      🔄 SWARMSUSDT: $112.07 -> $106.09 (-5.3%)
-2025-05-25 10:54:25:      🔄 MAGICUSDT: $112.07 -> $106.09 (-5.3%)
-2025-05-25 10:54:25:      🔄 ORCAUSDT: $112.07 -> $106.09 (-5.3%)
-2025-05-25 10:54:27: 
+2025-05-25 18:42:39:    📊 Daily return: +0.76%
+2025-05-25 18:42:39:    📈 Realized vol: 136.55% -> Target: 15.0%
+2025-05-25 18:42:39:    ⚡ Vol scalar: 0.540 -> 0.511
+2025-05-25 18:42:39:      🔄 FARTCOINUSDT: $112.07 -> $106.09 (-5.3%)
+2025-05-25 18:42:39:      🔄 COWUSDT: $112.07 -> $106.09 (-5.3%)
+2025-05-25 18:42:39:      🔄 SWARMSUSDT: $112.07 -> $106.09 (-5.3%)
+2025-05-25 18:42:39:      🔄 MAGICUSDT: $112.07 -> $106.09 (-5.3%)
+2025-05-25 18:42:39:      🔄 ORCAUSDT: $112.07 -> $106.09 (-5.3%)
+2025-05-25 18:42:40: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-14 00:00:
-2025-05-25 10:54:27:    📊 Daily return: -1.19%
-2025-05-25 10:54:27:    📈 Realized vol: 132.50% -> Target: 15.0%
-2025-05-25 10:54:27:    ⚡ Vol scalar: 0.511 -> 0.484
-2025-05-25 10:54:27:      🔄 FARTCOINUSDT: $106.09 -> $100.44 (-5.3%)
-2025-05-25 10:54:27:      🔄 COWUSDT: $106.09 -> $100.44 (-5.3%)
-2025-05-25 10:54:27:      🔄 SWARMSUSDT: $106.09 -> $100.44 (-5.3%)
-2025-05-25 10:54:27:      🔄 MAGICUSDT: $106.09 -> $100.44 (-5.3%)
-2025-05-25 10:54:27:      🔄 ORCAUSDT: $106.09 -> $100.44 (-5.3%)
-2025-05-25 10:54:28: 
-📈 END OF PERIOD 2 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:54:28: ============================================================
-2025-05-25 10:54:28: 🏦 Portfolio Value: $1,037.15 → $1,078.28 (+41.13)
-2025-05-25 10:54:28: 💰 Period Funding PnL: $1.74
-2025-05-25 10:54:28: 📊 Period Realized Trading PnL: $30.18
-2025-05-25 10:54:28: 📈 Current Unrealized PnL: $39.74
-2025-05-25 10:54:28: 💸 Period Trading Costs: $1.25
-2025-05-25 10:54:28: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:54:28: 📊 Period-end realized vol: 132.50% (target: 15.0%)
-2025-05-25 10:54:28: ⚡ Period-end vol scalar: 0.484
-2025-05-25 10:54:28: ⚖️  Period-end leverage: 0.93x
-2025-05-25 10:54:28: 📈 Vol scaling effectiveness: 783.4% deviation from target
-2025-05-25 10:54:28: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:54:28: 💰 Total Funding PnL: $10.50
-2025-05-25 10:54:28: 📊 Total Realized Trading PnL: $30.18
-2025-05-25 10:54:28: 💸 Total Trading Costs: $2.15
-2025-05-25 10:54:28: 
+2025-05-25 18:42:40:    📊 Daily return: -1.19%
+2025-05-25 18:42:40:    📈 Realized vol: 132.50% -> Target: 15.0%
+2025-05-25 18:42:40:    ⚡ Vol scalar: 0.511 -> 0.484
+2025-05-25 18:42:40:      🔄 FARTCOINUSDT: $106.09 -> $100.44 (-5.3%)
+2025-05-25 18:42:40:      🔄 COWUSDT: $106.09 -> $100.44 (-5.3%)
+2025-05-25 18:42:40:      🔄 SWARMSUSDT: $106.09 -> $100.44 (-5.3%)
+2025-05-25 18:42:40:      🔄 MAGICUSDT: $106.09 -> $100.44 (-5.3%)
+2025-05-25 18:42:40:      🔄 ORCAUSDT: $106.09 -> $100.44 (-5.3%)
+2025-05-25 18:42:41: 
+📈 END OF PERIOD 2 SUMMARY:
+2025-05-25 18:42:41: 🏦 Portfolio Value: $1,037.15 → $1,078.28 (+41.13)
+2025-05-25 18:42:41: 💰 Period Funding PnL: $1.74
+2025-05-25 18:42:41: 📊 Period Realized Trading PnL: $30.18
+2025-05-25 18:42:41: 💸 Period Trading Costs: $1.25
+2025-05-25 18:42:41: 
 ================================================================================
-2025-05-25 10:54:28: REBALANCE PERIOD 3/19
-2025-05-25 10:54:28: ================================================================================
-2025-05-25 10:54:28: 📅 Period: 2025-01-15 00:00 → 2025-01-22 00:00
-2025-05-25 10:54:28: 💰 Starting Capital: $1,078.28
-2025-05-25 10:54:28: 📊 Current Portfolio Positions: 5
-2025-05-25 10:54:28: 
+2025-05-25 18:42:41: REBALANCE PERIOD 3/19
+2025-05-25 18:42:41: ================================================================================
+2025-05-25 18:42:41: 📅 Period: 2025-01-15 00:00 → 2025-01-22 00:00
+2025-05-25 18:42:41: 💰 Starting Capital: $1,078.28
+2025-05-25 18:42:41: 📊 Current Portfolio Positions: 5
+2025-05-25 18:42:41: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:28:    📊 Current realized volatility: 132.50%
-2025-05-25 10:54:28:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:28:    ⚡ Current vol scalar: 0.484
-2025-05-25 10:54:28:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:54:28:    📐 Vol ratio (realized/target): 8.83
-2025-05-25 10:54:28: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:28: Total symbols with funding data in period: 410
-2025-05-25 10:54:28: Symbols meeting 30.0% threshold: 13
-2025-05-25 10:54:28: 
+2025-05-25 18:42:41:    📊 Current realized volatility: 132.50%
+2025-05-25 18:42:41:    🎯 Target volatility: 15.0%
+2025-05-25 18:42:41:    ⚡ Current vol scalar: 0.484
+2025-05-25 18:42:41: 
 ⭐ TOP 5 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:54:28: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:54:28: --------------------------------------------------
-2025-05-25 10:54:28: 1     MELANIAUSDT     172.38         % 4h
-2025-05-25 10:54:28: 2     HYPEUSDT        61.51          % 8h
-2025-05-25 10:54:28: 3     GRIFFAINUSDT    52.41          % 4h
-2025-05-25 10:54:28: 4     PAXGUSDT        47.79          % 4h
-2025-05-25 10:54:28: 5     MAGICUSDT       43.80          % 2h
-2025-05-25 10:54:28: 
+2025-05-25 18:42:41: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:42:41: --------------------------------------------------
+2025-05-25 18:42:41: 1     MELANIAUSDT     172.38         % 4h
+2025-05-25 18:42:41: 2     HYPEUSDT        61.51          % 8h
+2025-05-25 18:42:41: 3     GRIFFAINUSDT    52.41          % 4h
+2025-05-25 18:42:41: 4     PAXGUSDT        47.79          % 4h
+2025-05-25 18:42:41: 5     MAGICUSDT       43.80          % 2h
+2025-05-25 18:42:41: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:54:28:    💵 Available capital: $1,078.28
-2025-05-25 10:54:28:    📊 Base allocation per symbol: $215.66
-2025-05-25 10:54:28:    ⚡ Vol scalar: 0.484
-2025-05-25 10:54:28:    💎 Scaled allocation per symbol: $104.43
-2025-05-25 10:54:28:    📈 Scaling effect: -51.6%
-2025-05-25 10:54:28: 
+2025-05-25 18:42:41:    💵 Available capital: $1,078.28
+2025-05-25 18:42:41:    📊 Base allocation per symbol: $215.66
+2025-05-25 18:42:41:    ⚡ Vol scalar: 0.484
+2025-05-25 18:42:41:    💎 Scaled allocation per symbol: $104.43
+2025-05-25 18:42:41: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:54:28:   🔸 Closed LINEAR short ORCAUSDT: 19.3541 @ 3.396000, PnL: $8.23, Cost: $0.06
-2025-05-25 10:54:28:   🔸 Closed SPOT long BTCUSDT: 0.0008 @ 96888.410000, PnL: $-0.28, Cost: $0.07
-2025-05-25 10:54:28:   ✅ Total PnL for ORCAUSDT: $7.95
-2025-05-25 10:54:28:   🔸 Closed LINEAR short FARTCOINUSDT: 100.3512 @ 1.010700, PnL: $-1.42, Cost: $0.09
-2025-05-25 10:54:28:   🔸 Closed SPOT long BTCUSDT: 0.0011 @ 96888.410000, PnL: $2.64, Cost: $0.09
-2025-05-25 10:54:28:   ✅ Total PnL for FARTCOINUSDT: $1.22
-2025-05-25 10:54:28:   🔸 Closed LINEAR short SWARMSUSDT: 166.3825 @ 0.220420, PnL: $37.28, Cost: $0.03
-2025-05-25 10:54:28:   🔸 Closed SPOT long BTCUSDT: 0.0008 @ 96888.410000, PnL: $-0.28, Cost: $0.07
-2025-05-25 10:54:28:   ✅ Total PnL for SWARMSUSDT: $37.00
-2025-05-25 10:54:28:   🔸 Closed LINEAR short COWUSDT: 93.1973 @ 0.784300, PnL: $0.86, Cost: $0.07
-2025-05-25 10:54:28:   🔸 Closed SPOT long BTCUSDT: 0.0008 @ 96888.410000, PnL: $-0.28, Cost: $0.07
-2025-05-25 10:54:28:   ✅ Total PnL for COWUSDT: $0.58
-2025-05-25 10:54:28: 
+2025-05-25 18:42:41:   ✅ Closed FARTCOINUSDT, PnL: $1.22, Cost: $0.18
+2025-05-25 18:42:41:   ✅ Closed SWARMSUSDT, PnL: $37.00, Cost: $0.10
+2025-05-25 18:42:41:   ✅ Closed ORCAUSDT, PnL: $7.95, Cost: $0.13
+2025-05-25 18:42:41:   ✅ Closed COWUSDT, PnL: $0.58, Cost: $0.13
+2025-05-25 18:42:41: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:54:28:   🔄 MAGICUSDT: $100.44 → $104.43 (+4.0%)
-2025-05-25 10:54:28: 
+2025-05-25 18:42:41:   🔄 MAGICUSDT: $104.43 → $104.43 (+0.0%)
+2025-05-25 18:42:41: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:54:28:   🔍 Processing symbol: MELANIAUSDT -> MELANIAUSDT
-2025-05-25 10:54:28:   ❌ MELANIAUSDT -> MELANIAUSDT: Linear ❌ - Cannot trade without linear data
-2025-05-25 10:54:28:   🔍 Processing symbol: HYPEUSDT -> HYPEUSDT
-2025-05-25 10:54:29:   📊 HYPEUSDT -> HYPEUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:29:     🪙 Trying Bitcoin as proxy for HYPEUSDT...
-2025-05-25 10:54:29:     ✅ Bitcoin proxy available @ 96888.41
-2025-05-25 10:54:29:   ✅ Using Bitcoin proxy for HYPEUSDT: BTC @ 96888.41
-2025-05-25 10:54:29:   🔍 Processing symbol: GRIFFAINUSDT -> GRIFFAINUSDT
-2025-05-25 10:54:29:   📊 GRIFFAINUSDT -> GRIFFAINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:29:     🪙 Trying Bitcoin as proxy for GRIFFAINUSDT...
-2025-05-25 10:54:29:     ✅ Bitcoin proxy available @ 96888.41
-2025-05-25 10:54:29:   ✅ Using Bitcoin proxy for GRIFFAINUSDT: BTC @ 96888.41
-2025-05-25 10:54:29:   🔍 Processing symbol: PAXGUSDT -> PAXGUSDT
-2025-05-25 10:54:29:   📊 PAXGUSDT -> PAXGUSDT: Linear ✅ Spot ✅ Prices ✅
-2025-05-25 10:54:29: 
+2025-05-25 18:42:41:   🔍 Processing symbol: MELANIAUSDT -> MELANIAUSDT
+2025-05-25 18:42:41:   ❌ MELANIAUSDT -> MELANIAUSDT: Cannot trade without linear data
+2025-05-25 18:42:41:   🔍 Processing symbol: HYPEUSDT -> HYPEUSDT
+2025-05-25 18:42:42:   📊 HYPEUSDT -> HYPEUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:42:     🪙 Trying Bitcoin as proxy for HYPEUSDT...
+2025-05-25 18:42:42:     ✅ Bitcoin proxy available @ 96888.41
+2025-05-25 18:42:42:   🔍 Processing symbol: GRIFFAINUSDT -> GRIFFAINUSDT
+2025-05-25 18:42:42:   📊 GRIFFAINUSDT -> GRIFFAINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:42:     🪙 Trying Bitcoin as proxy for GRIFFAINUSDT...
+2025-05-25 18:42:42:     ✅ Bitcoin proxy available @ 96888.41
+2025-05-25 18:42:42:   🔍 Processing symbol: PAXGUSDT -> PAXGUSDT
+2025-05-25 18:42:42:   📊 PAXGUSDT -> PAXGUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-25 18:42:42: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:54:29: Available capital: $1,077.74
-2025-05-25 10:54:29: Base allocation per symbol: $215.66
-2025-05-25 10:54:29: Scaled allocation per symbol: $104.43
-2025-05-25 10:54:29: Vol scalar applied: 0.484
-2025-05-25 10:54:29: Symbols to trade: 3
-2025-05-25 10:54:29: 
+2025-05-25 18:42:42: Symbols to trade: 3
+2025-05-25 18:42:42: 
   📈 HYPEUSDT (+61.51% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.48x]:
-2025-05-25 10:54:29:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:29:      💰 Base allocation: $215.66, Scaled: $104.43
-2025-05-25 10:54:29:      🔸 LINEAR short: 2.2765 units @ 22.936000 = $52.21
-2025-05-25 10:54:29:      🔸 SPOT long: 0.0005 units @ 96888.410000 = $52.21
-2025-05-25 10:54:29:      💸 Trading costs: $0.09 (Linear: $0.05, Spot: $0.05)
-2025-05-25 10:54:29: 
+2025-05-25 18:42:42:      💸 Trading costs: $0.09
+2025-05-25 18:42:42: 
   📈 GRIFFAINUSDT (+52.41% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.48x]:
-2025-05-25 10:54:29:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:29:      💰 Base allocation: $215.66, Scaled: $104.43
-2025-05-25 10:54:29:      🔸 LINEAR short: 117.9479 units @ 0.442680 = $52.21
-2025-05-25 10:54:29:      🔸 SPOT long: 0.0005 units @ 96888.410000 = $52.21
-2025-05-25 10:54:29:      💸 Trading costs: $0.09 (Linear: $0.05, Spot: $0.05)
-2025-05-25 10:54:29: 
+2025-05-25 18:42:42:      💸 Trading costs: $0.09
+2025-05-25 18:42:42: 
   📈 PAXGUSDT (+47.79% funding) ⚡ [SCALED 0.48x]:
-2025-05-25 10:54:29:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
-2025-05-25 10:54:29:      💰 Base allocation: $215.66, Scaled: $104.43
-2025-05-25 10:54:29:      🔸 LINEAR short: 0.0195 units @ 2676.000000 = $52.21
-2025-05-25 10:54:29:      🔸 SPOT long: 0.0195 units @ 2676.000000 = $52.21
-2025-05-25 10:54:29:      💸 Trading costs: $0.09 (Linear: $0.05, Spot: $0.05)
-2025-05-25 10:54:29: 
+2025-05-25 18:42:42:      💸 Trading costs: $0.09
+2025-05-25 18:42:42: 
 📊 REBALANCE PERIOD 3 SUMMARY:
-2025-05-25 10:54:29: ✅ Opened 3 new delta-neutral positions
-2025-05-25 10:54:29: ❌ Closed 4 old positions
-2025-05-25 10:54:29: 🔄 Updated 1 existing positions
-2025-05-25 10:54:29: 💰 Total active positions: 4
-2025-05-25 10:54:29: 💸 Period trading costs: $0.82
-2025-05-25 10:54:29: 📈 Period realized PnL: $46.74
-2025-05-25 10:54:29: 🏦 Portfolio value: $1078.28
-2025-05-25 10:54:29: ⚡ Applied vol scalar: 0.484
-2025-05-25 10:54:29: 💎 Total nominal exposure: $835.41
-2025-05-25 10:54:29: ⚖️  Final leverage: 0.77x
-2025-05-25 10:54:29: 
+2025-05-25 18:42:42: ✅ Opened 3 new positions
+2025-05-25 18:42:42: ❌ Closed 4 old positions
+2025-05-25 18:42:42: 🔄 Updated 1 existing positions
+2025-05-25 18:42:42: 💰 Total active positions: 4
+2025-05-25 18:42:42: 💸 Period trading costs: $0.82
+2025-05-25 18:42:42: 📈 Period realized PnL: $46.74
+2025-05-25 18:42:42: ⚖️  Final leverage: 0.77x
+2025-05-25 18:42:42: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-15 00:00:
-2025-05-25 10:54:29:    📊 Daily return: -0.83%
-2025-05-25 10:54:29:    📈 Realized vol: 128.52% -> Target: 15.0%
-2025-05-25 10:54:29:    ⚡ Vol scalar: 0.484 -> 0.459
-2025-05-25 10:54:29:      🔄 MAGICUSDT: $104.43 -> $98.89 (-5.3%)
-2025-05-25 10:54:29:      🔄 HYPEUSDT: $104.43 -> $98.89 (-5.3%)
-2025-05-25 10:54:29:      🔄 GRIFFAINUSDT: $104.43 -> $98.89 (-5.3%)
-2025-05-25 10:54:29:      🔄 PAXGUSDT: $104.43 -> $98.89 (-5.3%)
-2025-05-25 10:54:30: 
+2025-05-25 18:42:42:    📊 Daily return: -0.83%
+2025-05-25 18:42:42:    📈 Realized vol: 128.52% -> Target: 15.0%
+2025-05-25 18:42:42:    ⚡ Vol scalar: 0.484 -> 0.459
+2025-05-25 18:42:42:      🔄 MAGICUSDT: $104.43 -> $98.89 (-5.3%)
+2025-05-25 18:42:42:      🔄 HYPEUSDT: $104.43 -> $98.89 (-5.3%)
+2025-05-25 18:42:42:      🔄 GRIFFAINUSDT: $104.43 -> $98.89 (-5.3%)
+2025-05-25 18:42:42:      🔄 PAXGUSDT: $104.43 -> $98.89 (-5.3%)
+2025-05-25 18:42:43: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-16 00:00:
-2025-05-25 10:54:30:    📊 Daily return: -1.23%
-2025-05-25 10:54:30:    📈 Realized vol: 124.74% -> Target: 15.0%
-2025-05-25 10:54:30:    ⚡ Vol scalar: 0.459 -> 0.434
-2025-05-25 10:54:30:      🔄 MAGICUSDT: $98.89 -> $93.67 (-5.3%)
-2025-05-25 10:54:30:      🔄 HYPEUSDT: $98.89 -> $93.67 (-5.3%)
-2025-05-25 10:54:30:      🔄 GRIFFAINUSDT: $98.89 -> $93.67 (-5.3%)
-2025-05-25 10:54:30:      🔄 PAXGUSDT: $98.89 -> $93.67 (-5.3%)
-2025-05-25 10:54:31: 
+2025-05-25 18:42:43:    📊 Daily return: -1.23%
+2025-05-25 18:42:43:    📈 Realized vol: 124.74% -> Target: 15.0%
+2025-05-25 18:42:43:    ⚡ Vol scalar: 0.459 -> 0.434
+2025-05-25 18:42:43:      🔄 MAGICUSDT: $98.89 -> $93.67 (-5.3%)
+2025-05-25 18:42:43:      🔄 HYPEUSDT: $98.89 -> $93.67 (-5.3%)
+2025-05-25 18:42:43:      🔄 GRIFFAINUSDT: $98.89 -> $93.67 (-5.3%)
+2025-05-25 18:42:43:      🔄 PAXGUSDT: $98.89 -> $93.67 (-5.3%)
+2025-05-25 18:42:44: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-17 00:00:
-2025-05-25 10:54:31:    📊 Daily return: +0.58%
-2025-05-25 10:54:31:    📈 Realized vol: 120.97% -> Target: 15.0%
-2025-05-25 10:54:31:    ⚡ Vol scalar: 0.434 -> 0.412
-2025-05-25 10:54:31:      🔄 MAGICUSDT: $93.67 -> $88.75 (-5.3%)
-2025-05-25 10:54:31:      🔄 HYPEUSDT: $93.67 -> $88.75 (-5.3%)
-2025-05-25 10:54:31:      🔄 GRIFFAINUSDT: $93.67 -> $88.75 (-5.3%)
-2025-05-25 10:54:31:      🔄 PAXGUSDT: $93.67 -> $88.75 (-5.3%)
-2025-05-25 10:54:32: 
+2025-05-25 18:42:44:    📊 Daily return: +0.58%
+2025-05-25 18:42:44:    📈 Realized vol: 120.97% -> Target: 15.0%
+2025-05-25 18:42:44:    ⚡ Vol scalar: 0.434 -> 0.412
+2025-05-25 18:42:44:      🔄 MAGICUSDT: $93.67 -> $88.75 (-5.3%)
+2025-05-25 18:42:44:      🔄 HYPEUSDT: $93.67 -> $88.75 (-5.3%)
+2025-05-25 18:42:44:      🔄 GRIFFAINUSDT: $93.67 -> $88.75 (-5.3%)
+2025-05-25 18:42:44:      🔄 PAXGUSDT: $93.67 -> $88.75 (-5.3%)
+2025-05-25 18:42:45: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-18 00:00:
-2025-05-25 10:54:32:    📊 Daily return: +0.61%
-2025-05-25 10:54:32:    📈 Realized vol: 117.32% -> Target: 15.0%
-2025-05-25 10:54:32:    ⚡ Vol scalar: 0.412 -> 0.390
-2025-05-25 10:54:32:      🔄 MAGICUSDT: $88.75 -> $84.10 (-5.2%)
-2025-05-25 10:54:32:      🔄 HYPEUSDT: $88.75 -> $84.10 (-5.2%)
-2025-05-25 10:54:32:      🔄 GRIFFAINUSDT: $88.75 -> $84.10 (-5.2%)
-2025-05-25 10:54:32:      🔄 PAXGUSDT: $88.75 -> $84.10 (-5.2%)
-2025-05-25 10:54:33: 
+2025-05-25 18:42:45:    📊 Daily return: +0.61%
+2025-05-25 18:42:45:    📈 Realized vol: 117.32% -> Target: 15.0%
+2025-05-25 18:42:45:    ⚡ Vol scalar: 0.412 -> 0.390
+2025-05-25 18:42:45:      🔄 MAGICUSDT: $88.75 -> $84.10 (-5.2%)
+2025-05-25 18:42:45:      🔄 HYPEUSDT: $88.75 -> $84.10 (-5.2%)
+2025-05-25 18:42:45:      🔄 GRIFFAINUSDT: $88.75 -> $84.10 (-5.2%)
+2025-05-25 18:42:45:      🔄 PAXGUSDT: $88.75 -> $84.10 (-5.2%)
+2025-05-25 18:42:46: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-19 00:00:
-2025-05-25 10:54:33:    📊 Daily return: +0.21%
-2025-05-25 10:54:33:    📈 Realized vol: 113.75% -> Target: 15.0%
-2025-05-25 10:54:33:    ⚡ Vol scalar: 0.390 -> 0.370
-2025-05-25 10:54:33:      🔄 MAGICUSDT: $84.10 -> $79.72 (-5.2%)
-2025-05-25 10:54:33:      🔄 HYPEUSDT: $84.10 -> $79.72 (-5.2%)
-2025-05-25 10:54:33:      🔄 GRIFFAINUSDT: $84.10 -> $79.72 (-5.2%)
-2025-05-25 10:54:33:      🔄 PAXGUSDT: $84.10 -> $79.72 (-5.2%)
-2025-05-25 10:54:34: 
+2025-05-25 18:42:46:    📊 Daily return: +0.21%
+2025-05-25 18:42:46:    📈 Realized vol: 113.75% -> Target: 15.0%
+2025-05-25 18:42:46:    ⚡ Vol scalar: 0.390 -> 0.370
+2025-05-25 18:42:46:      🔄 MAGICUSDT: $84.10 -> $79.72 (-5.2%)
+2025-05-25 18:42:46:      🔄 HYPEUSDT: $84.10 -> $79.72 (-5.2%)
+2025-05-25 18:42:46:      🔄 GRIFFAINUSDT: $84.10 -> $79.72 (-5.2%)
+2025-05-25 18:42:46:      🔄 PAXGUSDT: $84.10 -> $79.72 (-5.2%)
+2025-05-25 18:42:47: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-20 00:00:
-2025-05-25 10:54:34:    📊 Daily return: +0.29%
-2025-05-25 10:54:34:    📈 Realized vol: 110.30% -> Target: 15.0%
-2025-05-25 10:54:34:    ⚡ Vol scalar: 0.370 -> 0.351
-2025-05-25 10:54:34:      🔄 MAGICUSDT: $79.72 -> $75.59 (-5.2%)
-2025-05-25 10:54:34:      🔄 HYPEUSDT: $79.72 -> $75.59 (-5.2%)
-2025-05-25 10:54:34:      🔄 GRIFFAINUSDT: $79.72 -> $75.59 (-5.2%)
-2025-05-25 10:54:34:      🔄 PAXGUSDT: $79.72 -> $75.59 (-5.2%)
-2025-05-25 10:54:36: 
+2025-05-25 18:42:47:    📊 Daily return: +0.29%
+2025-05-25 18:42:47:    📈 Realized vol: 110.30% -> Target: 15.0%
+2025-05-25 18:42:47:    ⚡ Vol scalar: 0.370 -> 0.351
+2025-05-25 18:42:47:      🔄 MAGICUSDT: $79.72 -> $75.59 (-5.2%)
+2025-05-25 18:42:47:      🔄 HYPEUSDT: $79.72 -> $75.59 (-5.2%)
+2025-05-25 18:42:47:      🔄 GRIFFAINUSDT: $79.72 -> $75.59 (-5.2%)
+2025-05-25 18:42:47:      🔄 PAXGUSDT: $79.72 -> $75.59 (-5.2%)
+2025-05-25 18:42:48: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-21 00:00:
-2025-05-25 10:54:36:    📊 Daily return: -1.05%
-2025-05-25 10:54:36:    📈 Realized vol: 107.05% -> Target: 15.0%
-2025-05-25 10:54:36:    ⚡ Vol scalar: 0.351 -> 0.332
-2025-05-25 10:54:36:      🔄 MAGICUSDT: $75.59 -> $71.69 (-5.2%)
-2025-05-25 10:54:36:      🔄 HYPEUSDT: $75.59 -> $71.69 (-5.2%)
-2025-05-25 10:54:36:      🔄 GRIFFAINUSDT: $75.59 -> $71.69 (-5.2%)
-2025-05-25 10:54:36:      🔄 PAXGUSDT: $75.59 -> $71.69 (-5.2%)
-2025-05-25 10:54:37: 
-📈 END OF PERIOD 3 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:54:37: ============================================================
-2025-05-25 10:54:37: 🏦 Portfolio Value: $1,078.28 → $1,083.12 (+4.84)
-2025-05-25 10:54:37: 💰 Period Funding PnL: $1.96
-2025-05-25 10:54:37: 📊 Period Realized Trading PnL: $46.74
-2025-05-25 10:54:37: 📈 Current Unrealized PnL: $-3.30
-2025-05-25 10:54:37: 💸 Period Trading Costs: $0.82
-2025-05-25 10:54:37: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:54:37: 📊 Period-end realized vol: 107.05% (target: 15.0%)
-2025-05-25 10:54:37: ⚡ Period-end vol scalar: 0.332
-2025-05-25 10:54:37: ⚖️  Period-end leverage: 0.53x
-2025-05-25 10:54:37: 📈 Vol scaling effectiveness: 613.7% deviation from target
-2025-05-25 10:54:37: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:54:37: 💰 Total Funding PnL: $12.46
-2025-05-25 10:54:37: 📊 Total Realized Trading PnL: $76.93
-2025-05-25 10:54:37: 💸 Total Trading Costs: $2.97
-2025-05-25 10:54:37: 
+2025-05-25 18:42:48:    📊 Daily return: -1.05%
+2025-05-25 18:42:48:    📈 Realized vol: 107.05% -> Target: 15.0%
+2025-05-25 18:42:48:    ⚡ Vol scalar: 0.351 -> 0.332
+2025-05-25 18:42:48:      🔄 MAGICUSDT: $75.59 -> $71.69 (-5.2%)
+2025-05-25 18:42:48:      🔄 HYPEUSDT: $75.59 -> $71.69 (-5.2%)
+2025-05-25 18:42:48:      🔄 GRIFFAINUSDT: $75.59 -> $71.69 (-5.2%)
+2025-05-25 18:42:48:      🔄 PAXGUSDT: $75.59 -> $71.69 (-5.2%)
+2025-05-25 18:42:49: 
+📈 END OF PERIOD 3 SUMMARY:
+2025-05-25 18:42:49: 🏦 Portfolio Value: $1,078.28 → $1,083.12 (+4.84)
+2025-05-25 18:42:49: 💰 Period Funding PnL: $1.96
+2025-05-25 18:42:49: 📊 Period Realized Trading PnL: $46.74
+2025-05-25 18:42:49: 💸 Period Trading Costs: $0.82
+2025-05-25 18:42:49: 
 ================================================================================
-2025-05-25 10:54:37: REBALANCE PERIOD 4/19
-2025-05-25 10:54:37: ================================================================================
-2025-05-25 10:54:37: 📅 Period: 2025-01-22 00:00 → 2025-01-29 00:00
-2025-05-25 10:54:37: 💰 Starting Capital: $1,083.12
-2025-05-25 10:54:37: 📊 Current Portfolio Positions: 4
-2025-05-25 10:54:37: 
+2025-05-25 18:42:49: REBALANCE PERIOD 4/19
+2025-05-25 18:42:49: ================================================================================
+2025-05-25 18:42:49: 📅 Period: 2025-01-22 00:00 → 2025-01-29 00:00
+2025-05-25 18:42:49: 💰 Starting Capital: $1,083.12
+2025-05-25 18:42:49: 📊 Current Portfolio Positions: 4
+2025-05-25 18:42:49: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:37:    📊 Current realized volatility: 107.05%
-2025-05-25 10:54:37:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:37:    ⚡ Current vol scalar: 0.332
-2025-05-25 10:54:37:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:54:37:    📐 Vol ratio (realized/target): 7.14
-2025-05-25 10:54:37: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:37: Total symbols with funding data in period: 414
-2025-05-25 10:54:37: Symbols meeting 30.0% threshold: 3
-2025-05-25 10:54:37: 
+2025-05-25 18:42:49:    📊 Current realized volatility: 107.05%
+2025-05-25 18:42:49:    🎯 Target volatility: 15.0%
+2025-05-25 18:42:49:    ⚡ Current vol scalar: 0.332
+2025-05-25 18:42:49: 
 ⭐ TOP 3 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:54:37: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:54:37: --------------------------------------------------
-2025-05-25 10:54:37: 1     MAGICUSDT       42.10          % 2h
-2025-05-25 10:54:37: 2     HYPEUSDT        39.58          % 8h
-2025-05-25 10:54:37: 3     RAYDIUMUSDT     30.63          % 4h
-2025-05-25 10:54:37: 
+2025-05-25 18:42:49: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:42:49: --------------------------------------------------
+2025-05-25 18:42:49: 1     MAGICUSDT       42.10          % 2h
+2025-05-25 18:42:49: 2     HYPEUSDT        39.58          % 8h
+2025-05-25 18:42:49: 3     RAYDIUMUSDT     30.63          % 4h
+2025-05-25 18:42:49: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:54:37:    💵 Available capital: $1,083.12
-2025-05-25 10:54:37:    📊 Base allocation per symbol: $361.04
-2025-05-25 10:54:37:    ⚡ Vol scalar: 0.332
-2025-05-25 10:54:37:    💎 Scaled allocation per symbol: $120.02
-2025-05-25 10:54:37:    📈 Scaling effect: -66.8%
-2025-05-25 10:54:37: 
+2025-05-25 18:42:49:    💵 Available capital: $1,083.12
+2025-05-25 18:42:49:    📊 Base allocation per symbol: $361.04
+2025-05-25 18:42:49:    ⚡ Vol scalar: 0.332
+2025-05-25 18:42:49:    💎 Scaled allocation per symbol: $120.02
+2025-05-25 18:42:49: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:54:37:   🔸 Closed LINEAR short PAXGUSDT: 0.0195 @ 2746.000000, PnL: $-1.37, Cost: $0.05
-2025-05-25 10:54:37:   🔸 Closed SPOT long PAXGUSDT: 0.0195 @ 2744.000000, PnL: $1.33, Cost: $0.05
-2025-05-25 10:54:37:   ✅ Total PnL for PAXGUSDT: $-0.04
-2025-05-25 10:54:37:   🔸 Closed LINEAR short GRIFFAINUSDT: 117.9479 @ 0.545560, PnL: $-12.13, Cost: $0.06
-2025-05-25 10:54:37:   🔸 Closed SPOT long BTCUSDT: 0.0005 @ 105950.380000, PnL: $4.88, Cost: $0.05
-2025-05-25 10:54:37:   ✅ Total PnL for GRIFFAINUSDT: $-7.25
-2025-05-25 10:54:37: 
+2025-05-25 18:42:49:   ✅ Closed PAXGUSDT, PnL: $-0.04, Cost: $0.10
+2025-05-25 18:42:49:   ✅ Closed GRIFFAINUSDT, PnL: $-7.25, Cost: $0.11
+2025-05-25 18:42:49: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:54:37:   🔄 MAGICUSDT: $71.69 → $120.02 (+67.4%)
-2025-05-25 10:54:37:   🔄 HYPEUSDT: $71.69 → $120.02 (+67.4%)
-2025-05-25 10:54:37: 
+2025-05-25 18:42:49:   🔄 HYPEUSDT: $120.02 → $120.02 (+0.0%)
+2025-05-25 18:42:49:   🔄 MAGICUSDT: $120.02 → $120.02 (+0.0%)
+2025-05-25 18:42:49: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:54:37:   🔍 Processing symbol: RAYDIUMUSDT -> RAYDIUMUSDT
-2025-05-25 10:54:37:   📊 RAYDIUMUSDT -> RAYDIUMUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:37:     🪙 Trying Bitcoin as proxy for RAYDIUMUSDT...
-2025-05-25 10:54:37:     ✅ Bitcoin proxy available @ 105950.38
-2025-05-25 10:54:37:   ✅ Using Bitcoin proxy for RAYDIUMUSDT: BTC @ 105950.38
-2025-05-25 10:54:37: 
+2025-05-25 18:42:49:   🔍 Processing symbol: RAYDIUMUSDT -> RAYDIUMUSDT
+2025-05-25 18:42:50:   📊 RAYDIUMUSDT -> RAYDIUMUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:50:     🪙 Trying Bitcoin as proxy for RAYDIUMUSDT...
+2025-05-25 18:42:50:     ✅ Bitcoin proxy available @ 105950.38
+2025-05-25 18:42:50: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:54:37: Available capital: $1,082.91
-2025-05-25 10:54:37: Base allocation per symbol: $361.04
-2025-05-25 10:54:37: Scaled allocation per symbol: $120.02
-2025-05-25 10:54:37: Vol scalar applied: 0.332
-2025-05-25 10:54:37: Symbols to trade: 1
-2025-05-25 10:54:37: 
+2025-05-25 18:42:50: Symbols to trade: 1
+2025-05-25 18:42:50: 
   📈 RAYDIUMUSDT (+30.63% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.33x]:
-2025-05-25 10:54:37:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:37:      💰 Base allocation: $361.04, Scaled: $120.02
-2025-05-25 10:54:37:      🔸 LINEAR short: 7.8283 units @ 7.665800 = $60.01
-2025-05-25 10:54:37:      🔸 SPOT long: 0.0006 units @ 105950.380000 = $60.01
-2025-05-25 10:54:37:      💸 Trading costs: $0.11 (Linear: $0.05, Spot: $0.05)
-2025-05-25 10:54:37: 
+2025-05-25 18:42:50:      💸 Trading costs: $0.11
+2025-05-25 18:42:50: 
 📊 REBALANCE PERIOD 4 SUMMARY:
-2025-05-25 10:54:37: ✅ Opened 1 new delta-neutral positions
-2025-05-25 10:54:37: ❌ Closed 2 old positions
-2025-05-25 10:54:37: 🔄 Updated 2 existing positions
-2025-05-25 10:54:37: 💰 Total active positions: 3
-2025-05-25 10:54:37: 💸 Period trading costs: $0.31
-2025-05-25 10:54:37: 📈 Period realized PnL: $-7.29
-2025-05-25 10:54:37: 🏦 Portfolio value: $1083.12
-2025-05-25 10:54:37: ⚡ Applied vol scalar: 0.332
-2025-05-25 10:54:37: 💎 Total nominal exposure: $720.12
-2025-05-25 10:54:37: ⚖️  Final leverage: 0.66x
-2025-05-25 10:54:37: 
+2025-05-25 18:42:50: ✅ Opened 1 new positions
+2025-05-25 18:42:50: ❌ Closed 2 old positions
+2025-05-25 18:42:50: 🔄 Updated 2 existing positions
+2025-05-25 18:42:50: 💰 Total active positions: 3
+2025-05-25 18:42:50: 💸 Period trading costs: $0.31
+2025-05-25 18:42:50: 📈 Period realized PnL: $-7.29
+2025-05-25 18:42:50: ⚖️  Final leverage: 0.66x
+2025-05-25 18:42:50: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-22 00:00:
-2025-05-25 10:54:37:    📊 Daily return: -0.72%
-2025-05-25 10:54:37:    📈 Realized vol: 103.84% -> Target: 15.0%
-2025-05-25 10:54:37:    ⚡ Vol scalar: 0.332 -> 0.315
-2025-05-25 10:54:37:      🔄 MAGICUSDT: $120.02 -> $113.86 (-5.1%)
-2025-05-25 10:54:37:      🔄 HYPEUSDT: $120.02 -> $113.86 (-5.1%)
-2025-05-25 10:54:37:      🔄 RAYDIUMUSDT: $120.02 -> $113.86 (-5.1%)
-2025-05-25 10:54:38: 
+2025-05-25 18:42:50:    📊 Daily return: -0.72%
+2025-05-25 18:42:50:    📈 Realized vol: 103.84% -> Target: 15.0%
+2025-05-25 18:42:50:    ⚡ Vol scalar: 0.332 -> 0.315
+2025-05-25 18:42:50:      🔄 MAGICUSDT: $120.02 -> $113.86 (-5.1%)
+2025-05-25 18:42:50:      🔄 HYPEUSDT: $120.02 -> $113.86 (-5.1%)
+2025-05-25 18:42:50:      🔄 RAYDIUMUSDT: $120.02 -> $113.86 (-5.1%)
+2025-05-25 18:42:50: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-23 00:00:
-2025-05-25 10:54:38:    📊 Daily return: -0.41%
-2025-05-25 10:54:38:    📈 Realized vol: 100.70% -> Target: 15.0%
-2025-05-25 10:54:38:    ⚡ Vol scalar: 0.315 -> 0.299
-2025-05-25 10:54:38:      🔄 MAGICUSDT: $113.86 -> $108.05 (-5.1%)
-2025-05-25 10:54:38:      🔄 HYPEUSDT: $113.86 -> $108.05 (-5.1%)
-2025-05-25 10:54:38:      🔄 RAYDIUMUSDT: $113.86 -> $108.05 (-5.1%)
-2025-05-25 10:54:39: 
+2025-05-25 18:42:50:    📊 Daily return: -0.41%
+2025-05-25 18:42:50:    📈 Realized vol: 100.70% -> Target: 15.0%
+2025-05-25 18:42:50:    ⚡ Vol scalar: 0.315 -> 0.299
+2025-05-25 18:42:50:      🔄 MAGICUSDT: $113.86 -> $108.05 (-5.1%)
+2025-05-25 18:42:50:      🔄 HYPEUSDT: $113.86 -> $108.05 (-5.1%)
+2025-05-25 18:42:50:      🔄 RAYDIUMUSDT: $113.86 -> $108.05 (-5.1%)
+2025-05-25 18:42:51: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-24 00:00:
-2025-05-25 10:54:39:    📊 Daily return: +0.33%
-2025-05-25 10:54:39:    📈 Realized vol: 97.64% -> Target: 15.0%
-2025-05-25 10:54:39:    ⚡ Vol scalar: 0.299 -> 0.284
-2025-05-25 10:54:39:      🔄 MAGICUSDT: $108.05 -> $102.56 (-5.1%)
-2025-05-25 10:54:39:      🔄 HYPEUSDT: $108.05 -> $102.56 (-5.1%)
-2025-05-25 10:54:39:      🔄 RAYDIUMUSDT: $108.05 -> $102.56 (-5.1%)
-2025-05-25 10:54:39: 
+2025-05-25 18:42:51:    📊 Daily return: +0.33%
+2025-05-25 18:42:51:    📈 Realized vol: 97.64% -> Target: 15.0%
+2025-05-25 18:42:51:    ⚡ Vol scalar: 0.299 -> 0.284
+2025-05-25 18:42:51:      🔄 MAGICUSDT: $108.05 -> $102.56 (-5.1%)
+2025-05-25 18:42:51:      🔄 HYPEUSDT: $108.05 -> $102.56 (-5.1%)
+2025-05-25 18:42:51:      🔄 RAYDIUMUSDT: $108.05 -> $102.56 (-5.1%)
+2025-05-25 18:42:52: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-25 00:00:
-2025-05-25 10:54:39:    📊 Daily return: -0.04%
-2025-05-25 10:54:39:    📈 Realized vol: 94.67% -> Target: 15.0%
-2025-05-25 10:54:39:    ⚡ Vol scalar: 0.284 -> 0.270
-2025-05-25 10:54:39:      🔄 MAGICUSDT: $102.56 -> $97.38 (-5.0%)
-2025-05-25 10:54:39:      🔄 HYPEUSDT: $102.56 -> $97.38 (-5.0%)
-2025-05-25 10:54:39:      🔄 RAYDIUMUSDT: $102.56 -> $97.38 (-5.0%)
-2025-05-25 10:54:40: 
+2025-05-25 18:42:52:    📊 Daily return: -0.04%
+2025-05-25 18:42:52:    📈 Realized vol: 94.67% -> Target: 15.0%
+2025-05-25 18:42:52:    ⚡ Vol scalar: 0.284 -> 0.270
+2025-05-25 18:42:52:      🔄 MAGICUSDT: $102.56 -> $97.38 (-5.0%)
+2025-05-25 18:42:52:      🔄 HYPEUSDT: $102.56 -> $97.38 (-5.0%)
+2025-05-25 18:42:52:      🔄 RAYDIUMUSDT: $102.56 -> $97.38 (-5.0%)
+2025-05-25 18:42:53: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-26 00:00:
-2025-05-25 10:54:40:    📊 Daily return: -0.13%
-2025-05-25 10:54:40:    📈 Realized vol: 91.78% -> Target: 15.0%
-2025-05-25 10:54:40:    ⚡ Vol scalar: 0.270 -> 0.256
-2025-05-25 10:54:40:      🔄 MAGICUSDT: $97.38 -> $92.49 (-5.0%)
-2025-05-25 10:54:40:      🔄 HYPEUSDT: $97.38 -> $92.49 (-5.0%)
-2025-05-25 10:54:40:      🔄 RAYDIUMUSDT: $97.38 -> $92.49 (-5.0%)
-2025-05-25 10:54:41: 
+2025-05-25 18:42:53:    📊 Daily return: -0.13%
+2025-05-25 18:42:53:    📈 Realized vol: 91.78% -> Target: 15.0%
+2025-05-25 18:42:53:    ⚡ Vol scalar: 0.270 -> 0.256
+2025-05-25 18:42:53:      🔄 MAGICUSDT: $97.38 -> $92.49 (-5.0%)
+2025-05-25 18:42:53:      🔄 HYPEUSDT: $97.38 -> $92.49 (-5.0%)
+2025-05-25 18:42:53:      🔄 RAYDIUMUSDT: $97.38 -> $92.49 (-5.0%)
+2025-05-25 18:42:53: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-27 00:00:
-2025-05-25 10:54:41:    📊 Daily return: +0.49%
-2025-05-25 10:54:41:    📈 Realized vol: 89.02% -> Target: 15.0%
-2025-05-25 10:54:41:    ⚡ Vol scalar: 0.256 -> 0.243
-2025-05-25 10:54:41:      🔄 MAGICUSDT: $92.49 -> $87.88 (-5.0%)
-2025-05-25 10:54:41:      🔄 HYPEUSDT: $92.49 -> $87.88 (-5.0%)
-2025-05-25 10:54:41:      🔄 RAYDIUMUSDT: $92.49 -> $87.88 (-5.0%)
-2025-05-25 10:54:42: 
+2025-05-25 18:42:53:    📊 Daily return: +0.49%
+2025-05-25 18:42:53:    📈 Realized vol: 89.02% -> Target: 15.0%
+2025-05-25 18:42:53:    ⚡ Vol scalar: 0.256 -> 0.243
+2025-05-25 18:42:53:      🔄 MAGICUSDT: $92.49 -> $87.88 (-5.0%)
+2025-05-25 18:42:53:      🔄 HYPEUSDT: $92.49 -> $87.88 (-5.0%)
+2025-05-25 18:42:53:      🔄 RAYDIUMUSDT: $92.49 -> $87.88 (-5.0%)
+2025-05-25 18:42:54: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-28 00:00:
-2025-05-25 10:54:42:    📊 Daily return: -0.17%
-2025-05-25 10:54:42:    📈 Realized vol: 86.31% -> Target: 15.0%
-2025-05-25 10:54:42:    ⚡ Vol scalar: 0.243 -> 0.231
-2025-05-25 10:54:42:      🔄 MAGICUSDT: $87.88 -> $83.52 (-5.0%)
-2025-05-25 10:54:42:      🔄 HYPEUSDT: $87.88 -> $83.52 (-5.0%)
-2025-05-25 10:54:42:      🔄 RAYDIUMUSDT: $87.88 -> $83.52 (-5.0%)
-2025-05-25 10:54:43: 
-📈 END OF PERIOD 4 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:54:43: ============================================================
-2025-05-25 10:54:43: 🏦 Portfolio Value: $1,083.12 → $1,089.48 (+6.36)
-2025-05-25 10:54:43: 💰 Period Funding PnL: $1.23
-2025-05-25 10:54:43: 📊 Period Realized Trading PnL: $-7.29
-2025-05-25 10:54:43: 📈 Current Unrealized PnL: $9.44
-2025-05-25 10:54:43: 💸 Period Trading Costs: $0.31
-2025-05-25 10:54:43: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:54:43: 📊 Period-end realized vol: 86.31% (target: 15.0%)
-2025-05-25 10:54:43: ⚡ Period-end vol scalar: 0.231
-2025-05-25 10:54:43: ⚖️  Period-end leverage: 0.46x
-2025-05-25 10:54:43: 📈 Vol scaling effectiveness: 475.4% deviation from target
-2025-05-25 10:54:43: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:54:43: 💰 Total Funding PnL: $13.69
-2025-05-25 10:54:43: 📊 Total Realized Trading PnL: $69.64
-2025-05-25 10:54:43: 💸 Total Trading Costs: $3.28
-2025-05-25 10:54:43: 
+2025-05-25 18:42:54:    📊 Daily return: -0.17%
+2025-05-25 18:42:54:    📈 Realized vol: 86.31% -> Target: 15.0%
+2025-05-25 18:42:54:    ⚡ Vol scalar: 0.243 -> 0.231
+2025-05-25 18:42:54:      🔄 MAGICUSDT: $87.88 -> $83.52 (-5.0%)
+2025-05-25 18:42:54:      🔄 HYPEUSDT: $87.88 -> $83.52 (-5.0%)
+2025-05-25 18:42:54:      🔄 RAYDIUMUSDT: $87.88 -> $83.52 (-5.0%)
+2025-05-25 18:42:55: 
+📈 END OF PERIOD 4 SUMMARY:
+2025-05-25 18:42:55: 🏦 Portfolio Value: $1,083.12 → $1,089.48 (+6.36)
+2025-05-25 18:42:55: 💰 Period Funding PnL: $1.23
+2025-05-25 18:42:55: 📊 Period Realized Trading PnL: $-7.29
+2025-05-25 18:42:55: 💸 Period Trading Costs: $0.31
+2025-05-25 18:42:55: 
 ================================================================================
-2025-05-25 10:54:43: REBALANCE PERIOD 5/19
-2025-05-25 10:54:43: ================================================================================
-2025-05-25 10:54:43: 📅 Period: 2025-01-29 00:00 → 2025-02-05 00:00
-2025-05-25 10:54:43: 💰 Starting Capital: $1,089.48
-2025-05-25 10:54:43: 📊 Current Portfolio Positions: 3
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55: REBALANCE PERIOD 5/19
+2025-05-25 18:42:55: ================================================================================
+2025-05-25 18:42:55: 📅 Period: 2025-01-29 00:00 → 2025-02-05 00:00
+2025-05-25 18:42:55: 💰 Starting Capital: $1,089.48
+2025-05-25 18:42:55: 📊 Current Portfolio Positions: 3
+2025-05-25 18:42:55: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:43:    📊 Current realized volatility: 86.31%
-2025-05-25 10:54:43:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:43:    ⚡ Current vol scalar: 0.231
-2025-05-25 10:54:43:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:54:43:    📐 Vol ratio (realized/target): 5.75
-2025-05-25 10:54:43: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:43: Total symbols with funding data in period: 415
-2025-05-25 10:54:43: Symbols meeting 30.0% threshold: 2
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55:    📊 Current realized volatility: 86.31%
+2025-05-25 18:42:55:    🎯 Target volatility: 15.0%
+2025-05-25 18:42:55:    ⚡ Current vol scalar: 0.231
+2025-05-25 18:42:55: 
 ⭐ TOP 2 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:54:43: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:54:43: --------------------------------------------------
-2025-05-25 10:54:43: 1     RAYDIUMUSDT     35.62          % 4h
-2025-05-25 10:54:43: 2     PIPPINUSDT      31.30          % 4h
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:42:55: --------------------------------------------------
+2025-05-25 18:42:55: 1     RAYDIUMUSDT     35.62          % 4h
+2025-05-25 18:42:55: 2     PIPPINUSDT      31.30          % 4h
+2025-05-25 18:42:55: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:54:43:    💵 Available capital: $1,089.48
-2025-05-25 10:54:43:    📊 Base allocation per symbol: $544.74
-2025-05-25 10:54:43:    ⚡ Vol scalar: 0.231
-2025-05-25 10:54:43:    💎 Scaled allocation per symbol: $126.02
-2025-05-25 10:54:43:    📈 Scaling effect: -76.9%
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55:    💵 Available capital: $1,089.48
+2025-05-25 18:42:55:    📊 Base allocation per symbol: $544.74
+2025-05-25 18:42:55:    ⚡ Vol scalar: 0.231
+2025-05-25 18:42:55:    💎 Scaled allocation per symbol: $126.02
+2025-05-25 18:42:55: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:54:43:   🔸 Closed LINEAR short MAGICUSDT: 136.5436 @ 0.317800, PnL: $30.56, Cost: $0.04
-2025-05-25 10:54:43:   🔸 Closed SPOT long MAGICUSDT: 136.3674 @ 0.319000, PnL: $-30.45, Cost: $0.04
-2025-05-25 10:54:43:   ✅ Total PnL for MAGICUSDT: $0.11
-2025-05-25 10:54:43:   🔸 Closed LINEAR short HYPEUSDT: 2.2765 @ 22.465000, PnL: $1.07, Cost: $0.05
-2025-05-25 10:54:43:   🔸 Closed SPOT long BTCUSDT: 0.0005 @ 101688.480000, PnL: $2.59, Cost: $0.05
-2025-05-25 10:54:43:   ✅ Total PnL for HYPEUSDT: $3.66
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55:   ✅ Closed HYPEUSDT, PnL: $3.66, Cost: $0.10
+2025-05-25 18:42:55:   ✅ Closed MAGICUSDT, PnL: $0.11, Cost: $0.08
+2025-05-25 18:42:55: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:54:43:   🔄 RAYDIUMUSDT: $83.52 → $126.02 (+50.9%)
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55:   🔄 RAYDIUMUSDT: $126.02 → $126.02 (+0.0%)
+2025-05-25 18:42:55: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:54:43:   🔍 Processing symbol: PIPPINUSDT -> PIPPINUSDT
-2025-05-25 10:54:43:   📊 PIPPINUSDT -> PIPPINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:43:     🪙 Trying Bitcoin as proxy for PIPPINUSDT...
-2025-05-25 10:54:43:     ✅ Bitcoin proxy available @ 101688.48
-2025-05-25 10:54:43:   ✅ Using Bitcoin proxy for PIPPINUSDT: BTC @ 101688.48
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55:   🔍 Processing symbol: PIPPINUSDT -> PIPPINUSDT
+2025-05-25 18:42:55:   📊 PIPPINUSDT -> PIPPINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:55:     🪙 Trying Bitcoin as proxy for PIPPINUSDT...
+2025-05-25 18:42:55:     ✅ Bitcoin proxy available @ 101688.48
+2025-05-25 18:42:55: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:54:43: Available capital: $1,089.31
-2025-05-25 10:54:43: Base allocation per symbol: $544.74
-2025-05-25 10:54:43: Scaled allocation per symbol: $126.02
-2025-05-25 10:54:43: Vol scalar applied: 0.231
-2025-05-25 10:54:43: Symbols to trade: 1
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55: Symbols to trade: 1
+2025-05-25 18:42:55: 
   📈 PIPPINUSDT (+31.30% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.23x]:
-2025-05-25 10:54:43:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:43:      💰 Base allocation: $544.74, Scaled: $126.02
-2025-05-25 10:54:43:      🔸 LINEAR short: 823.5432 units @ 0.076510 = $63.01
-2025-05-25 10:54:43:      🔸 SPOT long: 0.0006 units @ 101688.480000 = $63.01
-2025-05-25 10:54:43:      💸 Trading costs: $0.11 (Linear: $0.06, Spot: $0.06)
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55:      💸 Trading costs: $0.11
+2025-05-25 18:42:55: 
 📊 REBALANCE PERIOD 5 SUMMARY:
-2025-05-25 10:54:43: ✅ Opened 1 new delta-neutral positions
-2025-05-25 10:54:43: ❌ Closed 2 old positions
-2025-05-25 10:54:43: 🔄 Updated 1 existing positions
-2025-05-25 10:54:43: 💰 Total active positions: 2
-2025-05-25 10:54:43: 💸 Period trading costs: $0.29
-2025-05-25 10:54:43: 📈 Period realized PnL: $3.77
-2025-05-25 10:54:43: 🏦 Portfolio value: $1089.48
-2025-05-25 10:54:43: ⚡ Applied vol scalar: 0.231
-2025-05-25 10:54:43: 💎 Total nominal exposure: $504.07
-2025-05-25 10:54:43: ⚖️  Final leverage: 0.46x
-2025-05-25 10:54:43: 
+2025-05-25 18:42:55: ✅ Opened 1 new positions
+2025-05-25 18:42:55: ❌ Closed 2 old positions
+2025-05-25 18:42:55: 🔄 Updated 1 existing positions
+2025-05-25 18:42:55: 💰 Total active positions: 2
+2025-05-25 18:42:55: 💸 Period trading costs: $0.29
+2025-05-25 18:42:55: 📈 Period realized PnL: $3.77
+2025-05-25 18:42:55: ⚖️  Final leverage: 0.46x
+2025-05-25 18:42:55: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-29 00:00:
-2025-05-25 10:54:43:    📊 Daily return: +0.18%
-2025-05-25 10:54:43:    📈 Realized vol: 83.68% -> Target: 15.0%
-2025-05-25 10:54:43:    ⚡ Vol scalar: 0.231 -> 0.220
-2025-05-25 10:54:43:      🔄 RAYDIUMUSDT: $126.02 -> $119.81 (-4.9%)
-2025-05-25 10:54:43:      🔄 PIPPINUSDT: $126.02 -> $119.81 (-4.9%)
-2025-05-25 10:54:44: 
+2025-05-25 18:42:55:    📊 Daily return: +0.18%
+2025-05-25 18:42:55:    📈 Realized vol: 83.68% -> Target: 15.0%
+2025-05-25 18:42:55:    ⚡ Vol scalar: 0.231 -> 0.220
+2025-05-25 18:42:55:      🔄 RAYDIUMUSDT: $126.02 -> $119.81 (-4.9%)
+2025-05-25 18:42:55:      🔄 PIPPINUSDT: $126.02 -> $119.81 (-4.9%)
+2025-05-25 18:42:56: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-30 00:00:
-2025-05-25 10:54:44:    📊 Daily return: +0.47%
-2025-05-25 10:54:44:    📈 Realized vol: 81.16% -> Target: 15.0%
-2025-05-25 10:54:44:    ⚡ Vol scalar: 0.220 -> 0.209
-2025-05-25 10:54:44:      🔄 RAYDIUMUSDT: $119.81 -> $113.95 (-4.9%)
-2025-05-25 10:54:44:      🔄 PIPPINUSDT: $119.81 -> $113.95 (-4.9%)
-2025-05-25 10:54:45: 
+2025-05-25 18:42:56:    📊 Daily return: +0.47%
+2025-05-25 18:42:56:    📈 Realized vol: 81.16% -> Target: 15.0%
+2025-05-25 18:42:56:    ⚡ Vol scalar: 0.220 -> 0.209
+2025-05-25 18:42:56:      🔄 RAYDIUMUSDT: $119.81 -> $113.95 (-4.9%)
+2025-05-25 18:42:56:      🔄 PIPPINUSDT: $119.81 -> $113.95 (-4.9%)
+2025-05-25 18:42:56: 
 🎯 DAILY VOL SCALING UPDATE at 2025-01-31 00:00:
-2025-05-25 10:54:45:    📊 Daily return: +0.43%
-2025-05-25 10:54:45:    📈 Realized vol: 78.72% -> Target: 15.0%
-2025-05-25 10:54:45:    ⚡ Vol scalar: 0.209 -> 0.199
-2025-05-25 10:54:45:      🔄 RAYDIUMUSDT: $113.95 -> $108.42 (-4.9%)
-2025-05-25 10:54:45:      🔄 PIPPINUSDT: $113.95 -> $108.42 (-4.9%)
-2025-05-25 10:54:46: 
-🎯 DAILY VOL SCALING UPDATE at 2025-02-02 00:00:
-2025-05-25 10:54:46:    📊 Daily return: +1.34%
-2025-05-25 10:54:46:    📈 Realized vol: 74.38% -> Target: 15.0%
-2025-05-25 10:54:46:    ⚡ Vol scalar: 0.199 -> 0.180
-2025-05-25 10:54:46:      🔄 RAYDIUMUSDT: $108.42 -> $98.25 (-9.4%)
-2025-05-25 10:54:46:      🔄 PIPPINUSDT: $108.42 -> $98.25 (-9.4%)
-2025-05-25 10:54:47: 
-🎯 DAILY VOL SCALING UPDATE at 2025-02-04 00:00:
-2025-05-25 10:54:47:    📊 Daily return: -1.16%
-2025-05-25 10:54:47:    📈 Realized vol: 70.17% -> Target: 15.0%
-2025-05-25 10:54:47:    ⚡ Vol scalar: 0.180 -> 0.164
-2025-05-25 10:54:47:      🔄 RAYDIUMUSDT: $98.25 -> $89.16 (-9.2%)
-2025-05-25 10:54:47:      🔄 PIPPINUSDT: $98.25 -> $89.16 (-9.2%)
-2025-05-25 10:54:47: 
-📈 END OF PERIOD 5 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:54:47: ============================================================
-2025-05-25 10:54:47: 🏦 Portfolio Value: $1,089.48 → $1,122.70 (+33.22)
-2025-05-25 10:54:47: 💰 Period Funding PnL: $0.68
-2025-05-25 10:54:47: 📊 Period Realized Trading PnL: $3.77
-2025-05-25 10:54:47: 📈 Current Unrealized PnL: $38.50
-2025-05-25 10:54:47: 💸 Period Trading Costs: $0.29
-2025-05-25 10:54:47: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:54:47: 📊 Period-end realized vol: 70.17% (target: 15.0%)
-2025-05-25 10:54:47: ⚡ Period-end vol scalar: 0.164
-2025-05-25 10:54:47: ⚖️  Period-end leverage: 0.32x
-2025-05-25 10:54:47: 📈 Vol scaling effectiveness: 367.8% deviation from target
-2025-05-25 10:54:47: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:54:47: 💰 Total Funding PnL: $14.37
-2025-05-25 10:54:47: 📊 Total Realized Trading PnL: $73.40
-2025-05-25 10:54:47: 💸 Total Trading Costs: $3.57
-2025-05-25 10:54:47: 
+2025-05-25 18:42:56:    📊 Daily return: +0.43%
+2025-05-25 18:42:56:    📈 Realized vol: 78.72% -> Target: 15.0%
+2025-05-25 18:42:56:    ⚡ Vol scalar: 0.209 -> 0.199
+2025-05-25 18:42:56:      🔄 RAYDIUMUSDT: $113.95 -> $108.42 (-4.9%)
+2025-05-25 18:42:56:      🔄 PIPPINUSDT: $113.95 -> $108.42 (-4.9%)
+2025-05-25 18:42:59: 
+📈 END OF PERIOD 5 SUMMARY:
+2025-05-25 18:42:59: 🏦 Portfolio Value: $1,089.48 → $1,122.73 (+33.25)
+2025-05-25 18:42:59: 💰 Period Funding PnL: $0.71
+2025-05-25 18:42:59: 📊 Period Realized Trading PnL: $3.77
+2025-05-25 18:42:59: 💸 Period Trading Costs: $0.29
+2025-05-25 18:42:59: 
 ================================================================================
-2025-05-25 10:54:47: REBALANCE PERIOD 6/19
-2025-05-25 10:54:47: ================================================================================
-2025-05-25 10:54:47: 📅 Period: 2025-02-05 00:00 → 2025-02-12 00:00
-2025-05-25 10:54:47: 💰 Starting Capital: $1,122.70
-2025-05-25 10:54:47: 📊 Current Portfolio Positions: 2
-2025-05-25 10:54:47: 
+2025-05-25 18:42:59: REBALANCE PERIOD 6/19
+2025-05-25 18:42:59: ================================================================================
+2025-05-25 18:42:59: 📅 Period: 2025-02-05 00:00 → 2025-02-12 00:00
+2025-05-25 18:42:59: 💰 Starting Capital: $1,122.73
+2025-05-25 18:42:59: 📊 Current Portfolio Positions: 2
+2025-05-25 18:42:59: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:47:    📊 Current realized volatility: 70.17%
-2025-05-25 10:54:47:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:47:    ⚡ Current vol scalar: 0.164
-2025-05-25 10:54:47:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:54:47:    📐 Vol ratio (realized/target): 4.68
-2025-05-25 10:54:47: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:47: Total symbols with funding data in period: 420
-2025-05-25 10:54:47: Symbols meeting 30.0% threshold: 0
-2025-05-25 10:54:47: 
+2025-05-25 18:42:59:    📊 Current realized volatility: 70.17%
+2025-05-25 18:42:59:    🎯 Target volatility: 15.0%
+2025-05-25 18:42:59:    ⚡ Current vol scalar: 0.164
+2025-05-25 18:42:59: 
 ❌ NO SYMBOLS MEET FUNDING RATE CRITERIA - CLOSING ALL POSITIONS
-2025-05-25 10:54:47:   ✅ Closed all positions for RAYDIUMUSDT, Total PnL: $7.68
-2025-05-25 10:54:47:   ✅ Closed all positions for PIPPINUSDT, Total PnL: $29.78
-2025-05-25 10:54:48: 
-📈 END OF PERIOD 6 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:54:48: ============================================================
-2025-05-25 10:54:48: 🏦 Portfolio Value: $1,089.48 → $1,121.67 (+32.19)
-2025-05-25 10:54:48: 💰 Period Funding PnL: $0.00
-2025-05-25 10:54:48: 📊 Period Realized Trading PnL: $37.47
-2025-05-25 10:54:48: 📈 Current Unrealized PnL: $0.00
-2025-05-25 10:54:48: 💸 Period Trading Costs: $0.00
-2025-05-25 10:54:48: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:54:48: 📊 Period-end realized vol: 56.53% (target: 15.0%)
-2025-05-25 10:54:48: ⚡ Period-end vol scalar: 0.118
-2025-05-25 10:54:48: ⚖️  Period-end leverage: 0.00x
-2025-05-25 10:54:48: 📈 Vol scaling effectiveness: 276.9% deviation from target
-2025-05-25 10:54:48: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:54:48: 💰 Total Funding PnL: $14.37
-2025-05-25 10:54:48: 📊 Total Realized Trading PnL: $110.87
-2025-05-25 10:54:48: 💸 Total Trading Costs: $3.57
-2025-05-25 10:54:48: 
+2025-05-25 18:42:59:   ✅ Closed all positions for RAYDIUMUSDT, PnL: $7.68
+2025-05-25 18:42:59:   ✅ Closed all positions for PIPPINUSDT, PnL: $29.78
+2025-05-25 18:42:59: 
+📈 END OF PERIOD 6 SUMMARY:
+2025-05-25 18:42:59: 🏦 Portfolio Value: $1,122.73 → $1,121.70 (-1.03)
+2025-05-25 18:42:59: 💰 Period Funding PnL: $0.00
+2025-05-25 18:42:59: 📊 Period Realized Trading PnL: $37.47
+2025-05-25 18:42:59: 💸 Period Trading Costs: $0.00
+2025-05-25 18:42:59: 
 ================================================================================
-2025-05-25 10:54:48: REBALANCE PERIOD 7/19
-2025-05-25 10:54:48: ================================================================================
-2025-05-25 10:54:48: 📅 Period: 2025-02-12 00:00 → 2025-02-19 00:00
-2025-05-25 10:54:48: 💰 Starting Capital: $1,121.67
-2025-05-25 10:54:48: 📊 Current Portfolio Positions: 0
-2025-05-25 10:54:48: 
+2025-05-25 18:42:59: REBALANCE PERIOD 7/19
+2025-05-25 18:42:59: ================================================================================
+2025-05-25 18:42:59: 📅 Period: 2025-02-12 00:00 → 2025-02-19 00:00
+2025-05-25 18:42:59: 💰 Starting Capital: $1,121.70
+2025-05-25 18:42:59: 📊 Current Portfolio Positions: 0
+2025-05-25 18:42:59: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:48:    📊 Current realized volatility: 56.53%
-2025-05-25 10:54:48:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:48:    ⚡ Current vol scalar: 0.118
-2025-05-25 10:54:48:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:54:48:    📐 Vol ratio (realized/target): 3.77
-2025-05-25 10:54:48: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:48: Total symbols with funding data in period: 426
-2025-05-25 10:54:48: Symbols meeting 30.0% threshold: 0
-2025-05-25 10:54:48: 
+2025-05-25 18:42:59:    📊 Current realized volatility: 56.53%
+2025-05-25 18:42:59:    🎯 Target volatility: 15.0%
+2025-05-25 18:42:59:    ⚡ Current vol scalar: 0.118
+2025-05-25 18:42:59: 
 ❌ NO SYMBOLS MEET FUNDING RATE CRITERIA - CLOSING ALL POSITIONS
-2025-05-25 10:54:48: 
-📈 END OF PERIOD 7 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:54:48: ============================================================
-2025-05-25 10:54:48: 🏦 Portfolio Value: $1,089.48 → $1,121.67 (+32.19)
-2025-05-25 10:54:48: 💰 Period Funding PnL: $0.00
-2025-05-25 10:54:48: 📊 Period Realized Trading PnL: $0.00
-2025-05-25 10:54:48: 📈 Current Unrealized PnL: $0.00
-2025-05-25 10:54:48: 💸 Period Trading Costs: $0.00
-2025-05-25 10:54:48: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:54:48: 📊 Period-end realized vol: 45.52% (target: 15.0%)
-2025-05-25 10:54:48: ⚡ Period-end vol scalar: 0.088
-2025-05-25 10:54:48: ⚖️  Period-end leverage: 0.00x
-2025-05-25 10:54:48: 📈 Vol scaling effectiveness: 203.5% deviation from target
-2025-05-25 10:54:48: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:54:48: 💰 Total Funding PnL: $14.37
-2025-05-25 10:54:48: 📊 Total Realized Trading PnL: $110.87
-2025-05-25 10:54:48: 💸 Total Trading Costs: $3.57
-2025-05-25 10:54:48: 
+2025-05-25 18:42:59: 
+📈 END OF PERIOD 7 SUMMARY:
+2025-05-25 18:42:59: 🏦 Portfolio Value: $1,121.70 → $1,121.70 (+0.00)
+2025-05-25 18:42:59: 💰 Period Funding PnL: $0.00
+2025-05-25 18:42:59: 📊 Period Realized Trading PnL: $0.00
+2025-05-25 18:42:59: 💸 Period Trading Costs: $0.00
+2025-05-25 18:42:59: 
 ================================================================================
-2025-05-25 10:54:48: REBALANCE PERIOD 8/19
-2025-05-25 10:54:48: ================================================================================
-2025-05-25 10:54:48: 📅 Period: 2025-02-19 00:00 → 2025-02-26 00:00
-2025-05-25 10:54:48: 💰 Starting Capital: $1,121.67
-2025-05-25 10:54:48: 📊 Current Portfolio Positions: 0
-2025-05-25 10:54:48: 
+2025-05-25 18:42:59: REBALANCE PERIOD 8/19
+2025-05-25 18:42:59: ================================================================================
+2025-05-25 18:42:59: 📅 Period: 2025-02-19 00:00 → 2025-02-26 00:00
+2025-05-25 18:42:59: 💰 Starting Capital: $1,121.70
+2025-05-25 18:42:59: 📊 Current Portfolio Positions: 0
+2025-05-25 18:42:59: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:48:    📊 Current realized volatility: 45.52%
-2025-05-25 10:54:48:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:48:    ⚡ Current vol scalar: 0.088
-2025-05-25 10:54:48:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:54:48:    📐 Vol ratio (realized/target): 3.03
-2025-05-25 10:54:48: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:48: Total symbols with funding data in period: 428
-2025-05-25 10:54:48: Symbols meeting 30.0% threshold: 12
-2025-05-25 10:54:48: 
+2025-05-25 18:42:59:    📊 Current realized volatility: 45.52%
+2025-05-25 18:42:59:    🎯 Target volatility: 15.0%
+2025-05-25 18:42:59:    ⚡ Current vol scalar: 0.088
+2025-05-25 18:42:59: 
 ⭐ TOP 5 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:54:48: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:54:48: --------------------------------------------------
-2025-05-25 10:54:48: 1     SOLAYERUSDT     134.21         % 1h
-2025-05-25 10:54:48: 2     RAYDIUMUSDT     76.38          % 4h
-2025-05-25 10:54:48: 3     NEIROETHUSDT    50.56          % 4h
-2025-05-25 10:54:48: 4     TAOUSDT         42.87          % 4h
-2025-05-25 10:54:48: 5     MAGICUSDT       41.84          % 2h
-2025-05-25 10:54:48: 
+2025-05-25 18:42:59: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:42:59: --------------------------------------------------
+2025-05-25 18:42:59: 1     SOLAYERUSDT     134.21         % 1h
+2025-05-25 18:42:59: 2     RAYDIUMUSDT     76.38          % 4h
+2025-05-25 18:42:59: 3     NEIROETHUSDT    50.56          % 4h
+2025-05-25 18:42:59: 4     TAOUSDT         42.87          % 4h
+2025-05-25 18:42:59: 5     MAGICUSDT       41.84          % 2h
+2025-05-25 18:42:59: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:54:48:    💵 Available capital: $1,121.67
-2025-05-25 10:54:48:    📊 Base allocation per symbol: $224.33
-2025-05-25 10:54:48:    ⚡ Vol scalar: 0.088
-2025-05-25 10:54:48:    💎 Scaled allocation per symbol: $19.64
-2025-05-25 10:54:48:    📈 Scaling effect: -91.2%
-2025-05-25 10:54:48: 
+2025-05-25 18:42:59:    💵 Available capital: $1,121.70
+2025-05-25 18:42:59:    📊 Base allocation per symbol: $224.34
+2025-05-25 18:42:59:    ⚡ Vol scalar: 0.088
+2025-05-25 18:42:59:    💎 Scaled allocation per symbol: $19.64
+2025-05-25 18:42:59: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:54:48:   🔍 Processing symbol: SOLAYERUSDT -> SOLAYERUSDT
-2025-05-25 10:54:48:   📊 SOLAYERUSDT -> SOLAYERUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:48:     🪙 Trying Bitcoin as proxy for SOLAYERUSDT...
-2025-05-25 10:54:48:     ✅ Bitcoin proxy available @ 95340.92
-2025-05-25 10:54:48:   ✅ Using Bitcoin proxy for SOLAYERUSDT: BTC @ 95340.92
-2025-05-25 10:54:48:   🔍 Processing symbol: RAYDIUMUSDT -> RAYDIUMUSDT
-2025-05-25 10:54:49:   📊 RAYDIUMUSDT -> RAYDIUMUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:49:     🪙 Trying Bitcoin as proxy for RAYDIUMUSDT...
-2025-05-25 10:54:49:     ✅ Bitcoin proxy available @ 95340.92
-2025-05-25 10:54:49:   ✅ Using Bitcoin proxy for RAYDIUMUSDT: BTC @ 95340.92
-2025-05-25 10:54:49:   🔍 Processing symbol: NEIROETHUSDT -> NEIROETHUSDT
-2025-05-25 10:54:49:   📊 NEIROETHUSDT -> NEIROETHUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:49:     🪙 Trying Bitcoin as proxy for NEIROETHUSDT...
-2025-05-25 10:54:49:     ✅ Bitcoin proxy available @ 95340.92
-2025-05-25 10:54:49:   ✅ Using Bitcoin proxy for NEIROETHUSDT: BTC @ 95340.92
-2025-05-25 10:54:49:   🔍 Processing symbol: TAOUSDT -> TAOUSDT
-2025-05-25 10:54:49:   📊 TAOUSDT -> TAOUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:54:49:     🪙 Trying Bitcoin as proxy for TAOUSDT...
-2025-05-25 10:54:49:     ✅ Bitcoin proxy available @ 95340.92
-2025-05-25 10:54:49:   ✅ Using Bitcoin proxy for TAOUSDT: BTC @ 95340.92
-2025-05-25 10:54:49:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
-2025-05-25 10:54:50:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
-2025-05-25 10:54:50: 
+2025-05-25 18:42:59:   🔍 Processing symbol: SOLAYERUSDT -> SOLAYERUSDT
+2025-05-25 18:42:59:   📊 SOLAYERUSDT -> SOLAYERUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:42:59:     🪙 Trying Bitcoin as proxy for SOLAYERUSDT...
+2025-05-25 18:42:59:     ✅ Bitcoin proxy available @ 95340.92
+2025-05-25 18:42:59:   🔍 Processing symbol: RAYDIUMUSDT -> RAYDIUMUSDT
+2025-05-25 18:43:00:   📊 RAYDIUMUSDT -> RAYDIUMUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:00:     🪙 Trying Bitcoin as proxy for RAYDIUMUSDT...
+2025-05-25 18:43:00:     ✅ Bitcoin proxy available @ 95340.92
+2025-05-25 18:43:00:   🔍 Processing symbol: NEIROETHUSDT -> NEIROETHUSDT
+2025-05-25 18:43:00:   📊 NEIROETHUSDT -> NEIROETHUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:00:     🪙 Trying Bitcoin as proxy for NEIROETHUSDT...
+2025-05-25 18:43:00:     ✅ Bitcoin proxy available @ 95340.92
+2025-05-25 18:43:00:   🔍 Processing symbol: TAOUSDT -> TAOUSDT
+2025-05-25 18:43:00:   📊 TAOUSDT -> TAOUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:00:     🪙 Trying Bitcoin as proxy for TAOUSDT...
+2025-05-25 18:43:00:     ✅ Bitcoin proxy available @ 95340.92
+2025-05-25 18:43:00:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-25 18:43:00:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-25 18:43:00: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:54:50: Available capital: $1,121.67
-2025-05-25 10:54:50: Base allocation per symbol: $224.33
-2025-05-25 10:54:50: Scaled allocation per symbol: $19.64
-2025-05-25 10:54:50: Vol scalar applied: 0.088
-2025-05-25 10:54:50: Symbols to trade: 5
-2025-05-25 10:54:50: 
+2025-05-25 18:43:00: Symbols to trade: 5
+2025-05-25 18:43:00: 
   📈 SOLAYERUSDT (+134.21% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.09x]:
-2025-05-25 10:54:50:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:50:      💰 Base allocation: $224.33, Scaled: $19.64
-2025-05-25 10:54:50:      🔸 LINEAR short: 15.6778 units @ 0.626400 = $9.82
-2025-05-25 10:54:50:      🔸 SPOT long: 0.0001 units @ 95340.920000 = $9.82
-2025-05-25 10:54:50:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:54:50: 
+2025-05-25 18:43:00:      💸 Trading costs: $0.02
+2025-05-25 18:43:00: 
   📈 RAYDIUMUSDT (+76.38% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.09x]:
-2025-05-25 10:54:50:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:50:      💰 Base allocation: $224.33, Scaled: $19.64
-2025-05-25 10:54:50:      🔸 LINEAR short: 2.3400 units @ 4.196800 = $9.82
-2025-05-25 10:54:50:      🔸 SPOT long: 0.0001 units @ 95340.920000 = $9.82
-2025-05-25 10:54:50:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:54:50: 
+2025-05-25 18:43:00:      💸 Trading costs: $0.02
+2025-05-25 18:43:00: 
   📈 NEIROETHUSDT (+50.56% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.09x]:
-2025-05-25 10:54:50:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:50:      💰 Base allocation: $224.33, Scaled: $19.64
-2025-05-25 10:54:50:      🔸 LINEAR short: 545.2854 units @ 0.018010 = $9.82
-2025-05-25 10:54:50:      🔸 SPOT long: 0.0001 units @ 95340.920000 = $9.82
-2025-05-25 10:54:50:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:54:50: 
+2025-05-25 18:43:00:      💸 Trading costs: $0.02
+2025-05-25 18:43:00: 
   📈 TAOUSDT (+42.87% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.09x]:
-2025-05-25 10:54:50:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:54:50:      💰 Base allocation: $224.33, Scaled: $19.64
-2025-05-25 10:54:50:      🔸 LINEAR short: 0.0261 units @ 376.880000 = $9.82
-2025-05-25 10:54:50:      🔸 SPOT long: 0.0001 units @ 95340.920000 = $9.82
-2025-05-25 10:54:50:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:54:50: 
+2025-05-25 18:43:00:      💸 Trading costs: $0.02
+2025-05-25 18:43:00: 
   📈 MAGICUSDT (+41.84% funding) ⚡ [SCALED 0.09x]:
-2025-05-25 10:54:50:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
-2025-05-25 10:54:50:      💰 Base allocation: $224.33, Scaled: $19.64
-2025-05-25 10:54:50:      🔸 LINEAR short: 41.8253 units @ 0.234800 = $9.82
-2025-05-25 10:54:50:      🔸 SPOT long: 41.5950 units @ 0.236100 = $9.82
-2025-05-25 10:54:50:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:54:50: 
+2025-05-25 18:43:00:      💸 Trading costs: $0.02
+2025-05-25 18:43:00: 
 📊 REBALANCE PERIOD 8 SUMMARY:
-2025-05-25 10:54:50: ✅ Opened 5 new delta-neutral positions
-2025-05-25 10:54:50: ❌ Closed 0 old positions
-2025-05-25 10:54:50: 🔄 Updated 0 existing positions
-2025-05-25 10:54:50: 💰 Total active positions: 5
-2025-05-25 10:54:50: 💸 Period trading costs: $0.09
-2025-05-25 10:54:50: 📈 Period realized PnL: $0.00
-2025-05-25 10:54:50: 🏦 Portfolio value: $1121.67
-2025-05-25 10:54:50: ⚡ Applied vol scalar: 0.088
-2025-05-25 10:54:50: 💎 Total nominal exposure: $196.41
-2025-05-25 10:54:50: ⚖️  Final leverage: 0.18x
-2025-05-25 10:54:54: 
-🎯 DAILY VOL SCALING UPDATE at 2025-02-22 00:00:
-2025-05-25 10:54:54:    📊 Daily return: +0.08%
-2025-05-25 10:54:54:    📈 Realized vol: 40.25% -> Target: 15.0%
-2025-05-25 10:54:54:    ⚡ Vol scalar: 0.088 -> 0.075
-2025-05-25 10:54:54:      🔄 SOLAYERUSDT: $19.64 -> $16.78 (-14.6%)
-2025-05-25 10:54:54:      🔄 RAYDIUMUSDT: $19.64 -> $16.78 (-14.6%)
-2025-05-25 10:54:54:      🔄 NEIROETHUSDT: $19.64 -> $16.78 (-14.6%)
-2025-05-25 10:54:54:      🔄 TAOUSDT: $19.64 -> $16.78 (-14.6%)
-2025-05-25 10:54:54:      🔄 MAGICUSDT: $19.64 -> $16.78 (-14.6%)
-2025-05-25 10:54:59: 
-📈 END OF PERIOD 8 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:54:59: ============================================================
-2025-05-25 10:54:59: 🏦 Portfolio Value: $1,121.67 → $1,117.21 (-4.46)
-2025-05-25 10:54:59: 💰 Period Funding PnL: $0.70
-2025-05-25 10:54:59: 📊 Period Realized Trading PnL: $0.00
-2025-05-25 10:54:59: 📈 Current Unrealized PnL: $-5.08
-2025-05-25 10:54:59: 💸 Period Trading Costs: $0.09
-2025-05-25 10:54:59: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:54:59: 📊 Period-end realized vol: 36.68% (target: 15.0%)
-2025-05-25 10:54:59: ⚡ Period-end vol scalar: 0.067
-2025-05-25 10:54:59: ⚖️  Period-end leverage: 0.15x
-2025-05-25 10:54:59: 📈 Vol scaling effectiveness: 144.6% deviation from target
-2025-05-25 10:54:59: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:54:59: 💰 Total Funding PnL: $15.07
-2025-05-25 10:54:59: 📊 Total Realized Trading PnL: $110.87
-2025-05-25 10:54:59: 💸 Total Trading Costs: $3.66
-2025-05-25 10:54:59: 
+2025-05-25 18:43:00: ✅ Opened 5 new positions
+2025-05-25 18:43:00: ❌ Closed 0 old positions
+2025-05-25 18:43:00: 🔄 Updated 0 existing positions
+2025-05-25 18:43:00: 💰 Total active positions: 5
+2025-05-25 18:43:00: 💸 Period trading costs: $0.09
+2025-05-25 18:43:00: 📈 Period realized PnL: $0.00
+2025-05-25 18:43:00: ⚖️  Final leverage: 0.18x
+2025-05-25 18:43:09: 
+📈 END OF PERIOD 8 SUMMARY:
+2025-05-25 18:43:09: 🏦 Portfolio Value: $1,121.70 → $1,117.32 (-4.38)
+2025-05-25 18:43:09: 💰 Period Funding PnL: $0.79
+2025-05-25 18:43:09: 📊 Period Realized Trading PnL: $0.00
+2025-05-25 18:43:09: 💸 Period Trading Costs: $0.09
+2025-05-25 18:43:09: 
 ================================================================================
-2025-05-25 10:54:59: REBALANCE PERIOD 9/19
-2025-05-25 10:54:59: ================================================================================
-2025-05-25 10:54:59: 📅 Period: 2025-02-26 00:00 → 2025-03-05 00:00
-2025-05-25 10:54:59: 💰 Starting Capital: $1,117.21
-2025-05-25 10:54:59: 📊 Current Portfolio Positions: 5
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09: REBALANCE PERIOD 9/19
+2025-05-25 18:43:09: ================================================================================
+2025-05-25 18:43:09: 📅 Period: 2025-02-26 00:00 → 2025-03-05 00:00
+2025-05-25 18:43:09: 💰 Starting Capital: $1,117.32
+2025-05-25 18:43:09: 📊 Current Portfolio Positions: 5
+2025-05-25 18:43:09: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:54:59:    📊 Current realized volatility: 36.68%
-2025-05-25 10:54:59:    🎯 Target volatility: 15.0%
-2025-05-25 10:54:59:    ⚡ Current vol scalar: 0.067
-2025-05-25 10:54:59:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:54:59:    📐 Vol ratio (realized/target): 2.45
-2025-05-25 10:54:59: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:54:59: Total symbols with funding data in period: 429
-2025-05-25 10:54:59: Symbols meeting 30.0% threshold: 2
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09:    📊 Current realized volatility: 36.68%
+2025-05-25 18:43:09:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:09:    ⚡ Current vol scalar: 0.067
+2025-05-25 18:43:09: 
 ⭐ TOP 2 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:54:59: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:54:59: --------------------------------------------------
-2025-05-25 10:54:59: 1     MAGICUSDT       43.80          % 2h
-2025-05-25 10:54:59: 2     FBUSDT          34.32          % 8h
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:09: --------------------------------------------------
+2025-05-25 18:43:09: 1     MAGICUSDT       43.80          % 2h
+2025-05-25 18:43:09: 2     FBUSDT          34.32          % 8h
+2025-05-25 18:43:09: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:54:59:    💵 Available capital: $1,117.21
-2025-05-25 10:54:59:    📊 Base allocation per symbol: $558.60
-2025-05-25 10:54:59:    ⚡ Vol scalar: 0.067
-2025-05-25 10:54:59:    💎 Scaled allocation per symbol: $37.40
-2025-05-25 10:54:59:    📈 Scaling effect: -93.3%
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09:    💵 Available capital: $1,117.32
+2025-05-25 18:43:09:    📊 Base allocation per symbol: $558.66
+2025-05-25 18:43:09:    ⚡ Vol scalar: 0.067
+2025-05-25 18:43:09:    💎 Scaled allocation per symbol: $37.41
+2025-05-25 18:43:09: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:54:59:   🔸 Closed LINEAR short SOLAYERUSDT: 15.6778 @ 0.738300, PnL: $-1.75, Cost: $0.01
-2025-05-25 10:54:59:   🔸 Closed SPOT long BTCUSDT: 0.0001 @ 88200.000000, PnL: $-0.74, Cost: $0.01
-2025-05-25 10:54:59:   ✅ Total PnL for SOLAYERUSDT: $-2.49
-2025-05-25 10:54:59:   🔸 Closed LINEAR short TAOUSDT: 0.0261 @ 371.480000, PnL: $0.14, Cost: $0.01
-2025-05-25 10:54:59:   🔸 Closed SPOT long BTCUSDT: 0.0001 @ 88200.000000, PnL: $-0.74, Cost: $0.01
-2025-05-25 10:54:59:   ✅ Total PnL for TAOUSDT: $-0.59
-2025-05-25 10:54:59:   🔸 Closed LINEAR short NEIROETHUSDT: 545.2854 @ 0.027620, PnL: $-5.24, Cost: $0.01
-2025-05-25 10:54:59:   🔸 Closed SPOT long BTCUSDT: 0.0001 @ 88200.000000, PnL: $-0.74, Cost: $0.01
-2025-05-25 10:54:59:   ✅ Total PnL for NEIROETHUSDT: $-5.98
-2025-05-25 10:54:59:   🔸 Closed LINEAR short RAYDIUMUSDT: 2.3400 @ 2.473000, PnL: $4.03, Cost: $0.01
-2025-05-25 10:54:59:   🔸 Closed SPOT long BTCUSDT: 0.0001 @ 88200.000000, PnL: $-0.74, Cost: $0.01
-2025-05-25 10:54:59:   ✅ Total PnL for RAYDIUMUSDT: $3.30
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09:   ✅ Closed TAOUSDT, PnL: $-0.59, Cost: $0.02
+2025-05-25 18:43:09:   ✅ Closed SOLAYERUSDT, PnL: $-2.49, Cost: $0.02
+2025-05-25 18:43:09:   ✅ Closed RAYDIUMUSDT, PnL: $3.30, Cost: $0.01
+2025-05-25 18:43:09:   ✅ Closed NEIROETHUSDT, PnL: $-5.98, Cost: $0.02
+2025-05-25 18:43:09: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:54:59:   🔄 MAGICUSDT: $16.78 → $37.40 (+122.9%)
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09:   🔄 MAGICUSDT: $37.41 → $37.41 (+0.0%)
+2025-05-25 18:43:09: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:54:59:   🔍 Processing symbol: FBUSDT -> FBUSDT
-2025-05-25 10:54:59:   📊 FBUSDT -> FBUSDT: Linear ✅ Spot ✅ Prices ✅
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09:   🔍 Processing symbol: FBUSDT -> FBUSDT
+2025-05-25 18:43:09:   📊 FBUSDT -> FBUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-25 18:43:09: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:54:59: Available capital: $1,117.14
-2025-05-25 10:54:59: Base allocation per symbol: $558.60
-2025-05-25 10:54:59: Scaled allocation per symbol: $37.40
-2025-05-25 10:54:59: Vol scalar applied: 0.067
-2025-05-25 10:54:59: Symbols to trade: 1
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09: Symbols to trade: 1
+2025-05-25 18:43:09: 
   📈 FBUSDT (+34.32% funding) ⚡ [SCALED 0.07x]:
-2025-05-25 10:54:59:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
-2025-05-25 10:54:59:      💰 Base allocation: $558.60, Scaled: $37.40
-2025-05-25 10:54:59:      🔸 LINEAR short: 16.2756 units @ 1.149000 = $18.70
-2025-05-25 10:54:59:      🔸 SPOT long: 33.5077 units @ 0.558100 = $18.70
-2025-05-25 10:54:59:      💸 Trading costs: $0.03 (Linear: $0.02, Spot: $0.02)
-2025-05-25 10:54:59: 
+2025-05-25 18:43:09:      💸 Trading costs: $0.03
+2025-05-25 18:43:09: 
 📊 REBALANCE PERIOD 9 SUMMARY:
-2025-05-25 10:54:59: ✅ Opened 1 new delta-neutral positions
-2025-05-25 10:54:59: ❌ Closed 4 old positions
-2025-05-25 10:54:59: 🔄 Updated 1 existing positions
-2025-05-25 10:54:59: 💰 Total active positions: 2
-2025-05-25 10:54:59: 💸 Period trading costs: $0.10
-2025-05-25 10:54:59: 📈 Period realized PnL: $-5.76
-2025-05-25 10:54:59: 🏦 Portfolio value: $1117.21
-2025-05-25 10:54:59: ⚡ Applied vol scalar: 0.067
-2025-05-25 10:54:59: 💎 Total nominal exposure: $149.60
-2025-05-25 10:54:59: ⚖️  Final leverage: 0.13x
-2025-05-25 10:55:02: 
-🎯 DAILY VOL SCALING UPDATE at 2025-03-02 00:00:
-2025-05-25 10:55:02:    📊 Daily return: +0.00%
-2025-05-25 10:55:02:    📈 Realized vol: 31.44% -> Target: 15.0%
-2025-05-25 10:55:02:    ⚡ Vol scalar: 0.067 -> 0.057
-2025-05-25 10:55:02:      🔄 MAGICUSDT: $37.40 -> $31.61 (-15.5%)
-2025-05-25 10:55:02:      🔄 FBUSDT: $37.40 -> $31.61 (-15.5%)
-2025-05-25 10:55:03: 
-📈 END OF PERIOD 9 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:03: ============================================================
-2025-05-25 10:55:03: 🏦 Portfolio Value: $1,117.21 → $1,116.91 (-0.30)
-2025-05-25 10:55:03: 💰 Period Funding PnL: $0.31
-2025-05-25 10:55:03: 📊 Period Realized Trading PnL: $-5.76
-2025-05-25 10:55:03: 📈 Current Unrealized PnL: $0.18
-2025-05-25 10:55:03: 💸 Period Trading Costs: $0.10
-2025-05-25 10:55:03: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:03: 📊 Period-end realized vol: 29.55% (target: 15.0%)
-2025-05-25 10:55:03: ⚡ Period-end vol scalar: 0.053
-2025-05-25 10:55:03: ⚖️  Period-end leverage: 0.11x
-2025-05-25 10:55:03: 📈 Vol scaling effectiveness: 97.0% deviation from target
-2025-05-25 10:55:03: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:03: 💰 Total Funding PnL: $15.38
-2025-05-25 10:55:03: 📊 Total Realized Trading PnL: $105.11
-2025-05-25 10:55:03: 💸 Total Trading Costs: $3.76
-2025-05-25 10:55:03: 
+2025-05-25 18:43:09: ✅ Opened 1 new positions
+2025-05-25 18:43:09: ❌ Closed 4 old positions
+2025-05-25 18:43:09: 🔄 Updated 1 existing positions
+2025-05-25 18:43:09: 💰 Total active positions: 2
+2025-05-25 18:43:09: 💸 Period trading costs: $0.10
+2025-05-25 18:43:09: 📈 Period realized PnL: $-5.76
+2025-05-25 18:43:09: ⚖️  Final leverage: 0.13x
+2025-05-25 18:43:13: 
+📈 END OF PERIOD 9 SUMMARY:
+2025-05-25 18:43:13: 🏦 Portfolio Value: $1,117.32 → $1,117.04 (-0.28)
+2025-05-25 18:43:13: 💰 Period Funding PnL: $0.32
+2025-05-25 18:43:13: 📊 Period Realized Trading PnL: $-5.76
+2025-05-25 18:43:13: 💸 Period Trading Costs: $0.10
+2025-05-25 18:43:13: 
 ================================================================================
-2025-05-25 10:55:03: REBALANCE PERIOD 10/19
-2025-05-25 10:55:03: ================================================================================
-2025-05-25 10:55:03: 📅 Period: 2025-03-05 00:00 → 2025-03-12 00:00
-2025-05-25 10:55:03: 💰 Starting Capital: $1,116.91
-2025-05-25 10:55:03: 📊 Current Portfolio Positions: 2
-2025-05-25 10:55:03: 
+2025-05-25 18:43:13: REBALANCE PERIOD 10/19
+2025-05-25 18:43:13: ================================================================================
+2025-05-25 18:43:13: 📅 Period: 2025-03-05 00:00 → 2025-03-12 00:00
+2025-05-25 18:43:13: 💰 Starting Capital: $1,117.04
+2025-05-25 18:43:13: 📊 Current Portfolio Positions: 2
+2025-05-25 18:43:13: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:03:    📊 Current realized volatility: 29.55%
-2025-05-25 10:55:03:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:03:    ⚡ Current vol scalar: 0.053
-2025-05-25 10:55:03:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:03:    📐 Vol ratio (realized/target): 1.97
-2025-05-25 10:55:03: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:03: Total symbols with funding data in period: 432
-2025-05-25 10:55:03: Symbols meeting 30.0% threshold: 1
-2025-05-25 10:55:03: 
+2025-05-25 18:43:13:    📊 Current realized volatility: 29.55%
+2025-05-25 18:43:13:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:13:    ⚡ Current vol scalar: 0.053
+2025-05-25 18:43:13: 
 ⭐ TOP 1 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:55:03: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:55:03: --------------------------------------------------
-2025-05-25 10:55:03: 1     MAGICUSDT       40.14          % 2h
-2025-05-25 10:55:03: 
+2025-05-25 18:43:13: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:13: --------------------------------------------------
+2025-05-25 18:43:13: 1     MAGICUSDT       40.14          % 2h
+2025-05-25 18:43:13: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:55:03:    💵 Available capital: $1,116.91
-2025-05-25 10:55:03:    📊 Base allocation per symbol: $1116.91
-2025-05-25 10:55:03:    ⚡ Vol scalar: 0.053
-2025-05-25 10:55:03:    💎 Scaled allocation per symbol: $59.47
-2025-05-25 10:55:03:    📈 Scaling effect: -94.7%
-2025-05-25 10:55:03: 
+2025-05-25 18:43:13:    💵 Available capital: $1,117.04
+2025-05-25 18:43:13:    📊 Base allocation per symbol: $1117.04
+2025-05-25 18:43:13:    ⚡ Vol scalar: 0.053
+2025-05-25 18:43:13:    💎 Scaled allocation per symbol: $59.48
+2025-05-25 18:43:13: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:55:03:   🔸 Closed LINEAR short FBUSDT: 16.2756 @ 1.137000, PnL: $0.20, Cost: $0.02
-2025-05-25 10:55:03:   🔸 Closed SPOT long FBUSDT: 33.5077 @ 0.558100, PnL: $0.00, Cost: $0.02
-2025-05-25 10:55:03:   ✅ Total PnL for FBUSDT: $0.20
-2025-05-25 10:55:03: 
+2025-05-25 18:43:13:   ✅ Closed FBUSDT, PnL: $0.20, Cost: $0.03
+2025-05-25 18:43:13: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:55:03:   🔄 MAGICUSDT: $31.61 → $59.47 (+88.1%)
-2025-05-25 10:55:03: 
+2025-05-25 18:43:13:   🔄 MAGICUSDT: $59.48 → $59.48 (+0.0%)
+2025-05-25 18:43:13: 
 📊 REBALANCE PERIOD 10 SUMMARY:
-2025-05-25 10:55:03: ✅ Opened 0 new delta-neutral positions
-2025-05-25 10:55:03: ❌ Closed 1 old positions
-2025-05-25 10:55:03: 🔄 Updated 1 existing positions
-2025-05-25 10:55:03: 💰 Total active positions: 1
-2025-05-25 10:55:03: 💸 Period trading costs: $0.03
-2025-05-25 10:55:03: 📈 Period realized PnL: $0.20
-2025-05-25 10:55:03: 🏦 Portfolio value: $1116.91
-2025-05-25 10:55:03: ⚡ Applied vol scalar: 0.053
-2025-05-25 10:55:03: 💎 Total nominal exposure: $118.95
-2025-05-25 10:55:03: ⚖️  Final leverage: 0.11x
-2025-05-25 10:55:05: 
-📈 END OF PERIOD 10 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:05: ============================================================
-2025-05-25 10:55:05: 🏦 Portfolio Value: $1,116.91 → $1,116.98 (+0.07)
-2025-05-25 10:55:05: 💰 Period Funding PnL: $0.11
-2025-05-25 10:55:05: 📊 Period Realized Trading PnL: $0.20
-2025-05-25 10:55:05: 📈 Current Unrealized PnL: $-0.03
-2025-05-25 10:55:05: 💸 Period Trading Costs: $0.03
-2025-05-25 10:55:05: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:05: 📊 Period-end realized vol: 23.80% (target: 15.0%)
-2025-05-25 10:55:05: ⚡ Period-end vol scalar: 0.044
-2025-05-25 10:55:05: ⚖️  Period-end leverage: 0.11x
-2025-05-25 10:55:05: 📈 Vol scaling effectiveness: 58.7% deviation from target
-2025-05-25 10:55:05: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:05: 💰 Total Funding PnL: $15.50
-2025-05-25 10:55:05: 📊 Total Realized Trading PnL: $105.30
-2025-05-25 10:55:05: 💸 Total Trading Costs: $3.80
-2025-05-25 10:55:05: 
+2025-05-25 18:43:13: ✅ Opened 1 new positions
+2025-05-25 18:43:13: ❌ Closed 1 old positions
+2025-05-25 18:43:13: 🔄 Updated 1 existing positions
+2025-05-25 18:43:13: 💰 Total active positions: 1
+2025-05-25 18:43:13: 💸 Period trading costs: $0.03
+2025-05-25 18:43:13: 📈 Period realized PnL: $0.20
+2025-05-25 18:43:13: ⚖️  Final leverage: 0.11x
+2025-05-25 18:43:15: 
+📈 END OF PERIOD 10 SUMMARY:
+2025-05-25 18:43:15: 🏦 Portfolio Value: $1,117.04 → $1,117.10 (+0.07)
+2025-05-25 18:43:15: 💰 Period Funding PnL: $0.11
+2025-05-25 18:43:15: 📊 Period Realized Trading PnL: $0.20
+2025-05-25 18:43:15: 💸 Period Trading Costs: $0.03
+2025-05-25 18:43:15: 
 ================================================================================
-2025-05-25 10:55:05: REBALANCE PERIOD 11/19
-2025-05-25 10:55:05: ================================================================================
-2025-05-25 10:55:05: 📅 Period: 2025-03-12 00:00 → 2025-03-19 00:00
-2025-05-25 10:55:05: 💰 Starting Capital: $1,116.98
-2025-05-25 10:55:05: 📊 Current Portfolio Positions: 1
-2025-05-25 10:55:05: 
+2025-05-25 18:43:15: REBALANCE PERIOD 11/19
+2025-05-25 18:43:15: ================================================================================
+2025-05-25 18:43:15: 📅 Period: 2025-03-12 00:00 → 2025-03-19 00:00
+2025-05-25 18:43:15: 💰 Starting Capital: $1,117.10
+2025-05-25 18:43:15: 📊 Current Portfolio Positions: 1
+2025-05-25 18:43:15: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:05:    📊 Current realized volatility: 23.80%
-2025-05-25 10:55:05:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:05:    ⚡ Current vol scalar: 0.044
-2025-05-25 10:55:05:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:05:    📐 Vol ratio (realized/target): 1.59
-2025-05-25 10:55:05: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:05: Total symbols with funding data in period: 436
-2025-05-25 10:55:05: Symbols meeting 30.0% threshold: 0
-2025-05-25 10:55:05: 
+2025-05-25 18:43:15:    📊 Current realized volatility: 23.80%
+2025-05-25 18:43:15:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:15:    ⚡ Current vol scalar: 0.044
+2025-05-25 18:43:15: 
 ❌ NO SYMBOLS MEET FUNDING RATE CRITERIA - CLOSING ALL POSITIONS
-2025-05-25 10:55:05:   ✅ Closed all positions for MAGICUSDT, Total PnL: $-0.02
-2025-05-25 10:55:05: 
-📈 END OF PERIOD 11 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:05: ============================================================
-2025-05-25 10:55:05: 🏦 Portfolio Value: $1,116.91 → $1,116.99 (+0.07)
-2025-05-25 10:55:05: 💰 Period Funding PnL: $0.00
-2025-05-25 10:55:05: 📊 Period Realized Trading PnL: $-0.02
-2025-05-25 10:55:05: 📈 Current Unrealized PnL: $0.00
-2025-05-25 10:55:05: 💸 Period Trading Costs: $0.00
-2025-05-25 10:55:05: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:05: 📊 Period-end realized vol: 19.17% (target: 15.0%)
-2025-05-25 10:55:05: ⚡ Period-end vol scalar: 0.039
-2025-05-25 10:55:05: ⚖️  Period-end leverage: 0.00x
-2025-05-25 10:55:05: 📈 Vol scaling effectiveness: 27.8% deviation from target
-2025-05-25 10:55:05: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:05: 💰 Total Funding PnL: $15.50
-2025-05-25 10:55:05: 📊 Total Realized Trading PnL: $105.28
-2025-05-25 10:55:05: 💸 Total Trading Costs: $3.80
-2025-05-25 10:55:05: 
+2025-05-25 18:43:15:   ✅ Closed all positions for MAGICUSDT, PnL: $-0.02
+2025-05-25 18:43:15: 
+📈 END OF PERIOD 11 SUMMARY:
+2025-05-25 18:43:15: 🏦 Portfolio Value: $1,117.10 → $1,117.11 (+0.01)
+2025-05-25 18:43:15: 💰 Period Funding PnL: $0.00
+2025-05-25 18:43:15: 📊 Period Realized Trading PnL: $-0.02
+2025-05-25 18:43:15: 💸 Period Trading Costs: $0.00
+2025-05-25 18:43:15: 
 ================================================================================
-2025-05-25 10:55:05: REBALANCE PERIOD 12/19
-2025-05-25 10:55:05: ================================================================================
-2025-05-25 10:55:05: 📅 Period: 2025-03-19 00:00 → 2025-03-26 00:00
-2025-05-25 10:55:05: 💰 Starting Capital: $1,116.99
-2025-05-25 10:55:05: 📊 Current Portfolio Positions: 0
-2025-05-25 10:55:05: 
+2025-05-25 18:43:15: REBALANCE PERIOD 12/19
+2025-05-25 18:43:15: ================================================================================
+2025-05-25 18:43:15: 📅 Period: 2025-03-19 00:00 → 2025-03-26 00:00
+2025-05-25 18:43:15: 💰 Starting Capital: $1,117.11
+2025-05-25 18:43:15: 📊 Current Portfolio Positions: 0
+2025-05-25 18:43:15: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:05:    📊 Current realized volatility: 19.17%
-2025-05-25 10:55:05:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:05:    ⚡ Current vol scalar: 0.039
-2025-05-25 10:55:05:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:05:    📐 Vol ratio (realized/target): 1.28
-2025-05-25 10:55:05: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:05: Total symbols with funding data in period: 441
-2025-05-25 10:55:05: Symbols meeting 30.0% threshold: 1
-2025-05-25 10:55:05: 
+2025-05-25 18:43:15:    📊 Current realized volatility: 19.16%
+2025-05-25 18:43:15:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:15:    ⚡ Current vol scalar: 0.039
+2025-05-25 18:43:15: 
 ⭐ TOP 1 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:55:05: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:55:05: --------------------------------------------------
-2025-05-25 10:55:05: 1     MAGICUSDT       41.54          % 2h
-2025-05-25 10:55:05: 
+2025-05-25 18:43:15: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:15: --------------------------------------------------
+2025-05-25 18:43:15: 1     MAGICUSDT       41.54          % 2h
+2025-05-25 18:43:15: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:55:05:    💵 Available capital: $1,116.99
-2025-05-25 10:55:05:    📊 Base allocation per symbol: $1116.99
-2025-05-25 10:55:05:    ⚡ Vol scalar: 0.039
-2025-05-25 10:55:05:    💎 Scaled allocation per symbol: $43.99
-2025-05-25 10:55:05:    📈 Scaling effect: -96.1%
-2025-05-25 10:55:05: 
+2025-05-25 18:43:15:    💵 Available capital: $1,117.11
+2025-05-25 18:43:15:    📊 Base allocation per symbol: $1117.11
+2025-05-25 18:43:15:    ⚡ Vol scalar: 0.039
+2025-05-25 18:43:15:    💎 Scaled allocation per symbol: $44.00
+2025-05-25 18:43:15: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:55:05:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
-2025-05-25 10:55:05:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
-2025-05-25 10:55:06: 
+2025-05-25 18:43:15:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-25 18:43:15:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-25 18:43:15: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:55:06: Available capital: $1,116.99
-2025-05-25 10:55:06: Base allocation per symbol: $1,116.99
-2025-05-25 10:55:06: Scaled allocation per symbol: $43.99
-2025-05-25 10:55:06: Vol scalar applied: 0.039
-2025-05-25 10:55:06: Symbols to trade: 1
-2025-05-25 10:55:06: 
+2025-05-25 18:43:15: Symbols to trade: 1
+2025-05-25 18:43:15: 
   📈 MAGICUSDT (+41.54% funding) ⚡ [SCALED 0.04x]:
-2025-05-25 10:55:06:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
-2025-05-25 10:55:06:      💰 Base allocation: $1116.99, Scaled: $43.99
-2025-05-25 10:55:06:      🔸 LINEAR short: 145.0054 units @ 0.151700 = $22.00
-2025-05-25 10:55:06:      🔸 SPOT long: 145.1010 units @ 0.151600 = $22.00
-2025-05-25 10:55:06:      💸 Trading costs: $0.04 (Linear: $0.02, Spot: $0.02)
-2025-05-25 10:55:06: 
+2025-05-25 18:43:15:      💸 Trading costs: $0.04
+2025-05-25 18:43:15: 
 📊 REBALANCE PERIOD 12 SUMMARY:
-2025-05-25 10:55:06: ✅ Opened 1 new delta-neutral positions
-2025-05-25 10:55:06: ❌ Closed 0 old positions
-2025-05-25 10:55:06: 🔄 Updated 0 existing positions
-2025-05-25 10:55:06: 💰 Total active positions: 1
-2025-05-25 10:55:06: 💸 Period trading costs: $0.04
-2025-05-25 10:55:06: 📈 Period realized PnL: $0.00
-2025-05-25 10:55:06: 🏦 Portfolio value: $1116.99
-2025-05-25 10:55:06: ⚡ Applied vol scalar: 0.039
-2025-05-25 10:55:06: 💎 Total nominal exposure: $87.99
-2025-05-25 10:55:06: ⚖️  Final leverage: 0.08x
-2025-05-25 10:55:07: 
-📈 END OF PERIOD 12 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:07: ============================================================
-2025-05-25 10:55:07: 🏦 Portfolio Value: $1,116.99 → $1,117.09 (+0.11)
-2025-05-25 10:55:07: 💰 Period Funding PnL: $0.09
-2025-05-25 10:55:07: 📊 Period Realized Trading PnL: $0.00
-2025-05-25 10:55:07: 📈 Current Unrealized PnL: $0.06
-2025-05-25 10:55:07: 💸 Period Trading Costs: $0.04
-2025-05-25 10:55:07: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:07: 📊 Period-end realized vol: 15.43% (target: 15.0%)
-2025-05-25 10:55:07: ⚡ Period-end vol scalar: 0.038
-2025-05-25 10:55:07: ⚖️  Period-end leverage: 0.08x
-2025-05-25 10:55:07: 📈 Vol scaling effectiveness: 2.9% deviation from target
-2025-05-25 10:55:07: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:07: 💰 Total Funding PnL: $15.59
-2025-05-25 10:55:07: 📊 Total Realized Trading PnL: $105.28
-2025-05-25 10:55:07: 💸 Total Trading Costs: $3.84
-2025-05-25 10:55:07: 
+2025-05-25 18:43:15: ✅ Opened 1 new positions
+2025-05-25 18:43:15: ❌ Closed 0 old positions
+2025-05-25 18:43:15: 🔄 Updated 0 existing positions
+2025-05-25 18:43:15: 💰 Total active positions: 1
+2025-05-25 18:43:15: 💸 Period trading costs: $0.04
+2025-05-25 18:43:15: 📈 Period realized PnL: $0.00
+2025-05-25 18:43:15: ⚖️  Final leverage: 0.08x
+2025-05-25 18:43:17: 
+📈 END OF PERIOD 12 SUMMARY:
+2025-05-25 18:43:17: 🏦 Portfolio Value: $1,117.11 → $1,117.22 (+0.11)
+2025-05-25 18:43:17: 💰 Period Funding PnL: $0.09
+2025-05-25 18:43:17: 📊 Period Realized Trading PnL: $0.00
+2025-05-25 18:43:17: 💸 Period Trading Costs: $0.04
+2025-05-25 18:43:17: 
 ================================================================================
-2025-05-25 10:55:07: REBALANCE PERIOD 13/19
-2025-05-25 10:55:07: ================================================================================
-2025-05-25 10:55:07: 📅 Period: 2025-03-26 00:00 → 2025-04-02 00:00
-2025-05-25 10:55:07: 💰 Starting Capital: $1,117.09
-2025-05-25 10:55:07: 📊 Current Portfolio Positions: 1
-2025-05-25 10:55:07: 
+2025-05-25 18:43:17: REBALANCE PERIOD 13/19
+2025-05-25 18:43:17: ================================================================================
+2025-05-25 18:43:17: 📅 Period: 2025-03-26 00:00 → 2025-04-02 00:00
+2025-05-25 18:43:17: 💰 Starting Capital: $1,117.22
+2025-05-25 18:43:17: 📊 Current Portfolio Positions: 1
+2025-05-25 18:43:17: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:07:    📊 Current realized volatility: 15.43%
-2025-05-25 10:55:07:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:08:    ⚡ Current vol scalar: 0.038
-2025-05-25 10:55:08:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:08:    📐 Vol ratio (realized/target): 1.03
-2025-05-25 10:55:08: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:08: Total symbols with funding data in period: 443
-2025-05-25 10:55:08: Symbols meeting 30.0% threshold: 1
-2025-05-25 10:55:08: 
+2025-05-25 18:43:17:    📊 Current realized volatility: 15.43%
+2025-05-25 18:43:17:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:17:    ⚡ Current vol scalar: 0.038
+2025-05-25 18:43:17: 
 ⭐ TOP 1 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:55:08: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:55:08: --------------------------------------------------
-2025-05-25 10:55:08: 1     MAGICUSDT       33.12          % 2h
-2025-05-25 10:55:08: 
+2025-05-25 18:43:17: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:17: --------------------------------------------------
+2025-05-25 18:43:17: 1     MAGICUSDT       33.12          % 2h
+2025-05-25 18:43:17: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:55:08:    💵 Available capital: $1,117.09
-2025-05-25 10:55:08:    📊 Base allocation per symbol: $1117.09
-2025-05-25 10:55:08:    ⚡ Vol scalar: 0.038
-2025-05-25 10:55:08:    💎 Scaled allocation per symbol: $41.96
-2025-05-25 10:55:08:    📈 Scaling effect: -96.2%
-2025-05-25 10:55:08: 
+2025-05-25 18:43:17:    💵 Available capital: $1,117.22
+2025-05-25 18:43:17:    📊 Base allocation per symbol: $1117.22
+2025-05-25 18:43:17:    ⚡ Vol scalar: 0.038
+2025-05-25 18:43:17:    💎 Scaled allocation per symbol: $41.96
+2025-05-25 18:43:17: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:55:08:   🔄 MAGICUSDT: $43.99 → $41.96 (-4.6%)
-2025-05-25 10:55:08: 
+2025-05-25 18:43:17:   🔄 MAGICUSDT: $41.96 → $41.96 (+0.0%)
+2025-05-25 18:43:17: 
 📊 REBALANCE PERIOD 13 SUMMARY:
-2025-05-25 10:55:08: ✅ Opened 0 new delta-neutral positions
-2025-05-25 10:55:08: ❌ Closed 0 old positions
-2025-05-25 10:55:08: 🔄 Updated 1 existing positions
-2025-05-25 10:55:08: 💰 Total active positions: 1
-2025-05-25 10:55:08: 💸 Period trading costs: $0.00
-2025-05-25 10:55:08: 📈 Period realized PnL: $0.00
-2025-05-25 10:55:08: 🏦 Portfolio value: $1117.09
-2025-05-25 10:55:08: ⚡ Applied vol scalar: 0.038
-2025-05-25 10:55:08: 💎 Total nominal exposure: $83.92
-2025-05-25 10:55:08: ⚖️  Final leverage: 0.08x
-2025-05-25 10:55:10: 
-📈 END OF PERIOD 13 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:10: ============================================================
-2025-05-25 10:55:10: 🏦 Portfolio Value: $1,117.09 → $1,116.62 (-0.47)
-2025-05-25 10:55:10: 💰 Period Funding PnL: $0.07
-2025-05-25 10:55:10: 📊 Period Realized Trading PnL: $0.00
-2025-05-25 10:55:10: 📈 Current Unrealized PnL: $-0.48
-2025-05-25 10:55:10: 💸 Period Trading Costs: $0.00
-2025-05-25 10:55:10: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:10: 📊 Period-end realized vol: 12.43% (target: 15.0%)
-2025-05-25 10:55:10: ⚡ Period-end vol scalar: 0.039
-2025-05-25 10:55:10: ⚖️  Period-end leverage: 0.08x
-2025-05-25 10:55:10: 📈 Vol scaling effectiveness: 17.1% deviation from target
-2025-05-25 10:55:10: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:10: 💰 Total Funding PnL: $15.65
-2025-05-25 10:55:10: 📊 Total Realized Trading PnL: $105.28
-2025-05-25 10:55:10: 💸 Total Trading Costs: $3.84
-2025-05-25 10:55:10: 
+2025-05-25 18:43:17: ✅ Opened 1 new positions
+2025-05-25 18:43:17: ❌ Closed 0 old positions
+2025-05-25 18:43:17: 🔄 Updated 1 existing positions
+2025-05-25 18:43:17: 💰 Total active positions: 1
+2025-05-25 18:43:17: 💸 Period trading costs: $0.00
+2025-05-25 18:43:17: 📈 Period realized PnL: $0.00
+2025-05-25 18:43:17: ⚖️  Final leverage: 0.08x
+2025-05-25 18:43:19: 
+📈 END OF PERIOD 13 SUMMARY:
+2025-05-25 18:43:19: 🏦 Portfolio Value: $1,117.22 → $1,116.74 (-0.47)
+2025-05-25 18:43:19: 💰 Period Funding PnL: $0.07
+2025-05-25 18:43:19: 📊 Period Realized Trading PnL: $0.00
+2025-05-25 18:43:19: 💸 Period Trading Costs: $0.00
+2025-05-25 18:43:19: 
 ================================================================================
-2025-05-25 10:55:10: REBALANCE PERIOD 14/19
-2025-05-25 10:55:10: ================================================================================
-2025-05-25 10:55:10: 📅 Period: 2025-04-02 00:00 → 2025-04-09 00:00
-2025-05-25 10:55:10: 💰 Starting Capital: $1,116.62
-2025-05-25 10:55:10: 📊 Current Portfolio Positions: 1
-2025-05-25 10:55:10: 
+2025-05-25 18:43:19: REBALANCE PERIOD 14/19
+2025-05-25 18:43:19: ================================================================================
+2025-05-25 18:43:19: 📅 Period: 2025-04-02 00:00 → 2025-04-09 00:00
+2025-05-25 18:43:19: 💰 Starting Capital: $1,116.74
+2025-05-25 18:43:19: 📊 Current Portfolio Positions: 1
+2025-05-25 18:43:19: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:10:    📊 Current realized volatility: 12.43%
-2025-05-25 10:55:10:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:10:    ⚡ Current vol scalar: 0.039
-2025-05-25 10:55:10:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:10:    📐 Vol ratio (realized/target): 0.83
-2025-05-25 10:55:10: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:10: Total symbols with funding data in period: 444
-2025-05-25 10:55:10: Symbols meeting 30.0% threshold: 0
-2025-05-25 10:55:10: 
+2025-05-25 18:43:19:    📊 Current realized volatility: 12.43%
+2025-05-25 18:43:19:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:19:    ⚡ Current vol scalar: 0.039
+2025-05-25 18:43:19: 
 ❌ NO SYMBOLS MEET FUNDING RATE CRITERIA - CLOSING ALL POSITIONS
-2025-05-25 10:55:10:   ✅ Closed all positions for MAGICUSDT, Total PnL: $-1.25
-2025-05-25 10:55:10: 
-📈 END OF PERIOD 14 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:10: ============================================================
-2025-05-25 10:55:10: 🏦 Portfolio Value: $1,117.09 → $1,115.85 (-1.24)
-2025-05-25 10:55:10: 💰 Period Funding PnL: $0.00
-2025-05-25 10:55:10: 📊 Period Realized Trading PnL: $-1.25
-2025-05-25 10:55:10: 📈 Current Unrealized PnL: $0.00
-2025-05-25 10:55:10: 💸 Period Trading Costs: $0.00
-2025-05-25 10:55:10: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:10: 📊 Period-end realized vol: 10.01% (target: 15.0%)
-2025-05-25 10:55:10: ⚡ Period-end vol scalar: 0.046
-2025-05-25 10:55:10: ⚖️  Period-end leverage: 0.00x
-2025-05-25 10:55:10: 📈 Vol scaling effectiveness: 33.3% deviation from target
-2025-05-25 10:55:10: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:10: 💰 Total Funding PnL: $15.65
-2025-05-25 10:55:10: 📊 Total Realized Trading PnL: $104.03
-2025-05-25 10:55:10: 💸 Total Trading Costs: $3.84
-2025-05-25 10:55:10: 
+2025-05-25 18:43:19:   ✅ Closed all positions for MAGICUSDT, PnL: $-1.25
+2025-05-25 18:43:19: 
+📈 END OF PERIOD 14 SUMMARY:
+2025-05-25 18:43:19: 🏦 Portfolio Value: $1,116.74 → $1,115.98 (-0.77)
+2025-05-25 18:43:19: 💰 Period Funding PnL: $0.00
+2025-05-25 18:43:19: 📊 Period Realized Trading PnL: $-1.25
+2025-05-25 18:43:19: 💸 Period Trading Costs: $0.00
+2025-05-25 18:43:19: 
 ================================================================================
-2025-05-25 10:55:10: REBALANCE PERIOD 15/19
-2025-05-25 10:55:10: ================================================================================
-2025-05-25 10:55:10: 📅 Period: 2025-04-09 00:00 → 2025-04-16 00:00
-2025-05-25 10:55:10: 💰 Starting Capital: $1,115.85
-2025-05-25 10:55:10: 📊 Current Portfolio Positions: 0
-2025-05-25 10:55:10: 
+2025-05-25 18:43:19: REBALANCE PERIOD 15/19
+2025-05-25 18:43:19: ================================================================================
+2025-05-25 18:43:19: 📅 Period: 2025-04-09 00:00 → 2025-04-16 00:00
+2025-05-25 18:43:19: 💰 Starting Capital: $1,115.98
+2025-05-25 18:43:19: 📊 Current Portfolio Positions: 0
+2025-05-25 18:43:19: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:10:    📊 Current realized volatility: 10.01%
-2025-05-25 10:55:10:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:10:    ⚡ Current vol scalar: 0.046
-2025-05-25 10:55:10:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:10:    📐 Vol ratio (realized/target): 0.67
-2025-05-25 10:55:10: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:10: Total symbols with funding data in period: 450
-2025-05-25 10:55:10: Symbols meeting 30.0% threshold: 2
-2025-05-25 10:55:10: 
+2025-05-25 18:43:19:    📊 Current realized volatility: 10.01%
+2025-05-25 18:43:19:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:19:    ⚡ Current vol scalar: 0.046
+2025-05-25 18:43:19: 
 ⭐ TOP 2 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:55:10: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:55:10: --------------------------------------------------
-2025-05-25 10:55:10: 1     JELLYJELLYUSDT  42.45          % 4h
-2025-05-25 10:55:10: 2     MAGICUSDT       30.47          % 2h
-2025-05-25 10:55:10: 
+2025-05-25 18:43:19: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:19: --------------------------------------------------
+2025-05-25 18:43:19: 1     JELLYJELLYUSDT  42.45          % 4h
+2025-05-25 18:43:19: 2     MAGICUSDT       30.47          % 2h
+2025-05-25 18:43:19: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:55:10:    💵 Available capital: $1,115.85
-2025-05-25 10:55:10:    📊 Base allocation per symbol: $557.92
-2025-05-25 10:55:10:    ⚡ Vol scalar: 0.046
-2025-05-25 10:55:10:    💎 Scaled allocation per symbol: $25.48
-2025-05-25 10:55:10:    📈 Scaling effect: -95.4%
-2025-05-25 10:55:10: 
+2025-05-25 18:43:19:    💵 Available capital: $1,115.98
+2025-05-25 18:43:19:    📊 Base allocation per symbol: $557.99
+2025-05-25 18:43:19:    ⚡ Vol scalar: 0.046
+2025-05-25 18:43:19:    💎 Scaled allocation per symbol: $25.49
+2025-05-25 18:43:19: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:55:10:   🔍 Processing symbol: JELLYJELLYUSDT -> JELLYJELLYUSDT
-2025-05-25 10:55:10:   📊 JELLYJELLYUSDT -> JELLYJELLYUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:10:     🪙 Trying Bitcoin as proxy for JELLYJELLYUSDT...
-2025-05-25 10:55:10:     ✅ Bitcoin proxy available @ 76514.60
-2025-05-25 10:55:10:   ✅ Using Bitcoin proxy for JELLYJELLYUSDT: BTC @ 76514.60
-2025-05-25 10:55:10:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
-2025-05-25 10:55:11:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
-2025-05-25 10:55:11: 
+2025-05-25 18:43:19:   🔍 Processing symbol: JELLYJELLYUSDT -> JELLYJELLYUSDT
+2025-05-25 18:43:20:   📊 JELLYJELLYUSDT -> JELLYJELLYUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:20:     🪙 Trying Bitcoin as proxy for JELLYJELLYUSDT...
+2025-05-25 18:43:20:     ✅ Bitcoin proxy available @ 76514.60
+2025-05-25 18:43:20:   🔍 Processing symbol: MAGICUSDT -> MAGICUSDT
+2025-05-25 18:43:20:   📊 MAGICUSDT -> MAGICUSDT: Linear ✅ Spot ✅ Prices ✅
+2025-05-25 18:43:20: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:55:11: Available capital: $1,115.85
-2025-05-25 10:55:11: Base allocation per symbol: $557.92
-2025-05-25 10:55:11: Scaled allocation per symbol: $25.48
-2025-05-25 10:55:11: Vol scalar applied: 0.046
-2025-05-25 10:55:11: Symbols to trade: 2
-2025-05-25 10:55:11: 
+2025-05-25 18:43:20: Symbols to trade: 2
+2025-05-25 18:43:20: 
   📈 JELLYJELLYUSDT (+42.45% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.05x]:
-2025-05-25 10:55:11:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:11:      💰 Base allocation: $557.92, Scaled: $25.48
-2025-05-25 10:55:11:      🔸 LINEAR short: 1229.1146 units @ 0.010367 = $12.74
-2025-05-25 10:55:11:      🔸 SPOT long: 0.0002 units @ 76514.600000 = $12.74
-2025-05-25 10:55:11:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:11: 
+2025-05-25 18:43:20:      💸 Trading costs: $0.02
+2025-05-25 18:43:20: 
   📈 MAGICUSDT (+30.47% funding) ⚡ [SCALED 0.05x]:
-2025-05-25 10:55:11:      💡 Strategy: Short perp (collect funding) + Long spot (hedge)
-2025-05-25 10:55:11:      💰 Base allocation: $557.92, Scaled: $25.48
-2025-05-25 10:55:11:      🔸 LINEAR short: 110.8984 units @ 0.114900 = $12.74
-2025-05-25 10:55:11:      🔸 SPOT long: 186.0180 units @ 0.068500 = $12.74
-2025-05-25 10:55:11:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:11: 
+2025-05-25 18:43:20:      💸 Trading costs: $0.02
+2025-05-25 18:43:20: 
 📊 REBALANCE PERIOD 15 SUMMARY:
-2025-05-25 10:55:11: ✅ Opened 2 new delta-neutral positions
-2025-05-25 10:55:11: ❌ Closed 0 old positions
-2025-05-25 10:55:11: 🔄 Updated 0 existing positions
-2025-05-25 10:55:11: 💰 Total active positions: 2
-2025-05-25 10:55:11: 💸 Period trading costs: $0.05
-2025-05-25 10:55:11: 📈 Period realized PnL: $0.00
-2025-05-25 10:55:11: 🏦 Portfolio value: $1115.85
-2025-05-25 10:55:11: ⚡ Applied vol scalar: 0.046
-2025-05-25 10:55:11: 💎 Total nominal exposure: $101.94
-2025-05-25 10:55:11: ⚖️  Final leverage: 0.09x
-2025-05-25 10:55:13: 
-🎯 DAILY VOL SCALING UPDATE at 2025-04-14 00:00:
-2025-05-25 10:55:13:    📊 Daily return: -0.14%
-2025-05-25 10:55:13:    📈 Realized vol: 8.39% -> Target: 15.0%
-2025-05-25 10:55:13:    ⚡ Vol scalar: 0.046 -> 0.058
-2025-05-25 10:55:13:      🔄 JELLYJELLYUSDT: $25.48 -> $32.24 (+26.5%)
-2025-05-25 10:55:13:      🔄 MAGICUSDT: $25.48 -> $32.24 (+26.5%)
-2025-05-25 10:55:15: 
-📈 END OF PERIOD 15 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:15: ============================================================
-2025-05-25 10:55:15: 🏦 Portfolio Value: $1,115.85 → $1,114.76 (-1.09)
-2025-05-25 10:55:15: 💰 Period Funding PnL: $0.27
-2025-05-25 10:55:15: 📊 Period Realized Trading PnL: $0.00
-2025-05-25 10:55:15: 📈 Current Unrealized PnL: $-1.32
-2025-05-25 10:55:15: 💸 Period Trading Costs: $0.05
-2025-05-25 10:55:15: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:15: 📊 Period-end realized vol: 8.14% (target: 15.0%)
-2025-05-25 10:55:15: ⚡ Period-end vol scalar: 0.061
-2025-05-25 10:55:15: ⚖️  Period-end leverage: 0.12x
-2025-05-25 10:55:15: 📈 Vol scaling effectiveness: 45.7% deviation from target
-2025-05-25 10:55:15: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:15: 💰 Total Funding PnL: $15.92
-2025-05-25 10:55:15: 📊 Total Realized Trading PnL: $104.03
-2025-05-25 10:55:15: 💸 Total Trading Costs: $3.88
-2025-05-25 10:55:15: 
+2025-05-25 18:43:20: ✅ Opened 2 new positions
+2025-05-25 18:43:20: ❌ Closed 0 old positions
+2025-05-25 18:43:20: 🔄 Updated 0 existing positions
+2025-05-25 18:43:20: 💰 Total active positions: 2
+2025-05-25 18:43:20: 💸 Period trading costs: $0.05
+2025-05-25 18:43:20: 📈 Period realized PnL: $0.00
+2025-05-25 18:43:20: ⚖️  Final leverage: 0.09x
+2025-05-25 18:43:23: 
+📈 END OF PERIOD 15 SUMMARY:
+2025-05-25 18:43:23: 🏦 Portfolio Value: $1,115.98 → $1,114.86 (-1.12)
+2025-05-25 18:43:23: 💰 Period Funding PnL: $0.24
+2025-05-25 18:43:23: 📊 Period Realized Trading PnL: $0.00
+2025-05-25 18:43:23: 💸 Period Trading Costs: $0.05
+2025-05-25 18:43:23: 
 ================================================================================
-2025-05-25 10:55:15: REBALANCE PERIOD 16/19
-2025-05-25 10:55:15: ================================================================================
-2025-05-25 10:55:15: 📅 Period: 2025-04-16 00:00 → 2025-04-23 00:00
-2025-05-25 10:55:15: 💰 Starting Capital: $1,114.76
-2025-05-25 10:55:15: 📊 Current Portfolio Positions: 2
-2025-05-25 10:55:15: 
+2025-05-25 18:43:23: REBALANCE PERIOD 16/19
+2025-05-25 18:43:23: ================================================================================
+2025-05-25 18:43:23: 📅 Period: 2025-04-16 00:00 → 2025-04-23 00:00
+2025-05-25 18:43:23: 💰 Starting Capital: $1,114.86
+2025-05-25 18:43:23: 📊 Current Portfolio Positions: 2
+2025-05-25 18:43:23: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:15:    📊 Current realized volatility: 8.14%
-2025-05-25 10:55:15:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:15:    ⚡ Current vol scalar: 0.061
-2025-05-25 10:55:15:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:15:    📐 Vol ratio (realized/target): 0.54
-2025-05-25 10:55:15: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:15: Total symbols with funding data in period: 454
-2025-05-25 10:55:15: Symbols meeting 30.0% threshold: 1
-2025-05-25 10:55:15: 
+2025-05-25 18:43:23:    📊 Current realized volatility: 8.14%
+2025-05-25 18:43:23:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:23:    ⚡ Current vol scalar: 0.061
+2025-05-25 18:43:23: 
 ⭐ TOP 1 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:55:15: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:55:15: --------------------------------------------------
-2025-05-25 10:55:15: 1     JELLYJELLYUSDT  32.77          % 4h
-2025-05-25 10:55:15: 
+2025-05-25 18:43:23: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:23: --------------------------------------------------
+2025-05-25 18:43:23: 1     JELLYJELLYUSDT  32.77          % 4h
+2025-05-25 18:43:23: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:55:15:    💵 Available capital: $1,114.76
-2025-05-25 10:55:15:    📊 Base allocation per symbol: $1114.76
-2025-05-25 10:55:15:    ⚡ Vol scalar: 0.061
-2025-05-25 10:55:15:    💎 Scaled allocation per symbol: $67.67
-2025-05-25 10:55:15:    📈 Scaling effect: -93.9%
-2025-05-25 10:55:15: 
+2025-05-25 18:43:23:    💵 Available capital: $1,114.86
+2025-05-25 18:43:23:    📊 Base allocation per symbol: $1114.86
+2025-05-25 18:43:23:    ⚡ Vol scalar: 0.061
+2025-05-25 18:43:23:    💎 Scaled allocation per symbol: $67.68
+2025-05-25 18:43:23: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:55:15:   🔸 Closed LINEAR short MAGICUSDT: 110.8984 @ 0.114900, PnL: $0.00, Cost: $0.01
-2025-05-25 10:55:15:   🔸 Closed SPOT long MAGICUSDT: 186.0180 @ 0.071200, PnL: $0.50, Cost: $0.01
-2025-05-25 10:55:15:   ✅ Total PnL for MAGICUSDT: $0.50
-2025-05-25 10:55:15: 
+2025-05-25 18:43:23:   ✅ Closed MAGICUSDT, PnL: $0.50, Cost: $0.02
+2025-05-25 18:43:23: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:55:15:   🔄 JELLYJELLYUSDT: $32.24 → $67.67 (+109.9%)
-2025-05-25 10:55:15: 
+2025-05-25 18:43:23:   🔄 JELLYJELLYUSDT: $67.68 → $67.68 (+0.0%)
+2025-05-25 18:43:23: 
 📊 REBALANCE PERIOD 16 SUMMARY:
-2025-05-25 10:55:15: ✅ Opened 0 new delta-neutral positions
-2025-05-25 10:55:15: ❌ Closed 1 old positions
-2025-05-25 10:55:15: 🔄 Updated 1 existing positions
-2025-05-25 10:55:15: 💰 Total active positions: 1
-2025-05-25 10:55:15: 💸 Period trading costs: $0.02
-2025-05-25 10:55:15: 📈 Period realized PnL: $0.50
-2025-05-25 10:55:15: 🏦 Portfolio value: $1114.76
-2025-05-25 10:55:15: ⚡ Applied vol scalar: 0.061
-2025-05-25 10:55:15: 💎 Total nominal exposure: $135.34
-2025-05-25 10:55:15: ⚖️  Final leverage: 0.12x
-2025-05-25 10:55:15: 
-🎯 DAILY VOL SCALING UPDATE at 2025-04-18 00:00:
-2025-05-25 10:55:15:    📊 Daily return: -0.03%
-2025-05-25 10:55:15:    📈 Realized vol: 7.43% -> Target: 15.0%
-2025-05-25 10:55:15:    ⚡ Vol scalar: 0.061 -> 0.072
-2025-05-25 10:55:15:      🔄 JELLYJELLYUSDT: $67.67 -> $80.01 (+18.2%)
-2025-05-25 10:55:16: 
-🎯 DAILY VOL SCALING UPDATE at 2025-04-21 00:00:
-2025-05-25 10:55:16:    📊 Daily return: -0.08%
-2025-05-25 10:55:16:    📈 Realized vol: 6.91% -> Target: 15.0%
-2025-05-25 10:55:16:    ⚡ Vol scalar: 0.072 -> 0.087
-2025-05-25 10:55:16:      🔄 JELLYJELLYUSDT: $80.01 -> $97.07 (+21.3%)
-2025-05-25 10:55:17: 
-📈 END OF PERIOD 16 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:17: ============================================================
-2025-05-25 10:55:17: 🏦 Portfolio Value: $1,114.76 → $1,117.28 (+2.52)
-2025-05-25 10:55:17: 💰 Period Funding PnL: $0.50
-2025-05-25 10:55:17: 📊 Period Realized Trading PnL: $0.50
-2025-05-25 10:55:17: 📈 Current Unrealized PnL: $0.22
-2025-05-25 10:55:17: 💸 Period Trading Costs: $0.02
-2025-05-25 10:55:17: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:17: 📊 Period-end realized vol: 6.70% (target: 15.0%)
-2025-05-25 10:55:17: ⚡ Period-end vol scalar: 0.094
-2025-05-25 10:55:17: ⚖️  Period-end leverage: 0.17x
-2025-05-25 10:55:17: 📈 Vol scaling effectiveness: 55.3% deviation from target
-2025-05-25 10:55:17: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:17: 💰 Total Funding PnL: $16.43
-2025-05-25 10:55:17: 📊 Total Realized Trading PnL: $104.53
-2025-05-25 10:55:17: 💸 Total Trading Costs: $3.91
-2025-05-25 10:55:17: 
+2025-05-25 18:43:23: ✅ Opened 2 new positions
+2025-05-25 18:43:23: ❌ Closed 1 old positions
+2025-05-25 18:43:23: 🔄 Updated 1 existing positions
+2025-05-25 18:43:23: 💰 Total active positions: 1
+2025-05-25 18:43:23: 💸 Period trading costs: $0.02
+2025-05-25 18:43:23: 📈 Period realized PnL: $0.50
+2025-05-25 18:43:23: ⚖️  Final leverage: 0.12x
+2025-05-25 18:43:25: 
+📈 END OF PERIOD 16 SUMMARY:
+2025-05-25 18:43:25: 🏦 Portfolio Value: $1,114.86 → $1,117.30 (+2.44)
+2025-05-25 18:43:25: 💰 Period Funding PnL: $0.43
+2025-05-25 18:43:25: 📊 Period Realized Trading PnL: $0.50
+2025-05-25 18:43:25: 💸 Period Trading Costs: $0.02
+2025-05-25 18:43:25: 
 ================================================================================
-2025-05-25 10:55:17: REBALANCE PERIOD 17/19
-2025-05-25 10:55:17: ================================================================================
-2025-05-25 10:55:17: 📅 Period: 2025-04-23 00:00 → 2025-04-30 00:00
-2025-05-25 10:55:17: 💰 Starting Capital: $1,117.28
-2025-05-25 10:55:17: 📊 Current Portfolio Positions: 1
-2025-05-25 10:55:17: 
+2025-05-25 18:43:25: REBALANCE PERIOD 17/19
+2025-05-25 18:43:25: ================================================================================
+2025-05-25 18:43:25: 📅 Period: 2025-04-23 00:00 → 2025-04-30 00:00
+2025-05-25 18:43:25: 💰 Starting Capital: $1,117.30
+2025-05-25 18:43:25: 📊 Current Portfolio Positions: 1
+2025-05-25 18:43:25: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:17:    📊 Current realized volatility: 6.70%
-2025-05-25 10:55:17:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:17:    ⚡ Current vol scalar: 0.094
-2025-05-25 10:55:17:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:17:    📐 Vol ratio (realized/target): 0.45
-2025-05-25 10:55:17: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:17: Total symbols with funding data in period: 458
-2025-05-25 10:55:17: Symbols meeting 30.0% threshold: 5
-2025-05-25 10:55:17: 
+2025-05-25 18:43:25:    📊 Current realized volatility: 6.70%
+2025-05-25 18:43:25:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:25:    ⚡ Current vol scalar: 0.094
+2025-05-25 18:43:25: 
 ⭐ TOP 5 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:55:17: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:55:17: --------------------------------------------------
-2025-05-25 10:55:17: 1     SOLAYERUSDT     94.61          % 1h
-2025-05-25 10:55:17: 2     JELLYJELLYUSDT  65.90          % 4h
-2025-05-25 10:55:17: 3     FARTCOINUSDT    44.75          % 4h
-2025-05-25 10:55:17: 4     BROCCOLIUSDT    43.95          % 4h
-2025-05-25 10:55:17: 5     MICHIUSDT       31.69          % 4h
-2025-05-25 10:55:17: 
+2025-05-25 18:43:25: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:25: --------------------------------------------------
+2025-05-25 18:43:25: 1     SOLAYERUSDT     94.61          % 1h
+2025-05-25 18:43:25: 2     JELLYJELLYUSDT  65.90          % 4h
+2025-05-25 18:43:25: 3     FARTCOINUSDT    44.75          % 4h
+2025-05-25 18:43:25: 4     BROCCOLIUSDT    43.95          % 4h
+2025-05-25 18:43:25: 5     MICHIUSDT       31.69          % 4h
+2025-05-25 18:43:25: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:55:17:    💵 Available capital: $1,117.28
-2025-05-25 10:55:17:    📊 Base allocation per symbol: $223.46
-2025-05-25 10:55:17:    ⚡ Vol scalar: 0.094
-2025-05-25 10:55:17:    💎 Scaled allocation per symbol: $20.90
-2025-05-25 10:55:17:    📈 Scaling effect: -90.6%
-2025-05-25 10:55:17: 
+2025-05-25 18:43:25:    💵 Available capital: $1,117.30
+2025-05-25 18:43:25:    📊 Base allocation per symbol: $223.46
+2025-05-25 18:43:25:    ⚡ Vol scalar: 0.094
+2025-05-25 18:43:25:    💎 Scaled allocation per symbol: $20.90
+2025-05-25 18:43:25: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:55:17:   🔄 JELLYJELLYUSDT: $97.07 → $20.90 (-78.5%)
-2025-05-25 10:55:17: 
+2025-05-25 18:43:25:   🔄 JELLYJELLYUSDT: $20.90 → $20.90 (+0.0%)
+2025-05-25 18:43:25: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:55:17:   🔍 Processing symbol: SOLAYERUSDT -> SOLAYERUSDT
-2025-05-25 10:55:17:   📊 SOLAYERUSDT -> SOLAYERUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:17:     🪙 Trying Bitcoin as proxy for SOLAYERUSDT...
-2025-05-25 10:55:17:     ✅ Bitcoin proxy available @ 92904.20
-2025-05-25 10:55:17:   ✅ Using Bitcoin proxy for SOLAYERUSDT: BTC @ 92904.20
-2025-05-25 10:55:17:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
-2025-05-25 10:55:18:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:18:     🪙 Trying Bitcoin as proxy for FARTCOINUSDT...
-2025-05-25 10:55:18:     ✅ Bitcoin proxy available @ 92904.20
-2025-05-25 10:55:18:   ✅ Using Bitcoin proxy for FARTCOINUSDT: BTC @ 92904.20
-2025-05-25 10:55:18:   🔍 Processing symbol: BROCCOLIUSDT -> BROCCOLIUSDT
-2025-05-25 10:55:18:   📊 BROCCOLIUSDT -> BROCCOLIUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:18:     🪙 Trying Bitcoin as proxy for BROCCOLIUSDT...
-2025-05-25 10:55:18:     ✅ Bitcoin proxy available @ 92904.20
-2025-05-25 10:55:18:   ✅ Using Bitcoin proxy for BROCCOLIUSDT: BTC @ 92904.20
-2025-05-25 10:55:18:   🔍 Processing symbol: MICHIUSDT -> MICHIUSDT
-2025-05-25 10:55:19:   📊 MICHIUSDT -> MICHIUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:19:     🪙 Trying Bitcoin as proxy for MICHIUSDT...
-2025-05-25 10:55:19:     ✅ Bitcoin proxy available @ 92904.20
-2025-05-25 10:55:19:   ✅ Using Bitcoin proxy for MICHIUSDT: BTC @ 92904.20
-2025-05-25 10:55:19: 
+2025-05-25 18:43:25:   🔍 Processing symbol: SOLAYERUSDT -> SOLAYERUSDT
+2025-05-25 18:43:26:   📊 SOLAYERUSDT -> SOLAYERUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:26:     🪙 Trying Bitcoin as proxy for SOLAYERUSDT...
+2025-05-25 18:43:26:     ✅ Bitcoin proxy available @ 92904.20
+2025-05-25 18:43:26:   🔍 Processing symbol: FARTCOINUSDT -> FARTCOINUSDT
+2025-05-25 18:43:27:   📊 FARTCOINUSDT -> FARTCOINUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:27:     🪙 Trying Bitcoin as proxy for FARTCOINUSDT...
+2025-05-25 18:43:27:     ✅ Bitcoin proxy available @ 92904.20
+2025-05-25 18:43:27:   🔍 Processing symbol: BROCCOLIUSDT -> BROCCOLIUSDT
+2025-05-25 18:43:27:   📊 BROCCOLIUSDT -> BROCCOLIUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:27:     🪙 Trying Bitcoin as proxy for BROCCOLIUSDT...
+2025-05-25 18:43:27:     ✅ Bitcoin proxy available @ 92904.20
+2025-05-25 18:43:27:   🔍 Processing symbol: MICHIUSDT -> MICHIUSDT
+2025-05-25 18:43:27:   📊 MICHIUSDT -> MICHIUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:27:     🪙 Trying Bitcoin as proxy for MICHIUSDT...
+2025-05-25 18:43:27:     ✅ Bitcoin proxy available @ 92904.20
+2025-05-25 18:43:27: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:55:19: Available capital: $1,117.28
-2025-05-25 10:55:19: Base allocation per symbol: $223.46
-2025-05-25 10:55:19: Scaled allocation per symbol: $20.90
-2025-05-25 10:55:19: Vol scalar applied: 0.094
-2025-05-25 10:55:19: Symbols to trade: 4
-2025-05-25 10:55:19: 
+2025-05-25 18:43:27: Symbols to trade: 4
+2025-05-25 18:43:27: 
   📈 SOLAYERUSDT (+94.61% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.09x]:
-2025-05-25 10:55:19:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:19:      💰 Base allocation: $223.46, Scaled: $20.90
-2025-05-25 10:55:19:      🔸 LINEAR short: 12.5689 units @ 0.831500 = $10.45
-2025-05-25 10:55:19:      🔸 SPOT long: 0.0001 units @ 92904.200000 = $10.45
-2025-05-25 10:55:19:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:19: 
+2025-05-25 18:43:27:      💸 Trading costs: $0.02
+2025-05-25 18:43:27: 
   📈 FARTCOINUSDT (+44.75% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.09x]:
-2025-05-25 10:55:19:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:19:      💰 Base allocation: $223.46, Scaled: $20.90
-2025-05-25 10:55:19:      🔸 LINEAR short: 9.2799 units @ 1.126200 = $10.45
-2025-05-25 10:55:19:      🔸 SPOT long: 0.0001 units @ 92904.200000 = $10.45
-2025-05-25 10:55:19:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:19: 
+2025-05-25 18:43:27:      💸 Trading costs: $0.02
+2025-05-25 18:43:27: 
   📈 BROCCOLIUSDT (+43.95% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.09x]:
-2025-05-25 10:55:19:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:19:      💰 Base allocation: $223.46, Scaled: $20.90
-2025-05-25 10:55:19:      🔸 LINEAR short: 364.6573 units @ 0.028660 = $10.45
-2025-05-25 10:55:19:      🔸 SPOT long: 0.0001 units @ 92904.200000 = $10.45
-2025-05-25 10:55:19:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:19: 
+2025-05-25 18:43:27:      💸 Trading costs: $0.02
+2025-05-25 18:43:27: 
   📈 MICHIUSDT (+31.69% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.09x]:
-2025-05-25 10:55:19:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:19:      💰 Base allocation: $223.46, Scaled: $20.90
-2025-05-25 10:55:19:      🔸 LINEAR short: 405.8671 units @ 0.025750 = $10.45
-2025-05-25 10:55:19:      🔸 SPOT long: 0.0001 units @ 92904.200000 = $10.45
-2025-05-25 10:55:19:      💸 Trading costs: $0.02 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:19: 
+2025-05-25 18:43:27:      💸 Trading costs: $0.02
+2025-05-25 18:43:27: 
 📊 REBALANCE PERIOD 17 SUMMARY:
-2025-05-25 10:55:19: ✅ Opened 4 new delta-neutral positions
-2025-05-25 10:55:19: ❌ Closed 0 old positions
-2025-05-25 10:55:19: 🔄 Updated 1 existing positions
-2025-05-25 10:55:19: 💰 Total active positions: 5
-2025-05-25 10:55:19: 💸 Period trading costs: $0.08
-2025-05-25 10:55:19: 📈 Period realized PnL: $0.00
-2025-05-25 10:55:19: 🏦 Portfolio value: $1117.28
-2025-05-25 10:55:19: ⚡ Applied vol scalar: 0.094
-2025-05-25 10:55:19: 💎 Total nominal exposure: $209.02
-2025-05-25 10:55:19: ⚖️  Final leverage: 0.19x
-2025-05-25 10:55:20: 
-🎯 DAILY VOL SCALING UPDATE at 2025-04-24 00:00:
-2025-05-25 10:55:20:    📊 Daily return: -1.52%
-2025-05-25 10:55:20:    📈 Realized vol: 9.50% -> Target: 15.0%
-2025-05-25 10:55:20:    ⚡ Vol scalar: 0.094 -> 0.104
-2025-05-25 10:55:20:      🔄 JELLYJELLYUSDT: $20.90 -> $23.32 (+11.6%)
-2025-05-25 10:55:20:      🔄 SOLAYERUSDT: $20.90 -> $23.32 (+11.6%)
-2025-05-25 10:55:20:      🔄 FARTCOINUSDT: $20.90 -> $23.32 (+11.6%)
-2025-05-25 10:55:20:      🔄 BROCCOLIUSDT: $20.90 -> $23.32 (+11.6%)
-2025-05-25 10:55:20:      🔄 MICHIUSDT: $20.90 -> $23.32 (+11.6%)
-2025-05-25 10:55:24: 
-🎯 DAILY VOL SCALING UPDATE at 2025-04-27 00:00:
-2025-05-25 10:55:24:    📊 Daily return: -1.55%
-2025-05-25 10:55:24:    📈 Realized vol: 11.46% -> Target: 15.0%
-2025-05-25 10:55:24:    ⚡ Vol scalar: 0.104 -> 0.115
-2025-05-25 10:55:24:      🔄 JELLYJELLYUSDT: $23.32 -> $25.60 (+9.7%)
-2025-05-25 10:55:24:      🔄 SOLAYERUSDT: $23.32 -> $25.60 (+9.7%)
-2025-05-25 10:55:24:      🔄 FARTCOINUSDT: $23.32 -> $25.60 (+9.7%)
-2025-05-25 10:55:24:      🔄 BROCCOLIUSDT: $23.32 -> $25.60 (+9.7%)
-2025-05-25 10:55:24:      🔄 MICHIUSDT: $23.32 -> $25.60 (+9.7%)
-2025-05-25 10:55:28: 
-📈 END OF PERIOD 17 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:28: ============================================================
-2025-05-25 10:55:28: 🏦 Portfolio Value: $1,117.28 → $1,086.26 (-31.02)
-2025-05-25 10:55:28: 💰 Period Funding PnL: $1.09
-2025-05-25 10:55:28: 📊 Period Realized Trading PnL: $0.00
-2025-05-25 10:55:28: 📈 Current Unrealized PnL: $-31.81
-2025-05-25 10:55:28: 💸 Period Trading Costs: $0.08
-2025-05-25 10:55:28: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:28: 📊 Period-end realized vol: 10.91% (target: 15.0%)
-2025-05-25 10:55:28: ⚡ Period-end vol scalar: 0.119
-2025-05-25 10:55:28: ⚖️  Period-end leverage: 0.24x
-2025-05-25 10:55:28: 📈 Vol scaling effectiveness: 27.2% deviation from target
-2025-05-25 10:55:28: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:28: 💰 Total Funding PnL: $17.51
-2025-05-25 10:55:28: 📊 Total Realized Trading PnL: $104.53
-2025-05-25 10:55:28: 💸 Total Trading Costs: $3.98
-2025-05-25 10:55:28: 
+2025-05-25 18:43:27: ✅ Opened 4 new positions
+2025-05-25 18:43:27: ❌ Closed 0 old positions
+2025-05-25 18:43:27: 🔄 Updated 1 existing positions
+2025-05-25 18:43:27: 💰 Total active positions: 5
+2025-05-25 18:43:27: 💸 Period trading costs: $0.08
+2025-05-25 18:43:27: 📈 Period realized PnL: $0.00
+2025-05-25 18:43:27: ⚖️  Final leverage: 0.19x
+2025-05-25 18:43:36: 
+📈 END OF PERIOD 17 SUMMARY:
+2025-05-25 18:43:36: 🏦 Portfolio Value: $1,117.30 → $1,086.13 (-31.17)
+2025-05-25 18:43:36: 💰 Period Funding PnL: $0.94
+2025-05-25 18:43:36: 📊 Period Realized Trading PnL: $0.00
+2025-05-25 18:43:36: 💸 Period Trading Costs: $0.08
+2025-05-25 18:43:36: 
 ================================================================================
-2025-05-25 10:55:28: REBALANCE PERIOD 18/19
-2025-05-25 10:55:28: ================================================================================
-2025-05-25 10:55:28: 📅 Period: 2025-04-30 00:00 → 2025-05-07 00:00
-2025-05-25 10:55:28: 💰 Starting Capital: $1,086.26
-2025-05-25 10:55:28: 📊 Current Portfolio Positions: 5
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36: REBALANCE PERIOD 18/19
+2025-05-25 18:43:36: ================================================================================
+2025-05-25 18:43:36: 📅 Period: 2025-04-30 00:00 → 2025-05-07 00:00
+2025-05-25 18:43:36: 💰 Starting Capital: $1,086.13
+2025-05-25 18:43:36: 📊 Current Portfolio Positions: 5
+2025-05-25 18:43:36: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:28:    📊 Current realized volatility: 10.91%
-2025-05-25 10:55:28:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:28:    ⚡ Current vol scalar: 0.119
-2025-05-25 10:55:28:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:28:    📐 Vol ratio (realized/target): 0.73
-2025-05-25 10:55:28: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:28: Total symbols with funding data in period: 468
-2025-05-25 10:55:28: Symbols meeting 30.0% threshold: 3
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36:    📊 Current realized volatility: 10.92%
+2025-05-25 18:43:36:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:36:    ⚡ Current vol scalar: 0.119
+2025-05-25 18:43:36: 
 ⭐ TOP 3 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:55:28: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:55:28: --------------------------------------------------
-2025-05-25 10:55:28: 1     10000WHYUSDT    38.73          % 4h
-2025-05-25 10:55:28: 2     FARTCOINUSDT    36.84          % 4h
-2025-05-25 10:55:28: 3     JELLYJELLYUSDT  32.13          % 4h
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:36: --------------------------------------------------
+2025-05-25 18:43:36: 1     10000WHYUSDT    38.73          % 4h
+2025-05-25 18:43:36: 2     FARTCOINUSDT    36.84          % 4h
+2025-05-25 18:43:36: 3     JELLYJELLYUSDT  32.13          % 4h
+2025-05-25 18:43:36: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:55:28:    💵 Available capital: $1,086.26
-2025-05-25 10:55:28:    📊 Base allocation per symbol: $362.09
-2025-05-25 10:55:28:    ⚡ Vol scalar: 0.119
-2025-05-25 10:55:28:    💎 Scaled allocation per symbol: $43.26
-2025-05-25 10:55:28:    📈 Scaling effect: -88.1%
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36:    💵 Available capital: $1,086.13
+2025-05-25 18:43:36:    📊 Base allocation per symbol: $362.04
+2025-05-25 18:43:36:    ⚡ Vol scalar: 0.119
+2025-05-25 18:43:36:    💎 Scaled allocation per symbol: $43.25
+2025-05-25 18:43:36: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:55:28:   🔸 Closed LINEAR short SOLAYERUSDT: 12.5689 @ 0.831500, PnL: $0.00, Cost: $0.01
-2025-05-25 10:55:28:   🔸 Closed SPOT long BTCUSDT: 0.0001 @ 94544.000000, PnL: $0.18, Cost: $0.01
-2025-05-25 10:55:28:   ✅ Total PnL for SOLAYERUSDT: $0.18
-2025-05-25 10:55:28:   🔸 Closed LINEAR short BROCCOLIUSDT: 364.6573 @ 0.034300, PnL: $-2.06, Cost: $0.01
-2025-05-25 10:55:28:   🔸 Closed SPOT long BTCUSDT: 0.0001 @ 94544.000000, PnL: $0.18, Cost: $0.01
-2025-05-25 10:55:28:   ✅ Total PnL for BROCCOLIUSDT: $-1.87
-2025-05-25 10:55:28:   🔸 Closed LINEAR short MICHIUSDT: 405.8671 @ 0.035580, PnL: $-3.99, Cost: $0.01
-2025-05-25 10:55:28:   🔸 Closed SPOT long BTCUSDT: 0.0001 @ 94544.000000, PnL: $0.18, Cost: $0.01
-2025-05-25 10:55:28:   ✅ Total PnL for MICHIUSDT: $-3.81
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36:   ✅ Closed SOLAYERUSDT, PnL: $0.18, Cost: $0.02
+2025-05-25 18:43:36:   ✅ Closed BROCCOLIUSDT, PnL: $-1.87, Cost: $0.02
+2025-05-25 18:43:36:   ✅ Closed MICHIUSDT, PnL: $-3.81, Cost: $0.02
+2025-05-25 18:43:36: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:55:28:   🔄 FARTCOINUSDT: $25.60 → $43.26 (+69.0%)
-2025-05-25 10:55:28:   🔄 JELLYJELLYUSDT: $25.60 → $43.26 (+69.0%)
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36:   🔄 FARTCOINUSDT: $43.25 → $43.25 (+0.0%)
+2025-05-25 18:43:36:   🔄 JELLYJELLYUSDT: $43.25 → $43.25 (+0.0%)
+2025-05-25 18:43:36: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:55:28:   🔍 Processing symbol: 10000WHYUSDT -> WHYUSDT
-2025-05-25 10:55:28:   📊 10000WHYUSDT -> WHYUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:28:     🪙 Trying Bitcoin as proxy for 10000WHYUSDT...
-2025-05-25 10:55:28:     ✅ Bitcoin proxy available @ 94544.00
-2025-05-25 10:55:28:   ✅ Using Bitcoin proxy for 10000WHYUSDT: BTC @ 94544.00
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36:   🔍 Processing symbol: 10000WHYUSDT -> WHYUSDT
+2025-05-25 18:43:36:   📊 10000WHYUSDT -> WHYUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:36:     🪙 Trying Bitcoin as proxy for 10000WHYUSDT...
+2025-05-25 18:43:36:     ✅ Bitcoin proxy available @ 94544.00
+2025-05-25 18:43:36: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:55:28: Available capital: $1,086.20
-2025-05-25 10:55:28: Base allocation per symbol: $362.09
-2025-05-25 10:55:28: Scaled allocation per symbol: $43.26
-2025-05-25 10:55:28: Vol scalar applied: 0.119
-2025-05-25 10:55:28: Symbols to trade: 1
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36: Symbols to trade: 1
+2025-05-25 18:43:36: 
   📈 10000WHYUSDT (+38.73% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.12x]:
-2025-05-25 10:55:28:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:28:      💰 Base allocation: $362.09, Scaled: $43.26
-2025-05-25 10:55:28:      🔸 LINEAR short: 46159.6070 units @ 0.000469 = $21.63
-2025-05-25 10:55:28:      🔸 SPOT long: 0.0002 units @ 94544.000000 = $21.63
-2025-05-25 10:55:28:      💸 Trading costs: $0.04 (Linear: $0.02, Spot: $0.02)
-2025-05-25 10:55:28: 
+2025-05-25 18:43:36:      💸 Trading costs: $0.04
+2025-05-25 18:43:36: 
 📊 REBALANCE PERIOD 18 SUMMARY:
-2025-05-25 10:55:28: ✅ Opened 1 new delta-neutral positions
-2025-05-25 10:55:28: ❌ Closed 3 old positions
-2025-05-25 10:55:28: 🔄 Updated 2 existing positions
-2025-05-25 10:55:28: 💰 Total active positions: 3
-2025-05-25 10:55:28: 💸 Period trading costs: $0.10
-2025-05-25 10:55:28: 📈 Period realized PnL: $-5.49
-2025-05-25 10:55:28: 🏦 Portfolio value: $1086.26
-2025-05-25 10:55:28: ⚡ Applied vol scalar: 0.119
-2025-05-25 10:55:28: 💎 Total nominal exposure: $259.56
-2025-05-25 10:55:28: ⚖️  Final leverage: 0.24x
-2025-05-25 10:55:31: 
-🎯 DAILY VOL SCALING UPDATE at 2025-05-03 00:00:
-2025-05-25 10:55:31:    📊 Daily return: +0.02%
-2025-05-25 10:55:31:    📈 Realized vol: 9.79% -> Target: 15.0%
-2025-05-25 10:55:31:    ⚡ Vol scalar: 0.119 -> 0.133
-2025-05-25 10:55:31:      🔄 JELLYJELLYUSDT: $43.26 -> $48.31 (+11.7%)
-2025-05-25 10:55:31:      🔄 FARTCOINUSDT: $43.26 -> $48.31 (+11.7%)
-2025-05-25 10:55:31:      🔄 10000WHYUSDT: $43.26 -> $48.31 (+11.7%)
-2025-05-25 10:55:33: 
-🎯 DAILY VOL SCALING UPDATE at 2025-05-06 00:00:
-2025-05-25 10:55:33:    📊 Daily return: +0.28%
-2025-05-25 10:55:33:    📈 Realized vol: 9.14% -> Target: 15.0%
-2025-05-25 10:55:33:    ⚡ Vol scalar: 0.133 -> 0.148
-2025-05-25 10:55:33:      🔄 JELLYJELLYUSDT: $48.31 -> $53.75 (+11.3%)
-2025-05-25 10:55:33:      🔄 FARTCOINUSDT: $48.31 -> $53.75 (+11.3%)
-2025-05-25 10:55:33:      🔄 10000WHYUSDT: $48.31 -> $53.75 (+11.3%)
-2025-05-25 10:55:34: 
-📈 END OF PERIOD 18 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:34: ============================================================
-2025-05-25 10:55:34: 🏦 Portfolio Value: $1,086.26 → $1,090.17 (+3.91)
-2025-05-25 10:55:34: 💰 Period Funding PnL: $0.97
-2025-05-25 10:55:34: 📊 Period Realized Trading PnL: $-5.49
-2025-05-25 10:55:34: 📈 Current Unrealized PnL: $-23.28
-2025-05-25 10:55:34: 💸 Period Trading Costs: $0.10
-2025-05-25 10:55:34: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:34: 📊 Period-end realized vol: 9.14% (target: 15.0%)
-2025-05-25 10:55:34: ⚡ Period-end vol scalar: 0.148
-2025-05-25 10:55:34: ⚖️  Period-end leverage: 0.30x
-2025-05-25 10:55:34: 📈 Vol scaling effectiveness: 39.1% deviation from target
-2025-05-25 10:55:34: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:34: 💰 Total Funding PnL: $18.49
-2025-05-25 10:55:34: 📊 Total Realized Trading PnL: $99.04
-2025-05-25 10:55:34: 💸 Total Trading Costs: $4.08
-2025-05-25 10:55:34: 
+2025-05-25 18:43:36: ✅ Opened 1 new positions
+2025-05-25 18:43:36: ❌ Closed 3 old positions
+2025-05-25 18:43:36: 🔄 Updated 2 existing positions
+2025-05-25 18:43:36: 💰 Total active positions: 3
+2025-05-25 18:43:36: 💸 Period trading costs: $0.10
+2025-05-25 18:43:36: 📈 Period realized PnL: $-5.49
+2025-05-25 18:43:36: ⚖️  Final leverage: 0.24x
+2025-05-25 18:43:41: 
+📈 END OF PERIOD 18 SUMMARY:
+2025-05-25 18:43:41: 🏦 Portfolio Value: $1,086.13 → $1,089.96 (+3.83)
+2025-05-25 18:43:41: 💰 Period Funding PnL: $0.89
+2025-05-25 18:43:41: 📊 Period Realized Trading PnL: $-5.49
+2025-05-25 18:43:41: 💸 Period Trading Costs: $0.10
+2025-05-25 18:43:41: 
 ================================================================================
-2025-05-25 10:55:34: REBALANCE PERIOD 19/19
-2025-05-25 10:55:34: ================================================================================
-2025-05-25 10:55:34: 📅 Period: 2025-05-07 00:00 → 2025-05-10 00:00
-2025-05-25 10:55:34: 💰 Starting Capital: $1,090.17
-2025-05-25 10:55:34: 📊 Current Portfolio Positions: 3
-2025-05-25 10:55:34: 
+2025-05-25 18:43:41: REBALANCE PERIOD 19/19
+2025-05-25 18:43:41: ================================================================================
+2025-05-25 18:43:41: 📅 Period: 2025-05-07 00:00 → 2025-05-10 00:00
+2025-05-25 18:43:41: 💰 Starting Capital: $1,089.96
+2025-05-25 18:43:41: 📊 Current Portfolio Positions: 3
+2025-05-25 18:43:41: 
 🎯 VOLATILITY SCALING STATUS:
-2025-05-25 10:55:34:    📊 Current realized volatility: 9.14%
-2025-05-25 10:55:34:    🎯 Target volatility: 15.0%
-2025-05-25 10:55:34:    ⚡ Current vol scalar: 0.148
-2025-05-25 10:55:34:    🔄 Scaling direction: 📉 DECREASING
-2025-05-25 10:55:34:    📐 Vol ratio (realized/target): 0.61
-2025-05-25 10:55:34: 
-🔍 SYMBOL SELECTION:
-2025-05-25 10:55:34: Total symbols with funding data in period: 471
-2025-05-25 10:55:34: Symbols meeting 30.0% threshold: 10
-2025-05-25 10:55:34: 
+2025-05-25 18:43:41:    📊 Current realized volatility: 9.14%
+2025-05-25 18:43:41:    🎯 Target volatility: 15.0%
+2025-05-25 18:43:41:    ⚡ Current vol scalar: 0.148
+2025-05-25 18:43:41: 
 ⭐ TOP 5 SYMBOLS BY FUNDING RATE:
-2025-05-25 10:55:34: Rank  Symbol          Funding Rate    Interval  
-2025-05-25 10:55:34: --------------------------------------------------
-2025-05-25 10:55:34: 1     DOODUSDT        71.12          % 4h
-2025-05-25 10:55:34: 2     1000000PEIPEIUSDT 61.83          % 8h
-2025-05-25 10:55:34: 3     FARTCOINUSDT    50.84          % 4h
-2025-05-25 10:55:34: 4     HYPEUSDT        47.37          % 8h
-2025-05-25 10:55:34: 5     1000MUMUUSDT    45.21          % 8h
-2025-05-25 10:55:34: 
+2025-05-25 18:43:41: Rank  Symbol          Funding Rate    Interval  
+2025-05-25 18:43:41: --------------------------------------------------
+2025-05-25 18:43:41: 1     DOODUSDT        71.12          % 4h
+2025-05-25 18:43:41: 2     1000000PEIPEIUSDT 61.83          % 8h
+2025-05-25 18:43:41: 3     FARTCOINUSDT    50.84          % 4h
+2025-05-25 18:43:41: 4     HYPEUSDT        47.37          % 8h
+2025-05-25 18:43:41: 5     1000MUMUUSDT    45.21          % 8h
+2025-05-25 18:43:41: 
 💰 ALLOCATION CALCULATION:
-2025-05-25 10:55:34:    💵 Available capital: $1,090.17
-2025-05-25 10:55:34:    📊 Base allocation per symbol: $218.03
-2025-05-25 10:55:34:    ⚡ Vol scalar: 0.148
-2025-05-25 10:55:34:    💎 Scaled allocation per symbol: $32.36
-2025-05-25 10:55:34:    📈 Scaling effect: -85.2%
-2025-05-25 10:55:34: 
+2025-05-25 18:43:41:    💵 Available capital: $1,089.96
+2025-05-25 18:43:41:    📊 Base allocation per symbol: $217.99
+2025-05-25 18:43:41:    ⚡ Vol scalar: 0.148
+2025-05-25 18:43:41:    💎 Scaled allocation per symbol: $32.35
+2025-05-25 18:43:41: 
 ❌ CLOSING POSITIONS (no longer in top 5):
-2025-05-25 10:55:34:   🔸 Closed LINEAR short 10000WHYUSDT: 46159.6070 @ 0.000405, PnL: $2.92, Cost: $0.02
-2025-05-25 10:55:34:   🔸 Closed SPOT long BTCUSDT: 0.0002 @ 97408.600000, PnL: $0.66, Cost: $0.02
-2025-05-25 10:55:34:   ✅ Total PnL for 10000WHYUSDT: $3.58
-2025-05-25 10:55:34:   🔸 Closed LINEAR short JELLYJELLYUSDT: 1229.1146 @ 0.035528, PnL: $-30.93, Cost: $0.04
-2025-05-25 10:55:34:   🔸 Closed SPOT long BTCUSDT: 0.0002 @ 97408.600000, PnL: $3.48, Cost: $0.01
-2025-05-25 10:55:34:   ✅ Total PnL for JELLYJELLYUSDT: $-27.45
-2025-05-25 10:55:34: 
+2025-05-25 18:43:41:   ✅ Closed JELLYJELLYUSDT, PnL: $-27.45, Cost: $0.05
+2025-05-25 18:43:41:   ✅ Closed 10000WHYUSDT, PnL: $3.58, Cost: $0.04
+2025-05-25 18:43:41: 
 🔄 UPDATING EXISTING POSITIONS WITH NEW VOL SCALING:
-2025-05-25 10:55:34:   🔄 FARTCOINUSDT: $53.75 → $32.36 (-39.8%)
-2025-05-25 10:55:34: 
+2025-05-25 18:43:41:   🔄 FARTCOINUSDT: $32.35 → $32.35 (+0.0%)
+2025-05-25 18:43:41: 
 🔍 CHECKING DATA AVAILABILITY FOR NEW POSITIONS:
-2025-05-25 10:55:34:   🔍 Processing symbol: DOODUSDT -> DOODUSDT
-2025-05-25 10:55:34:   ❌ DOODUSDT -> DOODUSDT: Linear ❌ - Cannot trade without linear data
-2025-05-25 10:55:34:   🔍 Processing symbol: 1000000PEIPEIUSDT -> PEIPEIUSDT
-2025-05-25 10:55:34:   📊 1000000PEIPEIUSDT -> PEIPEIUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:34:     🪙 Trying Bitcoin as proxy for 1000000PEIPEIUSDT...
-2025-05-25 10:55:34:     ✅ Bitcoin proxy available @ 97408.60
-2025-05-25 10:55:34:   ✅ Using Bitcoin proxy for 1000000PEIPEIUSDT: BTC @ 97408.60
-2025-05-25 10:55:34:   🔍 Processing symbol: HYPEUSDT -> HYPEUSDT
-2025-05-25 10:55:34:   📊 HYPEUSDT -> HYPEUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:34:     🪙 Trying Bitcoin as proxy for HYPEUSDT...
-2025-05-25 10:55:34:     ✅ Bitcoin proxy available @ 97408.60
-2025-05-25 10:55:34:   ✅ Using Bitcoin proxy for HYPEUSDT: BTC @ 97408.60
-2025-05-25 10:55:34:   🔍 Processing symbol: 1000MUMUUSDT -> MUMUUSDT
-2025-05-25 10:55:35:   📊 1000MUMUUSDT -> MUMUUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
-2025-05-25 10:55:35:     🪙 Trying Bitcoin as proxy for 1000MUMUUSDT...
-2025-05-25 10:55:35:     ✅ Bitcoin proxy available @ 97408.60
-2025-05-25 10:55:35:   ✅ Using Bitcoin proxy for 1000MUMUUSDT: BTC @ 97408.60
-2025-05-25 10:55:35: 
+2025-05-25 18:43:41:   🔍 Processing symbol: DOODUSDT -> DOODUSDT
+2025-05-25 18:43:41:   ❌ DOODUSDT -> DOODUSDT: Cannot trade without linear data
+2025-05-25 18:43:41:   🔍 Processing symbol: 1000000PEIPEIUSDT -> PEIPEIUSDT
+2025-05-25 18:43:42:   📊 1000000PEIPEIUSDT -> PEIPEIUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:42:     🪙 Trying Bitcoin as proxy for 1000000PEIPEIUSDT...
+2025-05-25 18:43:42:     ✅ Bitcoin proxy available @ 97408.60
+2025-05-25 18:43:42:   🔍 Processing symbol: HYPEUSDT -> HYPEUSDT
+2025-05-25 18:43:42:   📊 HYPEUSDT -> HYPEUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:42:     🪙 Trying Bitcoin as proxy for HYPEUSDT...
+2025-05-25 18:43:42:     ✅ Bitcoin proxy available @ 97408.60
+2025-05-25 18:43:42:   🔍 Processing symbol: 1000MUMUUSDT -> MUMUUSDT
+2025-05-25 18:43:42:   📊 1000MUMUUSDT -> MUMUUSDT: Linear ✅ Spot ❌ - TRYING BITCOIN PROXY
+2025-05-25 18:43:42:     🪙 Trying Bitcoin as proxy for 1000MUMUUSDT...
+2025-05-25 18:43:42:     ✅ Bitcoin proxy available @ 97408.60
+2025-05-25 18:43:42: 
 ✅ OPENING NEW POSITIONS WITH VOL SCALING:
-2025-05-25 10:55:35: Available capital: $1,090.08
-2025-05-25 10:55:35: Base allocation per symbol: $218.03
-2025-05-25 10:55:35: Scaled allocation per symbol: $32.36
-2025-05-25 10:55:35: Vol scalar applied: 0.148
-2025-05-25 10:55:35: Symbols to trade: 3
-2025-05-25 10:55:35: 
+2025-05-25 18:43:42: Symbols to trade: 3
+2025-05-25 18:43:42: 
   📈 1000000PEIPEIUSDT (+61.83% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.15x]:
-2025-05-25 10:55:35:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:35:      💰 Base allocation: $218.03, Scaled: $32.36
-2025-05-25 10:55:35:      🔸 LINEAR short: 360.0730 units @ 0.044940 = $16.18
-2025-05-25 10:55:35:      🔸 SPOT long: 0.0002 units @ 97408.600000 = $16.18
-2025-05-25 10:55:35:      💸 Trading costs: $0.03 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:35: 
+2025-05-25 18:43:42:      💸 Trading costs: $0.03
+2025-05-25 18:43:42: 
   📈 HYPEUSDT (+47.37% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.15x]:
-2025-05-25 10:55:35:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:35:      💰 Base allocation: $218.03, Scaled: $32.36
-2025-05-25 10:55:35:      🔸 LINEAR short: 1.3150 units @ 12.305000 = $16.18
-2025-05-25 10:55:35:      🔸 SPOT long: 0.0002 units @ 97408.600000 = $16.18
-2025-05-25 10:55:35:      💸 Trading costs: $0.03 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:35: 
+2025-05-25 18:43:42:      💸 Trading costs: $0.03
+2025-05-25 18:43:42: 
   📈 1000MUMUUSDT (+45.21% funding) 🪙 [BTC PROXY] ⚡ [SCALED 0.15x]:
-2025-05-25 10:55:35:      💡 Strategy: Short perp (collect funding) + Long BTC PROXY (hedge)
-2025-05-25 10:55:35:      💰 Base allocation: $218.03, Scaled: $32.36
-2025-05-25 10:55:35:      🔸 LINEAR short: 5721.9527 units @ 0.002828 = $16.18
-2025-05-25 10:55:35:      🔸 SPOT long: 0.0002 units @ 97408.600000 = $16.18
-2025-05-25 10:55:35:      💸 Trading costs: $0.03 (Linear: $0.01, Spot: $0.01)
-2025-05-25 10:55:35: 
+2025-05-25 18:43:42:      💸 Trading costs: $0.03
+2025-05-25 18:43:42: 
 📊 REBALANCE PERIOD 19 SUMMARY:
-2025-05-25 10:55:35: ✅ Opened 3 new delta-neutral positions
-2025-05-25 10:55:35: ❌ Closed 2 old positions
-2025-05-25 10:55:35: 🔄 Updated 1 existing positions
-2025-05-25 10:55:35: 💰 Total active positions: 4
-2025-05-25 10:55:35: 💸 Period trading costs: $0.18
-2025-05-25 10:55:35: 📈 Period realized PnL: $-23.87
-2025-05-25 10:55:35: 🏦 Portfolio value: $1090.17
-2025-05-25 10:55:35: ⚡ Applied vol scalar: 0.148
-2025-05-25 10:55:35: 💎 Total nominal exposure: $258.91
-2025-05-25 10:55:35: ⚖️  Final leverage: 0.24x
-2025-05-25 10:55:36: 
-🎯 DAILY VOL SCALING UPDATE at 2025-05-08 00:00:
-2025-05-25 10:55:36:    📊 Daily return: +0.10%
-2025-05-25 10:55:36:    📈 Realized vol: 8.61% -> Target: 15.0%
-2025-05-25 10:55:36:    ⚡ Vol scalar: 0.148 -> 0.161
-2025-05-25 10:55:36:      🔄 FARTCOINUSDT: $32.36 -> $35.21 (+8.8%)
-2025-05-25 10:55:36:      🔄 1000000PEIPEIUSDT: $32.36 -> $35.21 (+8.8%)
-2025-05-25 10:55:36:      🔄 HYPEUSDT: $32.36 -> $35.21 (+8.8%)
-2025-05-25 10:55:36:      🔄 1000MUMUUSDT: $32.36 -> $35.21 (+8.8%)
-2025-05-25 10:55:38: 
-📈 END OF PERIOD 19 DETAILED P&L + VOLATILITY BREAKDOWN:
-2025-05-25 10:55:38: ============================================================
-2025-05-25 10:55:38: 🏦 Portfolio Value: $1,090.17 → $1,090.17 (+0.00)
-2025-05-25 10:55:38: 💰 Period Funding PnL: $0.42
-2025-05-25 10:55:38: 📊 Period Realized Trading PnL: $-23.87
-2025-05-25 10:55:38: 📈 Current Unrealized PnL: $-18.86
-2025-05-25 10:55:38: 💸 Period Trading Costs: $0.18
-2025-05-25 10:55:38: 
-🎯 VOLATILITY SCALING METRICS:
-2025-05-25 10:55:38: 📊 Period-end realized vol: 8.41% (target: 15.0%)
-2025-05-25 10:55:38: ⚡ Period-end vol scalar: 0.169
-2025-05-25 10:55:38: ⚖️  Period-end leverage: 0.26x
-2025-05-25 10:55:38: 📈 Vol scaling effectiveness: 43.9% deviation from target
-2025-05-25 10:55:38: 
-📊 CUMULATIVE TOTALS TO DATE:
-2025-05-25 10:55:38: 💰 Total Funding PnL: $18.91
-2025-05-25 10:55:38: 📊 Total Realized Trading PnL: $75.17
-2025-05-25 10:55:38: 💸 Total Trading Costs: $4.26
-2025-05-25 10:55:38: 
+2025-05-25 18:43:42: ✅ Opened 3 new positions
+2025-05-25 18:43:42: ❌ Closed 2 old positions
+2025-05-25 18:43:42: 🔄 Updated 1 existing positions
+2025-05-25 18:43:42: 💰 Total active positions: 4
+2025-05-25 18:43:42: 💸 Period trading costs: $0.18
+2025-05-25 18:43:42: 📈 Period realized PnL: $-23.87
+2025-05-25 18:43:42: ⚖️  Final leverage: 0.24x
+2025-05-25 18:43:45: 
+📈 END OF PERIOD 19 SUMMARY:
+2025-05-25 18:43:45: 🏦 Portfolio Value: $1,089.96 → $1,089.96 (+0.00)
+2025-05-25 18:43:45: 💰 Period Funding PnL: $0.39
+2025-05-25 18:43:45: 📊 Period Realized Trading PnL: $-23.87
+2025-05-25 18:43:45: 💸 Period Trading Costs: $0.18
+2025-05-25 18:43:45: 
 ================================================================================
-2025-05-25 10:55:38: CLOSING ALL REMAINING POSITIONS AT END OF BACKTEST
-2025-05-25 10:55:38: ================================================================================
-2025-05-25 10:55:38: Closing 4 remaining positions at end date: 2025-05-10 00:00:00+00:00
-2025-05-25 10:55:38:   🔸 Final Close LINEAR short FARTCOINUSDT: 9.2799 @ 1.126200, PnL: $0.00, Cost: $0.01
-2025-05-25 10:55:38:   🔸 Final Close SPOT long BTCUSDT: 0.0001 @ 102978.100000, PnL: $1.13, Cost: $0.01
-2025-05-25 10:55:38:   ✅ Final close total PnL for FARTCOINUSDT: $1.13
-2025-05-25 10:55:38:   🔸 Final Close LINEAR short 1000000PEIPEIUSDT: 360.0730 @ 0.063300, PnL: $-6.61, Cost: $0.02
-2025-05-25 10:55:38:   🔸 Final Close SPOT long BTCUSDT: 0.0002 @ 102978.100000, PnL: $0.93, Cost: $0.02
-2025-05-25 10:55:38:   ✅ Final close total PnL for 1000000PEIPEIUSDT: $-5.69
-2025-05-25 10:55:38:   🔸 Final Close LINEAR short HYPEUSDT: 1.3150 @ 12.305000, PnL: $0.00, Cost: $0.01
-2025-05-25 10:55:38:   🔸 Final Close SPOT long BTCUSDT: 0.0002 @ 102978.100000, PnL: $0.93, Cost: $0.02
-2025-05-25 10:55:38:   ✅ Final close total PnL for HYPEUSDT: $0.93
-2025-05-25 10:55:38:   🔸 Final Close LINEAR short 1000MUMUUSDT: 5721.9527 @ 0.005652, PnL: $-16.16, Cost: $0.03
-2025-05-25 10:55:38:   🔸 Final Close SPOT long BTCUSDT: 0.0002 @ 102978.100000, PnL: $0.93, Cost: $0.02
-2025-05-25 10:55:38:   ✅ Final close total PnL for 1000MUMUUSDT: $-15.23
-2025-05-25 10:55:38: 
-💰 Final position closing summary:
-2025-05-25 10:55:38:    📊 Final realized PnL: $-18.86
-2025-05-25 10:55:38:    💸 Final trading costs: $0.13
-2025-05-25 10:55:38: 
+2025-05-25 18:43:45: CLOSING ALL REMAINING POSITIONS AT END OF BACKTEST
+2025-05-25 18:43:45: ================================================================================
+2025-05-25 18:43:45: Closing 4 remaining positions
+2025-05-25 18:43:45:   ✅ Final close FARTCOINUSDT: PnL $1.13, Cost: $0.02
+2025-05-25 18:43:45:   ✅ Final close 1000000PEIPEIUSDT: PnL $-5.68, Cost: $0.04
+2025-05-25 18:43:45:   ✅ Final close HYPEUSDT: PnL $0.92, Cost: $0.03
+2025-05-25 18:43:45:   ✅ Final close 1000MUMUUSDT: PnL $-15.23, Cost: $0.04
+2025-05-25 18:43:45: ✅ Final portfolio value: $1070.60
+2025-05-25 18:43:45: 
 ================================================================================
-2025-05-25 10:55:38: RECALCULATING FINAL PORTFOLIO VALUES
-2025-05-25 10:55:38: ================================================================================
-2025-05-25 10:55:38: ✅ Final portfolio value: $1070.83
-2025-05-25 10:55:38: 
-================================================================================
-2025-05-25 10:55:38: FINAL VOLATILITY SCALED BACKTEST RESULTS
-2025-05-25 10:55:38: ================================================================================
-2025-05-25 10:55:38: 🏁 STRATEGY PERFORMANCE:
-2025-05-25 10:55:38:    📅 Period: 2025-01-01 to 2025-05-10 (129 days)
-2025-05-25 10:55:38:    💰 Initial Capital: $1,000.00
-2025-05-25 10:55:38:    🏦 Final Portfolio Value: $1,070.83
-2025-05-25 10:55:38:    📈 Total Return: 7.08%
-2025-05-25 10:55:38:    📊 Annualized Return: 21.36%
-2025-05-25 10:55:38:    📉 Maximum Drawdown: -10.95%
-2025-05-25 10:55:38:    ⚡ Sharpe Ratio: 1.25
-2025-05-25 10:55:38:    📊 Annualized Volatility: 17.03%
-2025-05-25 10:55:38: 
+2025-05-25 18:43:45: FINAL VOLATILITY SCALED BACKTEST RESULTS
+2025-05-25 18:43:45: ================================================================================
+2025-05-25 18:43:45: 🏁 STRATEGY PERFORMANCE:
+2025-05-25 18:43:45:    📅 Period: 2025-01-01 to 2025-05-10 (129 days)
+2025-05-25 18:43:45:    💰 Initial Capital: $1,000.00
+2025-05-25 18:43:45:    🏦 Final Portfolio Value: $1,070.60
+2025-05-25 18:43:45:    📈 Total Return: 7.06%
+2025-05-25 18:43:45:    📊 Annualized Return: 21.29%
+2025-05-25 18:43:45:    📉 Maximum Drawdown: -10.95%
+2025-05-25 18:43:45:    ⚡ Sharpe Ratio: 1.25
+2025-05-25 18:43:45:    📊 Annualized Volatility: 17.03%
+2025-05-25 18:43:45: 
 🎯 VOLATILITY SCALING PERFORMANCE:
-2025-05-25 10:55:38:    🎯 Target Volatility: 15.0%
-2025-05-25 10:55:38:    📊 Final Realized Volatility: 0.00%
-2025-05-25 10:55:38:    📐 Target Deviation: 100.0%
-2025-05-25 10:55:38:    ⚡ Average Vol Scalar: 0.179
-2025-05-25 10:55:38:    📈 Max Vol Scalar: 1.000
-2025-05-25 10:55:38:    📉 Min Vol Scalar: 0.038
-2025-05-25 10:55:38:    ⚖️  Average Leverage: 0.31x
-2025-05-25 10:55:38:    ⚖️  Maximum Leverage: 2.03x
-2025-05-25 10:55:38: 
+2025-05-25 18:43:45:    🎯 Target Volatility: 15.0%
+2025-05-25 18:43:45:    📊 Final Realized Volatility: 0.00%
+2025-05-25 18:43:45:    ⚡ Average Vol Scalar: 0.179
+2025-05-25 18:43:45:    📈 Max Vol Scalar: 1.000
+2025-05-25 18:43:45:    📉 Min Vol Scalar: 0.000
+2025-05-25 18:43:45:    ⚖️  Average Leverage: 0.31x
+2025-05-25 18:43:45:    ⚖️  Maximum Leverage: 2.03x
+2025-05-25 18:43:45: 
 💰 P&L BREAKDOWN:
-2025-05-25 10:55:38:    💸 Total Trading Costs: $4.39
-2025-05-25 10:55:38:    💰 Total Funding PnL: $18.91
-2025-05-25 10:55:38:    📊 Total Trading PnL: $56.31
-2025-05-25 10:55:38:    💎 Total Realized Trading PnL: $56.31
-2025-05-25 10:55:38:    🏆 Net P&L: $70.83
-2025-05-25 10:55:38: 
+2025-05-25 18:43:45:    💸 Total Trading Costs: $4.39
+2025-05-25 18:43:45:    💰 Total Funding PnL: $18.67
+2025-05-25 18:43:45:    📊 Total Trading PnL: $56.32
+2025-05-25 18:43:45:    💎 Total Realized Trading PnL: $56.32
+2025-05-25 18:43:45:    🏆 Net P&L: $70.60
+2025-05-25 18:43:45: 
 📊 ENHANCED COST ANALYSIS:
-2025-05-25 10:55:38:    💸 Trading costs as % of capital: 0.44%
-2025-05-25 10:55:38:    💰 Funding PnL as % of capital: 1.89%
-2025-05-25 10:55:38:    ⚖️  Funding vs Costs ratio: 4.31x
-2025-05-25 10:55:38:    ⚡ Vol scaling avg benefit: -82.1%
-2025-05-25 10:55:38: 
+2025-05-25 18:43:45:    💸 Trading costs as % of capital: 0.44%
+2025-05-25 18:43:45:    💰 Funding PnL as % of capital: 1.87%
+2025-05-25 18:43:45:    ⚖️  Funding vs Costs ratio: 4.25x
+2025-05-25 18:43:45:    ⚡ Vol scaling avg benefit: -82.1%
+2025-05-25 18:43:45: 
 📊 DATA AVAILABILITY:
-2025-05-25 10:55:38:    📋 Total symbol evaluations: 33
-2025-05-25 10:55:38:    ✅ Successful data availability: 8
-2025-05-25 10:55:38:    📈 Success rate: 24.2%
-2025-05-25 10:55:38: 
+2025-05-25 18:43:45:    📋 Total symbol evaluations: 33
+2025-05-25 18:43:45:    ✅ Successful data availability: 8
+2025-05-25 18:43:45:    📈 Success rate: 24.2%
+2025-05-25 18:43:45: 
 📊 TRADING ACTIVITY:
-2025-05-25 10:55:38:    🔄 Total rebalance periods: 19
-2025-05-25 10:55:38:    📈 Total positions opened: 62
-2025-05-25 10:55:38:    📊 Average positions per rebalance: 3.3
-2025-05-25 10:55:38: 
+2025-05-25 18:43:45:    🔄 Total rebalance periods: 19
+2025-05-25 18:43:45:    📈 Total positions opened: 62
+2025-05-25 18:43:45:    📊 Average positions per rebalance: 3.3
+2025-05-25 18:43:45: 
 🎯 VOLATILITY SCALING EFFECTIVENESS:
-2025-05-25 10:55:38:    📊 Periods within 20% of target vol: 312/3097 (10.1%)
-2025-05-25 10:55:38:    ⚡ EWMA Lambda effectiveness: 0.060
-2025-05-25 10:55:38:    📈 Vol scaling helped achieve target: NO
-2025-05-25 10:55:38: 
+2025-05-25 18:43:45:    📊 Target Deviation: 100.0%
+2025-05-25 18:43:45:    📊 Periods within 20% of target vol: 312/3097 (10.1%)
+2025-05-25 18:43:45:    ⚡ EWMA Lambda effectiveness: 0.060
+2025-05-25 18:43:45:    📈 Vol scaling helped achieve target: NO
+2025-05-25 18:43:45: 
 ================================================================================
-2025-05-25 10:55:38: VOLATILITY SCALED BACKTEST COMPLETED SUCCESSFULLY
-2025-05-25 10:55:38: ================================================================================
+2025-05-25 18:43:45: VOLATILITY SCALED BACKTEST COMPLETED SUCCESSFULLY
+2025-05-25 18:43:45: ================================================================================
+2025-05-25 18:43:45: 
+📁 VERBOSE VOLATILITY SCALED RESULTS SAVED:
+2025-05-25 18:43:45:   📊 Main results: funding_analysis/verbose_vol_scaled_funding_strategy_results.csv
+2025-05-25 18:43:45:   📋 Data availability: funding_analysis/verbose_vol_scaled_data_availability_report.csv
+2025-05-25 18:43:45:   📈 Position history: funding_analysis/verbose_vol_scaled_position_history.csv
+2025-05-25 18:43:45:   🔄 Rebalance history: funding_analysis/verbose_vol_scaled_rebalance_history.csv
+2025-05-25 18:43:45:   🎯 Volatility metrics: funding_analysis/verbose_vol_scaling_metrics.csv
+2025-05-25 18:43:45:   📝 Verbose log: funding_analysis\verbose_vol_scaled_backtest_log.txt
