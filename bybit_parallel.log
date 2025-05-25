@@ -2386,3 +2386,276 @@
 2025-05-25 09:57:51,832 - INFO - Downloading spot kline data for MUMUUSDT (interval: 1h)
 2025-05-25 09:57:51,834 - INFO - Date range for MUMUUSDT: 2025-01-01 to 2025-05-10
 2025-05-25 09:57:51,835 - INFO - Fetching chunk for MUMUUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:46:45,036 - INFO - Step 1: Loading symbols...
+2025-05-25 10:46:45,040 - INFO - Loaded 474 symbols
+2025-05-25 10:46:45,040 - INFO - Step 2: Fetching 1h kline data from 2025-01-01 to 2025-05-10...
+2025-05-25 10:46:46,750 - INFO - Downloading spot kline data for FARTCOINUSDT (interval: 1h)
+2025-05-25 10:46:46,752 - INFO - Date range for FARTCOINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:46:46,752 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:46:47,163 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-08 to 2025-01-15
+2025-05-25 10:46:47,371 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-15 to 2025-01-22
+2025-05-25 10:46:47,630 - INFO - Downloading spot kline data for GRIFFAINUSDT (interval: 1h)
+2025-05-25 10:46:47,631 - INFO - Date range for GRIFFAINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:46:47,631 - INFO - Fetching chunk for GRIFFAINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:46:48,186 - INFO - Downloading spot kline data for HIPPOUSDT (interval: 1h)
+2025-05-25 10:46:48,188 - INFO - Date range for HIPPOUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:46:48,188 - INFO - Fetching chunk for HIPPOUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:46:48,553 - INFO - Downloading spot kline data for MUMUUSDT (interval: 1h)
+2025-05-25 10:46:48,554 - INFO - Date range for MUMUUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:46:48,554 - INFO - Fetching chunk for MUMUUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:46:57,168 - INFO - Downloading spot kline data for COWUSDT (interval: 1h)
+2025-05-25 10:46:57,169 - INFO - Date range for COWUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:46:57,170 - INFO - Fetching chunk for COWUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:46:57,510 - INFO - Downloading spot kline data for SWARMSUSDT (interval: 1h)
+2025-05-25 10:46:57,511 - INFO - Adjusted start date to launch time for SWARMSUSDT: 2025-01-06 08:31:58+00:00
+2025-05-25 10:46:57,511 - INFO - Date range for SWARMSUSDT: 2025-01-06 to 2025-05-10
+2025-05-25 10:46:57,511 - INFO - Fetching chunk for SWARMSUSDT: 2025-01-06 to 2025-01-13
+2025-05-25 10:46:57,883 - INFO - Downloading spot kline data for ORCAUSDT (interval: 1h)
+2025-05-25 10:46:57,885 - INFO - Date range for ORCAUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:46:57,885 - INFO - Fetching chunk for ORCAUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:47:06,658 - INFO - Downloading spot kline data for MELANIAUSDT (interval: 1h)
+2025-05-25 10:47:06,659 - INFO - Adjusted start date to launch time for MELANIAUSDT: 2025-01-20 05:13:39+00:00
+2025-05-25 10:47:06,660 - INFO - Date range for MELANIAUSDT: 2025-01-20 to 2025-05-10
+2025-05-25 10:47:06,660 - INFO - Fetching chunk for MELANIAUSDT: 2025-01-20 to 2025-01-27
+2025-05-25 10:47:07,004 - INFO - Downloading spot kline data for HYPEUSDT (interval: 1h)
+2025-05-25 10:47:07,005 - INFO - Date range for HYPEUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:47:07,006 - INFO - Fetching chunk for HYPEUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:47:07,344 - INFO - Downloading spot kline data for GRIFFAINUSDT (interval: 1h)
+2025-05-25 10:47:07,345 - INFO - Date range for GRIFFAINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:47:07,346 - INFO - Fetching chunk for GRIFFAINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:47:14,571 - INFO - Downloading spot kline data for RAYDIUMUSDT (interval: 1h)
+2025-05-25 10:47:14,572 - INFO - Date range for RAYDIUMUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:47:14,572 - INFO - Fetching chunk for RAYDIUMUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:47:20,163 - INFO - Downloading spot kline data for PIPPINUSDT (interval: 1h)
+2025-05-25 10:47:20,164 - INFO - Adjusted start date to launch time for PIPPINUSDT: 2025-01-17 08:38:42+00:00
+2025-05-25 10:47:20,164 - INFO - Date range for PIPPINUSDT: 2025-01-17 to 2025-05-10
+2025-05-25 10:47:20,165 - INFO - Fetching chunk for PIPPINUSDT: 2025-01-17 to 2025-01-24
+2025-05-25 10:47:24,497 - INFO - Downloading spot kline data for SOLAYERUSDT (interval: 1h)
+2025-05-25 10:47:24,498 - INFO - Adjusted start date to launch time for SOLAYERUSDT: 2025-02-11 14:12:56+00:00
+2025-05-25 10:47:24,498 - INFO - Date range for SOLAYERUSDT: 2025-02-11 to 2025-05-10
+2025-05-25 10:47:24,499 - INFO - Fetching chunk for SOLAYERUSDT: 2025-02-11 to 2025-02-18
+2025-05-25 10:47:24,881 - INFO - Downloading spot kline data for RAYDIUMUSDT (interval: 1h)
+2025-05-25 10:47:24,883 - INFO - Date range for RAYDIUMUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:47:24,883 - INFO - Fetching chunk for RAYDIUMUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:47:25,235 - INFO - Downloading spot kline data for NEIROETHUSDT (interval: 1h)
+2025-05-25 10:47:25,236 - INFO - Date range for NEIROETHUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:47:25,236 - INFO - Fetching chunk for NEIROETHUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:47:25,578 - INFO - Downloading spot kline data for TAOUSDT (interval: 1h)
+2025-05-25 10:47:25,579 - INFO - Date range for TAOUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:47:25,579 - INFO - Fetching chunk for TAOUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:47:44,416 - INFO - Downloading spot kline data for JELLYJELLYUSDT (interval: 1h)
+2025-05-25 10:47:44,417 - INFO - Adjusted start date to launch time for JELLYJELLYUSDT: 2025-01-30 06:45:11+00:00
+2025-05-25 10:47:44,418 - INFO - Date range for JELLYJELLYUSDT: 2025-01-30 to 2025-05-10
+2025-05-25 10:47:44,418 - INFO - Fetching chunk for JELLYJELLYUSDT: 2025-01-30 to 2025-02-06
+2025-05-25 10:47:50,369 - INFO - Downloading spot kline data for SOLAYERUSDT (interval: 1h)
+2025-05-25 10:47:50,370 - INFO - Adjusted start date to launch time for SOLAYERUSDT: 2025-02-11 14:12:56+00:00
+2025-05-25 10:47:50,370 - INFO - Date range for SOLAYERUSDT: 2025-02-11 to 2025-05-10
+2025-05-25 10:47:50,370 - INFO - Fetching chunk for SOLAYERUSDT: 2025-02-11 to 2025-02-18
+2025-05-25 10:47:50,929 - INFO - Downloading spot kline data for FARTCOINUSDT (interval: 1h)
+2025-05-25 10:47:50,931 - INFO - Date range for FARTCOINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:47:50,931 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:47:51,228 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-08 to 2025-01-15
+2025-05-25 10:47:51,439 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-15 to 2025-01-22
+2025-05-25 10:47:51,703 - INFO - Downloading spot kline data for BROCCOLIUSDT (interval: 1h)
+2025-05-25 10:47:51,704 - INFO - Adjusted start date to launch time for BROCCOLIUSDT: 2025-02-14 12:11:51+00:00
+2025-05-25 10:47:51,704 - INFO - Date range for BROCCOLIUSDT: 2025-02-14 to 2025-05-10
+2025-05-25 10:47:51,704 - INFO - Fetching chunk for BROCCOLIUSDT: 2025-02-14 to 2025-02-21
+2025-05-25 10:47:52,353 - INFO - Downloading spot kline data for MICHIUSDT (interval: 1h)
+2025-05-25 10:47:52,355 - INFO - Adjusted start date to launch time for MICHIUSDT: 2025-01-27 03:25:41+00:00
+2025-05-25 10:47:52,355 - INFO - Date range for MICHIUSDT: 2025-01-27 to 2025-05-10
+2025-05-25 10:47:52,355 - INFO - Fetching chunk for MICHIUSDT: 2025-01-27 to 2025-02-03
+2025-05-25 10:48:01,032 - INFO - Downloading spot kline data for WHYUSDT (interval: 1h)
+2025-05-25 10:48:01,033 - INFO - Date range for WHYUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:48:01,033 - INFO - Fetching chunk for WHYUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:48:06,541 - INFO - Downloading spot kline data for PEIPEIUSDT (interval: 1h)
+2025-05-25 10:48:06,542 - INFO - Date range for PEIPEIUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:48:06,542 - INFO - Fetching chunk for PEIPEIUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:48:07,016 - INFO - Downloading spot kline data for HYPEUSDT (interval: 1h)
+2025-05-25 10:48:07,018 - INFO - Date range for HYPEUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:48:07,018 - INFO - Fetching chunk for HYPEUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:48:07,376 - INFO - Downloading spot kline data for MUMUUSDT (interval: 1h)
+2025-05-25 10:48:07,378 - INFO - Date range for MUMUUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:48:07,378 - INFO - Fetching chunk for MUMUUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:53:38,480 - INFO - Step 1: Loading symbols...
+2025-05-25 10:53:38,483 - INFO - Loaded 474 symbols
+2025-05-25 10:53:38,483 - INFO - Step 2: Fetching 1h kline data from 2025-01-01 to 2025-05-10...
+2025-05-25 10:54:04,386 - INFO - Step 1: Loading symbols...
+2025-05-25 10:54:04,389 - INFO - Loaded 474 symbols
+2025-05-25 10:54:04,389 - INFO - Step 2: Fetching 1h kline data from 2025-01-01 to 2025-05-10...
+2025-05-25 10:54:05,861 - INFO - Downloading spot kline data for FARTCOINUSDT (interval: 1h)
+2025-05-25 10:54:05,862 - INFO - Date range for FARTCOINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:05,862 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:06,283 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-08 to 2025-01-15
+2025-05-25 10:54:06,474 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-15 to 2025-01-22
+2025-05-25 10:54:06,726 - INFO - Downloading spot kline data for GRIFFAINUSDT (interval: 1h)
+2025-05-25 10:54:06,728 - INFO - Date range for GRIFFAINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:06,728 - INFO - Fetching chunk for GRIFFAINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:07,324 - INFO - Downloading spot kline data for HIPPOUSDT (interval: 1h)
+2025-05-25 10:54:07,325 - INFO - Date range for HIPPOUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:07,325 - INFO - Fetching chunk for HIPPOUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:08,113 - INFO - Downloading spot kline data for MUMUUSDT (interval: 1h)
+2025-05-25 10:54:08,114 - INFO - Date range for MUMUUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:08,114 - INFO - Fetching chunk for MUMUUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:18,223 - INFO - Downloading spot kline data for COWUSDT (interval: 1h)
+2025-05-25 10:54:18,224 - INFO - Date range for COWUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:18,224 - INFO - Fetching chunk for COWUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:18,574 - INFO - Downloading spot kline data for SWARMSUSDT (interval: 1h)
+2025-05-25 10:54:18,575 - INFO - Adjusted start date to launch time for SWARMSUSDT: 2025-01-06 08:31:58+00:00
+2025-05-25 10:54:18,575 - INFO - Date range for SWARMSUSDT: 2025-01-06 to 2025-05-10
+2025-05-25 10:54:18,576 - INFO - Fetching chunk for SWARMSUSDT: 2025-01-06 to 2025-01-13
+2025-05-25 10:54:18,955 - INFO - Downloading spot kline data for ORCAUSDT (interval: 1h)
+2025-05-25 10:54:18,956 - INFO - Date range for ORCAUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:18,956 - INFO - Fetching chunk for ORCAUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:28,629 - INFO - Downloading spot kline data for MELANIAUSDT (interval: 1h)
+2025-05-25 10:54:28,630 - INFO - Adjusted start date to launch time for MELANIAUSDT: 2025-01-20 05:13:39+00:00
+2025-05-25 10:54:28,631 - INFO - Date range for MELANIAUSDT: 2025-01-20 to 2025-05-10
+2025-05-25 10:54:28,632 - INFO - Fetching chunk for MELANIAUSDT: 2025-01-20 to 2025-01-27
+2025-05-25 10:54:28,936 - INFO - Downloading spot kline data for HYPEUSDT (interval: 1h)
+2025-05-25 10:54:28,937 - INFO - Date range for HYPEUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:28,937 - INFO - Fetching chunk for HYPEUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:29,251 - INFO - Downloading spot kline data for GRIFFAINUSDT (interval: 1h)
+2025-05-25 10:54:29,252 - INFO - Date range for GRIFFAINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:29,252 - INFO - Fetching chunk for GRIFFAINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:37,225 - INFO - Downloading spot kline data for RAYDIUMUSDT (interval: 1h)
+2025-05-25 10:54:37,226 - INFO - Date range for RAYDIUMUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:37,226 - INFO - Fetching chunk for RAYDIUMUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:43,561 - INFO - Downloading spot kline data for PIPPINUSDT (interval: 1h)
+2025-05-25 10:54:43,562 - INFO - Adjusted start date to launch time for PIPPINUSDT: 2025-01-17 08:38:42+00:00
+2025-05-25 10:54:43,562 - INFO - Date range for PIPPINUSDT: 2025-01-17 to 2025-05-10
+2025-05-25 10:54:43,562 - INFO - Fetching chunk for PIPPINUSDT: 2025-01-17 to 2025-01-24
+2025-05-25 10:54:48,583 - INFO - Downloading spot kline data for SOLAYERUSDT (interval: 1h)
+2025-05-25 10:54:48,584 - INFO - Adjusted start date to launch time for SOLAYERUSDT: 2025-02-11 14:12:56+00:00
+2025-05-25 10:54:48,584 - INFO - Date range for SOLAYERUSDT: 2025-02-11 to 2025-05-10
+2025-05-25 10:54:48,584 - INFO - Fetching chunk for SOLAYERUSDT: 2025-02-11 to 2025-02-18
+2025-05-25 10:54:48,911 - INFO - Downloading spot kline data for RAYDIUMUSDT (interval: 1h)
+2025-05-25 10:54:48,913 - INFO - Date range for RAYDIUMUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:48,913 - INFO - Fetching chunk for RAYDIUMUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:49,244 - INFO - Downloading spot kline data for NEIROETHUSDT (interval: 1h)
+2025-05-25 10:54:49,246 - INFO - Date range for NEIROETHUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:49,247 - INFO - Fetching chunk for NEIROETHUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:54:49,566 - INFO - Downloading spot kline data for TAOUSDT (interval: 1h)
+2025-05-25 10:54:49,569 - INFO - Date range for TAOUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:54:49,569 - INFO - Fetching chunk for TAOUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:55:10,594 - INFO - Downloading spot kline data for JELLYJELLYUSDT (interval: 1h)
+2025-05-25 10:55:10,595 - INFO - Adjusted start date to launch time for JELLYJELLYUSDT: 2025-01-30 06:45:11+00:00
+2025-05-25 10:55:10,595 - INFO - Date range for JELLYJELLYUSDT: 2025-01-30 to 2025-05-10
+2025-05-25 10:55:10,595 - INFO - Fetching chunk for JELLYJELLYUSDT: 2025-01-30 to 2025-02-06
+2025-05-25 10:55:17,258 - INFO - Downloading spot kline data for SOLAYERUSDT (interval: 1h)
+2025-05-25 10:55:17,259 - INFO - Adjusted start date to launch time for SOLAYERUSDT: 2025-02-11 14:12:56+00:00
+2025-05-25 10:55:17,259 - INFO - Date range for SOLAYERUSDT: 2025-02-11 to 2025-05-10
+2025-05-25 10:55:17,259 - INFO - Fetching chunk for SOLAYERUSDT: 2025-02-11 to 2025-02-18
+2025-05-25 10:55:17,606 - INFO - Downloading spot kline data for FARTCOINUSDT (interval: 1h)
+2025-05-25 10:55:17,607 - INFO - Date range for FARTCOINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:55:17,608 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:55:17,870 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-08 to 2025-01-15
+2025-05-25 10:55:18,087 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-15 to 2025-01-22
+2025-05-25 10:55:18,599 - INFO - Downloading spot kline data for BROCCOLIUSDT (interval: 1h)
+2025-05-25 10:55:18,600 - INFO - Adjusted start date to launch time for BROCCOLIUSDT: 2025-02-14 12:11:51+00:00
+2025-05-25 10:55:18,600 - INFO - Date range for BROCCOLIUSDT: 2025-02-14 to 2025-05-10
+2025-05-25 10:55:18,601 - INFO - Fetching chunk for BROCCOLIUSDT: 2025-02-14 to 2025-02-21
+2025-05-25 10:55:18,970 - INFO - Downloading spot kline data for MICHIUSDT (interval: 1h)
+2025-05-25 10:55:18,972 - INFO - Adjusted start date to launch time for MICHIUSDT: 2025-01-27 03:25:41+00:00
+2025-05-25 10:55:18,972 - INFO - Date range for MICHIUSDT: 2025-01-27 to 2025-05-10
+2025-05-25 10:55:18,972 - INFO - Fetching chunk for MICHIUSDT: 2025-01-27 to 2025-02-03
+2025-05-25 10:55:28,354 - INFO - Downloading spot kline data for WHYUSDT (interval: 1h)
+2025-05-25 10:55:28,355 - INFO - Date range for WHYUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:55:28,356 - INFO - Fetching chunk for WHYUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:55:34,293 - INFO - Downloading spot kline data for PEIPEIUSDT (interval: 1h)
+2025-05-25 10:55:34,294 - INFO - Date range for PEIPEIUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:55:34,295 - INFO - Fetching chunk for PEIPEIUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:55:34,680 - INFO - Downloading spot kline data for HYPEUSDT (interval: 1h)
+2025-05-25 10:55:34,681 - INFO - Date range for HYPEUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:55:34,681 - INFO - Fetching chunk for HYPEUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:55:35,009 - INFO - Downloading spot kline data for MUMUUSDT (interval: 1h)
+2025-05-25 10:55:35,010 - INFO - Date range for MUMUUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:55:35,010 - INFO - Fetching chunk for MUMUUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:26,398 - INFO - Step 1: Loading symbols...
+2025-05-25 10:58:26,403 - INFO - Loaded 474 symbols
+2025-05-25 10:58:26,404 - INFO - Step 2: Fetching 1h kline data from 2025-01-01 to 2025-05-10...
+2025-05-25 10:58:27,981 - INFO - Downloading spot kline data for FARTCOINUSDT (interval: 1h)
+2025-05-25 10:58:27,983 - INFO - Date range for FARTCOINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:27,983 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:28,402 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-08 to 2025-01-15
+2025-05-25 10:58:28,602 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-15 to 2025-01-22
+2025-05-25 10:58:28,854 - INFO - Downloading spot kline data for GRIFFAINUSDT (interval: 1h)
+2025-05-25 10:58:28,855 - INFO - Date range for GRIFFAINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:28,855 - INFO - Fetching chunk for GRIFFAINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:29,432 - INFO - Downloading spot kline data for HIPPOUSDT (interval: 1h)
+2025-05-25 10:58:29,433 - INFO - Date range for HIPPOUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:29,433 - INFO - Fetching chunk for HIPPOUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:29,781 - INFO - Downloading spot kline data for MUMUUSDT (interval: 1h)
+2025-05-25 10:58:29,782 - INFO - Date range for MUMUUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:29,782 - INFO - Fetching chunk for MUMUUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:38,280 - INFO - Downloading spot kline data for COWUSDT (interval: 1h)
+2025-05-25 10:58:38,282 - INFO - Date range for COWUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:38,282 - INFO - Fetching chunk for COWUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:38,644 - INFO - Downloading spot kline data for SWARMSUSDT (interval: 1h)
+2025-05-25 10:58:38,645 - INFO - Adjusted start date to launch time for SWARMSUSDT: 2025-01-06 08:31:58+00:00
+2025-05-25 10:58:38,645 - INFO - Date range for SWARMSUSDT: 2025-01-06 to 2025-05-10
+2025-05-25 10:58:38,645 - INFO - Fetching chunk for SWARMSUSDT: 2025-01-06 to 2025-01-13
+2025-05-25 10:58:39,009 - INFO - Downloading spot kline data for ORCAUSDT (interval: 1h)
+2025-05-25 10:58:39,010 - INFO - Date range for ORCAUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:39,010 - INFO - Fetching chunk for ORCAUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:47,958 - INFO - Downloading spot kline data for MELANIAUSDT (interval: 1h)
+2025-05-25 10:58:47,959 - INFO - Adjusted start date to launch time for MELANIAUSDT: 2025-01-20 05:13:39+00:00
+2025-05-25 10:58:47,959 - INFO - Date range for MELANIAUSDT: 2025-01-20 to 2025-05-10
+2025-05-25 10:58:47,959 - INFO - Fetching chunk for MELANIAUSDT: 2025-01-20 to 2025-01-27
+2025-05-25 10:58:48,280 - INFO - Downloading spot kline data for HYPEUSDT (interval: 1h)
+2025-05-25 10:58:48,283 - INFO - Date range for HYPEUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:48,283 - INFO - Fetching chunk for HYPEUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:48,622 - INFO - Downloading spot kline data for GRIFFAINUSDT (interval: 1h)
+2025-05-25 10:58:48,623 - INFO - Date range for GRIFFAINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:48,624 - INFO - Fetching chunk for GRIFFAINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:58:55,991 - INFO - Downloading spot kline data for RAYDIUMUSDT (interval: 1h)
+2025-05-25 10:58:55,993 - INFO - Date range for RAYDIUMUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:58:55,993 - INFO - Fetching chunk for RAYDIUMUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:59:01,736 - INFO - Downloading spot kline data for PIPPINUSDT (interval: 1h)
+2025-05-25 10:59:01,737 - INFO - Adjusted start date to launch time for PIPPINUSDT: 2025-01-17 08:38:42+00:00
+2025-05-25 10:59:01,737 - INFO - Date range for PIPPINUSDT: 2025-01-17 to 2025-05-10
+2025-05-25 10:59:01,737 - INFO - Fetching chunk for PIPPINUSDT: 2025-01-17 to 2025-01-24
+2025-05-25 10:59:06,391 - INFO - Downloading spot kline data for SOLAYERUSDT (interval: 1h)
+2025-05-25 10:59:06,392 - INFO - Adjusted start date to launch time for SOLAYERUSDT: 2025-02-11 14:12:56+00:00
+2025-05-25 10:59:06,392 - INFO - Date range for SOLAYERUSDT: 2025-02-11 to 2025-05-10
+2025-05-25 10:59:06,393 - INFO - Fetching chunk for SOLAYERUSDT: 2025-02-11 to 2025-02-18
+2025-05-25 10:59:06,799 - INFO - Downloading spot kline data for RAYDIUMUSDT (interval: 1h)
+2025-05-25 10:59:06,800 - INFO - Date range for RAYDIUMUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:59:06,800 - INFO - Fetching chunk for RAYDIUMUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:59:07,160 - INFO - Downloading spot kline data for NEIROETHUSDT (interval: 1h)
+2025-05-25 10:59:07,161 - INFO - Date range for NEIROETHUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:59:07,161 - INFO - Fetching chunk for NEIROETHUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:59:07,531 - INFO - Downloading spot kline data for TAOUSDT (interval: 1h)
+2025-05-25 10:59:07,532 - INFO - Date range for TAOUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:59:07,532 - INFO - Fetching chunk for TAOUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:59:26,621 - INFO - Downloading spot kline data for JELLYJELLYUSDT (interval: 1h)
+2025-05-25 10:59:26,623 - INFO - Adjusted start date to launch time for JELLYJELLYUSDT: 2025-01-30 06:45:11+00:00
+2025-05-25 10:59:26,623 - INFO - Date range for JELLYJELLYUSDT: 2025-01-30 to 2025-05-10
+2025-05-25 10:59:26,623 - INFO - Fetching chunk for JELLYJELLYUSDT: 2025-01-30 to 2025-02-06
+2025-05-25 10:59:32,321 - INFO - Downloading spot kline data for SOLAYERUSDT (interval: 1h)
+2025-05-25 10:59:32,322 - INFO - Adjusted start date to launch time for SOLAYERUSDT: 2025-02-11 14:12:56+00:00
+2025-05-25 10:59:32,323 - INFO - Date range for SOLAYERUSDT: 2025-02-11 to 2025-05-10
+2025-05-25 10:59:32,323 - INFO - Fetching chunk for SOLAYERUSDT: 2025-02-11 to 2025-02-18
+2025-05-25 10:59:32,737 - INFO - Downloading spot kline data for FARTCOINUSDT (interval: 1h)
+2025-05-25 10:59:32,738 - INFO - Date range for FARTCOINUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:59:32,738 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:59:33,048 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-08 to 2025-01-15
+2025-05-25 10:59:33,258 - INFO - Fetching chunk for FARTCOINUSDT: 2025-01-15 to 2025-01-22
+2025-05-25 10:59:33,633 - INFO - Downloading spot kline data for BROCCOLIUSDT (interval: 1h)
+2025-05-25 10:59:33,634 - INFO - Adjusted start date to launch time for BROCCOLIUSDT: 2025-02-14 12:11:51+00:00
+2025-05-25 10:59:33,634 - INFO - Date range for BROCCOLIUSDT: 2025-02-14 to 2025-05-10
+2025-05-25 10:59:33,634 - INFO - Fetching chunk for BROCCOLIUSDT: 2025-02-14 to 2025-02-21
+2025-05-25 10:59:34,130 - INFO - Downloading spot kline data for MICHIUSDT (interval: 1h)
+2025-05-25 10:59:34,131 - INFO - Adjusted start date to launch time for MICHIUSDT: 2025-01-27 03:25:41+00:00
+2025-05-25 10:59:34,131 - INFO - Date range for MICHIUSDT: 2025-01-27 to 2025-05-10
+2025-05-25 10:59:34,132 - INFO - Fetching chunk for MICHIUSDT: 2025-01-27 to 2025-02-03
+2025-05-25 10:59:43,160 - INFO - Downloading spot kline data for WHYUSDT (interval: 1h)
+2025-05-25 10:59:43,162 - INFO - Date range for WHYUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:59:43,162 - INFO - Fetching chunk for WHYUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:59:48,573 - INFO - Downloading spot kline data for PEIPEIUSDT (interval: 1h)
+2025-05-25 10:59:48,575 - INFO - Date range for PEIPEIUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:59:48,575 - INFO - Fetching chunk for PEIPEIUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:59:48,919 - INFO - Downloading spot kline data for HYPEUSDT (interval: 1h)
+2025-05-25 10:59:48,921 - INFO - Date range for HYPEUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:59:48,921 - INFO - Fetching chunk for HYPEUSDT: 2025-01-01 to 2025-01-08
+2025-05-25 10:59:49,250 - INFO - Downloading spot kline data for MUMUUSDT (interval: 1h)
+2025-05-25 10:59:49,251 - INFO - Date range for MUMUUSDT: 2025-01-01 to 2025-05-10
+2025-05-25 10:59:49,251 - INFO - Fetching chunk for MUMUUSDT: 2025-01-01 to 2025-01-08
